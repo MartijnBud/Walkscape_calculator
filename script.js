@@ -12,6 +12,21 @@ const xpTable = [
   7195629, 7944614, 8771558, 9684577, 10692629, 11805606, 13034431,
 ];
 
+// Function to calculate the current level from XP
+function calculateCurrentLevelFromXP() {
+  const currentXP = parseInt(document.getElementById("currentXP").value);
+  const currentLevelField = document.getElementById("currentLevel");
+
+  if (!isNaN(currentXP)) {
+    for (let i = 1; i < xpTable.length; i++) {
+      if (xpTable[i] > currentXP) {
+        currentLevelField.value = i - 1; // Update the current level field
+        break;
+      }
+    }
+  }
+}
+
 // Function to calculate the total XP required to reach the desired level
 function calculateXP() {
   const currentXP = parseInt(document.getElementById("currentXP").value);
@@ -28,7 +43,7 @@ function calculateXP() {
     for (let i = 1; i < xpTable.length; i++) {
       if (xpTable[i] > currentXP) {
         currentXPLevel = i - 1; // Set current level based on XP
-        currentLevelField.value = currentXPLevel;
+        currentLevelField.value = currentXPLevel; // Insert that value into the input field
         break;
       }
     }
@@ -59,3 +74,8 @@ function calculateXP() {
     2
   )} actions to reach level ${desiredLevel}.`;
 }
+
+// Update current level when XP is changed:
+document
+  .getElementById("currentXP")
+  .addEventListener("input", calculateCurrentLevelFromXP);
