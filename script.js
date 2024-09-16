@@ -65,14 +65,14 @@ function calculateXP() {
   // Calculate total steps required based on actions and steps per action
   let totalSteps = actionsRequired * stepsPerAction;
 
+  // Round steps and actions up to nearest int, since half steps and actions are useless
+  totalSteps = Math.ceil(totalSteps);
+  actionsRequired = Math.ceil(actionsRequired);
+
   // Display the result
   document.getElementById(
     "result"
-  ).innerText = `You need to walk ${totalSteps.toFixed(
-    2
-  )} steps and perform ${actionsRequired.toFixed(
-    2
-  )} actions to reach level ${desiredLevel}.`;
+  ).innerText = `You need to walk ${totalSteps} steps and perform ${actionsRequired} actions to reach level ${desiredLevel}.`;
 }
 
 // Update current level when XP is changed:
