@@ -14,21 +14,35 @@ const xpTable = [
 
 // Function to calculate the total XP required to reach the desired level
 function calculateXP() {
-  const currentLevel = parseInt(document.getElementById("currentLevel").value);
+  const currentXP = parseInt(document.getElementById("currentXP").value);
+  const currentLevelField = document.getElementById("currentLevel");
+  let currentLevel = parseInt(currentLevelField.value);
   const desiredLevel = parseInt(document.getElementById("desiredLevel").value);
   const stepsPerAction = parseFloat(
     document.getElementById("stepsPerAction").value
   );
   const xpPerAction = parseFloat(document.getElementById("xpPerAction").value);
 
-  if (desiredLevel <= currentLevel) {
+  let currentXPLevel = currentLevel;
+  if (!isNaN(currentXP)) {
+    for (let i = 1; i < xpTable.length; i++) {
+      if (xpTable[i] > currentXP) {
+        currentXPLevel = i - 1; // Set current level based on XP
+        currentLevelField.value = currentXPLevel;
+        break;
+      }
+    }
+  }
+
+  if (desiredLevel <= currentXPLevel) {
     document.getElementById("result").innerText =
       "Desired level must be higher than current level!";
     return;
   }
-  //test
+
   // Calculate total XP needed to go from current level to desired level
-  let totalXP = xpTable[desiredLevel] - xpTable[currentLevel];
+  let totalXP =
+    xpTable[desiredLevel] - (currentXP ? currentXP : xpTable[currentXPLevel]);
 
   // Calculate how many actions are required based on XP per action
   let actionsRequired = totalXP / xpPerAction;
