@@ -1,6 +1,5 @@
 import requests
-import re
-from bs4 import BeautifulSoup, Tag
+from bs4 import BeautifulSoup
 import pandas as pd
 
 
@@ -72,5 +71,5 @@ for skill in skills:
 df_recipes = pd.concat(combined_dfs["recipes"])
 df_activities = pd.concat(combined_dfs["activities"])
 
-df_recipes.to_csv("recipes.csv")
-df_activities.to_csv("activities.csv")
+df_recipes.to_csv("data/recipes.csv")
+df_activities.to_csv("data/activities.csv")
