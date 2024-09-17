@@ -8,3 +8,4 @@ To do:
 
 Ideas:
 - Add interactive world map
+- Add expected drops for activities
