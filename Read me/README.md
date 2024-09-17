@@ -4,6 +4,7 @@ To do:
 - Add gear slots (start with normal everything)
     - Later add qualities
     - Add potion/food efficiency boosts?
+- Add cookie banner -> google analytics
 
 
 Ideas:
