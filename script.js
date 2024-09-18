@@ -79,3 +79,28 @@ function calculateXP() {
 document
   .getElementById("currentXP")
   .addEventListener("input", calculateCurrentLevelFromXP);
+
+// Function to check if cookies have been accepted
+function checkCookieConsent() {
+  const cookieConsent = localStorage.getItem("cookieConsent");
+  if (!cookieConsent) {
+    document.getElementById("cookieConsent").style.display = "block";
+  }
+}
+
+// Function to handle cookie consent acceptance
+function acceptCookies() {
+  localStorage.setItem("cookieConsent", "true");
+  document.getElementById("cookieConsent").style.display = "none";
+}
+
+// Wait until the entire page has loaded
+window.addEventListener("load", function () {
+  // Check the cookie consent status on page load
+  checkCookieConsent();
+
+  // Add event listener for "Accept" button
+  document
+    .getElementById("acceptCookies")
+    .addEventListener("click", acceptCookies);
+});
