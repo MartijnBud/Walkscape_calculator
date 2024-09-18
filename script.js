@@ -80,7 +80,7 @@ document
   .getElementById("currentXP")
   .addEventListener("input", calculateCurrentLevelFromXP);
 
-// Function to check if cookies have been accepted
+// Function to check if cookies have been accepted or declined
 function checkCookieConsent() {
   const cookieConsent = localStorage.getItem("cookieConsent");
   if (!cookieConsent) {
@@ -94,6 +94,12 @@ function acceptCookies() {
   document.getElementById("cookieConsent").style.display = "none";
 }
 
+// Function to handle cookie consent decline
+function declineCookies() {
+  localStorage.setItem("cookieConsent", "false");
+  document.getElementById("cookieConsent").style.display = "none";
+}
+
 // Wait until the entire page has loaded
 window.addEventListener("load", function () {
   // Check the cookie consent status on page load
@@ -103,4 +109,9 @@ window.addEventListener("load", function () {
   document
     .getElementById("acceptCookies")
     .addEventListener("click", acceptCookies);
+
+  // Add event listener for "Decline" button
+  document
+    .getElementById("declineCookies")
+    .addEventListener("click", declineCookies);
 });
