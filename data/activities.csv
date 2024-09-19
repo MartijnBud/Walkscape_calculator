@@ -1,0 +1,209 @@
+Activity,Level,Requirement,Materials Used,Base Exp,Base Steps,Base Exp/Step,Min Steps,Category,Skill,Location
+Make a Wooden Sword,1.0,Basic Sawmill,2x Birch Plank,40.0,140,0.286,94,recipe,Carpentry,-
+Make a Wooden Shield,1.0,Basic Sawmill,2x Birch Plank,40.0,140,0.286,94,recipe,Carpentry,-
+Cut a Birch Plank,1.0,Basic Sawmill,2x Birch Logs,28.0,90,0.311,60,recipe,Carpentry,-
+Create a Birch Plank (Scrap),1.0,Basic Sawmill,5x Wood Scrap,28.0,99,0.283,55,recipe,Carpentry,-
+Cut a Pine Plank,10.0,Basic Sawmill,2x Pine Logs,39.0,105,0.371,66,recipe,Carpentry,-
+Create a Pine Plank (Scrap),10.0,Basic Sawmill,10x Wood Scrap,39.0,115,0.339,72,recipe,Carpentry,-
+Cut a Spruce Plank,20.0,Basic Sawmill,2x Spruce Logs,53.0,120,0.442,71,recipe,Carpentry,-
+Create a Spruce Plank (Scrap),20.0,Basic Sawmill,20x Wood Scrap,53.0,132,0.402,78,recipe,Carpentry,-
+Cut an Oak Plank,25.0,Basic Sawmill,2x Oak Logs,64.0,125,0.512,74,recipe,Carpentry,-
+Create a Oak Plank (Scrap),25.0,Basic Sawmill,30x Wood Scrap,64.0,137,0.467,81,recipe,Carpentry,-
+Cut a Maple Plank,30.0,Basic Sawmill,2x Maple Logs,77.0,135,0.57,75,recipe,Carpentry,-
+Create a Maple Plank (Scrap),30.0,Basic Sawmill,40x Wood Scrap,77.0,148,0.52,83,recipe,Carpentry,-
+Cut a Teak Plank,40.0,Basic Sawmill,2x Teak Logs,90.0,145,0.621,77,recipe,Carpentry,-
+Create a Teak Plank (Scrap),40.0,Basic Sawmill,80x Wood Scrap,90.0,159,0.566,84,recipe,Carpentry,-
+Cut a Willow Plank,40.0,Basic Sawmill,2x Willow Logs,81.0,131,0.618,69,recipe,Carpentry,-
+Create a Willow Plank (Scrap),40.0,Basic Sawmill,80x Wood Scrap,81.0,144,0.563,76,recipe,Carpentry,-
+Cut a Coral Plank,45.0,Basic Sawmill,2x Coral,112.0,150,0.747,79,recipe,Carpentry,-
+Cut a Mangrove Plank,50.0,Advanced Sawmill,2x Mangrove Logs,114.0,160,0.713,80,recipe,Carpentry,-
+Fry a Shrimp,1.0,Basic Kitchen,1x Raw Shrimp,26.0,65,0.4,44,recipe,Cooking,-
+Fry a Perch,1.0,Basic Kitchen,1x Raw Perch,28.0,70,0.4,47,recipe,Cooking,-
+Brew Nettle Tea,3.0,Basic Kitchen,2x Nettle,31.0,75,0.413,50,recipe,Cooking,-
+Fry a Carp,5.0,Basic Kitchen,1x Raw Carp,33.0,75,0.44,47,recipe,Cooking,-
+Bake Bread,8.0,Basic Kitchen,1x Wheat,23.0,50,0.46,32,recipe,Cooking,-
+Fry a Pike,10.0,Basic Kitchen,1x Raw Pike,40.0,85,0.471,54,recipe,Cooking,-
+Make Porridge,15.0,Basic Kitchen,1x Wheat,50.0,93,0.538,59,recipe,Cooking,-
+Make Pancakes,17.0,Basic Kitchen,2x Wheat 1x Milk,56.0,100,0.56,59,recipe,Cooking,-
+Fry a Trout,20.0,Basic Kitchen,1x Raw Trout,52.0,90,0.578,50,recipe,Cooking,-
+Make Trout Soup,22.0,Basic Kitchen,1x Raw Trout,86.0,140,0.614,83,recipe,Cooking,-
+Mix Chocolate Milk,22.0,Basic Kitchen,1x Chocolate 1x Milk,46.0,75,0.613,45,recipe,Cooking,-
+Bake a Bagel,25.0,Basic Kitchen,2x Wheat,66.0,100,0.66,32,recipe,Cooking,-
+Bake Pickles,27.0,Basic Kitchen,1x Cucumber 1x Salt Crystal,68.0,100,0.68,59,recipe,Cooking,-
+Fry a Salmon,30.0,Basic Kitchen,1x Raw Salmon,67.0,100,0.67,56,recipe,Cooking,-
+Fry a Jellyfish,30.0,Basic Kitchen,1x Raw Jellyfish,73.0,100,0.73,56,recipe,Cooking,-
+Make Mushroom Curry,32.0,Basic Kitchen,2x Mushroom 1x Tomato,132.0,174,0.759,97,recipe,Cooking,-
+Fry a Lobster,35.0,Basic Kitchen,1x Raw Lobster,83.0,105,0.79,56,recipe,Cooking,-
+Harden Kelp,35.0,Basic Kitchen,1x Kelp,57.0,70,0.814,42,recipe,Cooking,-
+Prepare a Kelp Roll,36.0,Basic Kitchen,3x Sweet Kelp,82.0,100,0.82,56,recipe,Cooking,-
+Make a Jelly Sandwich,37.0,Basic Kitchen,2x Berries 2x Bread,148.0,175,0.846,93,recipe,Cooking,-
+Assemble Dynamite,38.0,Basic Kitchen,2x Salt Crystal 1x Volcanic Ash,172.0,200,0.86,106,recipe,Cooking,-
+Fry a Swordfish,40.0,Basic Kitchen,1x Raw Swordfish,94.0,110,0.855,58,recipe,Cooking,-
+Fry a Squid,45.0,Basic Kitchen,1x Raw Squid,130.0,130,1.0,58,recipe,Cooking,-
+Make a Sweet Carrot Pie,45.0,Basic Kitchen,1x Carrot 1x Honeycomb 1x Wheat 1x Egg 1x Potato,285.0,300,0.95,150,recipe,Cooking,-
+Fry a Stingray,45.0,Basic Kitchen,1x Raw Stingray,120.0,120,1.0,64,recipe,Cooking,-
+Brew Saltrum,45.0,Basic Kitchen,1x Salty Hops 1x Salt Crystal,120.0,125,0.96,66,recipe,Cooking,-
+Prepare an Underwater Salad,46.0,Basic Kitchen,1x Sea Spinach 1x Sea Cabbage 1x Underwater Lotus,123.0,129,0.953,68,recipe,Cooking,-
+Make a Fried Fish Sandwich,46.0,Basic Kitchen,1x Raw Swordfish 2x Bread,224.0,220,1.018,110,recipe,Cooking,-
+Fry a Shark,50.0,Advanced Kitchen,1x Raw Shark,143.0,130,1.1,65,recipe,Cooking,-
+Fry a Anglerfish,60.0,Advanced Kitchen,1x Raw Anglerfish,204.0,150,1.36,72,recipe,Cooking,-
+Craft a Basic Hatchet,1.0,,2x Stone 1x Wooden Stick,44.0,110,0.4,74,recipe,Crafting,-
+Craft a Basic Pickaxe,1.0,,2x Stone 1x Wooden Stick,44.0,110,0.4,74,recipe,Crafting,-
+Craft a Basic Sickle,1.0,Basic Workshop,1x Stone 1x Wooden Stick 1x Rope,44.0,110,0.4,74,recipe,Crafting,-
+Spin Flax into Rope,1.0,Basic Workshop,2x Flax,15.0,60,0.25,40,recipe,Crafting,-
+Craft a Copper Hatchet,1.0,Basic Workshop,2x Copper Bar 1x Birch Plank,51.0,120,0.425,80,recipe,Crafting,-
+Craft a Copper Pickaxe,1.0,Basic Workshop,2x Copper Bar 1x Birch Plank,50.0,120,0.417,80,recipe,Crafting,-
+Craft a Copper Sickle,1.0,Basic Workshop,1x Copper Bar 1x Birch Plank 1x Rope,51.0,120,0.425,80,recipe,Crafting,-
+Weave a Basic Fishing Net,1.0,,1x Rope,28.0,75,0.373,47,recipe,Crafting,-
+Craft a Wooden Fishing Pole,4.0,Basic Workshop,3x Wooden Stick 1x Fishing Line,29.0,70,0.414,44,recipe,Crafting,-
+Craft a Bag of Rocks,5.0,,1x Sturdy Branch 1x Large Stone,120.0,200,0.6,125,recipe,Crafting,-
+Craft a Bronze Hatchet,10.0,Basic Workshop,2x Bronze Bar 1x Pine Plank,66.0,130,0.508,82,recipe,Crafting,-
+Craft a Bronze Pickaxe,10.0,Basic Workshop,2x Bronze Bar 1x Pine Plank,66.0,130,0.508,82,recipe,Crafting,-
+Craft a Pine Fishing Rod,10.0,Basic Workshop,3x Pine Plank 1x Fishing Line,45.0,90,0.5,57,recipe,Crafting,-
+Weave a Large Fishing Net,15.0,Basic Workshop,2x Rope,48.0,95,0.505,53,recipe,Crafting,-
+Craft an Iron Hatchet,20.0,Basic Workshop,2x Iron Bar 1x Spruce Plank,86.0,140,0.614,83,recipe,Crafting,-
+Craft an Iron Pickaxe,20.0,Basic Workshop,2x Iron Bar 1x Spruce Plank,89.0,145,0.614,86,recipe,Crafting,-
+Craft an Iron Sickle,20.0,Basic Workshop,1x Iron Bar 1x Spruce Plank 1x Rope,86.0,140,0.614,83,recipe,Crafting,-
+Craft a Kelp Diving Mask,25.0,Basic Workshop,2x Hardened Kelp,99.0,150,0.66,89,recipe,Crafting,-
+Craft a Kelp Diving Shirt,25.0,Basic Workshop,2x Hardened Kelp,99.0,150,0.66,89,recipe,Crafting,-
+Craft a Kelp Diving Pants,25.0,Basic Workshop,2x Hardened Kelp,99.0,150,0.66,89,recipe,Crafting,-
+Craft a Fishing Spear,25.0,Basic Workshop,1x Iron Bar 2x Maple Plank,95.0,130,0.731,73,recipe,Crafting,-
+Craft a Steel Hatchet,30.0,Basic Workshop,2x Steel Bar 1x Maple Plank,111.0,155,0.716,87,recipe,Crafting,-
+Craft a Steel Pickaxe,30.0,Basic Workshop,2x Steel Bar 1x Maple Plank,114.0,160,0.713,89,recipe,Crafting,-
+Craft a Steel Sickle,30.0,Basic Workshop,1x Steel Bar 1x Maple Plank 1x Rope,111.0,155,0.716,87,recipe,Crafting,-
+Craft an Oak Fishing Rod,30.0,Basic Workshop,3x Oak Plank 1x Fishing Line,83.0,125,0.664,74,recipe,Crafting,-
+Craft a Lobster Pot,35.0,Basic Workshop,2x Steel Bar 2x Teak Plank,150.0,200,0.75,112,recipe,Crafting,-
+Craft Kelp Rope,37.0,Basic Workshop,1x Hardened Kelp,59.0,70,0.843,37,recipe,Crafting,-
+Craft a Jellyfishing Net,37.0,Basic Workshop,2x Kelp Rope 1x Sturdy Branch,150.0,173,0.867,92,recipe,Crafting,-
+Craft a Tarsilium Hatchet,40.0,Basic Workshop,2x Tarsilium Bar 1x Teak Plank,153.0,170,0.9,90,recipe,Crafting,-
+Craft a Tarsilium Pickaxe,40.0,Basic Workshop,2x Tarsilium Bar 1x Teak Plank,153.0,175,0.874,93,recipe,Crafting,-
+Craft a Willow Fishing Rod,40.0,Basic Workshop,3x Willow Plank 1x Fishing Line,157.0,175,0.897,75,recipe,Crafting,-
+Craft Hydrilium,45.0,Basic Workshop,1x Hardened Kelp 2x Volcanic Rock,55.0,85,0.647,45,recipe,Crafting,-
+Craft a Hydrilium Diving Helm,45.0,Basic Workshop,2x Hydrilium,160.0,200,0.8,106,recipe,Crafting,-
+Craft a Hydrilium Diving Torso,45.0,Basic Workshop,2x Hydrilium,160.0,200,0.8,106,recipe,Crafting,-
+Craft a Hydrilium Diving Leggings,45.0,Basic Workshop,2x Hydrilium,160.0,200,0.8,106,recipe,Crafting,-
+Craft a Coral Fishing Spear,45.0,Basic Workshop,1x Hydrilium Bar 2x Coral Plank,180.0,180,1.0,95,recipe,Crafting,-
+Craft a Hydrilium Pickaxe,45.0,Basic Workshop,2x Hydrilium Bar 1x Coral Plank,180.0,180,1.0,95,recipe,Crafting,-
+Craft a Hydrilium Hatchet,45.0,Basic Workshop,2x Hydrilium Bar 1x Coral Plank,180.0,180,1.0,95,recipe,Crafting,-
+Craft a Hydrilium Sickle,45.0,Basic Workshop,1x Hydrilium Bar 1x Coral Plank 1x Kelp Rope,180.0,180,1.0,95,recipe,Crafting,-
+Craft a Farganite Hatchet,50.0,Advanced Workshop,2x Farganite Bar 1x Mangrove Plank,152.0,185,0.822,93,recipe,Crafting,-
+Craft a Farganite Pickaxe,50.0,Advanced Workshop,2x Farganite Bar 1x Mangrove Plank,156.0,190,0.821,95,recipe,Crafting,-
+Smelt a Copper Bar,1.0,Basic Forge,2x Copper Ore,12.0,50,0.24,34,recipe,Smithing,-
+Create a Copper Bar (Scrap),1.0,Basic Forge,5x Metal Scrap,12.0,55,0.218,37,recipe,Smithing,-
+Make a Copper Sword,3.0,Basic Forge,2x Copper Bar,50.0,140,0.357,94,recipe,Smithing,-
+Make a Copper Shield,6.0,Basic Forge,2x Copper Bar,50.0,140,0.357,94,recipe,Smithing,-
+Smelt a Bronze Bar,10.0,Basic Forge,1x Copper Ore 1x Tin Ore,15.0,60,0.25,38,recipe,Smithing,-
+Create a Bronze Bar (Scrap),10.0,Basic Forge,10x Metal Scrap,15.0,66,0.227,42,recipe,Smithing,-
+Make a Bronze Sword,13.0,Basic Forge,2x Bronze Bar,64.0,160,0.4,100,recipe,Smithing,-
+Make a Bronze Shield,16.0,Basic Forge,2x Bronze Bar,64.0,160,0.4,100,recipe,Smithing,-
+Smelt an Iron Bar,20.0,Basic Forge,2x Iron Ore,21.5,75,0.287,45,recipe,Smithing,-
+Create a Iron Bar (Scrap),20.0,Basic Forge,20x Metal Scrap,21.5,83,0.259,49,recipe,Smithing,-
+Make a Iron Sword,23.0,Basic Forge,2x Iron Bar,93.0,190,0.489,112,recipe,Smithing,-
+Make a Iron Shield,26.0,Basic Forge,2x Iron Bar,93.0,190,0.489,112,recipe,Smithing,-
+Smelt a Steel Bar,30.0,Basic Forge,2x Iron Ore 1x Coal,28.0,85,0.329,48,recipe,Smithing,-
+Create a Steel Bar (Scrap),30.0,Basic Forge,40x Metal Scrap,28.0,93,0.301,52,recipe,Smithing,-
+Make a Steel Sword,33.0,Basic Forge,2x Steel Bar,123.0,210,0.586,117,recipe,Smithing,-
+Make a Steel Shield,36.0,Basic Forge,2x Steel Bar,123.0,210,0.586,117,recipe,Smithing,-
+Smelt a Tarsilium Bar,40.0,Basic Forge,1x Tarsilium Ore 2x Coal,36.0,100,0.36,53,recipe,Smithing,-
+Create a Tarsilium Bar (Scrap),40.0,Basic Forge,80x Metal Scrap,36.0,100,0.36,53,recipe,Smithing,-
+Make a Tarsilium Sword,43.0,Basic Forge,2x Tarsilium Bar,160.0,240,0.667,127,recipe,Smithing,-
+Smith a Hydrilium Bar,45.0,Basic Forge,1x Kelp 1x Hydrilium,55.0,110,0.5,58,recipe,Smithing,-
+Make a Tarsilium Shield,46.0,Basic Forge,2x Tarsilium Bar,160.0,240,0.667,127,recipe,Smithing,-
+Smelt a Farganite Bar,50.0,Advanced Forge,1x Farganite Ore 3x Coal,48.5,120,0.404,60,recipe,Smithing,-
+Traveling,1.0,,-,Varies,Varies,Varies,Varies,activity,Agility,Between Areas
+Search Team,1.0,,-,3000,7500,0.400,5000,activity,Agility,Horn of Respite
+Emergency Swim Escape,1.0,,-,0.001,10000,0.000,10000,activity,Agility,Syrenthia (All)
+Cross-Country Skiing (Beginner),5.0,Skis,-,102,242,0.421,162,activity,Agility,Casbrant Fields
+Frisbee Golfing (Beginner),10.0,Frisbee,-,214,425,0.504,266,activity,Agility,Barbantok
+Mountain Climbing (Beginner),10.0,Climbing Gear,-,25,52,0.481,33,activity,Agility,Frostbite Mountain
+Cross-Country Skiing (Intermediate),20.0,Skis,-,172,318,0.541,199,activity,Agility,Noiseless Pass
+Swimming (Beginner),20.0,,-,32,56,0.571,32,activity,Agility,Farsand Coast
+Sledding,20.0,,-,50,100,0.500,59,activity,Agility,Nurturing Nook Springs
+Frisbee Golfing (Intermediate),25.0,Frisbee,-,392,680,0.576,378,activity,Agility,Bilgemont Port
+Rooftop Jumping (Beginner),25.0,,-,34,53,0.642,36,activity,Agility,Coldington
+Rescue Team,30.0,"Climbing Gear, Skis",-,5000,8500,0.588,5667,activity,Agility,Horn of Respite
+Kayaking,30.0,Life Vest,-,49,68,0.721,38,activity,Agility,Old Arena Ruins
+Merfolk Dancing,30.0,Diving Gear Set,-,195,300,0.650,150,activity,Agility,Vastalume
+Mountain Climbing (Intermediate),35.0,Climbing Gear,-,94,119,0.790,67,activity,Agility,Black Eye Peak
+Swimming (Intermediate),40.0,,-,104,109,0.954,55,activity,Agility,Red Coast
+Rooftop Jumping (Intermediate),45.0,,-,143,147,0.973,70,activity,Agility,Everhaven
+Swimming (Expert),50.0,Advanced Diving Gear Set,-,155,150,1.033,72,activity,Agility,Elara's Lagoon
+Sandcastle Building,1.0,,-,88,220,0.4,147,activity,Carpentry,Beach of Woes
+Wood Carving,10.0,Carpentry Tool,-,16,48,0.333,32,activity,Carpentry,Barbantok
+Ship Repair (Beginner),20.0,Carpentry Tool,-,43,88,0.489,52,activity,Carpentry,Port Skildar
+Ship Repair (Beginner),10.0,Carpentry Tool,-,22,88,0.25,52,activity,Smithing,Port Skildar
+Ship Repair (Intermediate),40.0,Carpentry Tool,-,97,147,0.66,82,activity,Carpentry,Blackspell Port
+Ship Repair (Intermediate),30.0,Carpentry Tool,-,50,147,0.34,82,activity,Smithing,Blackspell Port
+Soup Kitchen Volunteering,10.0,,-,24,51,0.471,30,activity,Cooking,"Azurazera, Granfiddich"
+Wine Grape Stomping,45.0,,-,112,143,0.783,65,activity,Cooking,Granfiddich
+Wine Grape Stomping,30.0,,-,28,143,0.196,65,activity,Agility,Granfiddich
+Ice Sculpting,15.0,Crafting Tool,-,21,89,0.236,45,activity,Crafting,Frusenholm
+Ice Sculpting,10.0,Crafting Tool,-,16,89,0.18,45,activity,Carpentry,Frusenholm
+Tinkering,25.0,Crafting Tool,-,30,92,0.326,44,activity,Crafting,Barbantok
+Underwater Basket Weaving,40.0,Diving Gear Set,-,180,300,0.6,167,activity,Crafting,Elara's Lagoon
+Sea Fishing (Net),1.0,Fishing Net,-,35,90,0.389,57,activity,Fishing,Beach of Woes
+Lake Fishing,5.0,Fishing Rod,-,28,70,0.4,44,activity,Fishing,"Azurazera, Frusenholm"
+Sea Fishing (Rod),20.0,Fishing Rod,-,64,110,0.582,65,activity,Fishing,Port Skildar
+Sea Fishing (Spear),30.0,Fishing Spear,-,82,125,0.656,66,activity,Fishing,Casbrant's Grave
+Sea Fishing (Cage),35.0,Fishing Cage,-,125,150,0.833,79,activity,Fishing,Winter's End
+Magnet Fishing,40.0,Magnetic Item,-,136,189,0.72,83,activity,Fishing,Old Arena Ruins
+Magnet Fishing,30.0,Magnetic Item,-,60,189,0.317,83,activity,Foraging,Old Arena Ruins
+Predator Hunting (Spear),55.0,Fishing Spear Expert Diving Gear Set,-,320,250,1.28,114,activity,Fishing,Darktide Trench
+Forest Foraging,1.0,,-,25,75,0.333,38,activity,Foraging,"Disenchanted Forest, Horn of Respite"
+Forest Foraging,,,-,4,75,0.053,38,activity,Agility,"Disenchanted Forest, Horn of Respite"
+Litter Looting,8.0,,-,35,90,0.389,45,activity,Foraging,"Kallaheim, Granfiddich"
+Litter Looting,,,-,7,90,0.078,45,activity,Agility,"Kallaheim, Granfiddich"
+Plains Foraging,10.0,,-,39,90,0.433,57,activity,Foraging,"Norsack Plains, Casbrant Fields"
+Plains Foraging,,,-,14,90,0.156,57,activity,Agility,"Norsack Plains, Casbrant Fields"
+Treasure Hunt,20.0,,-,10,100,0.1,84,activity,Foraging,Horn of Respite
+Treasure Hunt,,,-,10,100,0.1,84,activity,Fishing,Horn of Respite
+Treasure Hunt,,,-,10,100,0.1,84,activity,Woodcutting,Horn of Respite
+Treasure Hunt,,,-,10,100,0.1,84,activity,Agility,Horn of Respite
+Cliff Foraging,25.0,,-,64,121,0.529,61,activity,Foraging,"Frostbite Mountain, Sanguine Hills"
+Cliff Foraging,20.0,,-,16,121,0.132,61,activity,Agility,"Frostbite Mountain, Sanguine Hills"
+Seashell Searching,25.0,,-,70,105,0.667,42,activity,Foraging,"Beach of Woes, Farsand Coast"
+Glacier Foraging,30.0,,-,178,208,0.856,116,activity,Foraging,Winter Waves Glacier
+Glacier Foraging,30.0,,-,12,208,0.058,116,activity,Agility,Winter Waves Glacier
+Trellin Dumpster Diving,35.0,,-,173,250,0.692,125,activity,Foraging,Granfiddich
+Trellin Dumpster Diving,20.0,,-,62,250,0.248,125,activity,Agility,Granfiddich
+Erdwise Dumpster Diving,35.0,,-,173,250,0.692,125,activity,Foraging,Blackspell Port
+Erdwise Dumpster Diving,20.0,,-,62,250,0.248,125,activity,Agility,Blackspell Port
+Cave Foraging,35.0,Light Source,-,59,74,0.797,42,activity,Foraging,Winter's End
+Wreck Diving,35.0,Diving Gear Set,-,700,1000,0.7,556,activity,Foraging,Casbrant's Grave
+Wreck Diving,35.0,Diving Gear Set,-,100,1000,0.1,556,activity,Agility,Casbrant's Grave
+Kelp Foraging,35.0,Diving Gear Set,-,35,110,0.318,55,activity,Foraging,Kelp Forest
+Kelp Foraging,35.0,Diving Gear Set,-,35,110,0.318,55,activity,Woodcutting,Kelp Forest
+Butterfly Catching,40.0,Bug Catching Net,-,72,115,0.626,64,activity,Foraging,Warrenfield
+Butterfly Catching,30.0,Bug Catching Net,-,26,115,0.226,64,activity,Agility,Warrenfield
+Merfolk Farm Foraging,40.0,Diving Gear Set Syrenthia Faction Reputation,-,90,100,0.9,53,activity,Foraging,Elara's Lagoon
+Stone Quarrying,1.0,,-,10,30,0.333,19,activity,Mining,Sanguine Hills
+Surface Salt Mining,1.0,Pickaxe,-,15,45,0.333,30,activity,Mining,Beach of Woes
+Mine Copper Ore,1.0,Pickaxe,-,15,45,0.333,30,activity,Mining,Frostbite Mountain
+Mine Tin Ore,10.0,Pickaxe,-,24,60,0.4,38,activity,Mining,Frostbite Mountain
+Gold Panning,15.0,Gold Pan,-,20,70,0.286,44,activity,Mining,Norsack Plains
+Gold Panning,5.0,Gold Pan,-,12,70,0.171,44,activity,Fishing,Norsack Plains
+Mine Iron Ore,20.0,Pickaxe,-,29,60,0.483,38,activity,Mining,Frostbite Mountain
+Mine Coal,30.0,Pickaxe,-,48,80,0.6,45,activity,Mining,"Frostbite Mountain, Sanguine Hills"
+Fossil Mining,35.0,Pickaxe Expert Diving Gear Set,-,375,500,0.75,358,activity,Mining,Darktide Trench
+Mine Tarsilium Ore,40.0,Pickaxe,-,58,90,0.644,48,activity,Mining,Sanguine Hills
+Mine Tarsilium Ore (Underwater),40.0,Pickaxe Advanced Diving Gear Set,-,58,90,0.644,48,activity,Mining,Underwater Cave
+Mine Volcanic Rock,40.0,Pickaxe Advanced Diving Gear Set,-,120,125,0.96,66,activity,Mining,Underwater Cave
+Mine Farganite Ore,50.0,Pickaxe,-,78,105,0.743,53,activity,Mining,Black Eye Peak
+Spelunking,50.0,Light Source Climbing Gear,-,232,375,0.619,150,activity,Mining,Black Eye Peak
+Spelunking,50.0,Light Source Climbing Gear,-,232,375,0.619,150,activity,Agility,Black Eye Peak
+Cave Diving,55.0,Pickaxe Light Source Advanced Diving Gear Set,-,800,1500,0.533,653,activity,Mining,Underwater Cave
+Cave Diving,55.0,Pickaxe Light Source Advanced Diving Gear Set,-,150,1500,0.1,653,activity,Agility,Underwater Cave
+Cave Diving,55.0,Pickaxe Light Source Advanced Diving Gear Set,-,800,1500,0.533,653,activity,Foraging,Underwater Cave
+Horseshoe Making,20.0,Smithing Hammer,-,25,70,0.357,35,activity,Smithing,Port Skildar
+Branch Trimming,1.0,,-,11,30,0.367,18,activity,Woodcutting,"Coldington, Mangrove Forest, Horn of Respite"
+Cut Birch Trees,1.0,Woodcutting Hatchet,-,12,30,0.4,19,activity,Woodcutting,"Disenchanted Forest, Nomad Woods"
+Cut Pine Trees,10.0,Woodcutting Hatchet,-,21,45,0.467,29,activity,Woodcutting,Disenchanted Forest
+Firewood Making,15.0,Woodcutting Hatchet,-,22,68,0.324,40,activity,Woodcutting,Coldington
+Firewood Making,10.0,Woodcutting Hatchet,-,11,68,0.162,40,activity,Agility,Coldington
+Cut Spruce Trees,20.0,Woodcutting Hatchet,-,29,50,0.58,30,activity,Woodcutting,"Casbrant Fields, Nomad Woods, Noiseless Pass"
+Cut Oak Trees,25.0,Woodcutting Hatchet,-,38,60,0.633,34,activity,Woodcutting,"Nomad Woods, Noiseless Pass"
+Cut Maple Trees,30.0,Woodcutting Hatchet,-,46,65,0.708,37,activity,Woodcutting,Mangrove Forest
+Cut Teak Trees,40.0,Woodcutting Hatchet,-,60,70,0.857,37,activity,Woodcutting,Farsand Coast
+Cut Willow Trees,40.0,Woodcutting Hatchet,-,50,58,0.862,31,activity,Woodcutting,"Mangrove Forest, Warrenfield"
+Coral Cutting,45.0,Woodcutting Hatchet Diving Gear Set,-,120,120,1.0,60,activity,Woodcutting,Kelp Forest
+Cut Mangrove Trees,50.0,Woodcutting Hatchet,-,97,90,1.078,43,activity,Woodcutting,Mangrove Forest
