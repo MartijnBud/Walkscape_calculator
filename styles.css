@@ -3,14 +3,14 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* Keep background fixed */
+  background-attachment: fixed;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* Align items to the top */
-  min-height: 100vh; /* Ensure it covers the viewport */
+  align-items: flex-start;
+  min-height: 100vh;
 }
 
 .container {
@@ -20,13 +20,13 @@ body {
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  margin: 20px 0; /* Add margin to separate from top and bottom */
+  margin: 20px 0;
 }
 
 #result {
-  max-height: 300px; /* Set a max height */
-  overflow-y: auto; /* Allow vertical scrolling */
-  display: none; /* Initially hidden */
+  max-height: 300px;
+  overflow-y: auto;
+  display: none;
 }
 
 h1 {
