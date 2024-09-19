@@ -1,15 +1,18 @@
 let currentCharacter = {}; // Store character data
 
-// Function to search for a character by username
 function searchCharacter() {
   const username = document.getElementById("username").value.trim();
   const searchResult = document.getElementById("searchResult");
   const skillSelection = document.getElementById("skillSelection");
   const skillDropdown = document.getElementById("skillDropdown");
-
+  const usernameField = document.getElementById("username"); // Get the username input field
+  const currentXPInput = document.getElementById("currentXP"); // Get the current XP input field
+  const searchButton = document.querySelector("button[type='button']");
+  searchButton.classList.add("pulsate");
   if (username === "") {
     searchResult.innerText = "Please enter a username.";
-    searchResult.classList.remove("show"); // Hide result if no username
+    searchResult.classList.remove("show");
+    searchButton.classList.remove("pulsate");
     return;
   }
 
@@ -22,35 +25,42 @@ function searchCharacter() {
     .then((data) => {
       if (data.length === 0 || !data.users || data.users.length === 0) {
         searchResult.innerText = "No character found.";
-        searchResult.classList.add("show"); // Show result
-        skillSelection.style.display = "none"; // Hide skill selection
+        searchResult.classList.add("show");
+        searchButton.classList.remove("pulsate");
+        skillSelection.style.display = "none";
         return;
       }
 
       const userId = data.users[0].id;
+      const characterName = data.users[0].username; // Get the correct username
       const charactersUrl = `${proxyUrl}?url=https://server.walkscape.app/portal/shared/users/${userId}/characters`;
 
-      return fetch(charactersUrl);
-    })
-    .then((response) => response.json())
-    .then((characters) => {
-      if (!characters || characters.length === 0) {
-        searchResult.innerText = "No characters found for this user.";
-        searchResult.classList.add("show");
-        return;
-      }
+      return fetch(charactersUrl)
+        .then((response) => response.json())
+        .then((characters) => {
+          if (!characters || characters.length === 0) {
+            searchResult.innerText = "No characters found for this user.";
+            searchResult.classList.add("show");
+            searchButton.classList.remove("pulsate");
+            return;
+          }
 
-      currentCharacter = characters[0];
-      searchResult.innerHTML = `
-        <h3>Character: ${currentCharacter.character_name} ✔️</h3>
-        <p><strong>Current Location:</strong> ${currentCharacter.current_location}</p>
-        <p><strong>Total Steps:</strong> ${currentCharacter.total_steps}</p>
-        <p><strong>Total XP:</strong> ${currentCharacter.statistics.total_xp}</p>
-      `;
+          currentCharacter = characters[0];
+          usernameField.value = characterName; // Set the input field to the correct username
+          searchButton.classList.remove("pulsate");
+          searchButton.classList.add("fade-green"); // Change button color to green
+          // usernameField.classList.add("fetched");
 
-      // Populate skill dropdown
-      populateSkillDropdown(currentCharacter.statistics);
-      skillSelection.style.display = "block"; // Show skill selection
+          // searchResult.innerHTML = `
+          //   <h3>Character: ${currentCharacter.character_name} ✔️</h3>
+          //   <p><strong>Current Location:</strong> ${currentCharacter.current_location}</p>
+          //   <p><strong>Total Steps:</strong> ${currentCharacter.total_steps}</p>
+          //   <p><strong>Total XP:</strong> ${currentCharacter.statistics.total_xp}</p>
+          // `;
+
+          populateSkillDropdown(currentCharacter.statistics);
+          skillSelection.style.display = "block";
+        });
     })
     .catch((error) => {
       searchResult.innerText = "Error fetching data. Please try again.";
@@ -171,12 +181,28 @@ function calculateXP() {
   totalSteps = Math.ceil(totalSteps);
   actionsRequired = Math.ceil(actionsRequired);
 
+  // Fade effect on button
+  const calculateButton = document.querySelector(
+    "button[onclick='calculateXP()']"
+  );
+  calculateButton.classList.add("fade-green");
+
+  // Remove the class after a brief delay
+  setTimeout(() => {
+    calculateButton.classList.remove("fade-green");
+  }, 1000); // Change duration as needed
+  // Change calculate button color to green
+  calculateButton.classList.add("fetched");
+
   // Display the result
   document.getElementById(
     "result"
   ).innerText = `You need to walk ${totalSteps} steps and perform ${actionsRequired} actions to reach level ${desiredLevel}.`;
   console.log("Total XP:", totalSteps);
   document.getElementById("result").classList.add("show");
+  // Scroll to the result
+  const resultElement = document.getElementById("result");
+  resultElement.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 // Update current level when XP is changed:
@@ -191,6 +217,39 @@ function checkCookieConsent() {
     document.getElementById("cookieConsent").style.display = "block";
   }
 }
+
+// Function to handle Enter key press for input fields
+function handleInputKeyPress(event) {
+  if (event.key === "Enter") {
+    event.preventDefault(); // Prevent default form submission
+
+    if (event.target.id === "username") {
+      searchCharacter(); // Trigger the search function
+    } else {
+      calculateXP(); // Trigger the calculate function
+    }
+  }
+}
+
+// Add event listeners to input fields
+document
+  .getElementById("username")
+  .addEventListener("keydown", handleInputKeyPress);
+document
+  .getElementById("currentXP")
+  .addEventListener("keydown", handleInputKeyPress);
+document
+  .getElementById("currentLevel")
+  .addEventListener("keydown", handleInputKeyPress);
+document
+  .getElementById("desiredLevel")
+  .addEventListener("keydown", handleInputKeyPress);
+document
+  .getElementById("stepsPerAction")
+  .addEventListener("keydown", handleInputKeyPress);
+document
+  .getElementById("xpPerAction")
+  .addEventListener("keydown", handleInputKeyPress);
 
 // Function to handle cookie consent acceptance
 function acceptCookies() {
