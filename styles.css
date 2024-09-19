@@ -3,24 +3,40 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed; /* Keep background fixed */
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  align-items: flex-start; /* Align items to the top */
+  min-height: 100vh; /* Ensure it covers the viewport */
 }
 
 .container {
-  background-color: white;
-  padding: 20px;
+  max-width: 500px;
+  width: 90%;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  margin: 20px 0; /* Add margin to separate from top and bottom */
+}
+
+#result {
+  max-height: 300px; /* Set a max height */
+  overflow-y: auto; /* Allow vertical scrolling */
+  display: none; /* Initially hidden */
 }
 
 h1 {
   text-align: center;
+  color: #333;
+}
+
+h2 {
+  color: #444;
+  margin-bottom: 10px;
 }
 
 form {
@@ -28,18 +44,52 @@ form {
   flex-direction: column;
 }
 
-label,
-input,
-button {
-  margin: 10px 0;
+label {
+  margin: 5px 0 5px;
+  color: #555;
 }
 
+input,
+button {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+input:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+#searchResult,
 #result {
   margin-top: 20px;
   font-weight: bold;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  display: none; /* Initially hidden */
 }
 
-/* Cookie banner styling */
+/* Show results when they exist */
+#searchResult.show,
+#result.show {
+  display: block;
+}
+
 .cookie-banner {
   display: none;
   position: fixed;

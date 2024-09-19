@@ -1,5 +1,3 @@
-<!-- test for github pages -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,31 +7,48 @@
       href="assets/icons/favicon.png"
       sizes="32x32"
     />
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WalkScape Skill Calculator</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <!-- Google tag (gtag.js) -->
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-Q3SZFB1FYP"
-  ></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    gtag("config", "G-Q3SZFB1FYP");
-  </script>
   <body>
     <div class="container">
       <h1>WalkScape Skill Calculator</h1>
+
+      <!-- Search Section -->
+      <div id="searchSection">
+        <h2>Search Character</h2>
+        <label for="username">Enter Username:</label>
+        <input type="text" id="username" placeholder="Enter username" />
+        <button type="button" onclick="searchCharacter()">Search</button>
+        <div id="searchResult"></div>
+      </div>
+
+      <!-- Skill Selection Section -->
+      <div id="skillSelection" style="display: none">
+        <h2>Select Skill</h2>
+        <label for="skillDropdown">Choose a skill:</label>
+        <select id="skillDropdown" onchange="updateCurrentXP()">
+          <option value="">Select a skill</option>
+          <option value="mining">Mining</option>
+          <option value="agility">Agility</option>
+          <option value="cooking">Cooking</option>
+          <option value="fishing">Fishing</option>
+          <option value="crafting">Crafting</option>
+          <option value="foraging">Foraging</option>
+          <option value="smithing">Smithing</option>
+          <option value="woodcutting">Woodcutting</option>
+          <option value="carpentry">Carpentry</option>
+        </select>
+      </div>
+      <!-- Some empty space here -->
+      <p></p>
+      <p></p>
+
+      <!-- Skill Calculator Section -->
       <form id="skillCalculator">
-        <label for="currentXP">Current XP (Optional):</label>
+        <label for="currentXP">Current XP:</label>
         <input type="number" id="currentXP" placeholder="Enter current XP" />
 
         <label for="currentLevel">Current Level:</label>
@@ -54,7 +69,6 @@
     </div>
 
     <script src="script.js"></script>
-    <!-- Cookie banner -->
     <div id="cookieConsent" class="cookie-banner">
       <p>
         We use cookies so you don't have to reselect your gear every time you
