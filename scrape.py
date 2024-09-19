@@ -4,7 +4,7 @@ import pandas as pd
 import re
 
 """ Scrape tables from wiki page """
-def get_tables(url):
+def get_activity_tables(url):
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"}
     response = requests.get(url, headers=headers).text
@@ -50,7 +50,7 @@ def get_tables(url):
 """ Function to make csv with all activities and recipes, scraped from walkscape wiki """
 def get_activites():
     # Get list of Skills
-    dfs = get_tables("https://wiki.walkscape.app/wiki/Skills")
+    dfs = get_activity_tables("https://wiki.walkscape.app/wiki/Skills")
     skills = dfs["other"][0]["Skill.1"]
 
     # Get df with all recipes and all activities
@@ -65,7 +65,7 @@ def get_activites():
     for skill in skills:
         print(f"Getting activity of {skill}")
         path_skill = path + skill
-        dfs = get_tables(path_skill)
+        dfs = get_activity_tables(path_skill)
 
         # Adding empty columns for eventual merging
         for df in dfs["recipes"]:
@@ -110,4 +110,42 @@ def get_activites():
     df = pd.concat([df_recipes, df_activities])
     df.to_csv("data/activities.csv", index=False)
 
-get_activites()
+def get_equipment():
+    url = "https://wiki.walkscape.app/wiki/"
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"}
+    response = requests.get(url + "Equipment", headers=headers).text
+
+    soup = BeautifulSoup(response, "html.parser")
+    tables = soup.find_all("table")
+
+    items = set()
+
+    # Get equipment names
+    for table in tables:
+
+        if not table.find('tr'):
+            # Skip empty tables
+            continue
+
+        if "This page has been updated to reflect" in table.find("tr").text:
+            # Skipping useless table
+            continue
+
+        df = pd.read_html(str(table), flavor='bs4')[0]
+        items.update(df["Item.1"])
+
+    for item in items:
+        response = requests.get(url + item, headers=headers).text
+        soup = BeautifulSoup(response, "html.parser")
+        print(soup)
+
+        quit()
+
+
+    print(items)
+
+
+
+
+get_equipment()
