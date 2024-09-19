@@ -67,10 +67,16 @@ def get_activites():
         path_skill = path + skill
         dfs = get_tables(path_skill)
 
+        # Adding empty columns for eventual merging
         for df in dfs["recipes"]:
             print(df)
-            df["skill"] = skill
+            df["Category"] = "recipe"
+            df["Skill"] = skill
+            df["Location"] = "-"
 
+        for df in dfs["activities"]:
+            df["Category"] = "activity"
+            df["Materials Used"] = "-"
 
         # Merge the results into the combined_dfs dictionary
         for label in combined_dfs:
@@ -80,24 +86,28 @@ def get_activites():
     df_activities = pd.concat(combined_dfs["activities"])
 
     # Clean recipes and activities before merging
-    df_activities.rename(columns=str.lower)
-    df_recipes.rename(columns=str.lower)
+    ## Dropping empty columns
+    df_activities.drop(df_activities.columns[0], axis=1, inplace=True)
+    df_recipes.drop(df_recipes.columns[0], axis=1, inplace=True)
 
-    df_activities.rename(columns={"level(s)": "level", "location": "location(s)", "activity.1": "activity",
-                                  "skill(s)": "skill", "requirement(s)": "requirement"})
-    df_recipes.rename(columns={"activity.1": "activity", "service requirement": "location",
-                               "materials used": "requirement"})
+    ## Removing () and .
+    df_activities.columns = [re.sub(r"\(.*?\)|\..*", "", col).strip() for col in df_activities.columns]
+    df_recipes.columns = [re.sub(r"\(.*?\)|\..*", "", col).strip() for col in df_recipes.columns]
 
-    df_activities['Min Steps (Max Efficiency)'] = df_activities['Min Steps (Max Efficiency)'].str.replace(r'\s*\(.*?\)', '', regex=True)
-    df_activities.columns = [re.sub(r'\s*\(.*?\)', '', col) for col in df_activities.columns]
-    df_recipes['Min Steps (Max Efficiency)'] = df_recipes['Min Steps (Max Efficiency)'].str.replace(r'\s*\(.*?\)', '', regex=True)
-    df_recipes.columns = [re.sub(r'\s*\(.*?\)', '', col) for col in df_recipes.columns]
+    df_activities['Min Steps'] = df_activities['Min Steps'].str.replace(r'\s*\(.*?\)', '', regex=True)
+    df_recipes['Min Steps'] = df_recipes['Min Steps'].str.replace(r'\s*\(.*?\)', '', regex=True)
 
-    df_activities = df_activities.drop(df_activities.columns[:2], axis=1)
-    df_recipes = df_recipes.drop(df_recipes.columns[:2], axis=1)
+    ## Merging columns that should never been separate columns ...
+    df_recipes['Base Exp/Step'] = df_recipes['Base Exp/Step'].fillna(df_recipes['Exp/Step'])
 
+    ## Dropping unnecessary columns
+    df_activities.drop(["Max Exp/Step", "Base Total Exp/Step", "Total Max Exp/Step"], axis=1, inplace=True)
+    df_recipes.drop(["Max Exp/Step", "Note", "Exp/Step"], axis=1, inplace=True)
 
-    df_recipes.to_csv("data/recipes.csv")
-    df_activities.to_csv("data/activities.csv")
+    ## Rename 'Service Requirement' or 'Requirement' for recipes
+    df_recipes.rename(columns={"Service Requirement": "Requirement"}, inplace=True)
+
+    df = pd.concat([df_recipes, df_activities])
+    df.to_csv("data/activities.csv", index=False)
 
 get_activites()
