@@ -1,5 +1,116 @@
 let currentCharacter = {}; // Store character data
+let activities = []; // Store activities data
 
+function loadActivities() {
+  fetch(
+    "https://proxyserver-2d51fl6oa-martijnbuds-projects.vercel.app/api?url=https://martijnbud.github.io/Walkscape_calculator/data/activities.csv"
+  )
+    .then((response) => response.text())
+    .then((data) => {
+      const rows = data.split("\n").slice(1); // Skip the header row
+      activities = rows.map((row) => {
+        const columns = row.split(",");
+        return {
+          activity: columns[0],
+          level: columns[1],
+          requirement: columns[2],
+          materialsUsed: columns[3],
+          baseExp: columns[4],
+          baseSteps: columns[5],
+          baseExpPerStep: columns[6],
+          minSteps: columns[7],
+          category: columns[8],
+          skill: columns[9],
+          location: columns[10],
+        };
+      });
+      populateActivityDropdown(); // Populate dropdown after loading
+    })
+    .catch((error) => console.error("Error loading activities:", error));
+  populateActivityDropdown(); // Call this after activities are loaded
+}
+
+window.addEventListener("load", loadActivities); // Load activities on page load
+
+function populateActivityDropdown() {
+  const activityDropdown = document.getElementById("activityDropdown");
+  activityDropdown.innerHTML = '<option value="">Select Activity</option>';
+
+  activities.forEach((activity) => {
+    activityDropdown.innerHTML += `
+      <option value="${activity.activity}" 
+              data-xp="${activity.baseExp}" 
+              data-steps="${activity.minSteps}" 
+              data-skill="${activity.skill}">
+        ${activity.activity}
+      </option>`;
+  });
+}
+
+function updateActivityValues() {
+  const activityDropdown = document.getElementById("activityDropdown");
+  const selectedOption =
+    activityDropdown.options[activityDropdown.selectedIndex];
+
+  if (selectedOption.value) {
+    const baseExp = selectedOption.getAttribute("data-xp");
+    const baseSteps = selectedOption.getAttribute("data-steps");
+
+    // Display baseExp and minSteps
+    document.getElementById("xpPerActionDisplay").textContent =
+      Math.floor(baseExp);
+    document.getElementById("stepsPerActionDisplay").textContent = baseSteps;
+  } else {
+    // Reset the values if no activity is selected
+    document.getElementById("xpPerActionDisplay").textContent = "N/A";
+    document.getElementById("stepsPerActionDisplay").textContent = "N/A";
+  }
+}
+
+// Update activity dropdown based on selected skill
+function filterActivitiesBySkill(skill) {
+  const stepsDropdown = document.getElementById("stepsDropdown");
+  const xpDropdown = document.getElementById("xpDropdown");
+
+  const options = [...stepsDropdown.options].slice(1);
+  stepsDropdown.innerHTML = '<option value="">Select Activity</option>';
+  xpDropdown.innerHTML = '<option value="">Select Activity</option>';
+
+  options.forEach((option) => {
+    if (option.getAttribute("data-skill") === skill) {
+      stepsDropdown.innerHTML += option.outerHTML;
+      xpDropdown.innerHTML += option.outerHTML;
+    }
+  });
+}
+
+function populateSkillDropdown(statistics) {
+  const skillDropdown = document.getElementById("skillDropdown");
+  skillDropdown.innerHTML = '<option value="">Select a skill</option>';
+
+  const skills = [
+    "mining",
+    "agility",
+    "cooking",
+    "fishing",
+    "crafting",
+    "foraging",
+    "smithing",
+    "woodcutting",
+    "carpentry",
+  ];
+
+  skills.forEach((skill) => {
+    skillDropdown.innerHTML += `<option value="${skill}">${
+      skill.charAt(0).toUpperCase() + skill.slice(1)
+    } (XP: ${statistics[skill] || 0})</option>`;
+  });
+
+  skillDropdown.addEventListener("change", () => {
+    updateCurrentXP();
+    filterActivitiesBySkill(skillDropdown.value);
+  });
+}
 function searchCharacter() {
   const username = document.getElementById("username").value.trim();
   const searchResult = document.getElementById("searchResult");
@@ -69,32 +180,6 @@ function searchCharacter() {
     });
 }
 
-// Populate skill dropdown based on character statistics
-function populateSkillDropdown(statistics) {
-  const skillDropdown = document.getElementById("skillDropdown");
-  skillDropdown.innerHTML = '<option value="">Select a skill</option>'; // Reset dropdown
-
-  const skills = [
-    "mining",
-    "agility",
-    "cooking",
-    "fishing",
-    "crafting",
-    "foraging",
-    "smithing",
-    "woodcutting",
-    "carpentry",
-  ];
-
-  skills.forEach((skill) => {
-    skillDropdown.innerHTML += `<option value="${skill}">${
-      skill.charAt(0).toUpperCase() + skill.slice(1)
-    } (XP: ${statistics[skill] || 0})</option>`;
-  });
-
-  skillDropdown.addEventListener("change", updateCurrentXP); // Add change event listener
-}
-
 // Function to update the current XP based on the selected skill
 function updateCurrentXP() {
   const skillDropdown = document.getElementById("skillDropdown");
@@ -141,14 +226,21 @@ function calculateCurrentLevelFromXP() {
 // Function to calculate the total XP required to reach the desired level
 function calculateXP() {
   console.log("Calculating XP...");
+
+  const selectedOption =
+    activityDropdown.options[activityDropdown.selectedIndex];
+  const baseExp = selectedOption.getAttribute("data-xp");
+  const baseSteps = selectedOption.getAttribute("data-steps");
+
   const currentXP = parseInt(document.getElementById("currentXP").value);
   const currentLevelField = document.getElementById("currentLevel");
   let currentLevel = parseInt(currentLevelField.value);
   const desiredLevel = parseInt(document.getElementById("desiredLevel").value);
-  const stepsPerAction = parseFloat(
-    document.getElementById("stepsPerAction").value
-  );
-  const xpPerAction = parseFloat(document.getElementById("xpPerAction").value);
+  const stepsPerAction = baseSteps;
+
+  const xpPerAction = baseExp;
+  console.log("Steps per action:", stepsPerAction);
+  console.log("XP per action:", xpPerAction);
 
   let currentXPLevel = currentLevel;
   if (!isNaN(currentXP)) {
@@ -170,12 +262,15 @@ function calculateXP() {
   // Calculate total XP needed to go from current level to desired level
   let totalXP =
     xpTable[desiredLevel] - (currentXP ? currentXP : xpTable[currentXPLevel]);
+  console.log("Total XP:", totalXP);
 
   // Calculate how many actions are required based on XP per action
   let actionsRequired = totalXP / xpPerAction;
+  console.log("Actions required:", actionsRequired);
 
   // Calculate total steps required based on actions and steps per action
   let totalSteps = actionsRequired * stepsPerAction;
+  console.log("Total steps:", totalSteps);
 
   // Round steps and actions up to nearest int
   totalSteps = Math.ceil(totalSteps);
@@ -198,7 +293,6 @@ function calculateXP() {
   document.getElementById(
     "result"
   ).innerText = `You need to walk ${totalSteps} steps and perform ${actionsRequired} actions to reach level ${desiredLevel}.`;
-  console.log("Total XP:", totalSteps);
   document.getElementById("result").classList.add("show");
   // Scroll to the result
   const resultElement = document.getElementById("result");

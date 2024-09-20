@@ -28,19 +28,21 @@
       <!-- Skill Selection Section -->
       <div id="skillSelection" style="display: none">
         <h2>Select Skill</h2>
-        <label for="skillDropdown">Choose a skill:</label>
-        <select id="skillDropdown" onchange="updateCurrentXP()">
-          <option value="">Select a skill</option>
-          <option value="mining">Mining</option>
-          <option value="agility">Agility</option>
-          <option value="cooking">Cooking</option>
-          <option value="fishing">Fishing</option>
-          <option value="crafting">Crafting</option>
-          <option value="foraging">Foraging</option>
-          <option value="smithing">Smithing</option>
-          <option value="woodcutting">Woodcutting</option>
-          <option value="carpentry">Carpentry</option>
-        </select>
+        <div class="select-container">
+          <label for="skillDropdown">Choose a skill:</label>
+          <select id="skillDropdown" onchange="updateCurrentXP()">
+            <option value="">Select a skill</option>
+            <option value="mining">Mining</option>
+            <option value="agility">Agility</option>
+            <option value="cooking">Cooking</option>
+            <option value="fishing">Fishing</option>
+            <option value="crafting">Crafting</option>
+            <option value="foraging">Foraging</option>
+            <option value="smithing">Smithing</option>
+            <option value="woodcutting">Woodcutting</option>
+            <option value="carpentry">Carpentry</option>
+          </select>
+        </div>
       </div>
       <!-- Some empty space here -->
       <p></p>
@@ -57,11 +59,23 @@
         <label for="desiredLevel">Desired Level:</label>
         <input type="number" id="desiredLevel" min="1" max="99" required />
 
-        <label for="stepsPerAction">Steps per Action:</label>
-        <input type="number" id="stepsPerAction" required />
+        <!-- Centered Activity Dropdown -->
+        <label for="activityDropdown">Select Activity:</label>
+        <div class="select-container centered">
+          <select
+            id="activityDropdown"
+            onchange="updateActivityValues()"
+            required
+          >
+            <option value="">Select Activity</option>
+          </select>
+        </div>
 
-        <label for="xpPerAction">XP per Action:</label>
-        <input type="number" id="xpPerAction" required />
+        <!-- XP and Steps aligned next to each other -->
+        <div class="action-info-container">
+          <p>XP Per Action: <span id="xpPerActionDisplay">N/A</span></p>
+          <p>Steps Per Action: <span id="stepsPerActionDisplay">N/A</span></p>
+        </div>
 
         <button type="button" onclick="calculateXP()">Calculate</button>
       </form>
