@@ -2,6 +2,14 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 import re
+import os
+from svglib.svglib import svg2rlg
+from reportlab.graphics import renderPDF, renderPM
+import svgwrite
+
+def write_text(data: str, path: str):
+    with open(path, 'w') as file:
+        file.write(data)
 
 """ Scrape tables from wiki page """
 def get_activity_tables(url):
@@ -120,6 +128,7 @@ def get_equipment():
     tables = soup.find_all("table")
 
     items = set()
+    os.makedirs("images", exist_ok=True)
 
     # Get equipment names
     for table in tables:
@@ -135,15 +144,42 @@ def get_equipment():
         df = pd.read_html(str(table), flavor='bs4')[0]
         items.update(df["Item.1"])
 
-    for item in items:
-        response = requests.get(url + item, headers=headers).text
-        soup = BeautifulSoup(response, "html.parser")
-        print(soup)
+        # Find and download images in each row
+        for row in table.find_all("tr"):
+            img_tag = row.find("img")
+            if img_tag:
+                img_url = img_tag['src']
+                filename = img_url.split("/")[-1]
+                print(filename)
+                img_url = "https:" + img_url
 
-        quit()
+                svg = requests.get(img_url, headers=headers).text
+                # print(svg)
+                write_text(svg, "data/images/" + filename)
 
 
-    print(items)
+
+
+
+        # response = requests.get(url + item, headers=headers).text
+        # soup = BeautifulSoup(response, "html.parser")
+        #
+        # # Find the "Item Attributes" header
+        # item_attributes_header = soup.find('span', id='Item_Attributes') or soup.find('span', id='Attributes')
+        #
+        # if not item_attributes_header:
+        #     print(f"{item} doesnt have any attributes")
+        #     break
+        #
+        # next_element = item_attributes_header.find_parent('h2').find_next_sibling()
+        #
+        # attributes = next_element.find_all('span', style="color:#228B22")
+        # for attribute in attributes:
+        #     print(attribute.text)
+
+        # quit()
+
+
 
 
 
