@@ -380,3 +380,55 @@ window.addEventListener("load", function () {
     .getElementById("declineCookies")
     .addEventListener("click", declineCookies);
 });
+
+// gear selection part:
+
+// sample gear items
+const gearItems = {
+  cape: { name: "Mystic Cape", efficiencyBonus: 5 },
+  back: { name: "Adventurer's Backpack", efficiencyBonus: 3 },
+  head: { name: "Helmet of Wisdom", efficiencyBonus: 4 },
+  hands: { name: "Gauntlets of Strength", efficiencyBonus: 6 },
+  neck: { name: "Amulet of Power", efficiencyBonus: 7 },
+  chest: { name: "Dragon Chestplate", efficiencyBonus: 8 },
+  primary: { name: "Sword of Valor", efficiencyBonus: 10 },
+  legs: { name: "Leggings of Swiftness", efficiencyBonus: 4 },
+  secondary: { name: "Shield of Fortitude", efficiencyBonus: 5 },
+  ring1: { name: "Ring of Precision", efficiencyBonus: 2 },
+  feet: { name: "Boots of Speed", efficiencyBonus: 3 },
+  ring2: { name: "Ring of Endurance", efficiencyBonus: 2 },
+};
+
+// initial state
+let selectedGear = {
+  cape: null,
+  back: null,
+  head: null,
+  hands: null,
+  neck: null,
+  chest: null,
+  primary: null,
+  legs: null,
+  secondary: null,
+  ring1: null,
+  feet: null,
+  ring2: null,
+};
+
+function selectGear(slot) {
+  const gear = gearItems[slot];
+  selectedGear[slot] = gear;
+  document.getElementById(slot).textContent = gear.name;
+
+  updateTotalBonus();
+}
+
+function updateTotalBonus() {
+  let totalBonus = 0;
+  for (let slot in selectedGear) {
+    if (selectedGear[slot]) {
+      totalBonus += selectedGear[slot].efficiencyBonus;
+    }
+  }
+  document.getElementById("totalBonus").textContent = totalBonus;
+}
