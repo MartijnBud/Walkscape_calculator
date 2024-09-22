@@ -10,6 +10,7 @@ function loadActivities() {
       const rows = data.split("\n").slice(1); // Skip the header row
       activities = rows.map((row) => {
         const columns = row.split(",");
+        const skill = columns[9] ? columns[9].toLowerCase().trim() : "";
         return {
           activity: columns[0],
           level: columns[1],
@@ -20,7 +21,7 @@ function loadActivities() {
           baseExpPerStep: columns[6],
           minSteps: columns[7],
           category: columns[8],
-          skill: columns[9],
+          skill: skill,
           location: columns[10],
         };
       });
@@ -47,6 +48,25 @@ function populateActivityDropdown() {
   });
 }
 
+function filterActivitiesBySkill(skill) {
+  const activityDropdown = document.getElementById("activityDropdown");
+  activityDropdown.innerHTML = '<option value="">Select Activity</option>';
+  activities;
+  console.log("Filtering activities by skill:", skill);
+  console.log("Activities:", activities[0].skill);
+
+  activities
+    .filter((activity) => activity.skill.toLowerCase() === skill) // Filter by the selected skill
+    .forEach((activity) => {
+      activityDropdown.innerHTML += `
+        <option value="${activity.activity}" 
+                data-xp="${activity.baseExp}" 
+                data-steps="${activity.minSteps}">
+          ${activity.activity}
+        </option>`;
+    });
+}
+
 function updateActivityValues() {
   const activityDropdown = document.getElementById("activityDropdown");
   const selectedOption =
@@ -65,23 +85,6 @@ function updateActivityValues() {
     document.getElementById("xpPerActionDisplay").textContent = "N/A";
     document.getElementById("stepsPerActionDisplay").textContent = "N/A";
   }
-}
-
-// Update activity dropdown based on selected skill
-function filterActivitiesBySkill(skill) {
-  const stepsDropdown = document.getElementById("stepsDropdown");
-  const xpDropdown = document.getElementById("xpDropdown");
-
-  const options = [...stepsDropdown.options].slice(1);
-  stepsDropdown.innerHTML = '<option value="">Select Activity</option>';
-  xpDropdown.innerHTML = '<option value="">Select Activity</option>';
-
-  options.forEach((option) => {
-    if (option.getAttribute("data-skill") === skill) {
-      stepsDropdown.innerHTML += option.outerHTML;
-      xpDropdown.innerHTML += option.outerHTML;
-    }
-  });
 }
 
 function populateSkillDropdown(statistics) {
@@ -109,6 +112,7 @@ function populateSkillDropdown(statistics) {
   skillDropdown.addEventListener("change", () => {
     updateCurrentXP();
     filterActivitiesBySkill(skillDropdown.value);
+    console.log("Skill selected:", skillDropdown.value);
   });
 }
 function searchCharacter() {
@@ -344,6 +348,10 @@ document
 document
   .getElementById("xpPerAction")
   .addEventListener("keydown", handleInputKeyPress);
+document.getElementById("skillDropdown").addEventListener("change", () => {
+  updateCurrentXP();
+  filterActivitiesBySkill(document.getElementById("skillDropdown").value);
+});
 
 // Function to handle cookie consent acceptance
 function acceptCookies() {
