@@ -17,10 +17,11 @@ header {
   width: 100%;
   text-align: center;
   padding: 20px 0;
+  padding-top: 4%;
 }
 
 .logo {
-  max-width: 50%;
+  max-width: 600px;
   height: auto;
 }
 
