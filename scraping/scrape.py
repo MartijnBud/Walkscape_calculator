@@ -1,24 +1,13 @@
-import requests
-from bs4 import BeautifulSoup
+
 import pandas as pd
 import re
 import os
-from svglib.svglib import svg2rlg
-from reportlab.graphics import renderPDF, renderPM
-import svgwrite
-
-def write_text(data: str, path: str):
-    with open(path, 'w') as file:
-        file.write(data)
+import functions as func
 
 """ Scrape tables from wiki page """
 def get_activity_tables(url):
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"}
-    response = requests.get(url, headers=headers).text
-
-    soup = BeautifulSoup(response, "html.parser")
-    tables = soup.find_all("table")
+    soup = func.get_wiki_soup()
+    tables = func.get_tables(soup)
 
     labeled_dfs = {
         'recipes': [],
@@ -54,6 +43,25 @@ def get_activity_tables(url):
             print(f"Error converting table with caption '{caption_text}' to DataFrame")
 
     return labeled_dfs
+
+def activities_recipes():
+    soup = func.get_wiki_soup("Activities")
+    tables = func.get_tables(soup)
+
+    for table in tables:
+        df = pd.read_html(str(table), flavor='bs4')[0]
+        name = df.columns[0].lower()
+        func.download_svg_from_table(table, f"data/images/{name}/")
+
+
+activities_recipes()
+
+
+
+
+
+
+
 
 """ Function to make csv with all activities and recipes, scraped from walkscape wiki """
 def get_activites():
@@ -118,43 +126,38 @@ def get_activites():
     df = pd.concat([df_recipes, df_activities])
     df.to_csv("data/activities.csv", index=False)
 
-def get_equipment_images():
-    url = "https://wiki.walkscape.app/wiki/"
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"}
-    response = requests.get(url + "Equipment", headers=headers).text
-
-    soup = BeautifulSoup(response, "html.parser")
-    tables = soup.find_all("table")
+def get_equipment_images(destination_path):
+    soup = func.get_wiki_soup("Equipment")
+    tables = func.get_tables(soup)
 
     items = set()
-    os.makedirs("images", exist_ok=True)
+    os.makedirs(destination_path, exist_ok=True)
 
     # Get equipment names
     for table in tables:
-
-        if not table.find('tr'):
-            # Skip empty tables
-            continue
-
-        if "This page has been updated to reflect" in table.find("tr").text:
-            # Skipping useless table
-            continue
 
         df = pd.read_html(str(table), flavor='bs4')[0]
         items.update(df["Item.1"])
 
         # Find and download images in each row
-        for row in table.find_all("tr"):
-            img_tag = row.find("img")
-            if img_tag:
-                img_url = img_tag["src"]
-                filename = img_url.split("/")[-1]
-                filename = filename.replace("%27", "'")
-                filename = filename.replace("_", " ")
-                print(filename)
-                img_url = "https:" + img_url
+        func.download_svg_from_table(table, destination_path)
 
-                svg = requests.get(img_url, headers=headers).text
-                write_text(svg, "data/images/equipment" + filename)
+
+
+
+def get_activities_images():
+    soup = func.get_wiki_soup("Activities")
+    tables = func.get_tables(soup)
+
+    items = set()
+    os.makedirs("data/images/activities", exist_ok=True)
+
+    # Get equipment names
+    for table in tables:
+
+        df = pd.read_html(str(table), flavor='bs4')[0]
+        items.update(df["Item.1"])
+
+        # Find and download images in each row
+        func.download_svg_from_table(table, "data/images/activities")
 
