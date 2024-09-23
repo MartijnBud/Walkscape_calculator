@@ -237,6 +237,11 @@ button:hover {
 }
 
 @media (max-width: 600px) {
+  .logo {
+    max-width: 100%;
+    height: auto;
+  }
+
   .cookie-banner {
     padding: 15px;
   }
@@ -290,70 +295,154 @@ button:hover {
 }
 
 .qualityfine {
-  -webkit-filter:drop-shadow(2px 0px 0.5px hsl(173,82%,85%)) drop-shadow(0px -2px 0.5px hsl(173,82%,85%)) drop-shadow(-2px 0px 0.5px hsl(173,82%,85%)) drop-shadow(0px 2px 0.5px hsl(173,82%,85%));
-  filter:drop-shadow(2px 0px 0.5px hsl(173,82%,85%)) drop-shadow(0px -2px 0.5px hsl(173,82%,85%)) drop-shadow(-2px 0px 0.5px hsl(173,82%,85%)) drop-shadow(0px 2px 0.5px hsl(173,82%,85%))
+  -webkit-filter: drop-shadow(2px 0px 0.5px hsl(173, 82%, 85%))
+    drop-shadow(0px -2px 0.5px hsl(173, 82%, 85%))
+    drop-shadow(-2px 0px 0.5px hsl(173, 82%, 85%))
+    drop-shadow(0px 2px 0.5px hsl(173, 82%, 85%));
+  filter: drop-shadow(2px 0px 0.5px hsl(173, 82%, 85%))
+    drop-shadow(0px -2px 0.5px hsl(173, 82%, 85%))
+    drop-shadow(-2px 0px 0.5px hsl(173, 82%, 85%))
+    drop-shadow(0px 2px 0.5px hsl(173, 82%, 85%));
 }
 .client-darkmode .qualityfine {
-  -webkit-filter:drop-shadow(2px 0px 0.5px hsl(172,100%,7%)) drop-shadow(0px -2px 0.5px hsl(172,100%,7%)) drop-shadow(-2px 0px 0.5px hsl(172,100%,7%)) drop-shadow(0px 2px 0.5px hsl(172,100%,7%));
-  filter:drop-shadow(2px 0px 0.5px hsl(172,100%,7%)) drop-shadow(0px -2px 0.5px hsl(172,100%,7%)) drop-shadow(-2px 0px 0.5px hsl(172,100%,7%)) drop-shadow(0px 2px 0.5px hsl(172,100%,7%))
+  -webkit-filter: drop-shadow(2px 0px 0.5px hsl(172, 100%, 7%))
+    drop-shadow(0px -2px 0.5px hsl(172, 100%, 7%))
+    drop-shadow(-2px 0px 0.5px hsl(172, 100%, 7%))
+    drop-shadow(0px 2px 0.5px hsl(172, 100%, 7%));
+  filter: drop-shadow(2px 0px 0.5px hsl(172, 100%, 7%))
+    drop-shadow(0px -2px 0.5px hsl(172, 100%, 7%))
+    drop-shadow(-2px 0px 0.5px hsl(172, 100%, 7%))
+    drop-shadow(0px 2px 0.5px hsl(172, 100%, 7%));
 }
 .qualitynormal,
 .qualitycommon {
-  -webkit-filter:drop-shadow(2px 0px 0.5px hsl(0,0%,63%)) drop-shadow(0px -2px 0.5px hsl(0,0%,63%)) drop-shadow(-2px 0px 0.5px hsl(0,0%,63%)) drop-shadow(0px 2px 0.5px hsl(0,0%,63%));
-  filter:drop-shadow(2px 0px 0.5px hsl(0,0%,63%)) drop-shadow(0px -2px 0.5px hsl(0,0%,63%)) drop-shadow(-2px 0px 0.5px hsl(0,0%,63%)) drop-shadow(0px 2px 0.5px hsl(0,0%,63%))
+  -webkit-filter: drop-shadow(2px 0px 0.5px hsl(0, 0%, 63%))
+    drop-shadow(0px -2px 0.5px hsl(0, 0%, 63%))
+    drop-shadow(-2px 0px 0.5px hsl(0, 0%, 63%))
+    drop-shadow(0px 2px 0.5px hsl(0, 0%, 63%));
+  filter: drop-shadow(2px 0px 0.5px hsl(0, 0%, 63%))
+    drop-shadow(0px -2px 0.5px hsl(0, 0%, 63%))
+    drop-shadow(-2px 0px 0.5px hsl(0, 0%, 63%))
+    drop-shadow(0px 2px 0.5px hsl(0, 0%, 63%));
 }
 .client-darkmode .qualitynormal,
 .client-darkmode .qualitycommon {
-  -webkit-filter:drop-shadow(2px 0px 0.5px hsl(0,0%,36%)) drop-shadow(0px -2px 0.5px hsl(0,0%,36%)) drop-shadow(-2px 0px 0.5px hsl(0,0%,36%)) drop-shadow(0px 2px 0.5px hsl(0,0%,36%));
-  filter:drop-shadow(2px 0px 0.5px hsl(0,0%,36%)) drop-shadow(0px -2px 0.5px hsl(0,0%,36%)) drop-shadow(-2px 0px 0.5px hsl(0,0%,36%)) drop-shadow(0px 2px 0.5px hsl(0,0%,36%))
+  -webkit-filter: drop-shadow(2px 0px 0.5px hsl(0, 0%, 36%))
+    drop-shadow(0px -2px 0.5px hsl(0, 0%, 36%))
+    drop-shadow(-2px 0px 0.5px hsl(0, 0%, 36%))
+    drop-shadow(0px 2px 0.5px hsl(0, 0%, 36%));
+  filter: drop-shadow(2px 0px 0.5px hsl(0, 0%, 36%))
+    drop-shadow(0px -2px 0.5px hsl(0, 0%, 36%))
+    drop-shadow(-2px 0px 0.5px hsl(0, 0%, 36%))
+    drop-shadow(0px 2px 0.5px hsl(0, 0%, 36%));
 }
 .qualitygood,
 .qualityuncommon {
-  -webkit-filter:drop-shadow(2px 0px 0.5px hsl(102,94%,76%)) drop-shadow(0px -2px 0.5px hsl(102,94%,76%)) drop-shadow(-2px 0px 0.5px hsl(102,94%,76%)) drop-shadow(0px 2px 0.5px hsl(102,94%,76%));
-  filter:drop-shadow(2px 0px 0.5px hsl(102,94%,76%)) drop-shadow(0px -2px 0.5px hsl(102,94%,76%)) drop-shadow(-2px 0px 0.5px hsl(102,94%,76%)) drop-shadow(0px 2px 0.5px hsl(102,94%,76%))
+  -webkit-filter: drop-shadow(2px 0px 0.5px hsl(102, 94%, 76%))
+    drop-shadow(0px -2px 0.5px hsl(102, 94%, 76%))
+    drop-shadow(-2px 0px 0.5px hsl(102, 94%, 76%))
+    drop-shadow(0px 2px 0.5px hsl(102, 94%, 76%));
+  filter: drop-shadow(2px 0px 0.5px hsl(102, 94%, 76%))
+    drop-shadow(0px -2px 0.5px hsl(102, 94%, 76%))
+    drop-shadow(-2px 0px 0.5px hsl(102, 94%, 76%))
+    drop-shadow(0px 2px 0.5px hsl(102, 94%, 76%));
 }
 .client-darkmode .qualitygood,
 .client-darkmode .qualityuncommon {
-  -webkit-filter:drop-shadow(2px 0px 0.5px hsl(120,94%,11%)) drop-shadow(0px -2px 0.5px hsl(120,94%,11%)) drop-shadow(-2px 0px 0.5px hsl(120,94%,11%)) drop-shadow(0px 2px 0.5px hsl(120,94%,11%));
-  filter:drop-shadow(2px 0px 0.5px hsl(120,94%,11%)) drop-shadow(0px -2px 0.5px hsl(120,94%,11%)) drop-shadow(-2px 0px 0.5px hsl(120,94%,11%)) drop-shadow(0px 2px 0.5px hsl(120,94%,11%))
+  -webkit-filter: drop-shadow(2px 0px 0.5px hsl(120, 94%, 11%))
+    drop-shadow(0px -2px 0.5px hsl(120, 94%, 11%))
+    drop-shadow(-2px 0px 0.5px hsl(120, 94%, 11%))
+    drop-shadow(0px 2px 0.5px hsl(120, 94%, 11%));
+  filter: drop-shadow(2px 0px 0.5px hsl(120, 94%, 11%))
+    drop-shadow(0px -2px 0.5px hsl(120, 94%, 11%))
+    drop-shadow(-2px 0px 0.5px hsl(120, 94%, 11%))
+    drop-shadow(0px 2px 0.5px hsl(120, 94%, 11%));
 }
 .qualitygreat,
 .qualityrare {
-  -webkit-filter:drop-shadow(2px 0px 0.5px hsl(222,100%,80%)) drop-shadow(0px -2px 0.5px hsl(222,100%,80%)) drop-shadow(-2px 0px 0.5px hsl(222,100%,80%)) drop-shadow(0px 2px 0.5px hsl(222,100%,80%));
-  filter:drop-shadow(2px 0px 0.5px hsl(222,100%,80%)) drop-shadow(0px -2px 0.5px hsl(222,100%,80%)) drop-shadow(-2px 0px 0.5px hsl(222,100%,80%)) drop-shadow(0px 2px 0.5px hsl(222,100%,80%))
+  -webkit-filter: drop-shadow(2px 0px 0.5px hsl(222, 100%, 80%))
+    drop-shadow(0px -2px 0.5px hsl(222, 100%, 80%))
+    drop-shadow(-2px 0px 0.5px hsl(222, 100%, 80%))
+    drop-shadow(0px 2px 0.5px hsl(222, 100%, 80%));
+  filter: drop-shadow(2px 0px 0.5px hsl(222, 100%, 80%))
+    drop-shadow(0px -2px 0.5px hsl(222, 100%, 80%))
+    drop-shadow(-2px 0px 0.5px hsl(222, 100%, 80%))
+    drop-shadow(0px 2px 0.5px hsl(222, 100%, 80%));
 }
 .client-darkmode .qualitygreat,
 .client-darkmode .qualityrare {
-  -webkit-filter:drop-shadow(2px 0px 0.5px hsl(233,100%,56%)) drop-shadow(0px -2px 0.5px hsl(233,100%,56%)) drop-shadow(-2px 0px 0.5px hsl(233,100%,56%)) drop-shadow(0px 2px 0.5px hsl(233,100%,56%));
-  filter:drop-shadow(2px 0px 0.5px hsl(233,100%,56%)) drop-shadow(0px -2px 0.5px hsl(233,100%,56%)) drop-shadow(-2px 0px 0.5px hsl(233,100%,56%)) drop-shadow(0px 2px 0.5px hsl(233,100%,56%))
+  -webkit-filter: drop-shadow(2px 0px 0.5px hsl(233, 100%, 56%))
+    drop-shadow(0px -2px 0.5px hsl(233, 100%, 56%))
+    drop-shadow(-2px 0px 0.5px hsl(233, 100%, 56%))
+    drop-shadow(0px 2px 0.5px hsl(233, 100%, 56%));
+  filter: drop-shadow(2px 0px 0.5px hsl(233, 100%, 56%))
+    drop-shadow(0px -2px 0.5px hsl(233, 100%, 56%))
+    drop-shadow(-2px 0px 0.5px hsl(233, 100%, 56%))
+    drop-shadow(0px 2px 0.5px hsl(233, 100%, 56%));
 }
 .qualityexcellent,
 .qualityepic {
-  -webkit-filter:drop-shadow(2px 0px 0.5px hsl(277,100%,82%)) drop-shadow(0px -2px 0.5px hsl(277,100%,82%)) drop-shadow(-2px 0px 0.5px hsl(277,100%,82%)) drop-shadow(0px 2px 0.5px hsl(277,100%,82%));
-  filter:drop-shadow(2px 0px 0.5px hsl(277,100%,82%)) drop-shadow(0px -2px 0.5px hsl(277,100%,82%)) drop-shadow(-2px 0px 0.5px hsl(277,100%,82%)) drop-shadow(0px 2px 0.5px hsl(277,100%,82%))
+  -webkit-filter: drop-shadow(2px 0px 0.5px hsl(277, 100%, 82%))
+    drop-shadow(0px -2px 0.5px hsl(277, 100%, 82%))
+    drop-shadow(-2px 0px 0.5px hsl(277, 100%, 82%))
+    drop-shadow(0px 2px 0.5px hsl(277, 100%, 82%));
+  filter: drop-shadow(2px 0px 0.5px hsl(277, 100%, 82%))
+    drop-shadow(0px -2px 0.5px hsl(277, 100%, 82%))
+    drop-shadow(-2px 0px 0.5px hsl(277, 100%, 82%))
+    drop-shadow(0px 2px 0.5px hsl(277, 100%, 82%));
 }
 .client-darkmode .qualityexcellent,
 .client-darkmode .qualityepic {
-  -webkit-filter:drop-shadow(2px 0px 0.5px hsl(260,80%,53%)) drop-shadow(0px -2px 0.5px hsl(260,80%,53%)) drop-shadow(-2px 0px 0.5px hsl(260,80%,53%)) drop-shadow(0px 2px 0.5px hsl(260,80%,53%));
-  filter:drop-shadow(2px 0px 0.5px hsl(260,80%,53%)) drop-shadow(0px -2px 0.5px hsl(260,80%,53%)) drop-shadow(-2px 0px 0.5px hsl(260,80%,53%)) drop-shadow(0px 2px 0.5px hsl(260,80%,53%))
+  -webkit-filter: drop-shadow(2px 0px 0.5px hsl(260, 80%, 53%))
+    drop-shadow(0px -2px 0.5px hsl(260, 80%, 53%))
+    drop-shadow(-2px 0px 0.5px hsl(260, 80%, 53%))
+    drop-shadow(0px 2px 0.5px hsl(260, 80%, 53%));
+  filter: drop-shadow(2px 0px 0.5px hsl(260, 80%, 53%))
+    drop-shadow(0px -2px 0.5px hsl(260, 80%, 53%))
+    drop-shadow(-2px 0px 0.5px hsl(260, 80%, 53%))
+    drop-shadow(0px 2px 0.5px hsl(260, 80%, 53%));
 }
 .qualityperfect,
 .qualitylegendary {
-  -webkit-filter:drop-shadow(2px 0px 0.5px hsl(35,97%,73%)) drop-shadow(0px -2px 0.5px hsl(35,97%,73%)) drop-shadow(-2px 0px 0.5px hsl(35,97%,73%)) drop-shadow(0px 2px 0.5px hsl(35,97%,73%));
-  filter:drop-shadow(2px 0px 0.5px hsl(35,97%,73%)) drop-shadow(0px -2px 0.5px hsl(35,97%,73%)) drop-shadow(-2px 0px 0.5px hsl(35,97%,73%)) drop-shadow(0px 2px 0.5px hsl(35,97%,73%))
+  -webkit-filter: drop-shadow(2px 0px 0.5px hsl(35, 97%, 73%))
+    drop-shadow(0px -2px 0.5px hsl(35, 97%, 73%))
+    drop-shadow(-2px 0px 0.5px hsl(35, 97%, 73%))
+    drop-shadow(0px 2px 0.5px hsl(35, 97%, 73%));
+  filter: drop-shadow(2px 0px 0.5px hsl(35, 97%, 73%))
+    drop-shadow(0px -2px 0.5px hsl(35, 97%, 73%))
+    drop-shadow(-2px 0px 0.5px hsl(35, 97%, 73%))
+    drop-shadow(0px 2px 0.5px hsl(35, 97%, 73%));
 }
 .client-darkmode .qualityperfect,
 .client-darkmode .qualitylegendary {
-  -webkit-filter:drop-shadow(2px 0px 0.5px hsl(30,100%,19%)) drop-shadow(0px -2px 0.5px hsl(30,100%,19%)) drop-shadow(-2px 0px 0.5px hsl(30,100%,19%)) drop-shadow(0px 2px 0.5px hsl(30,100%,19%));
-  filter:drop-shadow(2px 0px 0.5px hsl(30,100%,19%)) drop-shadow(0px -2px 0.5px hsl(30,100%,19%)) drop-shadow(-2px 0px 0.5px hsl(30,100%,19%)) drop-shadow(0px 2px 0.5px hsl(30,100%,19%))
+  -webkit-filter: drop-shadow(2px 0px 0.5px hsl(30, 100%, 19%))
+    drop-shadow(0px -2px 0.5px hsl(30, 100%, 19%))
+    drop-shadow(-2px 0px 0.5px hsl(30, 100%, 19%))
+    drop-shadow(0px 2px 0.5px hsl(30, 100%, 19%));
+  filter: drop-shadow(2px 0px 0.5px hsl(30, 100%, 19%))
+    drop-shadow(0px -2px 0.5px hsl(30, 100%, 19%))
+    drop-shadow(-2px 0px 0.5px hsl(30, 100%, 19%))
+    drop-shadow(0px 2px 0.5px hsl(30, 100%, 19%));
 }
 .qualityeternal,
 .qualityethereal {
-  -webkit-filter:drop-shadow(2px 0px 0.5px hsl(360,88%,62%)) drop-shadow(0px -2px 0.5px hsl(360,88%,62%)) drop-shadow(-2px 0px 0.5px hsl(360,88%,62%)) drop-shadow(0px 2px 0.5px hsl(360,88%,62%));
-  filter:drop-shadow(2px 0px 0.5px hsl(360,88%,62%)) drop-shadow(0px -2px 0.5px hsl(360,88%,62%)) drop-shadow(-2px 0px 0.5px hsl(360,88%,62%)) drop-shadow(0px 2px 0.5px hsl(360,88%,62%))
+  -webkit-filter: drop-shadow(2px 0px 0.5px hsl(360, 88%, 62%))
+    drop-shadow(0px -2px 0.5px hsl(360, 88%, 62%))
+    drop-shadow(-2px 0px 0.5px hsl(360, 88%, 62%))
+    drop-shadow(0px 2px 0.5px hsl(360, 88%, 62%));
+  filter: drop-shadow(2px 0px 0.5px hsl(360, 88%, 62%))
+    drop-shadow(0px -2px 0.5px hsl(360, 88%, 62%))
+    drop-shadow(-2px 0px 0.5px hsl(360, 88%, 62%))
+    drop-shadow(0px 2px 0.5px hsl(360, 88%, 62%));
 }
 .client-darkmode .qualityeternal,
 .client-darkmode .qualityethereal {
-  -webkit-filter:drop-shadow(2px 0px 0.5px hsl(360,90%,70%)) drop-shadow(0px -2px 0.5px hsl(360,90%,70%)) drop-shadow(-2px 0px 0.5px hsl(360,90%,70%)) drop-shadow(0px 2px 0.5px hsl(360,90%,70%));
-  filter:drop-shadow(2px 0px 0.5px hsl(360,90%,70%)) drop-shadow(0px -2px 0.5px hsl(360,90%,70%)) drop-shadow(-2px 0px 0.5px hsl(360,90%,70%)) drop-shadow(0px 2px 0.5px hsl(360,90%,70%))
+  -webkit-filter: drop-shadow(2px 0px 0.5px hsl(360, 90%, 70%))
+    drop-shadow(0px -2px 0.5px hsl(360, 90%, 70%))
+    drop-shadow(-2px 0px 0.5px hsl(360, 90%, 70%))
+    drop-shadow(0px 2px 0.5px hsl(360, 90%, 70%));
+  filter: drop-shadow(2px 0px 0.5px hsl(360, 90%, 70%))
+    drop-shadow(0px -2px 0.5px hsl(360, 90%, 70%))
+    drop-shadow(-2px 0px 0.5px hsl(360, 90%, 70%))
+    drop-shadow(0px 2px 0.5px hsl(360, 90%, 70%));
 }
