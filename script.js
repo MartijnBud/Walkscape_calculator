@@ -432,3 +432,28 @@ function updateTotalBonus() {
   }
   document.getElementById("totalBonus").textContent = totalBonus;
 }
+
+function toggleView() {
+  const homeContainer = document.getElementById("homeContainer");
+  const mapContainer = document.getElementById("mapContainer");
+  const menuButton = document.getElementById("menuButton");
+
+  // Toggle between home and map
+  if (homeContainer.style.display === "none") {
+    // Show home container (calculator)
+    homeContainer.style.display = "block";
+    mapContainer.style.display = "none";
+    menuButton.textContent = "Interactive World Map"; // Set text to "Interactive World Map"
+
+    // Remove the "expand" class to reset the container
+    homeContainer.classList.remove("expand");
+  } else {
+    // Show map container
+    homeContainer.style.display = "none";
+    mapContainer.style.display = "block";
+    menuButton.textContent = "Calculator"; // Set text to "Calculator"
+
+    // Add the "expand" class to increase the width of homeContainer when switching back
+    homeContainer.classList.add("expand");
+  }
+}

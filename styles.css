@@ -15,7 +15,6 @@ body {
 
 header {
   width: 100%;
-
   text-align: center;
   padding: 20px 0;
   padding-top: 4%;
@@ -64,7 +63,6 @@ h3 {
 }
 
 .container {
-  max-width: 600px;
   padding: 30px;
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
@@ -186,6 +184,57 @@ button:hover {
 
 .select-container select:hover {
   box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Home Container Styles */
+#homeContainer {
+  max-width: 600px; /* Default width */
+  margin: auto;
+  transition: width 0.5s ease; /* Smooth transition for width */
+}
+
+/* Override max-width when expanding the homeContainer */
+#homeContainer.expand {
+  max-width: none; /* Remove the max-width constraint */
+  width: 80%; /* Adjust the width to your preference */
+  transition: width 0.5s ease, max-width 0.5s ease; /* Smooth transition */
+}
+
+/* Map Container Styles */
+#mapContainer {
+  width: 80%;
+  height: 100vh;
+}
+
+#worldMap {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Menu Button Styling */
+.menu-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #414141;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.menu-btn:hover {
+  background-color: #161816;
+}
+
+/* Adjust the home container width when the map is shown */
+#homeContainer.shrink {
+  width: 40%; /* Change this value as needed */
+  transition: width 0.5s ease; /* Smooth transition */
 }
 
 .cookie-banner {

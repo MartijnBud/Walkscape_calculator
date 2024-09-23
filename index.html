@@ -21,7 +21,11 @@
     <header>
       <img src="assets/logo.png" alt="Logo" class="logo" />
     </header>
-    <div class="container">
+    <!-- Menu Button -->
+    <button id="menuButton" class="menu-btn" onclick="toggleView()">
+      Interactive World Map
+    </button>
+    <div class="container" id="homeContainer">
       <h1>Skill Calculator</h1>
       <h3>
         This website is still under construction. <br />
@@ -142,6 +146,13 @@
         <button type="button" onclick="calculateXP()">Calculate</button>
       </form>
       <div id="result"></div>
+    </div>
+    <div id="mapContainer" class="container" style="display: none">
+      <iframe
+        id="worldMap"
+        src="https://map.walkscape.app"
+        frameborder="0"
+      ></iframe>
     </div>
 
     <script src="script.js"></script>
