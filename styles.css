@@ -13,6 +13,14 @@ body {
   min-height: 100vh;
 }
 
+.buttonClass {
+  padding-bottom: 30px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
 header {
   width: 100%;
   text-align: center;
@@ -186,21 +194,18 @@ button:hover {
   box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* Home Container Styles */
 #homeContainer {
-  max-width: 600px; /* Default width */
+  max-width: 600px;
   margin: auto;
-  transition: width 0.5s ease; /* Smooth transition for width */
+  transition: width 0.5s ease;
 }
 
-/* Override max-width when expanding the homeContainer */
 #homeContainer.expand {
-  max-width: none; /* Remove the max-width constraint */
-  width: 80%; /* Adjust the width to your preference */
-  transition: width 0.5s ease, max-width 0.5s ease; /* Smooth transition */
+  max-width: none;
+  width: 80%;
+  transition: width 0.5s ease, max-width 0.5s ease;
 }
 
-/* Map Container Styles */
 #mapContainer {
   width: 80%;
   height: 100vh;
@@ -212,11 +217,9 @@ button:hover {
   border: none;
 }
 
-/* Menu Button Styling */
 .menu-btn {
-  position: fixed;
+  align-self: center;
   top: 20px;
-  right: 20px;
   z-index: 1000;
   padding: 10px 20px;
   font-size: 16px;
@@ -231,10 +234,9 @@ button:hover {
   background-color: #161816;
 }
 
-/* Adjust the home container width when the map is shown */
 #homeContainer.shrink {
-  width: 40%; /* Change this value as needed */
-  transition: width 0.5s ease; /* Smooth transition */
+  width: 40%;
+  transition: width 0.5s ease;
 }
 
 .cookie-banner {
