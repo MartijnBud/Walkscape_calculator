@@ -118,7 +118,7 @@ def get_activites():
     df = pd.concat([df_recipes, df_activities])
     df.to_csv("data/activities.csv", index=False)
 
-def get_equipment():
+def get_equipment_images():
     url = "https://wiki.walkscape.app/wiki/"
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"}
@@ -148,40 +148,13 @@ def get_equipment():
         for row in table.find_all("tr"):
             img_tag = row.find("img")
             if img_tag:
-                img_url = img_tag['src']
+                img_url = img_tag["src"]
                 filename = img_url.split("/")[-1]
+                filename = filename.replace("%27", "'")
+                filename = filename.replace("_", " ")
                 print(filename)
                 img_url = "https:" + img_url
 
                 svg = requests.get(img_url, headers=headers).text
-                # print(svg)
-                write_text(svg, "data/images/" + filename)
+                write_text(svg, "data/images/equipment" + filename)
 
-
-
-
-
-        # response = requests.get(url + item, headers=headers).text
-        # soup = BeautifulSoup(response, "html.parser")
-        #
-        # # Find the "Item Attributes" header
-        # item_attributes_header = soup.find('span', id='Item_Attributes') or soup.find('span', id='Attributes')
-        #
-        # if not item_attributes_header:
-        #     print(f"{item} doesnt have any attributes")
-        #     break
-        #
-        # next_element = item_attributes_header.find_parent('h2').find_next_sibling()
-        #
-        # attributes = next_element.find_all('span', style="color:#228B22")
-        # for attribute in attributes:
-        #     print(attribute.text)
-
-        # quit()
-
-
-
-
-
-
-get_equipment()
