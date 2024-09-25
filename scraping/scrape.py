@@ -48,10 +48,28 @@ def activities_recipes():
     soup = func.get_wiki_soup("Activities")
     tables = func.get_tables(soup)
 
+    # Get activities and skills, and their icons
     for table in tables:
         df = pd.read_html(str(table), flavor='bs4')[0]
         name = df.columns[0].lower()
-        func.download_svg_from_table(table, f"data/images/{name}/")
+        # func.download_svg_from_table(table, f"data/images/{name}/")
+
+        if name == "skill": skills = list(df["Skill.1"])
+        if name == "activity": activities = list(df["Activity.1"])
+
+    print(f"Activities: {activities}")
+    print(f"Skills: {skills}")
+
+    # Get all information of activities (exp, loot)
+    for activity in activities:
+        soup = func.get_wiki_soup(activity)
+        tables = func.get_tables(soup)
+
+
+
+    # caption = table.find('caption')
+    # caption_text = caption.get_text(strip=True) if caption else "No caption"
+    # print(df)
 
 
 activities_recipes()
