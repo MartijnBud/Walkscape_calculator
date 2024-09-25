@@ -1,6 +1,6 @@
 
 # Data needed
-Activities (skills needed, xp rates, location)
+Activities (skills needed, xp rates, location, drops)
 Recipes (skills needed, materials needed, xp rates, service needed)
 Skills (just icons)
 Equipment (Boosts/nerfs given)
