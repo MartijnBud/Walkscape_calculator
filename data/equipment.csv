@@ -1,0 +1,8 @@
+﻿Item,Skill,Level,Slot,Quality,Item_type,Attribute,Attribute_skill,Note,Craft_loot,Boost,Type_boost
+Basic Hatchet,Woodcutting,1,Tool,Normal,Woodcutting Hatchet,Work Efficiency,Woodcutting,While doing  Woodcutting,Craft,-10,percentage
+Basic Hatchet,Woodcutting,1,Tool,Good,Woodcutting Hatchet,Work Efficiency,Woodcutting,While doing  Woodcutting,Craft,-8,percentage
+Basic Hatchet,Woodcutting,1,Tool,Good,Woodcutting Hatchet,Double Rewards,Woodcutting,While doing  Woodcutting,Craft,1,percentage
+Basic Hatchet,Woodcutting,1,Tool,Good,Woodcutting Hatchet,Fine Material Finding,Woodcutting,While doing  Woodcutting,Craft,5,percentage
+Basic Hatchet,Woodcutting,1,Tool,Good,Woodcutting Hatchet,Chest Finding,Woodcutting,While doing  Woodcutting,Craft,3,percentage
+Basic Hatchet,Woodcutting,1,Tool,Good,Woodcutting Hatchet,Find Bird Nests,Woodcutting,While doing  Woodcutting,Craft,5,percentage
+Basic Hatchet,Woodcutting,1,Tool,Great,Woodcutting Hatchet,Work Efficiency,Woodcutting,While doing  Woodcutting,Craft,-6,percentage
