@@ -245,12 +245,12 @@ def get_equipment(destination_path):
         items = df_table.iloc[:,1]
 
         # Get easy accessed columns (item name, skill, level, slot/tool, item type)
-        temp_df["item"] = items
-        temp_df["skill"] = df_table[df_table.columns[2]]
-        temp_df["level"] = df_table[df_table.columns[3]]
-        temp_df["slot"] = df_table["Slot"] if "Slot" in df_table.columns else "Tool"
-        temp_df["item_type"] = df_table["Item Type"]
-        temp_df["craft_loot"] = "Craft" if craft_loot == "Crafted Items" else "Loot"
+        temp_df["Item"] = items
+        temp_df["Skill"] = df_table[df_table.columns[2]]
+        temp_df["Level"] = df_table[df_table.columns[3]]
+        temp_df["Slot"] = df_table["Slot"] if "Slot" in df_table.columns else "Tool"
+        temp_df["Item_type"] = df_table["Item Type"]
+        temp_df["Craft_loot"] = "Craft" if craft_loot == "Crafted Items" else "Loot"
 
         df = pd.concat([temp_df, df], ignore_index=True)
 
@@ -262,12 +262,12 @@ def get_equipment(destination_path):
     # Create a list to hold new rows
     new_rows = []
 
-    df_craft = df[df["craft_loot"] == "Craft"]
+    df_craft = df[df["Craft_loot"] == "Craft"]
     count = 0
 
     # Iterate over each row in the DataFrame
     for index, row in df_craft.iterrows():
-        item = row['item']
+        item = row['Item']
         print(f"Get data for {item}")
         soup = func.get_wiki_soup(item)
         tables = func.get_tables(soup)
@@ -280,15 +280,15 @@ def get_equipment(destination_path):
             if "This item has no attributes" in p.text.strip():
                 for quality in qualities:
                     new_rows.append({
-                        'item': item,
-                        'skill': row['skill'],
-                        'level': row['level'],
-                        'slot': row['slot'],
-                        'quality': quality,
-                        'item_type': row['item_type'],
-                        'attributes': None,  # No attribute if it doesn't exist
-                        'note': None,        # No note if it doesn't exist
-                        'craft_loot': row['craft_loot']
+                        'Item': item,
+                        'Skill': row['Skill'],
+                        'Level': row['Level'],
+                        'Slot': row['Slot'],
+                        'Quality': quality,
+                        'Item_type': row['Item_type'],
+                        'Attributes': None,  # No attribute if it doesn't exist
+                        'Note': None,        # No note if it doesn't exist
+                        'Craft_loot': row['Craft_loot']
                     })
                 continue
 
@@ -298,15 +298,15 @@ def get_equipment(destination_path):
             results_from_p = get_attributes_from_html(lines)  # Your function for extracting attributes
             for result in results_from_p:
                 new_rows.append({
-                    'item': item,
-                    'skill': row['skill'],
-                    'level': row['level'],
-                    'slot': row['slot'],
-                    'quality': qualities[quality_index - 1],
-                    'item_type': row['item_type'],
-                    'attributes': result.get('attribute'),  # Extracting the attribute
-                    'note': result.get('note'),
-                    'craft_loot': row['craft_loot']
+                    'Item': item,
+                    'Skill': row['Skill'],
+                    'Level': row['Level'],
+                    'Slot': row['Slot'],
+                    'Quality': qualities[quality_index - 1],
+                    'Item_type': row['Item_type'],
+                    'Attributes': result.get('attribute'),  # Extracting the attribute
+                    'Note': result.get('note'),
+                    'Craft_loot': row['Craft_loot']
                 })
 
         if count == 5:
@@ -314,7 +314,7 @@ def get_equipment(destination_path):
             new_rows_df = pd.DataFrame(new_rows)
 
             # Remove all rows in df for items that are in new_rows_df
-            df = df[~df['item'].isin(new_rows_df['item'])]
+            df = df[~df['Item'].isin(new_rows_df['Item'])]
 
             # Append the new rows for the items with qualities
             df = pd.concat([df, new_rows_df], ignore_index=True)
