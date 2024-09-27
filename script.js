@@ -120,8 +120,8 @@ function searchCharacter() {
   const searchResult = document.getElementById("searchResult");
   const skillSelection = document.getElementById("skillSelection");
   const skillDropdown = document.getElementById("skillDropdown");
-  const usernameField = document.getElementById("username"); // Get the username input field
-  const currentXPInput = document.getElementById("currentXP"); // Get the current XP input field
+  const usernameField = document.getElementById("username");
+  const currentXPInput = document.getElementById("currentXP");
   const searchButton = document.querySelector("button[type='button']");
   searchButton.classList.add("pulsate");
   if (username === "") {
@@ -147,7 +147,7 @@ function searchCharacter() {
       }
 
       const userId = data.users[0].id;
-      const characterName = data.users[0].username; // Get the correct username
+      const characterName = data.users[0].username; // set the username to the fetched username
       const charactersUrl = `${proxyUrl}?url=https://server.walkscape.app/portal/shared/users/${userId}/characters`;
 
       return fetch(charactersUrl)
