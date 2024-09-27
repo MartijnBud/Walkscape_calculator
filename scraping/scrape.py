@@ -1,4 +1,5 @@
 
+from bs4 import BeautifulSoup
 import pandas as pd
 import re
 import os
@@ -64,22 +65,6 @@ def activities_recipes():
     for activity in activities:
         soup = func.get_wiki_soup(activity)
         tables = func.get_tables(soup)
-
-
-
-    # caption = table.find('caption')
-    # caption_text = caption.get_text(strip=True) if caption else "No caption"
-    # print(df)
-
-
-activities_recipes()
-
-
-
-
-
-
-
 
 """ Function to make csv with all activities and recipes, scraped from walkscape wiki """
 def get_activites():
@@ -160,9 +145,6 @@ def get_equipment_images(destination_path):
         # Find and download images in each row
         func.download_svg_from_table(table, destination_path)
 
-
-
-
 def get_activities_images():
     soup = func.get_wiki_soup("Activities")
     tables = func.get_tables(soup)
@@ -178,4 +160,175 @@ def get_activities_images():
 
         # Find and download images in each row
         func.download_svg_from_table(table, "data/images/activities")
+
+def get_previous_headers(table):
+    h2_header = None
+    h3_header = None
+
+    sibling = table.find_previous_sibling()
+    while sibling:
+        if sibling.name == 'h2' and h2_header is None:
+            h2_header = sibling.get_text(strip=True)
+        elif sibling.name == 'h3' and h3_header is None:
+            h3_header = sibling.get_text(strip=True)
+
+        # Move to the previous sibling
+        sibling = sibling.find_previous_sibling()
+
+        # Stop if both headers are found
+        if h2_header and h3_header:
+            break
+
+    return h2_header, h3_header
+
+def split_br(p):
+    lines = []
+    current_line = []
+    for content in p.contents:
+        if content.name == 'br':
+            # If we encounter a <br />, join the current line and add it to lines
+            if current_line:
+                lines.append(BeautifulSoup(''.join(str(x) for x in current_line), 'html.parser'))
+                current_line = []  # Reset current line
+        else:
+            # Otherwise, add the content to the current line
+            current_line.append(content)
+    # Add any remaining content after the last <br />
+    if current_line:
+        lines.append(BeautifulSoup(''.join(str(x) for x in current_line), 'html.parser'))
+
+    return lines
+
+def get_attributes_from_html(lines):
+    results = []
+
+    for section in lines:
+        plus_spans = section.find_all('span', style="color:#228B22")
+        sub_spans = section.find_all('span', style="color:#E51414")
+
+        if isinstance(plus_spans, str):
+            plus_spans = [plus_spans]  # Convert to a list if it's a string
+        if isinstance(sub_spans, str):
+            sub_spans = [sub_spans]  # Convert to a list if it's a string
+
+        # Combine both sets of spans
+        spans = plus_spans + sub_spans
+
+        if not spans:
+            continue
+
+        for span in spans:
+            attribute = span.text.strip()
+            remaining_text = section.text.strip()
+            note = remaining_text.replace(attribute, '').strip()
+            results.append({"attribute": attribute, "note": note})
+
+    return results
+
+
+def get_equipment(destination_path):
+    soup = func.get_wiki_soup("Equipment")
+    tables = func.get_tables(soup)
+
+    columns = ['item', 'skill', 'level', 'slot', 'quality', 'item_type', 'attribute', "note", 'craft_loot']
+    df = pd.DataFrame(columns=columns)
+
+    os.makedirs(destination_path, exist_ok=True)
+
+    for table in tables:
+
+        temp_df = pd.DataFrame(columns=columns)
+
+        # Get if gear or tool, and crafted or loot
+        gear_tool, craft_loot = get_previous_headers(table)
+        df_table = pd.read_html(str(table), flavor='bs4')[0]
+        items = df_table.iloc[:,1]
+
+        # Get easy accessed columns (item name, skill, level, slot/tool, item type)
+        temp_df["item"] = items
+        temp_df["skill"] = df_table[df_table.columns[2]]
+        temp_df["level"] = df_table[df_table.columns[3]]
+        temp_df["slot"] = df_table["Slot"] if "Slot" in df_table.columns else "Tool"
+        temp_df["item_type"] = df_table["Item Type"]
+        temp_df["craft_loot"] = "Craft" if craft_loot == "Crafted Items" else "Loot"
+
+        df = pd.concat([temp_df, df], ignore_index=True)
+
+    df.to_csv("equipment_without_qualities.csv", index=False)
+
+    # Get attributes from qualities in gear
+
+    qualities = ["Normal", "Good", "Great", "Excellent", "Perfect", "Eternal"]
+    # Create a list to hold new rows
+    new_rows = []
+
+    df_craft = df[df["craft_loot"] == "Craft"]
+    count = 0
+
+    # Iterate over each row in the DataFrame
+    for index, row in df_craft.iterrows():
+        item = row['item']
+        print(f"Get data for {item}")
+        soup = func.get_wiki_soup(item)
+        tables = func.get_tables(soup)
+        table = tables[12]  # Adjust if necessary
+
+        paragraphs = table.find_all('p')
+        quality_index = 0
+
+        for p in paragraphs:
+            if "This item has no attributes" in p.text.strip():
+                for quality in qualities:
+                    new_rows.append({
+                        'item': item,
+                        'skill': row['skill'],
+                        'level': row['level'],
+                        'slot': row['slot'],
+                        'quality': quality,
+                        'item_type': row['item_type'],
+                        'attributes': None,  # No attribute if it doesn't exist
+                        'note': None,        # No note if it doesn't exist
+                        'craft_loot': row['craft_loot']
+                    })
+                continue
+
+            # print(f"Getting quality {qualities[quality_index]}")
+            lines = split_br(p)  # Your function for splitting lines
+            quality_index += 1
+            results_from_p = get_attributes_from_html(lines)  # Your function for extracting attributes
+            for result in results_from_p:
+                new_rows.append({
+                    'item': item,
+                    'skill': row['skill'],
+                    'level': row['level'],
+                    'slot': row['slot'],
+                    'quality': qualities[quality_index - 1],
+                    'item_type': row['item_type'],
+                    'attributes': result.get('attribute'),  # Extracting the attribute
+                    'note': result.get('note'),
+                    'craft_loot': row['craft_loot']
+                })
+
+        if count == 5:
+            # Convert the new rows into a DataFrame
+            new_rows_df = pd.DataFrame(new_rows)
+
+            # Remove all rows in df for items that are in new_rows_df
+            df = df[~df['item'].isin(new_rows_df['item'])]
+
+            # Append the new rows for the items with qualities
+            df = pd.concat([df, new_rows_df], ignore_index=True)
+
+            # Save the final DataFrame with qualities to a CSV
+            df.to_csv("equipment_with_qualities.csv", index=False)
+            quit()
+
+        count += 1
+
+
+
+
+
+
+get_equipment("data/kaas")
 
