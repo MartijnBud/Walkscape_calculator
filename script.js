@@ -1,5 +1,7 @@
 let currentCharacter = {}; // Store character data
 let activities = []; // Store activities data
+let gear = []; // Store gear data
+let sortOrder = -1; // 1 for ascending, -1 for descending
 
 function loadActivities() {
   fetch(
@@ -25,46 +27,132 @@ function loadActivities() {
           location: columns[10],
         };
       });
-      populateActivityDropdown(); // Populate dropdown after loading
+      populateActivityTable(); // Populate dropdown after loading
     })
     .catch((error) => console.error("Error loading activities:", error));
-  populateActivityDropdown(); // Call this after activities are loaded
+  populateActivityTable(); // Call this after activities are loaded
 }
 
 window.addEventListener("load", loadActivities); // Load activities on page load
 
-function populateActivityDropdown() {
-  const activityDropdown = document.getElementById("activityDropdown");
-  activityDropdown.innerHTML = '<option value="">Select Activity</option>';
+function populateActivityTable(skill) {
+  console.log("Skill:", skill);
+  const activityTableBody = document
+    .getElementById("activityTable")
+    .getElementsByTagName("tbody")[0];
+  activityTableBody.innerHTML = ""; // Clear the table first
 
-  activities.forEach((activity) => {
-    activityDropdown.innerHTML += `
-      <option value="${activity.activity}" 
-              data-xp="${activity.baseExp}" 
-              data-steps="${activity.minSteps}" 
-              data-skill="${activity.skill}">
-        ${activity.activity}
-      </option>`;
+  const currentXP = parseInt(document.getElementById("currentXP").value);
+  const desiredLevel = parseInt(document.getElementById("desiredLevel").value);
+
+  // Check if XP and desired level are valid for calculating total actions and steps
+  const xpValid = !isNaN(currentXP);
+  const levelValid = !isNaN(desiredLevel) && desiredLevel > 0;
+
+  let totalXPNeeded = 0;
+
+  if (xpValid && levelValid) {
+    const xpTable = [
+      0, 0, 83, 174, 276, 388, 512, 650, 801, 969, 1154, 1358, 1584, 1833, 2107,
+      2411, 2746, 3115, 3523, 3973, 4470, 5018, 5624, 6291, 7028, 7842, 8740,
+      9730, 10824, 12031, 13363, 14833, 16456, 18247, 20224, 22406, 24815,
+      27473, 30408, 33648, 37224, 41171, 45529, 50339, 55649, 61512, 68000,
+      75127, 83014, 91721, 101333, 111945, 123660, 136594, 150872, 166636,
+      184040, 203254, 224466, 247886, 273742, 302288, 333804, 368599, 407015,
+      449428, 496254, 547953, 605032, 668051, 737627, 814445, 899257, 992895,
+      1096278, 1210421, 1336443, 1475581, 1629200, 1798808, 1986068, 2192818,
+      2421087, 2673114, 2951373, 3258594, 3597792, 3972294, 4385776, 4842295,
+      5346332, 5902831, 6517253, 7195629, 7944614, 8771558, 9684577, 10692629,
+      11805606, 13034431,
+    ];
+
+    totalXPNeeded = xpTable[desiredLevel] - currentXP;
+  }
+
+  // Filter activities if the skill is defined and not an empty string
+  const filteredActivities = skill
+    ? activities.filter(
+        (activity) => activity.skill.toLowerCase() === skill.toLowerCase()
+      )
+    : activities;
+
+  filteredActivities.forEach((activity) => {
+    const xpPerAction = parseFloat(activity.baseExp);
+    const stepsPerAction = parseFloat(activity.minSteps);
+
+    let actionsRequired = "N/A";
+    let totalStepsRequired = "N/A";
+
+    // Calculate actions and steps only if XP and level inputs are valid
+    if (xpValid && levelValid && xpPerAction > 0) {
+      actionsRequired = Math.ceil(totalXPNeeded / xpPerAction);
+      totalStepsRequired = actionsRequired * stepsPerAction;
+    }
+
+    const row = document.createElement("tr");
+
+    row.innerHTML = `
+      <td>${Math.floor(activity.level)}</td>
+      <td>${activity.activity}</td>
+      <td>${actionsRequired}</td>
+      <td>${totalStepsRequired}</td>
+      <td>${activity.skill}</td>
+    `;
+
+    const currentLevel = parseInt(
+      document.getElementById("currentLevel").value
+    );
+    let highNuff = false;
+    if (activity.level <= currentLevel) {
+      highNuff = true;
+    }
+    highNuff ? row.classList.add("green") : row.classList.add("red");
+
+    // Add an event listener to each row
+    row.addEventListener("click", () => {
+      document.getElementById("xpPerActionDisplay").textContent = Math.floor(
+        activity.baseExp
+      );
+      document.getElementById("stepsPerActionDisplay").textContent =
+        activity.minSteps;
+
+      // Highlight selected row
+      const rows = document.querySelectorAll("tr");
+      rows.forEach((row) => row.classList.remove("selected"));
+      row.classList.add("selected");
+    });
+
+    activityTableBody.appendChild(row); // Add the row to the table body
   });
+  if (isNaN(skill)) {
+    sortTable(0); // Sort by level by default
+    console.log("Sorting by level");
+  }
 }
 
-function filterActivitiesBySkill(skill) {
-  const activityDropdown = document.getElementById("activityDropdown");
-  activityDropdown.innerHTML = '<option value="">Select Activity</option>';
-  activities;
-  console.log("Filtering activities by skill:", skill);
-  console.log("Activities:", activities[0].skill);
+function sortTable(columnIndex) {
+  const table = document.getElementById("activityTable");
+  const rowsArray = Array.from(table.rows).slice(1); // Exclude header row
+  const isNumeric = columnIndex >= 0;
 
-  activities
-    .filter((activity) => activity.skill.toLowerCase() === skill) // Filter by the selected skill
-    .forEach((activity) => {
-      activityDropdown.innerHTML += `
-        <option value="${activity.activity}" 
-                data-xp="${activity.baseExp}" 
-                data-steps="${activity.minSteps}">
-          ${activity.activity}
-        </option>`;
-    });
+  rowsArray.sort((a, b) => {
+    const aValue = a.cells[columnIndex].textContent;
+    const bValue = b.cells[columnIndex].textContent;
+
+    if (isNumeric) {
+      return sortOrder * (parseFloat(aValue) - parseFloat(bValue));
+    } else {
+      return sortOrder * aValue.localeCompare(bValue);
+    }
+  });
+
+  // Toggle sorting order for the next click
+  sortOrder = -sortOrder;
+
+  // Reinsert sorted rows into the table
+  const tbody = table.getElementsByTagName("tbody")[0];
+  tbody.innerHTML = ""; // Clear existing rows
+  rowsArray.forEach((row) => tbody.appendChild(row));
 }
 
 function updateActivityValues() {
@@ -87,7 +175,43 @@ function updateActivityValues() {
   }
 }
 
+function setupEventListeners() {
+  const currentXPInput = document.getElementById("currentXP");
+  const desiredLevelInput = document.getElementById("desiredLevel");
+  const skillDropdown = document.getElementById("skillDropdown");
+  const currentLevelInput = document.getElementById("currentLevel");
+
+  // Update the table when currentXP or desiredLevel is changed
+  currentXPInput.addEventListener("input", () => {
+    const selectedSkill = skillDropdown.value;
+    populateActivityTable(selectedSkill);
+  });
+
+  desiredLevelInput.addEventListener("input", () => {
+    const selectedSkill = skillDropdown.value;
+    populateActivityTable(selectedSkill);
+  });
+
+  currentLevelInput.addEventListener("input", () => {
+    const selectedSkill = skillDropdown.value;
+    populateActivityTable(selectedSkill);
+  });
+
+  // Update the table when skill selection is changed
+  skillDropdown.addEventListener("change", () => {
+    const selectedSkill = skillDropdown.value;
+    populateActivityTable(selectedSkill);
+  });
+}
+
+// Call the setupEventListeners function when the window is loaded
+window.addEventListener("load", () => {
+  loadActivities(); // Load activities
+  setupEventListeners(); // Set up event listeners
+});
+
 function populateSkillDropdown(statistics) {
+  console.log("Statistics:", statistics);
   const skillDropdown = document.getElementById("skillDropdown");
   skillDropdown.innerHTML = '<option value="">Select a skill</option>';
 
@@ -104,17 +228,41 @@ function populateSkillDropdown(statistics) {
   ];
 
   skills.forEach((skill) => {
-    skillDropdown.innerHTML += `<option value="${skill}">${
-      skill.charAt(0).toUpperCase() + skill.slice(1)
-    } (XP: ${statistics[skill] || 0})</option>`;
+    let xp = statistics[skill] || 0;
+    let lvl = 0;
+    for (let i = 1; i < xpTable.length; i++) {
+      if (xpTable[i] > xp) {
+        lvl = i - 1;
+        console.log("Level:", lvl);
+        skillDropdown.innerHTML += `<option value="${skill}">${
+          skill.charAt(0).toUpperCase() + skill.slice(1)
+        } (Level: ${lvl || 0})</option>`;
+        break;
+      }
+    }
   });
 
-  skillDropdown.addEventListener("change", () => {
-    updateCurrentXP();
-    filterActivitiesBySkill(skillDropdown.value);
-    console.log("Skill selected:", skillDropdown.value);
-  });
+  // skills.forEach((skill) => {
+  //   skillDropdown.innerHTML += `<option value="${skill}">${
+  //     skill.charAt(0).toUpperCase() + skill.slice(1)
+  //   } (XP: ${lvl || 0})</option>`;
+  // });
 }
+
+function calculateCurrentLevelFromXP() {
+  const currentXP = parseInt(document.getElementById("currentXP").value);
+  const currentLevelField = document.getElementById("currentLevel");
+
+  if (!isNaN(currentXP)) {
+    for (let i = 1; i < xpTable.length; i++) {
+      if (xpTable[i] > currentXP) {
+        currentLevelField.value = i - 1; // Update the current level field
+        break;
+      }
+    }
+  }
+}
+
 function searchCharacter() {
   const username = document.getElementById("username").value.trim();
   const searchResult = document.getElementById("searchResult");
@@ -164,14 +312,6 @@ function searchCharacter() {
           usernameField.value = characterName; // Set the input field to the correct username
           searchButton.classList.remove("pulsate");
           searchButton.classList.add("fade-green"); // Change button color to green
-          // usernameField.classList.add("fetched");
-
-          // searchResult.innerHTML = `
-          //   <h3>Character: ${currentCharacter.character_name} ✔️</h3>
-          //   <p><strong>Current Location:</strong> ${currentCharacter.current_location}</p>
-          //   <p><strong>Total Steps:</strong> ${currentCharacter.total_steps}</p>
-          //   <p><strong>Total XP:</strong> ${currentCharacter.statistics.total_xp}</p>
-          // `;
 
           populateSkillDropdown(currentCharacter.statistics);
           skillSelection.style.display = "block";
@@ -188,9 +328,14 @@ function searchCharacter() {
 function updateCurrentXP() {
   const skillDropdown = document.getElementById("skillDropdown");
   const currentXPInput = document.getElementById("currentXP");
+  console.log("Skill dropdown value:", skillDropdown.value);
+  populateActivityTable(skillDropdown.value);
 
   if (skillDropdown.value) {
-    currentXPInput.value = currentCharacter.statistics[skillDropdown.value]; // Set current XP
+    currentCharacter.statistics
+      ? (currentXPInput.value =
+          currentCharacter.statistics[skillDropdown.value])
+      : null; // Set current XP
   } else {
     currentXPInput.value = ""; // Reset if no skill selected
   }
@@ -198,7 +343,6 @@ function updateCurrentXP() {
   // Update the current level based on the new XP
   calculateCurrentLevelFromXP();
 }
-
 const xpTable = [
   0, 0, 83, 174, 276, 388, 512, 650, 801, 969, 1154, 1358, 1584, 1833, 2107,
   2411, 2746, 3115, 3523, 3973, 4470, 5018, 5624, 6291, 7028, 7842, 8740, 9730,
@@ -231,10 +375,12 @@ function calculateCurrentLevelFromXP() {
 function calculateXP() {
   console.log("Calculating XP...");
 
-  const selectedOption =
-    activityDropdown.options[activityDropdown.selectedIndex];
-  const baseExp = selectedOption.getAttribute("data-xp");
-  const baseSteps = selectedOption.getAttribute("data-steps");
+  const baseExp = parseInt(
+    document.getElementById("xpPerActionDisplay").textContent
+  );
+  const baseSteps = parseInt(
+    document.getElementById("stepsPerActionDisplay").textContent
+  );
 
   const currentXP = parseInt(document.getElementById("currentXP").value);
   const currentLevelField = document.getElementById("currentLevel");
@@ -296,7 +442,7 @@ function calculateXP() {
   // Display the result
   document.getElementById(
     "result"
-  ).innerText = `You need to walk ${totalSteps} steps and perform ${actionsRequired} actions to reach level ${desiredLevel}.`;
+  ).innerText = `You need to walk ${totalSteps} steps and perform ${actionsRequired} actions to reach level ${desiredLevel}.  Good luck!`;
   document.getElementById("result").classList.add("show");
   // Scroll to the result
   const resultElement = document.getElementById("result");
@@ -307,6 +453,8 @@ function calculateXP() {
 document
   .getElementById("currentXP")
   .addEventListener("input", calculateCurrentLevelFromXP);
+
+document.getElementById();
 
 // Function to check if cookies have been accepted or declined
 function checkCookieConsent() {
@@ -348,10 +496,6 @@ document
 document
   .getElementById("xpPerAction")
   .addEventListener("keydown", handleInputKeyPress);
-document.getElementById("skillDropdown").addEventListener("change", () => {
-  updateCurrentXP();
-  filterActivitiesBySkill(document.getElementById("skillDropdown").value);
-});
 
 // Function to handle cookie consent acceptance
 function acceptCookies() {
@@ -380,58 +524,6 @@ window.addEventListener("load", function () {
     .getElementById("declineCookies")
     .addEventListener("click", declineCookies);
 });
-
-// gear selection part:
-
-// sample gear items
-const gearItems = {
-  cape: { name: "Mystic Cape", efficiencyBonus: 5 },
-  back: { name: "Adventurer's Backpack", efficiencyBonus: 3 },
-  head: { name: "Helmet of Wisdom", efficiencyBonus: 4 },
-  hands: { name: "Gauntlets of Strength", efficiencyBonus: 6 },
-  neck: { name: "Amulet of Power", efficiencyBonus: 7 },
-  chest: { name: "Dragon Chestplate", efficiencyBonus: 8 },
-  primary: { name: "Sword of Valor", efficiencyBonus: 10 },
-  legs: { name: "Leggings of Swiftness", efficiencyBonus: 4 },
-  secondary: { name: "Shield of Fortitude", efficiencyBonus: 5 },
-  ring1: { name: "Ring of Precision", efficiencyBonus: 2 },
-  feet: { name: "Boots of Speed", efficiencyBonus: 3 },
-  ring2: { name: "Ring of Endurance", efficiencyBonus: 2 },
-};
-
-// initial state
-let selectedGear = {
-  cape: null,
-  back: null,
-  head: null,
-  hands: null,
-  neck: null,
-  chest: null,
-  primary: null,
-  legs: null,
-  secondary: null,
-  ring1: null,
-  feet: null,
-  ring2: null,
-};
-
-function selectGear(slot) {
-  const gear = gearItems[slot];
-  selectedGear[slot] = gear;
-  document.getElementById(slot).textContent = gear.name;
-
-  updateTotalBonus();
-}
-
-function updateTotalBonus() {
-  let totalBonus = 0;
-  for (let slot in selectedGear) {
-    if (selectedGear[slot]) {
-      totalBonus += selectedGear[slot].efficiencyBonus;
-    }
-  }
-  document.getElementById("totalBonus").textContent = totalBonus;
-}
 
 function toggleView() {
   const homeContainer = document.getElementById("homeContainer");

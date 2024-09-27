@@ -35,6 +35,12 @@ h3 {
   text-align: center;
 }
 
+h4 {
+  font-size: 14px;
+  margin: 0;
+  text-align: center;
+}
+
 .logo {
   max-width: 600px;
   height: auto;
@@ -77,6 +83,8 @@ h3 {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   margin: 20px 0;
   margin: 20px auto;
+  max-width: 100%;
+  overflow-x: auto;
 }
 
 #result {
@@ -188,6 +196,11 @@ button:hover {
 .select-container select option {
   padding: 10px;
   background-color: #fff;
+}
+
+.suggestions {
+  background-color: #f0f0f0;
+  border: 1px solid #f0f0f0;
 }
 
 .select-container select:hover {
@@ -309,6 +322,49 @@ button:hover {
   }
 }
 
+#activityTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#activityTable th,
+#activityTable td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+#activityTable th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+#activityTable tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+#activityTable tr.red.selected {
+  background-color: #3498db;
+  color: white;
+}
+
+#activityTable tr.green.selected {
+  background-color: #3498db;
+  color: white;
+}
+
+#activityTable tr.red {
+  background-color: #e74c3c;
+  color: white;
+}
+
+#activityTable tr.green {
+  background-color: #2ecc71;
+  color: white;
+}
+
 #searchResult,
 #result {
   margin-top: 20px;
@@ -330,6 +386,18 @@ button:hover {
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+  .gear-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 400px) {
+  .gear-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .gear-slot {

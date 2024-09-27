@@ -41,6 +41,7 @@
         Interactive World Map
       </button>
     </div>
+    <!-- Main container -->
     <div class="container" id="homeContainer">
       <h1>Skill Calculator</h1>
       <h3>
@@ -58,7 +59,7 @@
       </div>
 
       <!-- Skill Selection Section -->
-      <div id="skillSelection" style="display: none">
+      <div id="skillSelection">
         <h2>Select Skill</h2>
         <div class="select-container">
           <label for="skillDropdown">Choose a skill:</label>
@@ -95,63 +96,231 @@
         <div id="gearSection">
           <h2>Equip Gear</h2>
           <div class="gear-grid">
-            <div class="gear-slot" id="cape" onclick="selectGear('cape')">
-              Cape
+            <div id="cape" onclick="selectGear('cape')">
+              <datalist id="suggestions">
+                <option>First option</option>
+                <option>Second Option</option>
+              </datalist>
+              <input
+                autocomplete="on"
+                list="suggestions"
+                class="gear-slot"
+                placeholder="Cape"
+              />
             </div>
-            <div class="gear-slot" id="head" onclick="selectGear('head')">
-              Head
+            <div id="head" onclick="selectGear('head')">
+              <datalist id="suggestions">
+                <option>First option</option>
+                <option>Second Option</option>
+              </datalist>
+              <input
+                autocomplete="on"
+                list="suggestions"
+                class="gear-slot"
+                placeholder="Head"
+              />
             </div>
-            <div class="gear-slot" id="back" onclick="selectGear('back')">
-              Back
+            <div id="back" onclick="selectGear('back')">
+              <datalist id="suggestions">
+                <option>First option</option>
+                <option>Second Option</option>
+              </datalist>
+              <input
+                autocomplete="on"
+                list="suggestions"
+                class="gear-slot"
+                placeholder="Back"
+              />
             </div>
 
-            <div class="gear-slot" id="hands" onclick="selectGear('hands')">
-              Hands
+            <div id="hands" onclick="selectGear('hands')">
+              <datalist id="suggestions">
+                <option>First option</option>
+                <option>Second Option</option>
+              </datalist>
+              <input
+                autocomplete="on"
+                list="suggestions"
+                class="gear-slot"
+                placeholder="Hands"
+              />
             </div>
-            <div class="gear-slot" id="chest" onclick="selectGear('chest')">
-              Chest
+            <div id="chest" onclick="selectGear('chest')">
+              <datalist id="suggestions">
+                <option>First option</option>
+                <option>Second Option</option>
+              </datalist>
+              <input
+                autocomplete="on"
+                list="suggestions"
+                class="gear-slot"
+                placeholder="Chest"
+              />
             </div>
-            <div class="gear-slot" id="neck" onclick="selectGear('neck')">
-              Neck
+            <div id="neck" onclick="selectGear('neck')">
+              <datalist id="suggestions">
+                <option>First option</option>
+                <option>Second Option</option>
+              </datalist>
+              <input
+                autocomplete="on"
+                list="suggestions"
+                class="gear-slot"
+                placeholder="Neck"
+              />
             </div>
 
-            <div class="gear-slot" id="primary" onclick="selectGear('primary')">
-              Primary
+            <div id="primary" onclick="selectGear('primary')">
+              <datalist id="suggestions">
+                <option>First option</option>
+                <option>Second Option</option>
+              </datalist>
+              <input
+                autocomplete="on"
+                list="suggestions"
+                class="gear-slot"
+                placeholder="Primary"
+              />
             </div>
-            <div class="gear-slot" id="legs" onclick="selectGear('legs')">
-              Legs
+            <div id="legs" onclick="selectGear('legs')">
+              <datalist id="suggestions">
+                <option>First option</option>
+                <option>Second Option</option>
+              </datalist>
+              <input
+                autocomplete="on"
+                list="suggestions"
+                class="gear-slot"
+                placeholder="Legs"
+              />
             </div>
-            <div
-              class="gear-slot"
-              id="secondary"
-              onclick="selectGear('secondary')"
-            >
-              Secondary
+            <div id="secondary" onclick="selectGear('secondary')">
+              <datalist id="suggestions">
+                <option>First option</option>
+                <option>Second Option</option>
+              </datalist>
+              <input
+                autocomplete="on"
+                list="suggestions"
+                class="gear-slot"
+                placeholder="Secondary"
+              />
             </div>
-            <div class="gear-slot" id="ring1" onclick="selectGear('ring1')">
-              Ring
+            <div id="ring1" onclick="selectGear('ring1')">
+              <datalist id="suggestions">
+                <option>First option</option>
+                <option>Second Option</option>
+              </datalist>
+              <input
+                autocomplete="on"
+                list="suggestions"
+                class="gear-slot"
+                placeholder="Ring"
+              />
             </div>
-            <div class="gear-slot" id="feet" onclick="selectGear('feet')">
-              Feet
+            <div id="feet" onclick="selectGear('feet')">
+              <datalist id="suggestions">
+                <option>First option</option>
+                <option>Second Option</option>
+              </datalist>
+              <input
+                autocomplete="on"
+                list="suggestions"
+                class="gear-slot"
+                placeholder="Feet"
+              />
             </div>
-            <div class="gear-slot" id="ring2" onclick="selectGear('ring2')">
-              Ring
+            <div id="ring2" onclick="selectGear('ring2')">
+              <datalist id="suggestions">
+                <option>First option</option>
+                <option>Second Option</option>
+              </datalist>
+              <input
+                autocomplete="on"
+                list="suggestions"
+                class="gear-slot"
+                placeholder="Ring"
+              />
             </div>
           </div>
-          <p>Total Efficiency Bonus: <span id="totalBonus">0</span>%</p>
-        </div>
+          <p id="totalBonusExperienceDisplay" style="display: none">
+            Total Bonus Experience:
+            <span id="totalBonusExperience">0</span>%
+            <br />
+          </p>
+          <p id="totalChestFindingDisplay" style="display: none">
+            Total Chest Finding: <span id="totalChestFinding">0</span>%
+            <br />
+          </p>
+          <p id="totalCraftingOutcomeDisplay" style="display: none">
+            Total Crafting Outcome: <span id="totalCraftingOutcome">0</span>%
+            <br />
+          </p>
+          <p id="totalDoubleActionDisplay" style="display: none">
+            Total Double Action: <span id="totalDoubleAction">0</span>%
+            <br />
+          </p>
+          <p id="totalDoubleRewardsDisplay" style="display: none">
+            Total Double Rewards: <span id="totalDoubleRewards">0</span>%
 
-        <!-- Centered Activity Dropdown -->
-        <label for="activityDropdown">Select Activity:</label>
-        <div class="select-container centered">
-          <select
-            id="activityDropdown"
-            onchange="updateActivityValues()"
-            required
-          >
-            <option value="">Select Activity</option>
-          </select>
+            <br />
+          </p>
+          <p id="totalFindBirdNestsDisplay" style="display: none">
+            Total Find Bird Nests: <span id="totalFindBirdNests">0</span>%
+
+            <br />
+          </p>
+          <p id="totalFindCollectiblesDisplay" style="display: none">
+            Total Find Collectibles:
+            <span id="totalFindCollectibles">0</span>%
+            <br />
+          </p>
+          <p id="totalFindGemsDisplay" style="display: none">
+            Total Find Gems: <span id="totalFindGems">0</span>% <br />
+          </p>
+          <p id="totalFineMaterialFindingDisplay" style="display: none">
+            Total Fine Material Finding:
+            <span id="totalFineMaterialFinding">0</span>%
+            <br />
+          </p>
+          <p id="totalInventorySpaceDisplay" style="display: none">
+            Total Inventory Space: <span id="totalInventorySpace">0</span>%
+            <br />
+          </p>
+          <p id="totalItemFindingDisplay" style="display: none">
+            Total Item Finding: <span id="totalItemFinding">0</span>% <br />
+          </p>
+          <p id="totalNoMaterialsConsumed" style="display: none">
+            Total No Materials Consumed:
+            <span id="totalNoMaterialsConsumed">0</span>%
+            <br />
+          </p>
+          <p id="totalSkillLevelDisplay" style="display: none">
+            Total Skill Level: <span id="totalSkillLevel">0</span>% <br />
+          </p>
+          <p id="totalStepsRequiredDisplay" style="display: none">
+            Total Steps Required: <span id="totalStepsRequired">0</span>% <br />
+          </p>
+          <p id="totalWorkEfficiencyDisplay" style="display: none">
+            Total Work Efficiency: <span id="totalWorkEfficiency">0</span>%
+            <br />
+          </p>
         </div>
+        <br />
+        <br />
+        <h4>Sort the table by clicking the headers</h3>
+        <table id="activityTable">
+          <thead>
+            <tr>
+              <th onclick="sortTable(0)">Level</th>
+              <th>Activity</th>
+              <th onclick="sortTable(2)">Total Actions</th>
+              <th onclick="sortTable(3)">Total Steps</th>
+              <th>Skill</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
 
         <!-- XP and Steps aligned next to each other -->
         <div class="action-info-container">
@@ -159,10 +328,13 @@
           <p>Steps Per Action: <span id="stepsPerActionDisplay">N/A</span></p>
         </div>
 
-        <button type="button" onclick="calculateXP()">Calculate</button>
+        <button type="button" onclick="calculateXP()">
+          Calculate expected loot and show requirements
+        </button>
       </form>
       <div id="result"></div>
     </div>
+    <!-- Map container -->
     <div id="mapContainer" class="container" style="display: none">
       <iframe
         id="worldMap"
