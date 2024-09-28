@@ -1,0 +1,3 @@
+﻿Item,Attribute,Attribute_skill,Boost,Type_boost,Note,Duration
+Beer,Bonus Experience,Global,-4,percentage,,1000
+Beer,Double Rewards,Global,2,percentage,,1000
