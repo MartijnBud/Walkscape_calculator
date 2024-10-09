@@ -1,3 +1,97 @@
-﻿Item,Attribute,Skill_boost,Boost,Type_boost,Note,Duration
-Beer,Bonus Experience,Global,-4,percentage,,1000
-Beer,Double Rewards,Global,2,percentage,,1000
+Item,Skill_boost,Boost,Type_boost,Attribute,Note,Duration,Quality
+Beer,Global,-4,Percentage,Bonus Experience,Global,1000,Normal
+Beer,Global,2,Percentage,Double Rewards,Global,1000,Normal
+Beer,Global,-4,Percentage,Bonus Experience,Global,1000,Fine
+Beer,Global,4,Percentage,Double Rewards,Global,1000,Fine
+Saltrum,Smithing,-2,Percentage,Bonus Experience,While doing  Smithing,1000,Normal
+Saltrum,Smithing,2,Percentage,Double Rewards,While doing  Smithing,1000,Normal
+Saltrum,Smithing,2,Percentage,No Materials Consumed,While doing  Smithing,1000,Normal
+Saltrum,Smithing,-2,Percentage,Bonus Experience,While doing  Smithing,1000,Fine
+Saltrum,Smithing,4,Percentage,Double Action,While doing  Smithing,1000,Fine
+Saltrum,Smithing,4,Percentage,No Materials Consumed,While doing  Smithing,1000,Fine
+Wine,Global,-4,Percentage,Bonus Experience,Global,1000,Normal
+Wine,Global,15,Percentage,Find Collectibles,Global,1000,Normal
+Wine,Global,-4,Percentage,Bonus Experience,Global,1000,Fine
+Wine,Global,25,Percentage,Find Collectibles,Global,1000,Fine
+Chocolate Milk,Carpentry,3,Percentage,No Materials Consumed,While doing  Carpentry,1000,Normal
+Chocolate Milk,Carpentry,1,Percentage,Double Rewards,While doing  Carpentry,1000,Normal
+Chocolate Milk,Carpentry,4,Percentage,No Materials Consumed,While doing  Carpentry,1000,Fine
+Chocolate Milk,Carpentry,4,Percentage,Double Rewards,While doing  Carpentry,1000,Fine
+Spicy Pumpkin Juice,Smithing,25,Percentage,Double Rewards,While doing  Smithing,2000,Normal
+Spicy Pumpkin Juice,Smithing,50,Percentage,Double Rewards,While doing  Smithing,2000,Fine
+Nettle Tea,Carpentry,3,Percentage,Work Efficiency,While doing  Carpentry,1000,Normal
+Nettle Tea,Carpentry,6,Percentage,Work Efficiency,While doing  Carpentry,1000,Fine
+Cooked Shrimp,Cooking,2,Percentage,Work Efficiency,While doing  Cooking,500,Normal
+Cooked Shrimp,Cooking,4,Percentage,Work Efficiency,While doing  Cooking,500,Fine
+Cooked Jellyfish,Carpentry,-1,Flat,Steps Required,While doing  Carpentry,500,Normal
+Cooked Jellyfish,Carpentry,-2,Flat,Steps Required,While doing  Carpentry,500,Fine
+Cooked Trout,Cooking,-1,Flat,Steps Required,While doing  Cooking,500,Normal
+Cooked Trout,Cooking,-2,Flat,Steps Required,While doing  Cooking,500,Fine
+Cooked Lobster,Crafting,3,Percentage,Double Rewards,While doing  Crafting,500,Normal
+Cooked Lobster,Crafting,5,Percentage,Double Rewards,While doing  Crafting,500,Fine
+Cooked Perch,Crafting,2,Percentage,Work Efficiency,While doing  Crafting,500,Normal
+Cooked Perch,Crafting,4,Percentage,Work Efficiency,While doing  Crafting,500,Fine
+Cooked Stingray,Fishing,5,Percentage,Work Efficiency,While doing  Fishing,500,Normal
+Cooked Stingray,Fishing,10,Percentage,Work Efficiency,While doing  Fishing,500,Fine
+Cooked Anglerfish,Mining,8,Percentage,Work Efficiency,While doing  Mining,500,Normal
+Cooked Anglerfish,Mining,15,Percentage,Work Efficiency,While doing  Mining,500,Fine
+Cooked Pike,Smithing,2,Percentage,Bonus Experience,While doing  Smithing,500,Normal
+Cooked Pike,Smithing,2,Percentage,No Materials Consumed,While doing  Smithing,500,Normal
+Cooked Pike,Smithing,4,Percentage,Bonus Experience,While doing  Smithing,500,Fine
+Cooked Pike,Smithing,4,Percentage,No Materials Consumed,While doing  Smithing,500,Fine
+Cooked Salmon,Smithing,3,Percentage,Work Efficiency,While doing  Smithing,500,Normal
+Cooked Salmon,Smithing,6,Percentage,Work Efficiency,While doing  Smithing,500,Fine
+Cooked Squid,Traveling,8,Percentage,Double Action,While doing  Traveling,500,Normal
+Cooked Squid,Traveling,16,Percentage,Double Action,While doing  Traveling,500,Fine
+Cooked Carp,Woodcutting,100,Percentage,Find Bird Nests,While doing  Woodcutting,500,Normal
+Cooked Carp,Woodcutting,200,Percentage,Find Bird Nests,While doing  Woodcutting,500,Fine
+Cooked Shark,Woodcutting,-1,Flat,Steps Required,While doing  Woodcutting,500,Normal
+Cooked Shark,Woodcutting,-2,Flat,Steps Required,While doing  Woodcutting,500,Fine
+Cooked Swordfish,Woodcutting,50,Percentage,Fine Material Finding,While doing  Woodcutting,500,Normal
+Cooked Swordfish,Woodcutting,100,Percentage,Fine Material Finding,While doing  Woodcutting,500,Fine
+Fried Noodles,Carpentry,30,Percentage,Double Action,While doing  Carpentry,2000,Normal
+Fried Noodles,Carpentry,60,Percentage,Double Action,While doing  Carpentry,2000,Fine
+Sweet Carrot Pie,Global,25,Flat,Crafting Outcome,Global,1000,Normal
+Sweet Carrot Pie,Global,50,Flat,Crafting Outcome,Global,1000,Fine
+Underwater Salad,Cooking,-2,Flat,Steps Required,While doing  Cooking,1000,Normal
+Underwater Salad,Cooking,2,Percentage,No Materials Consumed,While doing  Cooking,1000,Normal
+Underwater Salad,Cooking,-3,Flat,Steps Required,While doing  Cooking,1000,Fine
+Underwater Salad,Cooking,6,Percentage,No Materials Consumed,While doing  Cooking,1000,Fine
+Pickles,Crafting,3,Percentage,No Materials Consumed,While doing  Crafting,1000,Normal
+Pickles,Crafting,5,Percentage,No Materials Consumed,While doing  Crafting,1000,Fine
+Trout Soup,Fishing,8,Percentage,Double Rewards,While doing  Fishing,1000,Normal
+Trout Soup,Fishing,16,Percentage,Double Rewards,While doing  Fishing,1000,Fine
+Kelp Rolls,Foraging,-1,Flat,Steps Required,While doing  Foraging,1000,Normal
+Kelp Rolls,Foraging,-2,Flat,Steps Required,While doing  Foraging,1000,Fine
+Mushroom Curry,Foraging,100,Percentage,Fine Material Finding,While doing  Foraging,1000,Normal
+Mushroom Curry,Foraging,200,Percentage,Fine Material Finding,While doing  Foraging,1000,Fine
+Porridge,Foraging,2,Percentage,Double Rewards,While doing  Foraging,1000,Normal
+Porridge,Foraging,4,Percentage,Double Rewards,While doing  Foraging,1000,Fine
+Veggie Soup,Foraging,300,Percentage,Fine Material Finding,While doing  Foraging,2000,Normal
+Veggie Soup,Foraging,2,Percentage,Double Rewards,While doing  Foraging,2000,Normal
+Veggie Soup,Foraging,500,Percentage,Fine Material Finding,While doing  Foraging,2000,Fine
+Veggie Soup,Foraging,4,Percentage,Double Rewards,While doing  Foraging,2000,Fine
+Jarvonian Pastry,Mining,300,Percentage,Fine Material Finding,While doing  Mining,2000,Normal
+Jarvonian Pastry,Mining,500,Percentage,Fine Material Finding,While doing  Mining,2000,Fine
+Pancake,Mining,3,Percentage,Work Efficiency,While doing  Mining,1000,Normal
+Pancake,Mining,6,Percentage,Work Efficiency,While doing  Mining,1000,Fine
+Bread,Traveling,10,Percentage,Work Efficiency,While doing  Traveling,1000,Normal
+Bread,Traveling,25,Percentage,Work Efficiency,While doing  Traveling,1000,Fine
+Salmon Pie,Woodcutting,7,Percentage,Work Efficiency,While doing  Woodcutting,1000,Normal
+Salmon Pie,Woodcutting,14,Percentage,Work Efficiency,While doing  Woodcutting,1000,Fine
+Schnitzel,Woodcutting,200,Percentage,Chest Finding,While doing  Woodcutting,2000,Normal
+Schnitzel,Woodcutting,400,Percentage,Chest Finding,While doing  Woodcutting,2000,Fine
+Bagel,Agility,5,Percentage,Work Efficiency,While doing  Agility,1000,Normal
+Bagel,Agility,5,Percentage,Double Action,While doing  Agility,1000,Fine
+Jelly Sandwich,Agility,5,Percentage,Double Action,While doing  Agility,1000,Normal
+Jelly Sandwich,Agility,10,Percentage,Double Action,While doing  Agility,1000,Fine
+Fried Fish Sandwich,Fishing,4,Percentage,Double Action,While doing  Fishing,1000,Normal
+Fried Fish Sandwich,Fishing,8,Percentage,Double Action,While doing  Fishing,1000,Fine
+Bug Bait,Fishing,-1,Flat,Steps Required,While doing  Fishing,2000,Normal
+Bug Bait,Fishing,-2,Flat,Steps Required,While doing  Fishing,2000,Fine
+Frozen Bait,Fishing,200,Percentage,Fine Material Finding,While doing  Fishing,2000,Normal
+Frozen Bait,Fishing,400,Percentage,Fine Material Finding,While doing  Fishing,2000,Fine
+Dynamite,Mining,-20,Percentage,Bonus Experience,While doing  Mining,1000,Normal
+Dynamite,Mining,20,Percentage,Double Rewards,While doing  Mining,1000,Normal
+Dynamite,Mining,-20,Percentage,Work Efficiency,While doing  Mining,1000,Fine
+Dynamite,Mining,30,Percentage,Double Rewards,While doing  Mining,1000,Fine
