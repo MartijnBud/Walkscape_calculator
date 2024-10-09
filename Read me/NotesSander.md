@@ -1,6 +1,6 @@
 
 # Next steps
-- [ ] Finish collection equipment with qualities
+- [x] Finish collection equipment with qualities
 - [ ] Collect collectibles
 - [ ] Collect consumables
 
@@ -16,8 +16,7 @@ Equipment (Boosts/nerfs given)
 Consumables (Boosts/nerfs given)
 Collectibles (Boosts/nerfs given)
 
-# Images
-Equipment with different qualities are given the border using CSS. Pasted this CSS in styles.css
+
 
 
 
