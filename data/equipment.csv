@@ -1,8 +1,1521 @@
-﻿Item,Skill,Level,Slot,Quality,Item_type,Attribute,Attribute_skill,Note,Craft_loot,Boost,Type_boost
-Basic Hatchet,Woodcutting,1,Tool,Normal,Woodcutting Hatchet,Work Efficiency,Woodcutting,While doing  Woodcutting,Craft,-10,percentage
-Basic Hatchet,Woodcutting,1,Tool,Good,Woodcutting Hatchet,Work Efficiency,Woodcutting,While doing  Woodcutting,Craft,-8,percentage
-Basic Hatchet,Woodcutting,1,Tool,Good,Woodcutting Hatchet,Double Rewards,Woodcutting,While doing  Woodcutting,Craft,1,percentage
-Basic Hatchet,Woodcutting,1,Tool,Good,Woodcutting Hatchet,Fine Material Finding,Woodcutting,While doing  Woodcutting,Craft,5,percentage
-Basic Hatchet,Woodcutting,1,Tool,Good,Woodcutting Hatchet,Chest Finding,Woodcutting,While doing  Woodcutting,Craft,3,percentage
-Basic Hatchet,Woodcutting,1,Tool,Good,Woodcutting Hatchet,Find Bird Nests,Woodcutting,While doing  Woodcutting,Craft,5,percentage
-Basic Hatchet,Woodcutting,1,Tool,Great,Woodcutting Hatchet,Work Efficiency,Woodcutting,While doing  Woodcutting,Craft,-6,percentage
+Item,Skill_req,Level,Slot,Craft_loot,Quality,Item_type,Attribute,Boost,Type_boost,Skill_boost,Note
+Oxygen Tank,Global,,Back,Loot,,"Diving Gear Set, Advanced Diving Gear Set, Expert Diving Gear Set",,,,,
+Ring of Homesickness,Global,,Ring,Loot,,,,,,,
+Adjustable Wrench,Crafting,20,Tool,Loot,,"Wrench, Crafting Tool",Work Efficiency,7,Percentage,Crafting,While doing  Crafting
+Adjustable Wrench,Crafting,20,Tool,Loot,,"Wrench, Crafting Tool",Crafting Outcome,20,Flat,Global,Global
+Adjustable Wrench,Crafting,20,Tool,Loot,,"Wrench, Crafting Tool",No Materials Consumed,4,Percentage,Crafting,While doing  Crafting
+Adoring Fan Statue,Global,,Tool,Loot,,,Double Action,2,Percentage,Global,Global
+Adoring Fan Statue,Global,,Tool,Loot,,,Chance to Find Adventurers' Guild Token,2,Percentage,,Global   1  Adventurers' Guild Token
+Adventuring Fishing Pole,Fishing,15,Tool,Loot,,"Fishing Rod, Adventuring Tool Set",Double Action,2,Percentage,Fishing,While doing  Fishing
+Adventuring Fishing Pole,Fishing,15,Tool,Loot,,"Fishing Rod, Adventuring Tool Set",Double Rewards,3,Percentage,Fishing,While doing  Fishing
+Adventuring Fishing Pole,Fishing,15,Tool,Loot,,"Fishing Rod, Adventuring Tool Set",Fine Material Finding,9,Percentage,Fishing,While doing  Fishing
+Adventuring Fishing Pole,Fishing,15,Tool,Loot,,"Fishing Rod, Adventuring Tool Set",Chest Finding,12,Percentage,Fishing,While doing  Fishing
+Adventuring Fishing Pole,Fishing,15,Tool,Loot,,"Fishing Rod, Adventuring Tool Set",Bonus Experience,1,Flat,Fishing,While doing  Fishing
+Adventuring Fishing Pole,Fishing,15,Tool,Loot,,"Fishing Rod, Adventuring Tool Set",Find Collectibles,6,Percentage,Fishing,While doing  Fishing
+Adventuring Frying Pan,Cooking,15,Tool,Loot,,"Cooking Pan, Adventuring Tool Set",Double Action,3,Percentage,Cooking,While doing  Cooking
+Adventuring Frying Pan,Cooking,15,Tool,Loot,,"Cooking Pan, Adventuring Tool Set",No Materials Consumed,9,Percentage,Cooking,While doing  Cooking
+Adventuring Frying Pan,Cooking,15,Tool,Loot,,"Cooking Pan, Adventuring Tool Set",Double Rewards,4,Percentage,Cooking,While doing  Cooking
+Adventuring Frying Pan,Cooking,15,Tool,Loot,,"Cooking Pan, Adventuring Tool Set",Chest Finding,15,Percentage,Cooking,While doing  Cooking
+Adventuring Frying Pan,Cooking,15,Tool,Loot,,"Cooking Pan, Adventuring Tool Set",Bonus Experience,1,Flat,Cooking,While doing  Cooking
+Adventuring Hammer,Smithing,15,Tool,Loot,,"Smithing Hammer, Adventuring Tool Set",Crafting Outcome,15,Flat,Global,Global
+Adventuring Hammer,Smithing,15,Tool,Loot,,"Smithing Hammer, Adventuring Tool Set",Double Action,2,Percentage,Smithing,While doing  Smithing
+Adventuring Hammer,Smithing,15,Tool,Loot,,"Smithing Hammer, Adventuring Tool Set",No Materials Consumed,7,Percentage,Smithing,While doing  Smithing
+Adventuring Hammer,Smithing,15,Tool,Loot,,"Smithing Hammer, Adventuring Tool Set",Double Rewards,3,Percentage,Smithing,While doing  Smithing
+Adventuring Hammer,Smithing,15,Tool,Loot,,"Smithing Hammer, Adventuring Tool Set",Chest Finding,15,Percentage,Smithing,While doing  Smithing
+Adventuring Hammer,Smithing,15,Tool,Loot,,"Smithing Hammer, Adventuring Tool Set",Bonus Experience,1,Flat,Smithing,While doing  Smithing
+Adventuring Hatchet,Woodcutting,15,Tool,Loot,,"Woodcutting Hatchet, Adventuring Tool Set",Double Action,2,Percentage,Woodcutting,While doing  Woodcutting
+Adventuring Hatchet,Woodcutting,15,Tool,Loot,,"Woodcutting Hatchet, Adventuring Tool Set",Fine Material Finding,9,Percentage,Woodcutting,While doing  Woodcutting
+Adventuring Hatchet,Woodcutting,15,Tool,Loot,,"Woodcutting Hatchet, Adventuring Tool Set",Chest Finding,12,Percentage,Woodcutting,While doing  Woodcutting
+Adventuring Hatchet,Woodcutting,15,Tool,Loot,,"Woodcutting Hatchet, Adventuring Tool Set",Bonus Experience,1,Flat,Woodcutting,While doing  Woodcutting
+Adventuring Hatchet,Woodcutting,15,Tool,Loot,,"Woodcutting Hatchet, Adventuring Tool Set",Find Bird Nests,15,Percentage,Woodcutting,While doing  Woodcutting
+Adventuring Hatchet,Woodcutting,15,Tool,Loot,,"Woodcutting Hatchet, Adventuring Tool Set",Find Collectibles,6,Percentage,Woodcutting,While doing  Woodcutting
+Adventuring Pickaxe,Mining,15,Tool,Loot,,"Pickaxe, Adventuring Tool Set",Double Action,2,Percentage,Mining,While doing  Mining
+Adventuring Pickaxe,Mining,15,Tool,Loot,,"Pickaxe, Adventuring Tool Set",Fine Material Finding,9,Percentage,Mining,While doing  Mining
+Adventuring Pickaxe,Mining,15,Tool,Loot,,"Pickaxe, Adventuring Tool Set",Chest Finding,12,Percentage,Mining,While doing  Mining
+Adventuring Pickaxe,Mining,15,Tool,Loot,,"Pickaxe, Adventuring Tool Set",Bonus Experience,1,Flat,Mining,While doing  Mining
+Adventuring Pickaxe,Mining,15,Tool,Loot,,"Pickaxe, Adventuring Tool Set",Find Gems,15,Percentage,Mining,While doing  Mining
+Adventuring Pickaxe,Mining,15,Tool,Loot,,"Pickaxe, Adventuring Tool Set",Find Collectibles,6,Percentage,Mining,While doing  Mining
+Adventuring Saw,Carpentry,15,Tool,Loot,,"Saw, Adventuring Tool Set",Double Action,3,Percentage,Carpentry,While doing  Carpentry
+Adventuring Saw,Carpentry,15,Tool,Loot,,"Saw, Adventuring Tool Set",No Materials Consumed,9,Percentage,Carpentry,While doing  Carpentry
+Adventuring Saw,Carpentry,15,Tool,Loot,,"Saw, Adventuring Tool Set",Double Rewards,4,Percentage,Carpentry,While doing  Carpentry
+Adventuring Saw,Carpentry,15,Tool,Loot,,"Saw, Adventuring Tool Set",Chest Finding,15,Percentage,Carpentry,While doing  Carpentry
+Adventuring Saw,Carpentry,15,Tool,Loot,,"Saw, Adventuring Tool Set",Bonus Experience,1,Flat,Carpentry,While doing  Carpentry
+Adventuring Sickle,Foraging,15,Tool,Loot,,"Sickle, Adventuring Tool Set, Foraging Tool",Double Action,2,Percentage,Foraging,While doing  Foraging
+Adventuring Sickle,Foraging,15,Tool,Loot,,"Sickle, Adventuring Tool Set, Foraging Tool",Double Rewards,3,Percentage,Foraging,While doing  Foraging
+Adventuring Sickle,Foraging,15,Tool,Loot,,"Sickle, Adventuring Tool Set, Foraging Tool",Fine Material Finding,9,Percentage,Foraging,While doing  Foraging
+Adventuring Sickle,Foraging,15,Tool,Loot,,"Sickle, Adventuring Tool Set, Foraging Tool",Chest Finding,12,Percentage,Foraging,While doing  Foraging
+Adventuring Sickle,Foraging,15,Tool,Loot,,"Sickle, Adventuring Tool Set, Foraging Tool",Bonus Experience,1,Flat,Foraging,While doing  Foraging
+Adventuring Sickle,Foraging,15,Tool,Loot,,"Sickle, Adventuring Tool Set, Foraging Tool",Find Collectibles,6,Percentage,Foraging,While doing  Foraging
+Adventuring Wrench,Crafting,15,Tool,Loot,,"Wrench, Adventuring Tool Set, Crafting Tool",Crafting Outcome,20,Flat,Global,Global
+Adventuring Wrench,Crafting,15,Tool,Loot,,"Wrench, Adventuring Tool Set, Crafting Tool",Double Action,2,Percentage,Crafting,While doing  Crafting
+Adventuring Wrench,Crafting,15,Tool,Loot,,"Wrench, Adventuring Tool Set, Crafting Tool",No Materials Consumed,7,Percentage,Crafting,While doing  Crafting
+Adventuring Wrench,Crafting,15,Tool,Loot,,"Wrench, Adventuring Tool Set, Crafting Tool",Double Rewards,3,Percentage,Crafting,While doing  Crafting
+Adventuring Wrench,Crafting,15,Tool,Loot,,"Wrench, Adventuring Tool Set, Crafting Tool",Chest Finding,15,Percentage,Crafting,While doing  Crafting
+Adventuring Wrench,Crafting,15,Tool,Loot,,"Wrench, Adventuring Tool Set, Crafting Tool",Bonus Experience,1,Flat,Crafting,While doing  Crafting
+Axe of Destruction,Woodcutting,44,Tool,Loot,,Woodcutting Hatchet,Work Efficiency,35,Percentage,Woodcutting,While doing  Woodcutting
+Axe of Destruction,Woodcutting,44,Tool,Loot,,Woodcutting Hatchet,Double Action,6,Percentage,Woodcutting,While doing  Woodcutting
+Axe of Destruction,Woodcutting,44,Tool,Loot,,Woodcutting Hatchet,Double Rewards,4,Percentage,Woodcutting,While doing  Woodcutting
+Axe of Destruction,Woodcutting,44,Tool,Loot,,Woodcutting Hatchet,Fine Material Finding,22,Percentage,Woodcutting,While doing  Woodcutting
+Axe of Destruction,Woodcutting,44,Tool,Loot,,Woodcutting Hatchet,Find Bird Nests,12,Percentage,Woodcutting,While doing  Woodcutting
+Axe of Destruction,Woodcutting,44,Tool,Loot,,Woodcutting Hatchet,Chance to Find Adventurers' Guild Token,2,Percentage,,Global   1  Adventurers' Guild Token
+Big Basket,Foraging,28,Tool,Loot,,,Inventory Space,2,Flat,Global,Global
+Big Basket,Foraging,28,Tool,Loot,,,Double Rewards,5,Percentage,Foraging,While doing  Foraging
+Blacksmithing Guidebook,Smithing,30,Tool,Loot,,,Work Efficiency,-10,Percentage,Smithing,While doing  Smithing
+Blacksmithing Guidebook,Smithing,30,Tool,Loot,,,Double Action,16,Percentage,Smithing,While doing  Smithing
+Blue Ice Sickle,Foraging,40,Tool,Loot,,"Foraging Tool, Sickle",Work Efficiency,40,Percentage,Foraging,While doing  Foraging
+Blue Ice Sickle,Foraging,40,Tool,Loot,,"Foraging Tool, Sickle",Double Action,10,Percentage,Foraging,While doing  Foraging
+Blue Ice Sickle,Foraging,40,Tool,Loot,,"Foraging Tool, Sickle",Double Rewards,10,Percentage,Foraging,While doing  Foraging
+Blue Ice Sickle,Foraging,40,Tool,Loot,,"Foraging Tool, Sickle",Fine Material Finding,10,Percentage,Foraging,While doing  Foraging
+Blue Ice Sickle,Foraging,40,Tool,Loot,,"Foraging Tool, Sickle",Chest Finding,10,Percentage,Foraging,While doing  Foraging
+Blue Ice Sickle,Foraging,40,Tool,Loot,,"Foraging Tool, Sickle",Bonus Experience,2,Percentage,Foraging,While doing  Foraging
+Blue Ice Sickle,Foraging,40,Tool,Loot,,"Foraging Tool, Sickle",Steps Required,-5,Flat,Foraging,While doing  Foraging
+Carving Knife,Crafting,18,Tool,Loot,,Knife,Work Efficiency,15,Percentage,Crafting,While doing  Crafting
+Carving Knife,Crafting,18,Tool,Loot,,Knife,Chest Finding,15,Percentage,Crafting,While doing  Crafting
+Clay Frisbee,Agility,1,Tool,Loot,,Frisbee,Chest Finding,2,Percentage,Global,Global
+Crafting Guidebook,Crafting,30,Tool,Loot,,,Work Efficiency,-15,Percentage,Crafting,While doing  Crafting
+Crafting Guidebook,Crafting,30,Tool,Loot,,,Crafting Outcome,20,Flat,Global,Global
+Crafting Guidebook,Crafting,30,Tool,Loot,,,Double Rewards,10,Percentage,Crafting,While doing  Crafting
+Crafting Guidebook,Crafting,30,Tool,Loot,,,Chest Finding,10,Percentage,Crafting,While doing  Crafting
+Cutting Board,Cooking,13,Tool,Loot,,Cutting Board,Double Rewards,8,Percentage,Cooking,While doing  Cooking
+Cutting Board,Cooking,13,Tool,Loot,,Cutting Board,Chest Finding,8,Percentage,Cooking,While doing  Cooking
+Dull Chisel,Carpentry,7,Tool,Loot,,"Chisel, Carpentry Tool",Double Rewards,5,Percentage,Carpentry,While doing  Carpentry
+Dull Chisel,Carpentry,7,Tool,Loot,,"Chisel, Carpentry Tool",No Materials Consumed,2,Percentage,Carpentry,While doing  Carpentry
+Dull Knife,Cooking,5,Tool,Loot,,Cooking Knife,Work Efficiency,10,Percentage,Cooking,While doing  Cooking
+Dull Knife,Cooking,5,Tool,Loot,,Cooking Knife,Double Action,2,Percentage,Cooking,While doing  Cooking
+Dull Knife,Cooking,5,Tool,Loot,,Cooking Knife,Bonus Experience,1,Percentage,Cooking,While doing  Cooking
+Dull Machete,Foraging,11,Tool,Loot,,Foraging Tool,Double Rewards,5,Percentage,Foraging,While doing  Foraging
+Dull Machete,Foraging,11,Tool,Loot,,Foraging Tool,Fine Material Finding,15,Percentage,Foraging,While doing  Foraging
+Dull Machete,Foraging,11,Tool,Loot,,Foraging Tool,Chest Finding,10,Percentage,Foraging,While doing  Foraging
+Dull Machete,Foraging,11,Tool,Loot,,Foraging Tool,Find Collectibles,2,Percentage,Global,Global
+Eberhart Corkscrew,Cooking,50,Tool,Loot,,,Bonus Experience,10,Percentage,Cooking,While doing  Cooking
+Eberhart Corkscrew,Cooking,50,Tool,Loot,,,No Materials Consumed,10,Percentage,Cooking,While doing  Cooking
+Eberhart Corkscrew,Cooking,50,Tool,Loot,,,Work Efficiency,5,Percentage,Cooking,While doing  Cooking
+Fireflies in a Jar,Foraging,39,Tool,Loot,,Light Source,Chest Finding,15,Percentage,Foraging,While doing  Foraging
+Fireflies in a Jar,Foraging,39,Tool,Loot,,Light Source,Chest Finding,15,Percentage,Agility,While doing  Agility
+Fishing Guidebook,Fishing,30,Tool,Loot,,,Work Efficiency,-10,Percentage,Fishing,While doing  Fishing
+Fishing Guidebook,Fishing,30,Tool,Loot,,,Double Action,16,Percentage,Fishing,While doing  Fishing
+Fishing Lure,Fishing,10,Tool,Loot,,Fishing Lure,Work Efficiency,10,Percentage,Fishing,While doing  Fishing
+Fishing Lure,Fishing,10,Tool,Loot,,Fishing Lure,Double Rewards,7,Percentage,Fishing,While doing  Fishing
+Flippy Spatula,Cooking,15,Tool,Loot,,,Chest Finding,4,Percentage,Cooking,While doing  Cooking
+Flippy Spatula,Cooking,15,Tool,Loot,,,Steps Required,-4,Flat,Cooking,While doing  Cooking
+Flora's Silver Spoon,Cooking,1,Tool,Loot,,,Work Efficiency,3,Percentage,Cooking,While doing  Cooking
+Flora's Silver Spoon,Cooking,1,Tool,Loot,,,No Materials Consumed,2,Percentage,Cooking,While doing  Cooking
+Flora's Silver Spoon,Cooking,1,Tool,Loot,,,Chest Finding,1,Percentage,Cooking,While doing  Cooking
+Flowing Pocketwatch,Agility,45,Tool,Loot,,,Steps Required,-1,Flat,Global,Global
+Forge Bellows,Smithing,15,Tool,Loot,,,Work Efficiency,8,Percentage,Smithing,While doing  Smithing
+Forge Bellows,Smithing,15,Tool,Loot,,,Double Rewards,3,Percentage,Smithing,While doing  Smithing
+Forge Bellows,Smithing,15,Tool,Loot,,,Bonus Experience,1,Flat,Smithing,While doing  Smithing
+Glowstick,Global,,Tool,Loot,,Light Source,Fine Material Finding,30,Percentage,Fishing,While doing  Fishing
+Gold Pan,Fishing,13,Tool,Loot,,Gold Pan,Work Efficiency,4,Percentage,Mining,While doing  Mining
+Gold Pan,Fishing,13,Tool,Loot,,Gold Pan,Work Efficiency,4,Percentage,Fishing,While doing  Fishing
+Gold Pan,Fishing,13,Tool,Loot,,Gold Pan,Fine Material Finding,8,Percentage,Mining,While doing  Mining
+Gold Pan,Fishing,13,Tool,Loot,,Gold Pan,Fine Material Finding,8,Percentage,Fishing,While doing  Fishing
+Gold Pan,Fishing,13,Tool,Loot,,Gold Pan,Bonus Experience,4,Percentage,Mining,While doing  Mining
+Gold Pan,Fishing,13,Tool,Loot,,Gold Pan,Bonus Experience,4,Percentage,Fishing,While doing  Fishing
+Golden Frisbee,Agility,25,Tool,Loot,,Frisbee,Chest Finding,7,Percentage,Global,Global
+Greedy Piggy Bank,Global,,Tool,Loot,,,Double Action,2,Percentage,Global,Global
+Hand Lantern,Mining,10,Tool,Loot,,Light Source,Chest Finding,9,Percentage,Mining,While doing  Mining
+Hand Lantern,Mining,10,Tool,Loot,,Light Source,Find Gems,7,Percentage,Mining,While doing  Mining
+Handsaw,Carpentry,33,Tool,Loot,,"Carpentry Tool, Saw",Work Efficiency,25,Percentage,Carpentry,While doing  Carpentry
+Handsaw,Carpentry,33,Tool,Loot,,"Carpentry Tool, Saw",Double Action,5,Percentage,Carpentry,While doing  Carpentry
+Handsaw,Carpentry,33,Tool,Loot,,"Carpentry Tool, Saw",Double Rewards,5,Percentage,Carpentry,While doing  Carpentry
+Handsaw,Carpentry,33,Tool,Loot,,"Carpentry Tool, Saw",Chest Finding,15,Percentage,Carpentry,While doing  Carpentry
+Heavy Axe Handle,Woodcutting,43,Tool,Loot,,,Work Efficiency,-25,Percentage,Woodcutting,While doing  Woodcutting
+Heavy Axe Handle,Woodcutting,43,Tool,Loot,,,Double Rewards,32,Percentage,Woodcutting,While doing  Woodcutting
+Ice Axe,Woodcutting,10,Tool,Loot,,Woodcutting Hatchet,Fine Material Finding,100,Percentage,Woodcutting,While doing  Woodcutting While in  Jarvonia.
+Ice Cutter,Carpentry,16,Tool,Loot,,Carpentry Tool,Work Efficiency,15,Percentage,Carpentry,While doing  Carpentry
+Ice Cutter,Carpentry,16,Tool,Loot,,Carpentry Tool,No Materials Consumed,5,Percentage,Carpentry,While doing  Carpentry
+Iron Thermos,Agility,15,Tool,Loot,,,Chest Finding,12,Percentage,Agility,While doing  Agility
+Iron Thermos,Agility,15,Tool,Loot,,,Bonus Experience,5,Percentage,Agility,While doing  Agility
+Jarvonian Smith's Hammer,Smithing,40,Tool,Loot,,Smithing Hammer,Work Efficiency,31,Percentage,Smithing,While doing  Smithing
+Jarvonian Smith's Hammer,Smithing,40,Tool,Loot,,Smithing Hammer,Double Rewards,4,Percentage,Smithing,While doing  Smithing
+Juggling Balls,Global,,Tool,Loot,,,Find Collectibles,5,Percentage,Global,Global
+Large Pot,Cooking,20,Tool,Loot,,Cooking Pot,Bonus Experience,15,Percentage,Cooking,While doing  Cooking
+Large Pot,Cooking,20,Tool,Loot,,Cooking Pot,Double Action,5,Percentage,Cooking,While doing  Cooking
+Lava Cooking Pan,Cooking,55,Tool,Loot,,,No Materials Consumed,-20,Percentage,Cooking,While doing  Cooking
+Lava Cooking Pan,Cooking,55,Tool,Loot,,,Double Rewards,-15,Percentage,Cooking,While doing  Cooking
+Lava Cooking Pan,Cooking,55,Tool,Loot,,,Steps Required,-6,Flat,Cooking,While doing  Cooking
+Log Basket,Woodcutting,13,Tool,Loot,,,Inventory Space,1,Flat,Global,Global
+Log Basket,Woodcutting,13,Tool,Loot,,,Fine Material Finding,9,Percentage,Woodcutting,While doing  Woodcutting
+Log Splitter,Woodcutting,35,Tool,Loot,,,Double Rewards,14,Percentage,Woodcutting,While doing  Woodcutting
+Log Splitter,Woodcutting,35,Tool,Loot,,,Fine Material Finding,5,Percentage,Woodcutting,While doing  Woodcutting
+Long Spade,Foraging,35,Tool,Loot,,,Work Efficiency,-9,Percentage,Foraging,While doing  Foraging
+Long Spade,Foraging,35,Tool,Loot,,,Double Rewards,14,Percentage,Foraging,While doing  Foraging
+Magnifying Lens,Crafting,36,Tool,Loot,,"Crafting Tool, Magnifying Lens",Crafting Outcome,12,Flat,Global,Global
+Magnifying Lens,Crafting,36,Tool,Loot,,"Crafting Tool, Magnifying Lens",Double Action,5,Percentage,Crafting,While doing  Crafting
+Map of GDTE,Agility,22,Tool,Loot,,Local Map,Double Action,15,Percentage,Traveling,While doing  Traveling While in  GDTE.
+Map of Jarvonia,Agility,22,Tool,Loot,,Local Map,Double Action,15,Percentage,Traveling,While doing  Traveling While in  Jarvonia.
+Meat Cleaver,Cooking,25,Tool,Loot,,"Cooking Tool, Cooking Knife",Work Efficiency,35,Percentage,Cooking,While doing  Cooking
+Meat Cleaver,Cooking,25,Tool,Loot,,"Cooking Tool, Cooking Knife",Double Action,5,Percentage,Cooking,While doing  Cooking
+Miner's Magnet,Mining,32,Tool,Loot,,Magnetic Item,Work Efficiency,8,Percentage,Mining,While doing  Mining
+Miner's Magnet,Mining,32,Tool,Loot,,Magnetic Item,Fine Material Finding,28,Percentage,Mining,While doing  Mining
+Mountaineering Guidebook,Agility,45,Tool,Loot,,,Work Efficiency,-10,Percentage,Agility,While doing  Agility
+Mountaineering Guidebook,Agility,45,Tool,Loot,,,Double Action,5,Percentage,Agility,While doing  Agility
+Mountaineering Guidebook,Agility,45,Tool,Loot,,,Double Rewards,5,Percentage,Agility,While doing  Agility
+Mountaineering Guidebook,Agility,45,Tool,Loot,,,Chest Finding,20,Percentage,Agility,While doing  Agility
+Mountaineering Guidebook,Agility,45,Tool,Loot,,,Bonus Experience,25,Percentage,Agility,While doing  Agility
+Northern Spices,Cooking,30,Tool,Loot,,,Work Efficiency,5,Percentage,Cooking,While doing  Cooking
+Northern Spices,Cooking,30,Tool,Loot,,,Double Action,5,Percentage,Cooking,While doing  Cooking
+Northern Spices,Cooking,30,Tool,Loot,,,Chest Finding,5,Percentage,Cooking,While doing  Cooking
+Omni-Tool,Global,,Tool,Loot,,,Chest Finding,8,Percentage,Global,Global
+Omni-Tool,Global,,Tool,Loot,,,Chest Finding,8,Percentage,,Global  when  60 Achievement Points
+Omni-Tool,Global,,Tool,Loot,,,Fine Material Finding,14,Percentage,,Global  when  80 Achievement Points
+Omni-Tool,Global,,Tool,Loot,,,Find Collectibles,8,Percentage,,Global  when  100 Achievement Points
+Omni-Tool,Global,,Tool,Loot,,,Double Rewards,2,Percentage,,Global  when  120 Achievement Points
+Omni-Tool,Global,,Tool,Loot,,,Work Efficiency,2,Percentage,,Global  when  140 Achievement Points
+Pointy Shears,Foraging,15,Tool,Loot,,,Double Rewards,2,Percentage,Foraging,While doing  Foraging
+Pointy Shears,Foraging,15,Tool,Loot,,,Chest Finding,2,Percentage,Foraging,While doing  Foraging
+Precise Ruler,Carpentry,18,Tool,Loot,,Ruler,Double Action,9,Percentage,Carpentry,While doing  Carpentry
+Precise Ruler,Carpentry,18,Tool,Loot,,Ruler,No Materials Consumed,3,Percentage,Carpentry,While doing  Carpentry
+Protractor,Carpentry,17,Tool,Loot,,,Work Efficiency,9,Percentage,Carpentry,While doing  Carpentry
+Protractor,Carpentry,17,Tool,Loot,,,Double Rewards,4,Percentage,Carpentry,While doing  Carpentry
+Recipe Book,Cooking,35,Tool,Loot,,,Work Efficiency,-12.5,Percentage,Cooking,While doing  Cooking
+Recipe Book,Cooking,35,Tool,Loot,,,Double Action,18.5,Percentage,Cooking,While doing  Cooking
+Recipe Book,Cooking,35,Tool,Loot,,,No Materials Consumed,7,Percentage,Cooking,While doing  Cooking
+Rusty Spyglass,Global,,Tool,Loot,,,Work Efficiency,-2,Percentage,Global,Global
+Rusty Spyglass,Global,,Tool,Loot,,,Fine Material Finding,20,Percentage,Global,Global
+Screwdriver,Crafting,16,Tool,Loot,,"Screwdriver, Crafting Tool",Work Efficiency,9,Percentage,Crafting,While doing  Crafting
+Sharp Chisel,Carpentry,27,Tool,Loot,,"Chisel, Carpentry Tool",Work Efficiency,18,Percentage,Carpentry,While doing  Carpentry
+Sharp Chisel,Carpentry,27,Tool,Loot,,"Chisel, Carpentry Tool",No Materials Consumed,4,Percentage,Carpentry,While doing  Carpentry
+Sharp Chisel,Carpentry,27,Tool,Loot,,"Chisel, Carpentry Tool",Chest Finding,5,Percentage,Carpentry,While doing  Carpentry
+Sharp Chisel,Carpentry,27,Tool,Loot,,"Chisel, Carpentry Tool",Bonus Experience,2,Flat,Carpentry,While doing  Carpentry
+Sharp Knife,Cooking,25,Tool,Loot,,Cooking Knife,Work Efficiency,23,Percentage,Cooking,While doing  Cooking
+Sharp Knife,Cooking,25,Tool,Loot,,Cooking Knife,Double Action,4,Percentage,Cooking,While doing  Cooking
+Sharp Knife,Cooking,25,Tool,Loot,,Cooking Knife,Bonus Experience,4,Percentage,Cooking,While doing  Cooking
+Sharp Machete,Foraging,22,Tool,Loot,,Foraging Tool,Double Rewards,10,Percentage,Foraging,While doing  Foraging
+Sharp Machete,Foraging,22,Tool,Loot,,Foraging Tool,Fine Material Finding,35,Percentage,Foraging,While doing  Foraging
+Sharp Machete,Foraging,22,Tool,Loot,,Foraging Tool,Chest Finding,25,Percentage,Foraging,While doing  Foraging
+Sharp Machete,Foraging,22,Tool,Loot,,Foraging Tool,Find Collectibles,4,Percentage,Global,Global
+Shell Snatcher,Global,,Tool,Loot,,,Work Efficiency,12,Percentage,Foraging,While doing  Foraging
+Shell Snatcher,Global,,Tool,Loot,,,Fine Material Finding,15,Percentage,Foraging,While doing  Foraging
+Shell Snatcher,Global,,Tool,Loot,,,Chest Finding,15,Percentage,Foraging,While doing  Foraging
+Shiny Spinner,Fishing,26,Tool,Loot,,Fishing Lure,Work Efficiency,15,Percentage,Fishing,While doing  Fishing
+Shiny Spinner,Fishing,26,Tool,Loot,,Fishing Lure,Double Action,6,Percentage,Fishing,While doing  Fishing
+Shiny Spinner,Fishing,26,Tool,Loot,,Fishing Lure,Fine Material Finding,15,Percentage,Fishing,While doing  Fishing
+Shovel Axe,"Mining, Woodcutting","50, 50",Tool,Loot,,"Pickaxe, Woodcutting Hatchet",Work Efficiency,45,Percentage,Mining,While doing  Mining
+Shovel Axe,"Mining, Woodcutting","50, 50",Tool,Loot,,"Pickaxe, Woodcutting Hatchet",Work Efficiency,45,Percentage,Woodcutting,While doing  Woodcutting
+Shovel Axe,"Mining, Woodcutting","50, 50",Tool,Loot,,"Pickaxe, Woodcutting Hatchet",Bonus Experience,2,Flat,Mining,While doing  Mining
+Shovel Axe,"Mining, Woodcutting","50, 50",Tool,Loot,,"Pickaxe, Woodcutting Hatchet",Bonus Experience,2,Flat,Woodcutting,While doing  Woodcutting
+Shovel Axe,"Mining, Woodcutting","50, 50",Tool,Loot,,"Pickaxe, Woodcutting Hatchet",Find Gems,20,Percentage,Mining,While doing  Mining
+Shovel Axe,"Mining, Woodcutting","50, 50",Tool,Loot,,"Pickaxe, Woodcutting Hatchet",Find Bird Nests,20,Percentage,Woodcutting,While doing  Woodcutting
+Simple Bug Catching Net,Global,,Tool,Loot,,Bug Catching Net,Work Efficiency,4,Percentage,Foraging,While doing  Foraging
+Simple Bug Catching Net,Global,,Tool,Loot,,Bug Catching Net,Bonus Experience,2,Percentage,Foraging,While doing  Foraging
+Simple Chisel,Global,,Tool,Loot,,"Chisel, Carpentry Tool",Work Efficiency,9,Percentage,Carpentry,While doing  Carpentry
+Simple Chisel,Global,,Tool,Loot,,"Chisel, Carpentry Tool",Bonus Experience,2,Percentage,Carpentry,While doing  Carpentry
+Simple Gold Pan,Global,,Tool,Loot,,Gold Pan,Work Efficiency,2,Percentage,Mining,While doing  Mining
+Simple Gold Pan,Global,,Tool,Loot,,Gold Pan,Work Efficiency,2,Percentage,Fishing,While doing  Fishing
+Simple Gold Pan,Global,,Tool,Loot,,Gold Pan,Fine Material Finding,2,Percentage,Mining,While doing  Mining
+Simple Gold Pan,Global,,Tool,Loot,,Gold Pan,Bonus Experience,2,Percentage,Fishing,While doing  Fishing
+Simple Hammer,Smithing,12,Tool,Loot,,Smithing Hammer,Work Efficiency,9,Percentage,Smithing,While doing  Smithing
+Simple Hammer,Smithing,12,Tool,Loot,,Smithing Hammer,Bonus Experience,2,Percentage,Smithing,While doing  Smithing
+Simple Magnet,Global,,Tool,Loot,,Magnetic Item,Fine Material Finding,4,Percentage,Mining,While doing  Mining
+Simple Magnet,Global,,Tool,Loot,,Magnetic Item,Work Efficiency,2,Percentage,Mining,While doing  Mining
+Simple Mining Shovel,Mining,7,Tool,Loot,,,Work Efficiency,3,Percentage,Mining,While doing  Mining
+Simple Mining Shovel,Mining,7,Tool,Loot,,,Fine Material Finding,9,Percentage,Mining,While doing  Mining
+Simple Mining Shovel,Mining,7,Tool,Loot,,,Chest Finding,3,Percentage,Mining,While doing  Mining
+Simple Pan,Global,,Tool,Loot,,Cooking Pan,Work Efficiency,9,Percentage,Cooking,While doing  Cooking
+Simple Pan,Global,,Tool,Loot,,Cooking Pan,Bonus Experience,2,Percentage,Cooking,While doing  Cooking
+Simple Ruler,Carpentry,11,Tool,Loot,,Ruler,Double Action,6,Percentage,Carpentry,While doing  Carpentry
+Simple Ruler,Carpentry,11,Tool,Loot,,Ruler,No Materials Consumed,1,Percentage,Carpentry,While doing  Carpentry
+Simple Saw,Global,,Tool,Loot,,"Saw, Carpentry Tool",Work Efficiency,9,Percentage,Carpentry,While doing  Carpentry
+Simple Saw,Global,,Tool,Loot,,"Saw, Carpentry Tool",Bonus Experience,2,Percentage,Carpentry,While doing  Carpentry
+Simple Torch,Agility,10,Tool,Loot,,Light Source,Chest Finding,5,Percentage,Agility,While doing  Agility
+Simple Wrench,Crafting,1,Tool,Loot,,"Crafting Tool, Wrench",Work Efficiency,6,Percentage,Crafting,While doing  Crafting
+Simple Wrench,Crafting,1,Tool,Loot,,"Crafting Tool, Wrench",Crafting Outcome,4,Flat,Global,Global
+Slipstick,Crafting,18,Tool,Loot,,,Crafting Outcome,18,Flat,Global,Global
+Slipstick,Crafting,18,Tool,Loot,,,No Materials Consumed,2,Percentage,Crafting,While doing  Crafting
+Slipstick,Crafting,18,Tool,Loot,,,Chest Finding,5,Percentage,Crafting,While doing  Crafting
+Small Sack,Foraging,17,Tool,Loot,,,Double Rewards,3,Percentage,Foraging,While doing  Foraging
+Small Sack,Foraging,17,Tool,Loot,,,Inventory Space,1,Flat,Global,Global
+Sturdy Whisk,Cooking,15,Tool,Loot,,,Steps Required,-1,Flat,Cooking,While doing  Cooking
+Tidal Lure,Fishing,45,Tool,Loot,,Fishing Lure,Work Efficiency,10,Percentage,Fishing,While doing  Fishing
+Tidal Lure,Fishing,45,Tool,Loot,,Fishing Lure,Chest Finding,20,Percentage,Fishing,While doing  Fishing
+Tidal Lure,Fishing,45,Tool,Loot,,Fishing Lure,Steps Required,-3,Flat,Fishing,While doing  Fishing
+Trash Grabber,Global,,Tool,Loot,,,Fine Material Finding,20,Percentage,Global,Global
+Traveler's Kit,Global,,Tool,Loot,,,Double Action,30,Percentage,Traveling,While doing  Traveling
+Traveler's Kit,Global,,Tool,Loot,,,Steps Required,10,Flat,Traveling,While doing  Traveling
+Trekking Poles,Global,,Tool,Loot,,,Work Efficiency,12,Percentage,Agility,While doing  Agility
+Trekking Poles,Global,,Tool,Loot,,,Inventory Space,-2,Flat,Global,Global
+Trusty Tent,Agility,40,Tool,Loot,,,Work Efficiency,50,Percentage,Traveling,While doing  Traveling While in  GDTE.
+Walking Stick,Agility,1,Tool,Loot,,,Work Efficiency,5,Percentage,Agility,While doing  Agility
+Water Bottle,Agility,1,Tool,Loot,,,Double Rewards,3,Percentage,Agility,While doing  Agility
+Wilderness Guidebook,Foraging,35,Tool,Loot,,,Work Efficiency,-10,Percentage,Foraging,While doing  Foraging
+Wilderness Guidebook,Foraging,35,Tool,Loot,,,Double Action,14,Percentage,Foraging,While doing  Foraging
+Wire Saw,Crafting,31,Tool,Loot,,"Saw, Crafting Tool",Work Efficiency,20,Percentage,Crafting,While doing  Crafting
+Wire Saw,Crafting,31,Tool,Loot,,"Saw, Crafting Tool",No Materials Consumed,5,Percentage,Crafting,While doing  Crafting
+Wire Saw,Crafting,31,Tool,Loot,,"Saw, Crafting Tool",Chest Finding,20,Percentage,Crafting,While doing  Crafting
+Wolf Jaw Tongs,Smithing,17,Tool,Loot,,,No Materials Consumed,3,Percentage,Smithing,While doing  Smithing
+Wolf Jaw Tongs,Smithing,17,Tool,Loot,,,Chest Finding,7,Percentage,Smithing,While doing  Smithing
+Wolf Jaw Tongs,Smithing,17,Tool,Loot,,,Bonus Experience,8,Percentage,Smithing,While doing  Smithing
+Woodcutting Guidebook,Woodcutting,30,Tool,Loot,,,Work Efficiency,-10,Percentage,Woodcutting,While doing  Woodcutting
+Woodcutting Guidebook,Woodcutting,30,Tool,Loot,,,Double Action,16,Percentage,Woodcutting,While doing  Woodcutting
+Absorbing Amulet,Global,,Neck,Loot,,,Fine Material Finding,10,Percentage,Global,Global
+Absorbing Amulet,Global,,Neck,Loot,,,Find Collectibles,10,Percentage,Global,Global
+Adventuring Amulet,Global,,Neck,Loot,,,Work Efficiency,4,Percentage,,Global  if wearing at least  1 Adventuring Tool Set items.
+Adventuring Amulet,Global,,Neck,Loot,,,Chest Finding,4,Percentage,,Global  if wearing at least  2 Adventuring Tool Set items.
+Adventuring Amulet,Global,,Neck,Loot,,,Fine Material Finding,6,Percentage,,Global  if wearing at least  3 Adventuring Tool Set items.
+Adventuring Amulet,Global,,Neck,Loot,,,Double Rewards,4,Percentage,,Global  if wearing at least  4 Adventuring Tool Set items.
+Adventuring Amulet,Global,,Neck,Loot,,,Steps Required,-1,Flat,,Global  if wearing at least  5 Adventuring Tool Set items.
+Adventuring Amulet,Global,,Neck,Loot,,,Chance to Find Adventurers' Guild Token,1,Percentage,,Global   1  Adventurers' Guild Token
+Adventuring Ring,Global,,Ring,Loot,,,Work Efficiency,2,Percentage,,Global  if wearing at least  1 Adventuring Tool Set items.
+Adventuring Ring,Global,,Ring,Loot,,,Chest Finding,2,Percentage,,Global  if wearing at least  2 Adventuring Tool Set items.
+Adventuring Ring,Global,,Ring,Loot,,,Fine Material Finding,3,Percentage,,Global  if wearing at least  3 Adventuring Tool Set items.
+Adventuring Ring,Global,,Ring,Loot,,,Double Rewards,2,Percentage,,Global  if wearing at least  4 Adventuring Tool Set items.
+Adventuring Ring,Global,,Ring,Loot,,,Steps Required,-1,Flat,,Global  if wearing at least  5 Adventuring Tool Set items.
+Adventuring Ring,Global,,Ring,Loot,,,Chance to Find Adventurers' Guild Token,0.5,Percentage,,Global   1  Adventurers' Guild Token
+Algae Ring,Global,,Ring,Loot,,,Work Efficiency,8,Percentage,Fishing,While doing  Fishing While in  Syrenthia.
+Backpack,Global,,Back,Loot,,,Inventory Space,4,Flat,Global,Global
+Birch Skis,Agility,5,Feet,Loot,,Skis,Work Efficiency,7,Percentage,Agility,While doing  Agility While in  Jarvonia.
+Boots of Speed,Global,,Feet,Loot,,,Steps Required,-1,Flat,Global,Global
+Breezy Shirt,Fishing,9,Chest,Loot,,,Work Efficiency,4,Percentage,Fishing,While doing  Fishing
+Breezy Shirt,Fishing,9,Chest,Loot,,,Bonus Experience,4,Percentage,Fishing,While doing  Fishing
+Breezy Shirt,Fishing,9,Chest,Loot,,,Chest Finding,4,Percentage,Fishing,While doing  Fishing
+Breezy Shirt,Fishing,9,Chest,Loot,,,Fine Material Finding,4,Percentage,Fishing,While doing  Fishing
+Breezy Shirt,Fishing,9,Chest,Loot,,,Double Action,4,Percentage,Fishing,While doing  Fishing
+Breezy Shirt,Fishing,9,Chest,Loot,,,Double Rewards,4,Percentage,Fishing,While doing  Fishing
+Camouflage Cape,Foraging,15,Cape,Loot,,,Double Rewards,4,Percentage,Foraging,While doing  Foraging
+Camouflage Cape,Foraging,15,Cape,Loot,,,Fine Material Finding,22,Percentage,Foraging,While doing  Foraging
+Candlehat,Crafting,58,Head,Loot,,Light Source,Work Efficiency,-5,Percentage,Crafting,While doing  Crafting
+Candlehat,Crafting,58,Head,Loot,,Light Source,Crafting Outcome,35,Flat,Global,Global
+Cape of Achiever,Global,,Cape,Loot,,,Work Efficiency,20,Percentage,Global,Global
+Cape of Achiever,Global,,Cape,Loot,,,Crafting Outcome,20,Flat,Global,Global
+Cape of Achiever,Global,,Cape,Loot,,,Fine Material Finding,35,Percentage,Global,Global
+Cape of Achiever,Global,,Cape,Loot,,,Bonus Experience,2,Flat,Global,Global
+Cape of Achiever,Global,,Cape,Loot,,,Inventory Space,2,Flat,Global,Global
+Cape of Achiever,Global,,Cape,Loot,,,Steps Required,-5,Flat,Global,Global
+Cape of Half-Achiever,Global,,Cape,Loot,,,Work Efficiency,9,Percentage,Global,Global
+Cape of Half-Achiever,Global,,Cape,Loot,,,Crafting Outcome,10,Flat,Global,Global
+Cape of Half-Achiever,Global,,Cape,Loot,,,Fine Material Finding,16,Percentage,Global,Global
+Cape of Half-Achiever,Global,,Cape,Loot,,,Bonus Experience,1,Flat,Global,Global
+Cape of Half-Achiever,Global,,Cape,Loot,,,Inventory Space,1,Flat,Global,Global
+Cape of Half-Achiever,Global,,Cape,Loot,,,Steps Required,-2,Flat,Global,Global
+Cape of the Trailblazer,Global,,Cape,Loot,,,Work Efficiency,20,Percentage,Traveling,While doing  Traveling
+Cape of the Trailblazer,Global,,Cape,Loot,,,Crafting Outcome,25,Flat,Global,Global
+Cape of the Trailblazer,Global,,Cape,Loot,,,Fine Material Finding,25,Percentage,Global,Global
+Cape of the Trailblazer,Global,,Cape,Loot,,,Inventory Space,1,Flat,Global,Global
+Cape of the Trailblazer,Global,,Cape,Loot,,,Steps Required,-3,Flat,Traveling,While doing  Traveling
+Cape of the Trailblazer,Global,,Cape,Loot,,,Find Collectibles,15,Percentage,Global,Global
+Cape of the Trailblazer,Global,,Cape,Loot,,,Chance to Find Adventurers' Guild Token,2,Percentage,,Global   1  Adventurers' Guild Token
+Chef's Apron,Cooking,25,Chest,Loot,,,Work Efficiency,3,Percentage,Cooking,While doing  Cooking
+Chef's Apron,Cooking,25,Chest,Loot,,,Double Rewards,8,Percentage,Cooking,While doing  Cooking
+Chef's Hat,Cooking,22,Head,Loot,,,Work Efficiency,4,Percentage,Cooking,While doing  Cooking
+Chef's Hat,Cooking,22,Head,Loot,,,Bonus Experience,6,Percentage,Cooking,While doing  Cooking
+Chef's Leg Apron,Cooking,17,Legs,Loot,,,Work Efficiency,10,Percentage,Cooking,While doing  Cooking
+Chef's Leg Apron,Cooking,17,Legs,Loot,,,Double Rewards,15,Percentage,Cooking,While doing  Cooking
+Compass Necklace,Foraging,24,Neck,Loot,,,Work Efficiency,4,Percentage,Foraging,While doing  Foraging
+Compass Necklace,Foraging,24,Neck,Loot,,,Fine Material Finding,22,Percentage,Foraging,While doing  Foraging
+Compass Necklace,Foraging,24,Neck,Loot,,,Find Collectibles,2,Percentage,Global,Global
+Conservationist Boots,Global,,Feet,Loot,,,Fine Material Finding,55,Percentage,Global,Global
+Conservationist Boots,Global,,Feet,Loot,,,Bonus Experience,-6,Percentage,Global,Global
+Conservationist Hat,Global,,Head,Loot,,,Fine Material Finding,55,Percentage,Global,Global
+Conservationist Hat,Global,,Head,Loot,,,Bonus Experience,-6,Percentage,Global,Global
+Conservationist Shirt,Global,,Chest,Loot,,,Fine Material Finding,55,Percentage,Global,Global
+Conservationist Shirt,Global,,Chest,Loot,,,Bonus Experience,-6,Percentage,Global,Global
+Conservationist Shorts,Global,,Legs,Loot,,,Fine Material Finding,55,Percentage,Global,Global
+Conservationist Shorts,Global,,Legs,Loot,,,Bonus Experience,-6,Percentage,Global,Global
+Cool Sunglasses,Fishing,7,Head,Loot,,,Fine Material Finding,15,Percentage,Fishing,While doing  Fishing
+Cooling Ice Amulet,Smithing,29,Neck,Loot,,,Double Action,5,Percentage,Smithing,While doing  Smithing
+Cooling Ice Amulet,Smithing,29,Neck,Loot,,,No Materials Consumed,5,Percentage,Smithing,While doing  Smithing
+Coral Cape,Global,,Cape,Loot,,,No Materials Consumed,3,Percentage,Global,Global
+Coral Cape,Global,,Cape,Loot,,,Chest Finding,15,Percentage,Woodcutting,While doing  Woodcutting While in Underwater location.
+Coral Cape,Global,,Cape,Loot,,,Chest Finding,15,Percentage,Mining,While doing  Mining While in Underwater location.
+Coral Cape,Global,,Cape,Loot,,,Chest Finding,15,Percentage,Fishing,While doing  Fishing While in Underwater location.
+Coral Cape,Global,,Cape,Loot,,,Chest Finding,15,Percentage,Foraging,While doing  Foraging While in Underwater location.
+Crafting Boots,Crafting,14,Feet,Loot,,,Crafting Outcome,9,Flat,Global,Global
+Crafting Boots,Crafting,14,Feet,Loot,,,No Materials Consumed,3,Percentage,Crafting,While doing  Crafting
+Crafting Boots,Crafting,14,Feet,Loot,,,Double Rewards,3,Percentage,Crafting,While doing  Crafting
+Crafting Pants,Crafting,14,Legs,Loot,,,Crafting Outcome,7,Flat,Global,Global
+Crafting Pants,Crafting,14,Legs,Loot,,,No Materials Consumed,1,Percentage,Crafting,While doing  Crafting
+Crafting Pants,Crafting,14,Legs,Loot,,,Chest Finding,2,Percentage,Crafting,While doing  Crafting
+Crafting Shirt,Crafting,12,Chest,Loot,,,Work Efficiency,7,Percentage,Crafting,While doing  Crafting
+Crafting Shirt,Crafting,12,Chest,Loot,,,Crafting Outcome,19,Flat,Global,Global
+Crafting Shirt,Crafting,12,Chest,Loot,,,No Materials Consumed,2,Percentage,Crafting,While doing  Crafting
+Crafting Shirt,Crafting,12,Chest,Loot,,,Bonus Experience,1,Flat,Crafting,While doing  Crafting
+Exercise Headband,Agility,35,Head,Loot,,,Double Action,15,Percentage,Traveling,While doing  Traveling
+Exercise Headband,Agility,35,Head,Loot,,,Chest Finding,35,Percentage,Traveling,While doing  Traveling
+Eye Patch,Global,,Head,Loot,,,Work Efficiency,-8,Percentage,Fishing,While doing  Fishing
+Eye Patch,Global,,Head,Loot,,,Fine Material Finding,60,Percentage,Fishing,While doing  Fishing
+Eye Patch,Global,,Head,Loot,,,Chest Finding,30,Percentage,Fishing,While doing  Fishing
+Feather Cape,Agility,42,Cape,Loot,,,Work Efficiency,15,Percentage,Agility,While doing  Agility
+Feather Cape,Agility,42,Cape,Loot,,,Bonus Experience,15,Percentage,Agility,While doing  Agility
+Fin Gloves,Global,,Hands,Loot,,,Work Efficiency,12,Percentage,Agility,While doing  Agility While in Underwater location.
+Fisherman's Hat,Fishing,15,Head,Loot,,,Bonus Experience,12,Percentage,Fishing,While doing  Fishing
+Fisherman's Hat,Fishing,15,Head,Loot,,,Bonus Experience,2,Flat,Fishing,While doing  Fishing
+Fisherman's Hat,Fishing,15,Head,Loot,,,Chest Finding,5,Percentage,Fishing,While doing  Fishing
+Fisherman's Trousers,Fishing,19,Legs,Loot,,,Work Efficiency,25,Percentage,Fishing,While doing  Fishing
+Fisherman's Trousers,Fishing,19,Legs,Loot,,,Double Action,4,Percentage,Fishing,While doing  Fishing
+Flowy Trousers,Agility,44,Legs,Loot,,,Work Efficiency,10,Percentage,Agility,While doing  Agility
+Flowy Trousers,Agility,44,Legs,Loot,,,Double Action,5,Percentage,Agility,While doing  Agility
+Flowy Trousers,Agility,44,Legs,Loot,,,Bonus Experience,10,Percentage,Agility,While doing  Agility
+Foraging Shirt,Foraging,7,Chest,Loot,,,Work Efficiency,7,Percentage,Foraging,While doing  Foraging
+Foraging Shirt,Foraging,7,Chest,Loot,,,Chest Finding,3,Percentage,Foraging,While doing  Foraging
+Foraging Shorts,Foraging,7,Legs,Loot,,,Work Efficiency,6,Percentage,Foraging,While doing  Foraging
+Foraging Shorts,Foraging,7,Legs,Loot,,,Double Action,2,Percentage,Foraging,While doing  Foraging
+Forester's Boots,Woodcutting,26,Feet,Loot,,,Double Action,6,Percentage,Woodcutting,While doing  Woodcutting
+Forester's Boots,Woodcutting,26,Feet,Loot,,,Double Rewards,2,Percentage,Woodcutting,While doing  Woodcutting
+Forester's Boots,Woodcutting,26,Feet,Loot,,,Fine Material Finding,11,Percentage,Woodcutting,While doing  Woodcutting
+Forester's Boots,Woodcutting,26,Feet,Loot,,,Find Bird Nests,28,Percentage,Woodcutting,While doing  Woodcutting
+Forester's Flannel Shirt,Woodcutting,24,Chest,Loot,,,Double Action,5,Percentage,Woodcutting,While doing  Woodcutting
+Forester's Flannel Shirt,Woodcutting,24,Chest,Loot,,,Double Rewards,5,Percentage,Woodcutting,While doing  Woodcutting
+Forester's Flannel Shirt,Woodcutting,24,Chest,Loot,,,Fine Material Finding,12,Percentage,Woodcutting,While doing  Woodcutting
+Forester's Flannel Shirt,Woodcutting,24,Chest,Loot,,,Find Bird Nests,39,Percentage,Woodcutting,While doing  Woodcutting
+Forester's Hat,Woodcutting,25,Head,Loot,,,Work Efficiency,13,Percentage,Woodcutting,While doing  Woodcutting
+Forester's Hat,Woodcutting,25,Head,Loot,,,Fine Material Finding,9,Percentage,Woodcutting,While doing  Woodcutting
+Forester's Hat,Woodcutting,25,Head,Loot,,,Bonus Experience,3,Flat,Woodcutting,While doing  Woodcutting
+Forester's Pants,Woodcutting,22,Legs,Loot,,,Work Efficiency,16,Percentage,Woodcutting,While doing  Woodcutting
+Forester's Pants,Woodcutting,22,Legs,Loot,,,Fine Material Finding,10,Percentage,Woodcutting,While doing  Woodcutting
+Forester's Pants,Woodcutting,22,Legs,Loot,,,Chest Finding,2,Percentage,Woodcutting,While doing  Woodcutting
+Gardening Gloves,Foraging,17,Hands,Loot,,,Work Efficiency,9,Percentage,Foraging,While doing  Foraging
+Gardening Gloves,Foraging,17,Hands,Loot,,,Fine Material Finding,9,Percentage,Foraging,While doing  Foraging
+Gardening Gloves,Foraging,17,Hands,Loot,,,Chest Finding,5,Percentage,Foraging,While doing  Foraging
+Gem Bracelet,Global,,Hands,Loot,,,Find Gems,20,Percentage,Mining,While doing  Mining
+Grappling Hook,Agility,38,Back,Loot,,Climbing Gear,Work Efficiency,-5,Percentage,Agility,While doing  Agility
+Grappling Hook,Agility,38,Back,Loot,,Climbing Gear,Chest Finding,12,Percentage,Agility,While doing  Agility
+Grappling Hook,Agility,38,Back,Loot,,Climbing Gear,Bonus Experience,12,Percentage,Agility,While doing  Agility
+Grappling Hook,Agility,38,Back,Loot,,Climbing Gear,Bonus Experience,1,Flat,Agility,While doing  Agility
+Grippy Gloves,Crafting,31,Hands,Loot,,,Double Rewards,9,Percentage,Crafting,While doing  Crafting
+Halfling's Feet Slippers,Foraging,30,Feet,Loot,,,Work Efficiency,12,Percentage,Foraging,While doing  Foraging
+Halfling's Feet Slippers,Foraging,30,Feet,Loot,,,Fine Material Finding,15,Percentage,Foraging,While doing  Foraging
+Halfling's Feet Slippers,Foraging,30,Feet,Loot,,,Bonus Experience,1,Flat,Foraging,While doing  Foraging
+Halfling's Feet Slippers,Foraging,30,Feet,Loot,,,Steps Required,-2,Flat,Agility,While doing  Agility
+Hat with a Feather,Foraging,52,Head,Loot,,,Double Action,5,Percentage,Foraging,While doing  Foraging
+Hat with a Feather,Foraging,52,Head,Loot,,,Double Rewards,8,Percentage,Foraging,While doing  Foraging
+Hat with a Feather,Foraging,52,Head,Loot,,,Bonus Experience,1,Flat,Foraging,While doing  Foraging
+Hat with a Feather,Foraging,52,Head,Loot,,,Steps Required,-2,Flat,Foraging,While doing  Foraging
+Herbert's Boots,Global,,Feet,Loot,,,Work Efficiency,1,Percentage,Global,Global
+Herbert's Cape,Global,,Cape,Loot,,,Work Efficiency,1,Percentage,Global,Global
+Herbert's Hat,Global,,Head,Loot,,,Work Efficiency,1,Percentage,Global,Global
+Herbert's Pants,Global,,Legs,Loot,,,Work Efficiency,1,Percentage,Global,Global
+Herbert's Shirt,Global,,Chest,Loot,,,Work Efficiency,1,Percentage,Global,Global
+Life Vest,Fishing,24,Chest,Loot,,Life Vest,Work Efficiency,5,Percentage,Fishing,While doing  Fishing
+Life Vest,Fishing,24,Chest,Loot,,Life Vest,Work Efficiency,5,Percentage,Agility,While doing  Agility
+Lucky Rabbit's Foot Necklace,Global,,Neck,Loot,,,Double Action,3,Percentage,Global,Global
+Lumberjack Boots,Woodcutting,10,Feet,Loot,,,Work Efficiency,5,Percentage,Woodcutting,While doing  Woodcutting
+Lumberjack Boots,Woodcutting,10,Feet,Loot,,,Bonus Experience,2,Percentage,Woodcutting,While doing  Woodcutting
+Lumberjack Boots,Woodcutting,10,Feet,Loot,,,Find Bird Nests,10,Percentage,Woodcutting,While doing  Woodcutting
+Lumberjack Hat,Woodcutting,12,Head,Loot,,,Work Efficiency,3,Percentage,Woodcutting,While doing  Woodcutting
+Lumberjack Hat,Woodcutting,12,Head,Loot,,,Bonus Experience,1,Flat,Woodcutting,While doing  Woodcutting
+Lumberjack Hat,Woodcutting,12,Head,Loot,,,Fine Material Finding,2,Percentage,Woodcutting,While doing  Woodcutting
+Lumberjack Pants,Woodcutting,8,Legs,Loot,,,Fine Material Finding,3,Percentage,Woodcutting,While doing  Woodcutting
+Lumberjack Pants,Woodcutting,8,Legs,Loot,,,Chest Finding,3,Percentage,Woodcutting,While doing  Woodcutting
+Lumberjack Sandals,Woodcutting,6,Feet,Loot,,,Work Efficiency,3,Percentage,Woodcutting,While doing  Woodcutting
+Lumberjack Sandals,Woodcutting,6,Feet,Loot,,,Fine Material Finding,3,Percentage,Woodcutting,While doing  Woodcutting
+Lumberjack Shirt,Woodcutting,27,Chest,Loot,,,Find Bird Nests,13,Percentage,Woodcutting,While doing  Woodcutting
+Lumberjack Shirt,Woodcutting,27,Chest,Loot,,,Bonus Experience,6,Percentage,Woodcutting,While doing  Woodcutting
+Lumberjack Shirt,Woodcutting,27,Chest,Loot,,,Bonus Experience,1,Flat,Woodcutting,While doing  Woodcutting
+Measuring Spoons Necklace,Cooking,18,Neck,Loot,,,No Materials Consumed,4,Percentage,Cooking,While doing  Cooking
+Measuring Spoons Necklace,Cooking,18,Neck,Loot,,,Chest Finding,12,Percentage,Cooking,While doing  Cooking
+Medieval Sneakers,Agility,25,Feet,Loot,,,Work Efficiency,15,Percentage,Traveling,While doing  Traveling
+Medieval Sneakers,Agility,25,Feet,Loot,,,Bonus Experience,33,Percentage,Traveling,While doing  Traveling
+Medieval Sneakers,Agility,25,Feet,Loot,,,Steps Required,-5,Flat,Traveling,While doing  Traveling
+Merfolk Dress,Agility,40,Chest,Loot,,"Diving Gear Set, Advanced Diving Gear Set",Work Efficiency,5,Percentage,,Global  While in Underwater location.
+Metalworking Gloves,Smithing,16,Hands,Loot,,,Double Action,6,Percentage,Smithing,While doing  Smithing
+Metalworking Gloves,Smithing,16,Hands,Loot,,,Bonus Experience,2,Flat,Smithing,While doing  Smithing
+Metalworking Gloves,Smithing,16,Hands,Loot,,,No Materials Consumed,4,Percentage,Smithing,While doing  Smithing
+Miner's Beard,Mining,25,Neck,Loot,,,Double Action,4,Percentage,Mining,While doing  Mining
+Miner's Pants,Mining,35,Legs,Loot,,,Work Efficiency,16,Percentage,Mining,While doing  Mining
+Miner's Pants,Mining,35,Legs,Loot,,,Double Rewards,5,Percentage,Mining,While doing  Mining
+Miner's Pants,Mining,35,Legs,Loot,,,Fine Material Finding,17,Percentage,Mining,While doing  Mining
+Miner's Shirt,Mining,32,Chest,Loot,,,Work Efficiency,9,Percentage,Mining,While doing  Mining
+Miner's Shirt,Mining,32,Chest,Loot,,,Bonus Experience,2,Flat,Mining,While doing  Mining
+Miner's Shirt,Mining,32,Chest,Loot,,,Find Gems,13,Percentage,Mining,While doing  Mining
+Mining Helmet,Mining,23,Head,Loot,,Light Source,Fine Material Finding,40,Percentage,Mining,While doing  Mining
+Mosquito Net Hat,Foraging,45,Head,Loot,,,Work Efficiency,12,Percentage,Foraging,While doing  Foraging While in  GDTE.
+Mosquito Net Hat,Foraging,45,Head,Loot,,,Double Rewards,7,Percentage,Foraging,While doing  Foraging
+Mosquito Net Hat,Foraging,45,Head,Loot,,,Fine Material Finding,20,Percentage,Foraging,While doing  Foraging
+Non-Slip Shoes,Cooking,17,Feet,Loot,,,No Materials Consumed,4,Percentage,Cooking,While doing  Cooking
+Non-Slip Shoes,Cooking,17,Feet,Loot,,,Steps Required,-2,Flat,Cooking,While doing  Cooking
+Non-Waterproof Shoes,Foraging,9,Feet,Loot,,,Work Efficiency,3,Percentage,Foraging,While doing  Foraging
+Non-Waterproof Shoes,Foraging,9,Feet,Loot,,,Fine Material Finding,5,Percentage,Foraging,While doing  Foraging
+Non-Waterproof Shoes,Foraging,9,Feet,Loot,,,Chest Finding,3,Percentage,Foraging,While doing  Foraging
+Oak Skis,Agility,25,Feet,Loot,,Skis,Work Efficiency,24,Percentage,Agility,While doing  Agility While in  Jarvonia.
+Old Copper Ring,Global,,Ring,Loot,,,Chest Finding,2,Percentage,Global,Global
+Old Gold Ring,Global,,Ring,Loot,,,Chest Finding,2,Percentage,Global,Global
+Old Gold Ring,Global,,Ring,Loot,,,Bonus Experience,2,Percentage,Global,Global
+Old Silver Ring,Global,,Ring,Loot,,,Bonus Experience,2,Percentage,Global,Global
+Oven Mittens,Cooking,5,Hands,Loot,,,No Materials Consumed,3,Percentage,Cooking,While doing  Cooking
+Oven Mittens,Cooking,5,Hands,Loot,,,Steps Required,-2,Flat,Cooking,While doing  Cooking
+Pants of Haste,Global,,Legs,Loot,,,Work Efficiency,3,Percentage,Global,Global
+Pants of Haste,Global,,Legs,Loot,,,Inventory Space,1,Flat,Global,Global
+Parkour Gloves,Agility,29,Hands,Loot,,,Work Efficiency,5,Percentage,Agility,While doing  Agility
+Parkour Gloves,Agility,29,Hands,Loot,,,Bonus Experience,5,Percentage,Agility,While doing  Agility
+Pathfinder,Global,,Neck,Loot,,,Work Efficiency,5,Percentage,Traveling,While doing  Traveling
+Pearl Amulet,Global,,Neck,Loot,,,Crafting Outcome,14,Flat,Crafting,While doing  Crafting While in  Syrenthia.
+Picker's Gloves,Foraging,9,Hands,Loot,,,Work Efficiency,4,Percentage,Foraging,While doing  Foraging
+Picker's Gloves,Foraging,9,Hands,Loot,,,Fine Material Finding,3,Percentage,Foraging,While doing  Foraging
+Picker's Gloves,Foraging,9,Hands,Loot,,,Chest Finding,3,Percentage,Foraging,While doing  Foraging
+Pine Skis,Agility,15,Feet,Loot,,Skis,Work Efficiency,16,Percentage,Agility,While doing  Agility While in  Jarvonia.
+Pirate Hat,Global,,Head,Loot,,,Work Efficiency,12,Percentage,Fishing,While doing  Fishing
+Pirate Hat,Global,,Head,Loot,,,Chest Finding,20,Percentage,Fishing,While doing  Fishing
+Protective Glasses,Carpentry,18,Head,Loot,,,Work Efficiency,16,Percentage,Carpentry,While doing  Carpentry
+Protective Glasses,Carpentry,18,Head,Loot,,,Work Efficiency,16,Percentage,Crafting,While doing  Crafting
+Protective Glasses,Carpentry,18,Head,Loot,,,Crafting Outcome,10,Flat,Global,Global
+Protective Glasses,Carpentry,18,Head,Loot,,,Double Rewards,8,Percentage,Carpentry,While doing  Carpentry
+Protective Glasses,Carpentry,18,Head,Loot,,,Double Rewards,8,Percentage,Crafting,While doing  Crafting
+Protective Gloves,Carpentry,7,Hands,Loot,,,Double Action,5,Percentage,Carpentry,While doing  Carpentry
+Protective Pants,Carpentry,22,Legs,Loot,,,Work Efficiency,14,Percentage,Carpentry,While doing  Carpentry
+Protective Pants,Carpentry,22,Legs,Loot,,,Double Rewards,2,Percentage,Carpentry,While doing  Carpentry
+Protective Shirt,Carpentry,20,Chest,Loot,,,Work Efficiency,17,Percentage,Carpentry,While doing  Carpentry
+Protective Shirt,Carpentry,20,Chest,Loot,,,No Materials Consumed,3,Percentage,Carpentry,While doing  Carpentry
+Protective Shirt,Carpentry,20,Chest,Loot,,,Chest Finding,6,Percentage,Carpentry,While doing  Carpentry
+Protective Shirt,Carpentry,20,Chest,Loot,,,Bonus Experience,2,Flat,Carpentry,While doing  Carpentry
+Ring of Ash,Global,,Ring,Loot,,,Work Efficiency,5,Percentage,Mining,While doing  Mining
+Ring of Ash,Global,,Ring,Loot,,,Double Rewards,10,Percentage,Mining,While doing  Mining
+Ring of the Bat,Global,,Ring,Loot,,,Bonus Experience,3,Percentage,Global,Global
+Ring of the Eel,Global,,Ring,Loot,,,Chest Finding,3,Percentage,Global,Global
+Ring of the Heron,Global,,Ring,Loot,,,Fine Material Finding,4,Percentage,Global,Global
+Rock-Star Amulet,Global,,Neck,Loot,,,Find Gems,5,Percentage,Mining,While doing  Mining
+Rooted Ring,Global,,Ring,Loot,,,Work Efficiency,5,Percentage,Woodcutting,While doing  Woodcutting
+Rooted Ring,Global,,Ring,Loot,,,Fine Material Finding,20,Percentage,Woodcutting,While doing  Woodcutting
+Running Shirt,Agility,9,Chest,Loot,,,Work Efficiency,9,Percentage,Agility,While doing  Agility
+Running Shorts,Agility,7,Legs,Loot,,,Bonus Experience,3,Percentage,Agility,While doing  Agility
+Running Shorts,Agility,7,Legs,Loot,,,Bonus Experience,1,Flat,Agility,While doing  Agility
+Running Visor,Global,,Head,Loot,,,Double Rewards,10,Percentage,Agility,While doing  Agility
+Rusty Diving Helmet,Agility,20,Head,Loot,,Diving Gear Set,Work Efficiency,-15,Percentage,,Global  While in Underwater location.
+Rusty Diving Leggings,Agility,20,Legs,Loot,,Diving Gear Set,Work Efficiency,-15,Percentage,,Global  While in Underwater location.
+Rusty Diving Torso,Agility,20,Chest,Loot,,Diving Gear Set,Work Efficiency,-15,Percentage,,Global  While in Underwater location.
+Sailor's Hat,Fishing,32,Head,Loot,,,Work Efficiency,-5,Percentage,Fishing,While doing  Fishing
+Sailor's Hat,Fishing,32,Head,Loot,,,Work Efficiency,-5,Percentage,Agility,While doing  Agility
+Sailor's Hat,Fishing,32,Head,Loot,,,Chest Finding,35,Percentage,Fishing,While doing  Fishing
+Sailor's Hat,Fishing,32,Head,Loot,,,Chest Finding,35,Percentage,Agility,While doing  Agility
+Shark Tooth Necklace,"Fishing, Agility","44, 21",Neck,Loot,,,Work Efficiency,8,Percentage,Fishing,While doing  Fishing
+Shark Tooth Necklace,"Fishing, Agility","44, 21",Neck,Loot,,,Work Efficiency,2,Percentage,Agility,While doing  Agility
+Shiny Ring,Global,,Ring,Loot,,,Fine Material Finding,1,Percentage,Global,Global
+Shoes of Escape,Agility,15,Feet,Loot,,,Work Efficiency,5,Percentage,Traveling,While doing  Traveling
+Shoes of Escape,Agility,15,Feet,Loot,,,Steps Required,-1,Flat,Traveling,While doing  Traveling
+Shrimp Ring,"Fishing, Cooking","43, 25",Ring,Loot,,,Work Efficiency,5,Percentage,Fishing,While doing  Fishing
+Shrimp Ring,"Fishing, Cooking","43, 25",Ring,Loot,,,Work Efficiency,5,Percentage,Cooking,While doing  Cooking
+Simple Amulet,Global,,Neck,Loot,,,Bonus Experience,1,Percentage,Global,Global
+Simple Life Vest,Global,,Chest,Loot,,Life Vest,Work Efficiency,3,Percentage,Fishing,While doing  Fishing
+Simple Life Vest,Global,,Chest,Loot,,Life Vest,Work Efficiency,2,Percentage,Agility,While doing  Agility
+Simple Ring,Global,,Ring,Loot,,,Bonus Experience,1,Percentage,Global,Global
+Simple Rope,Global,,Back,Loot,,Climbing Gear,Work Efficiency,4,Percentage,Agility,While doing  Agility
+Simple Rope,Global,,Back,Loot,,Climbing Gear,Bonus Experience,2,Percentage,Agility,While doing  Agility
+Smelly Socks,Global,,Feet,Loot,,,Bonus Experience,-5,Percentage,Global,Global
+Smelly Socks,Global,,Feet,Loot,,,Chest Finding,5,Percentage,Global,Global
+Smelting Goggles,Smithing,24,Head,Loot,,,Work Efficiency,14,Percentage,Smithing,While doing  Smithing
+Smelting Goggles,Smithing,24,Head,Loot,,,Chest Finding,30,Percentage,Smithing,While doing  Smithing
+Smelting Goggles,Smithing,24,Head,Loot,,,Bonus Experience,4,Percentage,Smithing,While doing  Smithing
+Smith's Apron,Smithing,20,Chest,Loot,,,Double Action,6,Percentage,Smithing,While doing  Smithing
+Smith's Apron,Smithing,20,Chest,Loot,,,Double Rewards,6,Percentage,Smithing,While doing  Smithing
+Smith's Pants,Smithing,12,Legs,Loot,,,Work Efficiency,7,Percentage,Smithing,While doing  Smithing
+Smith's Pants,Smithing,12,Legs,Loot,,,Bonus Experience,4,Percentage,Smithing,While doing  Smithing
+Squishy Flip Flops,Fishing,5,Feet,Loot,,,Double Rewards,1,Percentage,Fishing,While doing  Fishing
+Squishy Flip Flops,Fishing,5,Feet,Loot,,,Bonus Experience,1,Flat,Fishing,While doing  Fishing
+Steel-Toe Boots,"Mining, Smithing","15, 15",Feet,Loot,,,Work Efficiency,5,Percentage,Mining,While doing  Mining
+Steel-Toe Boots,"Mining, Smithing","15, 15",Feet,Loot,,,Work Efficiency,5,Percentage,Smithing,While doing  Smithing
+Swashbuckler Sword,Global,,Primary,Loot,,,Work Efficiency,1,Percentage,Fishing,While doing  Fishing
+Swashbuckler Sword,Global,,Primary,Loot,,,Work Efficiency,1,Percentage,Foraging,While doing  Foraging
+Tentacle Crown,Global,,Head,Loot,,,Fine Material Finding,40,Percentage,,Global  While in Underwater location.
+Tentacle Crown,Global,,Head,Loot,,,Chest Finding,30,Percentage,,Global  While in Underwater location.
+Tiny Backpack,Global,,Back,Loot,,,Inventory Space,1,Flat,Global,Global
+Tough Rope,Agility,17,Back,Loot,,Climbing Gear,Work Efficiency,-4,Percentage,Agility,While doing  Agility
+Tough Rope,Agility,17,Back,Loot,,Climbing Gear,Chest Finding,8,Percentage,Agility,While doing  Agility
+Tough Rope,Agility,17,Back,Loot,,Climbing Gear,Bonus Experience,8,Percentage,Agility,While doing  Agility
+Treasure Hunter Hat,Global,,Head,Loot,,Treasure Hunter Set,Double Rewards,1,Percentage,Global,Global
+Treasure Hunter Hat,Global,,Head,Loot,,Treasure Hunter Set,Find Collectibles,5,Percentage,,Global  if wearing at least  1 Treasure Hunter Set items.
+Treasure Hunter Hat,Global,,Head,Loot,,Treasure Hunter Set,Find Collectibles,5,Percentage,,Global  if wearing at least  2 Treasure Hunter Set items.
+Treasure Hunter Hat,Global,,Head,Loot,,Treasure Hunter Set,Find Collectibles,10,Percentage,,Global  if wearing at least  3 Treasure Hunter Set items.
+Treasure Hunter Jacket,Global,,Chest,Loot,,Treasure Hunter Set,Double Rewards,3,Percentage,Global,Global
+Treasure Hunter Jacket,Global,,Chest,Loot,,Treasure Hunter Set,Find Collectibles,5,Percentage,,Global  if wearing at least  1 Treasure Hunter Set items.
+Treasure Hunter Jacket,Global,,Chest,Loot,,Treasure Hunter Set,Find Collectibles,5,Percentage,,Global  if wearing at least  2 Treasure Hunter Set items.
+Treasure Hunter Jacket,Global,,Chest,Loot,,Treasure Hunter Set,Find Collectibles,10,Percentage,,Global  if wearing at least  3 Treasure Hunter Set items.
+Treasure Hunter Pants,Global,,Legs,Loot,,Treasure Hunter Set,Double Rewards,2,Percentage,Global,Global
+Treasure Hunter Pants,Global,,Legs,Loot,,Treasure Hunter Set,Find Collectibles,5,Percentage,,Global  if wearing at least  1 Treasure Hunter Set items.
+Treasure Hunter Pants,Global,,Legs,Loot,,Treasure Hunter Set,Find Collectibles,5,Percentage,,Global  if wearing at least  2 Treasure Hunter Set items.
+Treasure Hunter Pants,Global,,Legs,Loot,,Treasure Hunter Set,Find Collectibles,10,Percentage,,Global  if wearing at least  3 Treasure Hunter Set items.
+Tree Scaling Claws,Woodcutting,21,Hands,Loot,,Climbing Gear,Double Action,4,Percentage,Woodcutting,While doing  Woodcutting
+Tree Scaling Claws,Woodcutting,21,Hands,Loot,,Climbing Gear,Double Action,2,Percentage,Agility,While doing  Agility
+Wading Shoes,Fishing,24,Feet,Loot,,,Work Efficiency,11,Percentage,Fishing,While doing  Fishing
+Wading Shoes,Fishing,24,Feet,Loot,,,Fine Material Finding,18,Percentage,Fishing,While doing  Fishing
+Wading Shoes,Fishing,24,Feet,Loot,,,Chest Finding,5,Percentage,Fishing,While doing  Fishing
+Warm Beanie,Global,,Head,Loot,,,Work Efficiency,6,Percentage,,Global  While in  Jarvonia.
+Warm Jacket,Global,,Chest,Loot,,,Work Efficiency,6,Percentage,,Global  While in  Jarvonia.
+Waterproof Boots,Foraging,30,Feet,Loot,,,Work Efficiency,11,Percentage,Foraging,While doing  Foraging
+Waterproof Boots,Foraging,30,Feet,Loot,,,Double Rewards,4,Percentage,Foraging,While doing  Foraging
+Waterproof Boots,Foraging,30,Feet,Loot,,,Fine Material Finding,13,Percentage,Foraging,While doing  Foraging
+Wilderness Pants,Foraging,25,Legs,Loot,,,Work Efficiency,12,Percentage,Foraging,While doing  Foraging
+Wilderness Pants,Foraging,25,Legs,Loot,,,Double Action,5,Percentage,Foraging,While doing  Foraging
+Wilderness Shirt,Foraging,25,Chest,Loot,,,Work Efficiency,17,Percentage,Foraging,While doing  Foraging
+Wilderness Shirt,Foraging,25,Chest,Loot,,,Chest Finding,9,Percentage,Foraging,While doing  Foraging
+Woodworking Glasses,Carpentry,17,Head,Loot,,,Double Rewards,9,Percentage,Carpentry,While doing  Carpentry
+Woodworking Glasses,Carpentry,17,Head,Loot,,,Bonus Experience,8,Percentage,Carpentry,While doing  Carpentry
+Basic Fishing Net,Fishing,1,Tool,Craft,Normal,"Fishing Net, Fishing",Work Efficiency,3,Percentage,Fishing,While doing  Fishing
+Basic Fishing Net,Fishing,1,Tool,Craft,Good,"Fishing Net, Fishing",Work Efficiency,4,Percentage,Fishing,While doing  Fishing
+Basic Fishing Net,Fishing,1,Tool,Craft,Good,"Fishing Net, Fishing",Double Rewards,1,Percentage,Fishing,While doing  Fishing
+Basic Fishing Net,Fishing,1,Tool,Craft,Good,"Fishing Net, Fishing",Fine Material Finding,16,Percentage,Fishing,While doing  Fishing
+Basic Fishing Net,Fishing,1,Tool,Craft,Good,"Fishing Net, Fishing",Chest Finding,5,Percentage,Fishing,While doing  Fishing
+Basic Fishing Net,Fishing,1,Tool,Craft,Great,"Fishing Net, Fishing",Work Efficiency,5,Percentage,Fishing,While doing  Fishing
+Basic Fishing Net,Fishing,1,Tool,Craft,Great,"Fishing Net, Fishing",Double Rewards,2,Percentage,Fishing,While doing  Fishing
+Basic Fishing Net,Fishing,1,Tool,Craft,Great,"Fishing Net, Fishing",Fine Material Finding,26,Percentage,Fishing,While doing  Fishing
+Basic Fishing Net,Fishing,1,Tool,Craft,Great,"Fishing Net, Fishing",Chest Finding,8,Percentage,Fishing,While doing  Fishing
+Basic Fishing Net,Fishing,1,Tool,Craft,Excellent,"Fishing Net, Fishing",Work Efficiency,7,Percentage,Fishing,While doing  Fishing
+Basic Fishing Net,Fishing,1,Tool,Craft,Excellent,"Fishing Net, Fishing",Double Rewards,3,Percentage,Fishing,While doing  Fishing
+Basic Fishing Net,Fishing,1,Tool,Craft,Excellent,"Fishing Net, Fishing",Fine Material Finding,30,Percentage,Fishing,While doing  Fishing
+Basic Fishing Net,Fishing,1,Tool,Craft,Excellent,"Fishing Net, Fishing",Chest Finding,9,Percentage,Fishing,While doing  Fishing
+Basic Fishing Net,Fishing,1,Tool,Craft,Perfect,"Fishing Net, Fishing",Work Efficiency,9,Percentage,Fishing,While doing  Fishing
+Basic Fishing Net,Fishing,1,Tool,Craft,Perfect,"Fishing Net, Fishing",Double Action,1,Percentage,Fishing,While doing  Fishing
+Basic Fishing Net,Fishing,1,Tool,Craft,Perfect,"Fishing Net, Fishing",Double Rewards,4,Percentage,Fishing,While doing  Fishing
+Basic Fishing Net,Fishing,1,Tool,Craft,Perfect,"Fishing Net, Fishing",Fine Material Finding,32,Percentage,Fishing,While doing  Fishing
+Basic Fishing Net,Fishing,1,Tool,Craft,Perfect,"Fishing Net, Fishing",Chest Finding,9,Percentage,Fishing,While doing  Fishing
+Basic Fishing Net,Fishing,1,Tool,Craft,Eternal,"Fishing Net, Fishing",Work Efficiency,11,Percentage,Fishing,While doing  Fishing
+Basic Fishing Net,Fishing,1,Tool,Craft,Eternal,"Fishing Net, Fishing",Double Action,3,Percentage,Fishing,While doing  Fishing
+Basic Fishing Net,Fishing,1,Tool,Craft,Eternal,"Fishing Net, Fishing",Double Rewards,5,Percentage,Fishing,While doing  Fishing
+Basic Fishing Net,Fishing,1,Tool,Craft,Eternal,"Fishing Net, Fishing",Fine Material Finding,34,Percentage,Fishing,While doing  Fishing
+Basic Fishing Net,Fishing,1,Tool,Craft,Eternal,"Fishing Net, Fishing",Chest Finding,10,Percentage,Fishing,While doing  Fishing
+Basic Hatchet,Woodcutting,1,Tool,Craft,Normal,Woodcutting Hatchet,Work Efficiency,-10,Percentage,Woodcutting,While doing  Woodcutting
+Basic Hatchet,Woodcutting,1,Tool,Craft,Good,Woodcutting Hatchet,Work Efficiency,-8,Percentage,Woodcutting,While doing  Woodcutting
+Basic Hatchet,Woodcutting,1,Tool,Craft,Good,Woodcutting Hatchet,Double Rewards,1,Percentage,Woodcutting,While doing  Woodcutting
+Basic Hatchet,Woodcutting,1,Tool,Craft,Good,Woodcutting Hatchet,Fine Material Finding,5,Percentage,Woodcutting,While doing  Woodcutting
+Basic Hatchet,Woodcutting,1,Tool,Craft,Good,Woodcutting Hatchet,Chest Finding,3,Percentage,Woodcutting,While doing  Woodcutting
+Basic Hatchet,Woodcutting,1,Tool,Craft,Good,Woodcutting Hatchet,Find Bird Nests,5,Percentage,Woodcutting,While doing  Woodcutting
+Basic Hatchet,Woodcutting,1,Tool,Craft,Great,Woodcutting Hatchet,Work Efficiency,-6,Percentage,Woodcutting,While doing  Woodcutting
+Basic Hatchet,Woodcutting,1,Tool,Craft,Great,Woodcutting Hatchet,Double Rewards,2,Percentage,Woodcutting,While doing  Woodcutting
+Basic Hatchet,Woodcutting,1,Tool,Craft,Great,Woodcutting Hatchet,Fine Material Finding,8,Percentage,Woodcutting,While doing  Woodcutting
+Basic Hatchet,Woodcutting,1,Tool,Craft,Great,Woodcutting Hatchet,Chest Finding,5,Percentage,Woodcutting,While doing  Woodcutting
+Basic Hatchet,Woodcutting,1,Tool,Craft,Great,Woodcutting Hatchet,Find Bird Nests,8,Percentage,Woodcutting,While doing  Woodcutting
+Basic Hatchet,Woodcutting,1,Tool,Craft,Excellent,Woodcutting Hatchet,Work Efficiency,-4,Percentage,Woodcutting,While doing  Woodcutting
+Basic Hatchet,Woodcutting,1,Tool,Craft,Excellent,Woodcutting Hatchet,Double Rewards,3,Percentage,Woodcutting,While doing  Woodcutting
+Basic Hatchet,Woodcutting,1,Tool,Craft,Excellent,Woodcutting Hatchet,Fine Material Finding,9,Percentage,Woodcutting,While doing  Woodcutting
+Basic Hatchet,Woodcutting,1,Tool,Craft,Excellent,Woodcutting Hatchet,Chest Finding,6,Percentage,Woodcutting,While doing  Woodcutting
+Basic Hatchet,Woodcutting,1,Tool,Craft,Excellent,Woodcutting Hatchet,Find Bird Nests,9,Percentage,Woodcutting,While doing  Woodcutting
+Basic Hatchet,Woodcutting,1,Tool,Craft,Perfect,Woodcutting Hatchet,Work Efficiency,-2,Percentage,Woodcutting,While doing  Woodcutting
+Basic Hatchet,Woodcutting,1,Tool,Craft,Perfect,Woodcutting Hatchet,Double Action,1,Percentage,Woodcutting,While doing  Woodcutting
+Basic Hatchet,Woodcutting,1,Tool,Craft,Perfect,Woodcutting Hatchet,Double Rewards,4,Percentage,Woodcutting,While doing  Woodcutting
+Basic Hatchet,Woodcutting,1,Tool,Craft,Perfect,Woodcutting Hatchet,Fine Material Finding,9,Percentage,Woodcutting,While doing  Woodcutting
+Basic Hatchet,Woodcutting,1,Tool,Craft,Perfect,Woodcutting Hatchet,Chest Finding,6,Percentage,Woodcutting,While doing  Woodcutting
+Basic Hatchet,Woodcutting,1,Tool,Craft,Perfect,Woodcutting Hatchet,Find Bird Nests,9,Percentage,Woodcutting,While doing  Woodcutting
+Basic Hatchet,Woodcutting,1,Tool,Craft,Eternal,Woodcutting Hatchet,Double Action,3,Percentage,Woodcutting,While doing  Woodcutting
+Basic Hatchet,Woodcutting,1,Tool,Craft,Eternal,Woodcutting Hatchet,Double Rewards,5,Percentage,Woodcutting,While doing  Woodcutting
+Basic Hatchet,Woodcutting,1,Tool,Craft,Eternal,Woodcutting Hatchet,Fine Material Finding,10,Percentage,Woodcutting,While doing  Woodcutting
+Basic Hatchet,Woodcutting,1,Tool,Craft,Eternal,Woodcutting Hatchet,Chest Finding,6,Percentage,Woodcutting,While doing  Woodcutting
+Basic Hatchet,Woodcutting,1,Tool,Craft,Eternal,Woodcutting Hatchet,Find Bird Nests,10,Percentage,Woodcutting,While doing  Woodcutting
+Basic Pickaxe,Mining,1,Tool,Craft,Normal,Pickaxe,Work Efficiency,-10,Percentage,Mining,While doing  Mining
+Basic Pickaxe,Mining,1,Tool,Craft,Good,Pickaxe,Work Efficiency,-8,Percentage,Mining,While doing  Mining
+Basic Pickaxe,Mining,1,Tool,Craft,Good,Pickaxe,Double Rewards,1,Percentage,Mining,While doing  Mining
+Basic Pickaxe,Mining,1,Tool,Craft,Good,Pickaxe,Fine Material Finding,5,Percentage,Mining,While doing  Mining
+Basic Pickaxe,Mining,1,Tool,Craft,Good,Pickaxe,Chest Finding,3,Percentage,Mining,While doing  Mining
+Basic Pickaxe,Mining,1,Tool,Craft,Good,Pickaxe,Find Gems,5,Percentage,Mining,While doing  Mining
+Basic Pickaxe,Mining,1,Tool,Craft,Great,Pickaxe,Work Efficiency,-6,Percentage,Mining,While doing  Mining
+Basic Pickaxe,Mining,1,Tool,Craft,Great,Pickaxe,Double Rewards,2,Percentage,Mining,While doing  Mining
+Basic Pickaxe,Mining,1,Tool,Craft,Great,Pickaxe,Fine Material Finding,8,Percentage,Mining,While doing  Mining
+Basic Pickaxe,Mining,1,Tool,Craft,Great,Pickaxe,Chest Finding,8,Percentage,Mining,While doing  Mining
+Basic Pickaxe,Mining,1,Tool,Craft,Great,Pickaxe,Find Gems,8,Percentage,Mining,While doing  Mining
+Basic Pickaxe,Mining,1,Tool,Craft,Excellent,Pickaxe,Work Efficiency,-4,Percentage,Mining,While doing  Mining
+Basic Pickaxe,Mining,1,Tool,Craft,Excellent,Pickaxe,Double Rewards,3,Percentage,Mining,While doing  Mining
+Basic Pickaxe,Mining,1,Tool,Craft,Excellent,Pickaxe,Fine Material Finding,8,Percentage,Mining,While doing  Mining
+Basic Pickaxe,Mining,1,Tool,Craft,Excellent,Pickaxe,Chest Finding,6,Percentage,Mining,While doing  Mining
+Basic Pickaxe,Mining,1,Tool,Craft,Excellent,Pickaxe,Find Gems,9,Percentage,Mining,While doing  Mining
+Basic Pickaxe,Mining,1,Tool,Craft,Perfect,Pickaxe,Work Efficiency,-2,Percentage,Mining,While doing  Mining
+Basic Pickaxe,Mining,1,Tool,Craft,Perfect,Pickaxe,Double Action,1,Percentage,Mining,While doing  Mining
+Basic Pickaxe,Mining,1,Tool,Craft,Perfect,Pickaxe,Double Rewards,4,Percentage,Mining,While doing  Mining
+Basic Pickaxe,Mining,1,Tool,Craft,Perfect,Pickaxe,Fine Material Finding,8,Percentage,Mining,While doing  Mining
+Basic Pickaxe,Mining,1,Tool,Craft,Perfect,Pickaxe,Chest Finding,6,Percentage,Mining,While doing  Mining
+Basic Pickaxe,Mining,1,Tool,Craft,Perfect,Pickaxe,Find Gems,9,Percentage,Mining,While doing  Mining
+Basic Pickaxe,Mining,1,Tool,Craft,Eternal,Pickaxe,Double Action,3,Percentage,Mining,While doing  Mining
+Basic Pickaxe,Mining,1,Tool,Craft,Eternal,Pickaxe,Double Rewards,5,Percentage,Mining,While doing  Mining
+Basic Pickaxe,Mining,1,Tool,Craft,Eternal,Pickaxe,Fine Material Finding,9,Percentage,Mining,While doing  Mining
+Basic Pickaxe,Mining,1,Tool,Craft,Eternal,Pickaxe,Chest Finding,6,Percentage,Mining,While doing  Mining
+Basic Pickaxe,Mining,1,Tool,Craft,Eternal,Pickaxe,Find Gems,10,Percentage,Mining,While doing  Mining
+Basic Sickle,Foraging,1,Tool,Craft,Normal,"Sickle, Foraging Tool",Work Efficiency,-10,Percentage,Foraging,While doing  Foraging
+Basic Sickle,Foraging,1,Tool,Craft,Good,"Sickle, Foraging Tool",Work Efficiency,-8,Percentage,Foraging,While doing  Foraging
+Basic Sickle,Foraging,1,Tool,Craft,Good,"Sickle, Foraging Tool",Double Rewards,1,Percentage,Foraging,While doing  Foraging
+Basic Sickle,Foraging,1,Tool,Craft,Good,"Sickle, Foraging Tool",Fine Material Finding,10,Percentage,Foraging,While doing  Foraging
+Basic Sickle,Foraging,1,Tool,Craft,Good,"Sickle, Foraging Tool",Chest Finding,3,Percentage,Foraging,While doing  Foraging
+Basic Sickle,Foraging,1,Tool,Craft,Great,"Sickle, Foraging Tool",Work Efficiency,-6,Percentage,Foraging,While doing  Foraging
+Basic Sickle,Foraging,1,Tool,Craft,Great,"Sickle, Foraging Tool",Double Rewards,2,Percentage,Foraging,While doing  Foraging
+Basic Sickle,Foraging,1,Tool,Craft,Great,"Sickle, Foraging Tool",Fine Material Finding,16,Percentage,Foraging,While doing  Foraging
+Basic Sickle,Foraging,1,Tool,Craft,Great,"Sickle, Foraging Tool",Chest Finding,5,Percentage,Foraging,While doing  Foraging
+Basic Sickle,Foraging,1,Tool,Craft,Excellent,"Sickle, Foraging Tool",Work Efficiency,-4,Percentage,Foraging,While doing  Foraging
+Basic Sickle,Foraging,1,Tool,Craft,Excellent,"Sickle, Foraging Tool",Double Rewards,3,Percentage,Foraging,While doing  Foraging
+Basic Sickle,Foraging,1,Tool,Craft,Excellent,"Sickle, Foraging Tool",Fine Material Finding,18,Percentage,Foraging,While doing  Foraging
+Basic Sickle,Foraging,1,Tool,Craft,Excellent,"Sickle, Foraging Tool",Chest Finding,6,Percentage,Foraging,While doing  Foraging
+Basic Sickle,Foraging,1,Tool,Craft,Perfect,"Sickle, Foraging Tool",Work Efficiency,-2,Percentage,Foraging,While doing  Foraging
+Basic Sickle,Foraging,1,Tool,Craft,Perfect,"Sickle, Foraging Tool",Double Action,1,Percentage,Foraging,While doing  Foraging
+Basic Sickle,Foraging,1,Tool,Craft,Perfect,"Sickle, Foraging Tool",Double Rewards,4,Percentage,Foraging,While doing  Foraging
+Basic Sickle,Foraging,1,Tool,Craft,Perfect,"Sickle, Foraging Tool",Fine Material Finding,18,Percentage,Foraging,While doing  Foraging
+Basic Sickle,Foraging,1,Tool,Craft,Perfect,"Sickle, Foraging Tool",Chest Finding,6,Percentage,Foraging,While doing  Foraging
+Basic Sickle,Foraging,1,Tool,Craft,Eternal,"Sickle, Foraging Tool",Double Action,2,Percentage,Foraging,While doing  Foraging
+Basic Sickle,Foraging,1,Tool,Craft,Eternal,"Sickle, Foraging Tool",Double Rewards,5,Percentage,Foraging,While doing  Foraging
+Basic Sickle,Foraging,1,Tool,Craft,Eternal,"Sickle, Foraging Tool",Fine Material Finding,19,Percentage,Foraging,While doing  Foraging
+Basic Sickle,Foraging,1,Tool,Craft,Eternal,"Sickle, Foraging Tool",Chest Finding,6,Percentage,Foraging,While doing  Foraging
+Copper Hatchet,Woodcutting,1,Tool,Craft,Normal,Woodcutting Hatchet,Work Efficiency,3,Percentage,Woodcutting,While doing  Woodcutting
+Copper Hatchet,Woodcutting,1,Tool,Craft,Good,Woodcutting Hatchet,Work Efficiency,4,Percentage,Woodcutting,While doing  Woodcutting
+Copper Hatchet,Woodcutting,1,Tool,Craft,Good,Woodcutting Hatchet,Double Rewards,1,Percentage,Woodcutting,While doing  Woodcutting
+Copper Hatchet,Woodcutting,1,Tool,Craft,Good,Woodcutting Hatchet,Fine Material Finding,8,Percentage,Woodcutting,While doing  Woodcutting
+Copper Hatchet,Woodcutting,1,Tool,Craft,Good,Woodcutting Hatchet,Chest Finding,5,Percentage,Woodcutting,While doing  Woodcutting
+Copper Hatchet,Woodcutting,1,Tool,Craft,Good,Woodcutting Hatchet,Find Bird Nests,8,Percentage,Woodcutting,While doing  Woodcutting
+Copper Hatchet,Woodcutting,1,Tool,Craft,Great,Woodcutting Hatchet,Work Efficiency,5,Percentage,Woodcutting,While doing  Woodcutting
+Copper Hatchet,Woodcutting,1,Tool,Craft,Great,Woodcutting Hatchet,Double Rewards,2,Percentage,Woodcutting,While doing  Woodcutting
+Copper Hatchet,Woodcutting,1,Tool,Craft,Great,Woodcutting Hatchet,Fine Material Finding,13,Percentage,Woodcutting,While doing  Woodcutting
+Copper Hatchet,Woodcutting,1,Tool,Craft,Great,Woodcutting Hatchet,Chest Finding,8,Percentage,Woodcutting,While doing  Woodcutting
+Copper Hatchet,Woodcutting,1,Tool,Craft,Great,Woodcutting Hatchet,Find Bird Nests,13,Percentage,Woodcutting,While doing  Woodcutting
+Copper Hatchet,Woodcutting,1,Tool,Craft,Excellent,Woodcutting Hatchet,Work Efficiency,7,Percentage,Woodcutting,While doing  Woodcutting
+Copper Hatchet,Woodcutting,1,Tool,Craft,Excellent,Woodcutting Hatchet,Double Rewards,3,Percentage,Woodcutting,While doing  Woodcutting
+Copper Hatchet,Woodcutting,1,Tool,Craft,Excellent,Woodcutting Hatchet,Fine Material Finding,15,Percentage,Woodcutting,While doing  Woodcutting
+Copper Hatchet,Woodcutting,1,Tool,Craft,Excellent,Woodcutting Hatchet,Chest Finding,9,Percentage,Woodcutting,While doing  Woodcutting
+Copper Hatchet,Woodcutting,1,Tool,Craft,Excellent,Woodcutting Hatchet,Find Bird Nests,15,Percentage,Woodcutting,While doing  Woodcutting
+Copper Hatchet,Woodcutting,1,Tool,Craft,Perfect,Woodcutting Hatchet,Work Efficiency,9,Percentage,Woodcutting,While doing  Woodcutting
+Copper Hatchet,Woodcutting,1,Tool,Craft,Perfect,Woodcutting Hatchet,Double Action,1,Percentage,Woodcutting,While doing  Woodcutting
+Copper Hatchet,Woodcutting,1,Tool,Craft,Perfect,Woodcutting Hatchet,Double Rewards,4,Percentage,Woodcutting,While doing  Woodcutting
+Copper Hatchet,Woodcutting,1,Tool,Craft,Perfect,Woodcutting Hatchet,Fine Material Finding,16,Percentage,Woodcutting,While doing  Woodcutting
+Copper Hatchet,Woodcutting,1,Tool,Craft,Perfect,Woodcutting Hatchet,Chest Finding,9,Percentage,Woodcutting,While doing  Woodcutting
+Copper Hatchet,Woodcutting,1,Tool,Craft,Perfect,Woodcutting Hatchet,Find Bird Nests,16,Percentage,Woodcutting,While doing  Woodcutting
+Copper Hatchet,Woodcutting,1,Tool,Craft,Eternal,Woodcutting Hatchet,Work Efficiency,11,Percentage,Woodcutting,While doing  Woodcutting
+Copper Hatchet,Woodcutting,1,Tool,Craft,Eternal,Woodcutting Hatchet,Double Action,3,Percentage,Woodcutting,While doing  Woodcutting
+Copper Hatchet,Woodcutting,1,Tool,Craft,Eternal,Woodcutting Hatchet,Double Rewards,5,Percentage,Woodcutting,While doing  Woodcutting
+Copper Hatchet,Woodcutting,1,Tool,Craft,Eternal,Woodcutting Hatchet,Fine Material Finding,17,Percentage,Woodcutting,While doing  Woodcutting
+Copper Hatchet,Woodcutting,1,Tool,Craft,Eternal,Woodcutting Hatchet,Chest Finding,10,Percentage,Woodcutting,While doing  Woodcutting
+Copper Hatchet,Woodcutting,1,Tool,Craft,Eternal,Woodcutting Hatchet,Find Bird Nests,17,Percentage,Woodcutting,While doing  Woodcutting
+Copper Pickaxe,Mining,1,Tool,Craft,Normal,Pickaxe,Work Efficiency,3,Percentage,Mining,While doing  Mining
+Copper Pickaxe,Mining,1,Tool,Craft,Good,Pickaxe,Work Efficiency,4,Percentage,Mining,While doing  Mining
+Copper Pickaxe,Mining,1,Tool,Craft,Good,Pickaxe,Double Rewards,1,Percentage,Mining,While doing  Mining
+Copper Pickaxe,Mining,1,Tool,Craft,Good,Pickaxe,Fine Material Finding,8,Percentage,Mining,While doing  Mining
+Copper Pickaxe,Mining,1,Tool,Craft,Good,Pickaxe,Chest Finding,5,Percentage,Mining,While doing  Mining
+Copper Pickaxe,Mining,1,Tool,Craft,Good,Pickaxe,Find Gems,8,Percentage,Mining,While doing  Mining
+Copper Pickaxe,Mining,1,Tool,Craft,Great,Pickaxe,Work Efficiency,5,Percentage,Mining,While doing  Mining
+Copper Pickaxe,Mining,1,Tool,Craft,Great,Pickaxe,Double Rewards,2,Percentage,Mining,While doing  Mining
+Copper Pickaxe,Mining,1,Tool,Craft,Great,Pickaxe,Fine Material Finding,13,Percentage,Mining,While doing  Mining
+Copper Pickaxe,Mining,1,Tool,Craft,Great,Pickaxe,Chest Finding,8,Percentage,Mining,While doing  Mining
+Copper Pickaxe,Mining,1,Tool,Craft,Great,Pickaxe,Find Gems,13,Percentage,Mining,While doing  Mining
+Copper Pickaxe,Mining,1,Tool,Craft,Excellent,Pickaxe,Work Efficiency,7,Percentage,Mining,While doing  Mining
+Copper Pickaxe,Mining,1,Tool,Craft,Excellent,Pickaxe,Double Rewards,3,Percentage,Mining,While doing  Mining
+Copper Pickaxe,Mining,1,Tool,Craft,Excellent,Pickaxe,Fine Material Finding,15,Percentage,Mining,While doing  Mining
+Copper Pickaxe,Mining,1,Tool,Craft,Excellent,Pickaxe,Chest Finding,9,Percentage,Mining,While doing  Mining
+Copper Pickaxe,Mining,1,Tool,Craft,Excellent,Pickaxe,Find Gems,15,Percentage,Mining,While doing  Mining
+Copper Pickaxe,Mining,1,Tool,Craft,Perfect,Pickaxe,Work Efficiency,9,Percentage,Mining,While doing  Mining
+Copper Pickaxe,Mining,1,Tool,Craft,Perfect,Pickaxe,Double Action,1,Percentage,Mining,While doing  Mining
+Copper Pickaxe,Mining,1,Tool,Craft,Perfect,Pickaxe,Double Rewards,4,Percentage,Mining,While doing  Mining
+Copper Pickaxe,Mining,1,Tool,Craft,Perfect,Pickaxe,Fine Material Finding,16,Percentage,Mining,While doing  Mining
+Copper Pickaxe,Mining,1,Tool,Craft,Perfect,Pickaxe,Chest Finding,9,Percentage,Mining,While doing  Mining
+Copper Pickaxe,Mining,1,Tool,Craft,Perfect,Pickaxe,Find Gems,16,Percentage,Mining,While doing  Mining
+Copper Pickaxe,Mining,1,Tool,Craft,Eternal,Pickaxe,Work Efficiency,11,Percentage,Mining,While doing  Mining
+Copper Pickaxe,Mining,1,Tool,Craft,Eternal,Pickaxe,Double Action,3,Percentage,Mining,While doing  Mining
+Copper Pickaxe,Mining,1,Tool,Craft,Eternal,Pickaxe,Double Rewards,5,Percentage,Mining,While doing  Mining
+Copper Pickaxe,Mining,1,Tool,Craft,Eternal,Pickaxe,Fine Material Finding,17,Percentage,Mining,While doing  Mining
+Copper Pickaxe,Mining,1,Tool,Craft,Eternal,Pickaxe,Chest Finding,10,Percentage,Mining,While doing  Mining
+Copper Pickaxe,Mining,1,Tool,Craft,Eternal,Pickaxe,Find Gems,17,Percentage,Mining,While doing  Mining
+Copper Sickle,Foraging,1,Tool,Craft,Normal,"Sickle, Foraging Tool",Work Efficiency,3,Percentage,Foraging,While doing  Foraging
+Copper Sickle,Foraging,1,Tool,Craft,Good,"Sickle, Foraging Tool",Work Efficiency,4,Percentage,Foraging,While doing  Foraging
+Copper Sickle,Foraging,1,Tool,Craft,Good,"Sickle, Foraging Tool",Double Rewards,1,Percentage,Foraging,While doing  Foraging
+Copper Sickle,Foraging,1,Tool,Craft,Good,"Sickle, Foraging Tool",Fine Material Finding,16,Percentage,Foraging,While doing  Foraging
+Copper Sickle,Foraging,1,Tool,Craft,Good,"Sickle, Foraging Tool",Chest Finding,5,Percentage,Foraging,While doing  Foraging
+Copper Sickle,Foraging,1,Tool,Craft,Great,"Sickle, Foraging Tool",Work Efficiency,5,Percentage,Foraging,While doing  Foraging
+Copper Sickle,Foraging,1,Tool,Craft,Great,"Sickle, Foraging Tool",Double Rewards,2,Percentage,Foraging,While doing  Foraging
+Copper Sickle,Foraging,1,Tool,Craft,Great,"Sickle, Foraging Tool",Fine Material Finding,26,Percentage,Foraging,While doing  Foraging
+Copper Sickle,Foraging,1,Tool,Craft,Great,"Sickle, Foraging Tool",Chest Finding,8,Percentage,Foraging,While doing  Foraging
+Copper Sickle,Foraging,1,Tool,Craft,Excellent,"Sickle, Foraging Tool",Work Efficiency,7,Percentage,Foraging,While doing  Foraging
+Copper Sickle,Foraging,1,Tool,Craft,Excellent,"Sickle, Foraging Tool",Double Rewards,3,Percentage,Foraging,While doing  Foraging
+Copper Sickle,Foraging,1,Tool,Craft,Excellent,"Sickle, Foraging Tool",Fine Material Finding,30,Percentage,Foraging,While doing  Foraging
+Copper Sickle,Foraging,1,Tool,Craft,Excellent,"Sickle, Foraging Tool",Chest Finding,9,Percentage,Foraging,While doing  Foraging
+Copper Sickle,Foraging,1,Tool,Craft,Perfect,"Sickle, Foraging Tool",Work Efficiency,9,Percentage,Foraging,While doing  Foraging
+Copper Sickle,Foraging,1,Tool,Craft,Perfect,"Sickle, Foraging Tool",Double Action,1,Percentage,Foraging,While doing  Foraging
+Copper Sickle,Foraging,1,Tool,Craft,Perfect,"Sickle, Foraging Tool",Double Rewards,4,Percentage,Foraging,While doing  Foraging
+Copper Sickle,Foraging,1,Tool,Craft,Perfect,"Sickle, Foraging Tool",Fine Material Finding,32,Percentage,Foraging,While doing  Foraging
+Copper Sickle,Foraging,1,Tool,Craft,Perfect,"Sickle, Foraging Tool",Chest Finding,9,Percentage,Foraging,While doing  Foraging
+Copper Sickle,Foraging,1,Tool,Craft,Eternal,"Sickle, Foraging Tool",Work Efficiency,11,Percentage,Foraging,While doing  Foraging
+Copper Sickle,Foraging,1,Tool,Craft,Eternal,"Sickle, Foraging Tool",Double Action,3,Percentage,Foraging,While doing  Foraging
+Copper Sickle,Foraging,1,Tool,Craft,Eternal,"Sickle, Foraging Tool",Double Rewards,5,Percentage,Foraging,While doing  Foraging
+Copper Sickle,Foraging,1,Tool,Craft,Eternal,"Sickle, Foraging Tool",Fine Material Finding,34,Percentage,Foraging,While doing  Foraging
+Copper Sickle,Foraging,1,Tool,Craft,Eternal,"Sickle, Foraging Tool",Chest Finding,10,Percentage,Foraging,While doing  Foraging
+Wooden Fishing Pole,Fishing,1,Tool,Craft,Normal,"Fishing Rod, Fishing",Work Efficiency,4,Percentage,Fishing,While doing  Fishing
+Wooden Fishing Pole,Fishing,1,Tool,Craft,Normal,"Fishing Rod, Fishing",Bonus Experience,3,Percentage,Fishing,While doing  Fishing
+Wooden Fishing Pole,Fishing,1,Tool,Craft,Good,"Fishing Rod, Fishing",Work Efficiency,7,Percentage,Fishing,While doing  Fishing
+Wooden Fishing Pole,Fishing,1,Tool,Craft,Good,"Fishing Rod, Fishing",Chest Finding,3,Percentage,Fishing,While doing  Fishing
+Wooden Fishing Pole,Fishing,1,Tool,Craft,Good,"Fishing Rod, Fishing",Bonus Experience,3,Percentage,Fishing,While doing  Fishing
+Wooden Fishing Pole,Fishing,1,Tool,Craft,Great,"Fishing Rod, Fishing",Work Efficiency,7,Percentage,Fishing,While doing  Fishing
+Wooden Fishing Pole,Fishing,1,Tool,Craft,Great,"Fishing Rod, Fishing",Fine Material Finding,10,Percentage,Fishing,While doing  Fishing
+Wooden Fishing Pole,Fishing,1,Tool,Craft,Great,"Fishing Rod, Fishing",Chest Finding,3,Percentage,Fishing,While doing  Fishing
+Wooden Fishing Pole,Fishing,1,Tool,Craft,Great,"Fishing Rod, Fishing",Bonus Experience,3,Percentage,Fishing,While doing  Fishing
+Wooden Fishing Pole,Fishing,1,Tool,Craft,Excellent,"Fishing Rod, Fishing",Work Efficiency,7,Percentage,Fishing,While doing  Fishing
+Wooden Fishing Pole,Fishing,1,Tool,Craft,Excellent,"Fishing Rod, Fishing",Double Rewards,3,Percentage,Fishing,While doing  Fishing
+Wooden Fishing Pole,Fishing,1,Tool,Craft,Excellent,"Fishing Rod, Fishing",Fine Material Finding,10,Percentage,Fishing,While doing  Fishing
+Wooden Fishing Pole,Fishing,1,Tool,Craft,Excellent,"Fishing Rod, Fishing",Chest Finding,3,Percentage,Fishing,While doing  Fishing
+Wooden Fishing Pole,Fishing,1,Tool,Craft,Excellent,"Fishing Rod, Fishing",Bonus Experience,3,Percentage,Fishing,While doing  Fishing
+Wooden Fishing Pole,Fishing,1,Tool,Craft,Perfect,"Fishing Rod, Fishing",Work Efficiency,7,Percentage,Fishing,While doing  Fishing
+Wooden Fishing Pole,Fishing,1,Tool,Craft,Perfect,"Fishing Rod, Fishing",Double Action,3,Percentage,Fishing,While doing  Fishing
+Wooden Fishing Pole,Fishing,1,Tool,Craft,Perfect,"Fishing Rod, Fishing",Double Rewards,3,Percentage,Fishing,While doing  Fishing
+Wooden Fishing Pole,Fishing,1,Tool,Craft,Perfect,"Fishing Rod, Fishing",Fine Material Finding,10,Percentage,Fishing,While doing  Fishing
+Wooden Fishing Pole,Fishing,1,Tool,Craft,Perfect,"Fishing Rod, Fishing",Chest Finding,3,Percentage,Fishing,While doing  Fishing
+Wooden Fishing Pole,Fishing,1,Tool,Craft,Perfect,"Fishing Rod, Fishing",Bonus Experience,3,Percentage,Fishing,While doing  Fishing
+Bronze Hatchet,Woodcutting,10,Tool,Craft,Normal,Woodcutting Hatchet,Work Efficiency,6,Percentage,Woodcutting,While doing  Woodcutting
+Bronze Hatchet,Woodcutting,10,Tool,Craft,Normal,Woodcutting Hatchet,Double Rewards,1,Percentage,Woodcutting,While doing  Woodcutting
+Bronze Hatchet,Woodcutting,10,Tool,Craft,Normal,Woodcutting Hatchet,Fine Material Finding,10,Percentage,Woodcutting,While doing  Woodcutting
+Bronze Hatchet,Woodcutting,10,Tool,Craft,Normal,Woodcutting Hatchet,Chest Finding,8,Percentage,Woodcutting,While doing  Woodcutting
+Bronze Hatchet,Woodcutting,10,Tool,Craft,Normal,Woodcutting Hatchet,Find Bird Nests,10,Percentage,Woodcutting,While doing  Woodcutting
+Bronze Hatchet,Woodcutting,10,Tool,Craft,Good,Woodcutting Hatchet,Work Efficiency,8,Percentage,Woodcutting,While doing  Woodcutting
+Bronze Hatchet,Woodcutting,10,Tool,Craft,Good,Woodcutting Hatchet,Double Rewards,2,Percentage,Woodcutting,While doing  Woodcutting
+Bronze Hatchet,Woodcutting,10,Tool,Craft,Good,Woodcutting Hatchet,Fine Material Finding,16,Percentage,Woodcutting,While doing  Woodcutting
+Bronze Hatchet,Woodcutting,10,Tool,Craft,Good,Woodcutting Hatchet,Chest Finding,13,Percentage,Woodcutting,While doing  Woodcutting
+Bronze Hatchet,Woodcutting,10,Tool,Craft,Good,Woodcutting Hatchet,Find Bird Nests,16,Percentage,Woodcutting,While doing  Woodcutting
+Bronze Hatchet,Woodcutting,10,Tool,Craft,Great,Woodcutting Hatchet,Work Efficiency,10,Percentage,Woodcutting,While doing  Woodcutting
+Bronze Hatchet,Woodcutting,10,Tool,Craft,Great,Woodcutting Hatchet,Double Action,1,Percentage,Woodcutting,While doing  Woodcutting
+Bronze Hatchet,Woodcutting,10,Tool,Craft,Great,Woodcutting Hatchet,Double Rewards,3,Percentage,Woodcutting,While doing  Woodcutting
+Bronze Hatchet,Woodcutting,10,Tool,Craft,Great,Woodcutting Hatchet,Fine Material Finding,18,Percentage,Woodcutting,While doing  Woodcutting
+Bronze Hatchet,Woodcutting,10,Tool,Craft,Great,Woodcutting Hatchet,Chest Finding,15,Percentage,Woodcutting,While doing  Woodcutting
+Bronze Hatchet,Woodcutting,10,Tool,Craft,Great,Woodcutting Hatchet,Find Bird Nests,18,Percentage,Woodcutting,While doing  Woodcutting
+Bronze Hatchet,Woodcutting,10,Tool,Craft,Excellent,Woodcutting Hatchet,Work Efficiency,12,Percentage,Woodcutting,While doing  Woodcutting
+Bronze Hatchet,Woodcutting,10,Tool,Craft,Excellent,Woodcutting Hatchet,Double Action,2,Percentage,Woodcutting,While doing  Woodcutting
+Bronze Hatchet,Woodcutting,10,Tool,Craft,Excellent,Woodcutting Hatchet,Double Rewards,4,Percentage,Woodcutting,While doing  Woodcutting
+Bronze Hatchet,Woodcutting,10,Tool,Craft,Excellent,Woodcutting Hatchet,Fine Material Finding,19,Percentage,Woodcutting,While doing  Woodcutting
+Bronze Hatchet,Woodcutting,10,Tool,Craft,Excellent,Woodcutting Hatchet,Chest Finding,15,Percentage,Woodcutting,While doing  Woodcutting
+Bronze Hatchet,Woodcutting,10,Tool,Craft,Excellent,Woodcutting Hatchet,Find Bird Nests,19,Percentage,Woodcutting,While doing  Woodcutting
+Bronze Hatchet,Woodcutting,10,Tool,Craft,Perfect,Woodcutting Hatchet,Work Efficiency,15,Percentage,Woodcutting,While doing  Woodcutting
+Bronze Hatchet,Woodcutting,10,Tool,Craft,Perfect,Woodcutting Hatchet,Double Action,6,Percentage,Woodcutting,While doing  Woodcutting
+Bronze Hatchet,Woodcutting,10,Tool,Craft,Perfect,Woodcutting Hatchet,Double Rewards,5,Percentage,Woodcutting,While doing  Woodcutting
+Bronze Hatchet,Woodcutting,10,Tool,Craft,Perfect,Woodcutting Hatchet,Fine Material Finding,20,Percentage,Woodcutting,While doing  Woodcutting
+Bronze Hatchet,Woodcutting,10,Tool,Craft,Perfect,Woodcutting Hatchet,Chest Finding,16,Percentage,Woodcutting,While doing  Woodcutting
+Bronze Hatchet,Woodcutting,10,Tool,Craft,Perfect,Woodcutting Hatchet,Find Bird Nests,20,Percentage,Woodcutting,While doing  Woodcutting
+Bronze Pickaxe,Mining,10,Tool,Craft,Normal,Pickaxe,Work Efficiency,6,Percentage,Mining,While doing  Mining
+Bronze Pickaxe,Mining,10,Tool,Craft,Normal,Pickaxe,Double Rewards,1,Percentage,Mining,While doing  Mining
+Bronze Pickaxe,Mining,10,Tool,Craft,Normal,Pickaxe,Fine Material Finding,10,Percentage,Mining,While doing  Mining
+Bronze Pickaxe,Mining,10,Tool,Craft,Normal,Pickaxe,Chest Finding,8,Percentage,Mining,While doing  Mining
+Bronze Pickaxe,Mining,10,Tool,Craft,Normal,Pickaxe,Find Gems,10,Percentage,Mining,While doing  Mining
+Bronze Pickaxe,Mining,10,Tool,Craft,Good,Pickaxe,Work Efficiency,8,Percentage,Mining,While doing  Mining
+Bronze Pickaxe,Mining,10,Tool,Craft,Good,Pickaxe,Double Rewards,2,Percentage,Mining,While doing  Mining
+Bronze Pickaxe,Mining,10,Tool,Craft,Good,Pickaxe,Fine Material Finding,16,Percentage,Mining,While doing  Mining
+Bronze Pickaxe,Mining,10,Tool,Craft,Good,Pickaxe,Chest Finding,13,Percentage,Mining,While doing  Mining
+Bronze Pickaxe,Mining,10,Tool,Craft,Good,Pickaxe,Find Gems,16,Percentage,Mining,While doing  Mining
+Bronze Pickaxe,Mining,10,Tool,Craft,Great,Pickaxe,Work Efficiency,10,Percentage,Mining,While doing  Mining
+Bronze Pickaxe,Mining,10,Tool,Craft,Great,Pickaxe,Double Action,1,Percentage,Mining,While doing  Mining
+Bronze Pickaxe,Mining,10,Tool,Craft,Great,Pickaxe,Double Rewards,3,Percentage,Mining,While doing  Mining
+Bronze Pickaxe,Mining,10,Tool,Craft,Great,Pickaxe,Fine Material Finding,18,Percentage,Mining,While doing  Mining
+Bronze Pickaxe,Mining,10,Tool,Craft,Great,Pickaxe,Chest Finding,15,Percentage,Mining,While doing  Mining
+Bronze Pickaxe,Mining,10,Tool,Craft,Great,Pickaxe,Find Gems,18,Percentage,Mining,While doing  Mining
+Bronze Pickaxe,Mining,10,Tool,Craft,Excellent,Pickaxe,Work Efficiency,12,Percentage,Mining,While doing  Mining
+Bronze Pickaxe,Mining,10,Tool,Craft,Excellent,Pickaxe,Double Action,2,Percentage,Mining,While doing  Mining
+Bronze Pickaxe,Mining,10,Tool,Craft,Excellent,Pickaxe,Double Rewards,4,Percentage,Mining,While doing  Mining
+Bronze Pickaxe,Mining,10,Tool,Craft,Excellent,Pickaxe,Fine Material Finding,19,Percentage,Mining,While doing  Mining
+Bronze Pickaxe,Mining,10,Tool,Craft,Excellent,Pickaxe,Chest Finding,16,Percentage,Mining,While doing  Mining
+Bronze Pickaxe,Mining,10,Tool,Craft,Excellent,Pickaxe,Find Gems,19,Percentage,Mining,While doing  Mining
+Bronze Pickaxe,Mining,10,Tool,Craft,Perfect,Pickaxe,Work Efficiency,15,Percentage,Mining,While doing  Mining
+Bronze Pickaxe,Mining,10,Tool,Craft,Perfect,Pickaxe,Double Action,6,Percentage,Mining,While doing  Mining
+Bronze Pickaxe,Mining,10,Tool,Craft,Perfect,Pickaxe,Double Rewards,5,Percentage,Mining,While doing  Mining
+Bronze Pickaxe,Mining,10,Tool,Craft,Perfect,Pickaxe,Fine Material Finding,20,Percentage,Mining,While doing  Mining
+Bronze Pickaxe,Mining,10,Tool,Craft,Perfect,Pickaxe,Chest Finding,17,Percentage,Mining,While doing  Mining
+Bronze Pickaxe,Mining,10,Tool,Craft,Perfect,Pickaxe,Find Gems,20,Percentage,Mining,While doing  Mining
+Pine Fishing Rod,Fishing,10,Tool,Craft,Normal,"Fishing Rod, Fishing",Work Efficiency,6,Percentage,Fishing,While doing  Fishing
+Pine Fishing Rod,Fishing,10,Tool,Craft,Normal,"Fishing Rod, Fishing",Double Rewards,1,Percentage,Fishing,While doing  Fishing
+Pine Fishing Rod,Fishing,10,Tool,Craft,Normal,"Fishing Rod, Fishing",Fine Material Finding,20,Percentage,Fishing,While doing  Fishing
+Pine Fishing Rod,Fishing,10,Tool,Craft,Normal,"Fishing Rod, Fishing",Chest Finding,8,Percentage,Fishing,While doing  Fishing
+Pine Fishing Rod,Fishing,10,Tool,Craft,Good,"Fishing Rod, Fishing",Work Efficiency,8,Percentage,Fishing,While doing  Fishing
+Pine Fishing Rod,Fishing,10,Tool,Craft,Good,"Fishing Rod, Fishing",Double Rewards,2,Percentage,Fishing,While doing  Fishing
+Pine Fishing Rod,Fishing,10,Tool,Craft,Good,"Fishing Rod, Fishing",Fine Material Finding,32,Percentage,Fishing,While doing  Fishing
+Pine Fishing Rod,Fishing,10,Tool,Craft,Good,"Fishing Rod, Fishing",Chest Finding,13,Percentage,Fishing,While doing  Fishing
+Pine Fishing Rod,Fishing,10,Tool,Craft,Great,"Fishing Rod, Fishing",Work Efficiency,10,Percentage,Fishing,While doing  Fishing
+Pine Fishing Rod,Fishing,10,Tool,Craft,Great,"Fishing Rod, Fishing",Double Action,1,Percentage,Fishing,While doing  Fishing
+Pine Fishing Rod,Fishing,10,Tool,Craft,Great,"Fishing Rod, Fishing",Double Rewards,3,Percentage,Fishing,While doing  Fishing
+Pine Fishing Rod,Fishing,10,Tool,Craft,Great,"Fishing Rod, Fishing",Fine Material Finding,36,Percentage,Fishing,While doing  Fishing
+Pine Fishing Rod,Fishing,10,Tool,Craft,Great,"Fishing Rod, Fishing",Chest Finding,15,Percentage,Fishing,While doing  Fishing
+Pine Fishing Rod,Fishing,10,Tool,Craft,Excellent,"Fishing Rod, Fishing",Work Efficiency,12,Percentage,Fishing,While doing  Fishing
+Pine Fishing Rod,Fishing,10,Tool,Craft,Excellent,"Fishing Rod, Fishing",Double Action,2,Percentage,Fishing,While doing  Fishing
+Pine Fishing Rod,Fishing,10,Tool,Craft,Excellent,"Fishing Rod, Fishing",Double Rewards,4,Percentage,Fishing,While doing  Fishing
+Pine Fishing Rod,Fishing,10,Tool,Craft,Excellent,"Fishing Rod, Fishing",Fine Material Finding,38,Percentage,Fishing,While doing  Fishing
+Pine Fishing Rod,Fishing,10,Tool,Craft,Excellent,"Fishing Rod, Fishing",Chest Finding,16,Percentage,Fishing,While doing  Fishing
+Pine Fishing Rod,Fishing,10,Tool,Craft,Perfect,"Fishing Rod, Fishing",Work Efficiency,15,Percentage,Fishing,While doing  Fishing
+Pine Fishing Rod,Fishing,10,Tool,Craft,Perfect,"Fishing Rod, Fishing",Double Action,6,Percentage,Fishing,While doing  Fishing
+Pine Fishing Rod,Fishing,10,Tool,Craft,Perfect,"Fishing Rod, Fishing",Double Rewards,5,Percentage,Fishing,While doing  Fishing
+Pine Fishing Rod,Fishing,10,Tool,Craft,Perfect,"Fishing Rod, Fishing",Fine Material Finding,40,Percentage,Fishing,While doing  Fishing
+Pine Fishing Rod,Fishing,10,Tool,Craft,Perfect,"Fishing Rod, Fishing",Chest Finding,17,Percentage,Fishing,While doing  Fishing
+Large Fishing Net,Fishing,15,Tool,Craft,Normal,"Fishing Net, Fishing",Work Efficiency,8,Percentage,Fishing,While doing  Fishing
+Large Fishing Net,Fishing,15,Tool,Craft,Normal,"Fishing Net, Fishing",Double Rewards,2,Percentage,Fishing,While doing  Fishing
+Large Fishing Net,Fishing,15,Tool,Craft,Normal,"Fishing Net, Fishing",Fine Material Finding,26,Percentage,Fishing,While doing  Fishing
+Large Fishing Net,Fishing,15,Tool,Craft,Normal,"Fishing Net, Fishing",Chest Finding,10,Percentage,Fishing,While doing  Fishing
+Large Fishing Net,Fishing,15,Tool,Craft,Good,"Fishing Net, Fishing",Work Efficiency,10,Percentage,Fishing,While doing  Fishing
+Large Fishing Net,Fishing,15,Tool,Craft,Good,"Fishing Net, Fishing",Double Rewards,4,Percentage,Fishing,While doing  Fishing
+Large Fishing Net,Fishing,15,Tool,Craft,Good,"Fishing Net, Fishing",Fine Material Finding,42,Percentage,Fishing,While doing  Fishing
+Large Fishing Net,Fishing,15,Tool,Craft,Good,"Fishing Net, Fishing",Chest Finding,16,Percentage,Fishing,While doing  Fishing
+Large Fishing Net,Fishing,15,Tool,Craft,Great,"Fishing Net, Fishing",Work Efficiency,13,Percentage,Fishing,While doing  Fishing
+Large Fishing Net,Fishing,15,Tool,Craft,Great,"Fishing Net, Fishing",Fine Material Finding,48,Percentage,Fishing,While doing  Fishing
+Large Fishing Net,Fishing,15,Tool,Craft,Great,"Fishing Net, Fishing",Chest Finding,18,Percentage,Fishing,While doing  Fishing
+Large Fishing Net,Fishing,15,Tool,Craft,Great,"Fishing Net, Fishing",Double Rewards,6,Percentage,Fishing,While doing  Fishing
+Large Fishing Net,Fishing,15,Tool,Craft,Great,"Fishing Net, Fishing",Double Action,1,Percentage,Fishing,While doing  Fishing
+Large Fishing Net,Fishing,15,Tool,Craft,Excellent,"Fishing Net, Fishing",Work Efficiency,13,Percentage,Fishing,While doing  Fishing
+Large Fishing Net,Fishing,15,Tool,Craft,Excellent,"Fishing Net, Fishing",Double Action,1,Percentage,Fishing,While doing  Fishing
+Large Fishing Net,Fishing,15,Tool,Craft,Excellent,"Fishing Net, Fishing",Double Rewards,6,Percentage,Fishing,While doing  Fishing
+Large Fishing Net,Fishing,15,Tool,Craft,Excellent,"Fishing Net, Fishing",Fine Material Finding,48,Percentage,Fishing,While doing  Fishing
+Large Fishing Net,Fishing,15,Tool,Craft,Excellent,"Fishing Net, Fishing",Chest Finding,18,Percentage,Fishing,While doing  Fishing
+Large Fishing Net,Fishing,15,Tool,Craft,Perfect,"Fishing Net, Fishing",Work Efficiency,20,Percentage,Fishing,While doing  Fishing
+Large Fishing Net,Fishing,15,Tool,Craft,Perfect,"Fishing Net, Fishing",Double Action,8,Percentage,Fishing,While doing  Fishing
+Large Fishing Net,Fishing,15,Tool,Craft,Perfect,"Fishing Net, Fishing",Double Rewards,10,Percentage,Fishing,While doing  Fishing
+Large Fishing Net,Fishing,15,Tool,Craft,Perfect,"Fishing Net, Fishing",Fine Material Finding,52,Percentage,Fishing,While doing  Fishing
+Large Fishing Net,Fishing,15,Tool,Craft,Perfect,"Fishing Net, Fishing",Chest Finding,20,Percentage,Fishing,While doing  Fishing
+Iron Hatchet,Woodcutting,20,Tool,Craft,Normal,Woodcutting Hatchet,Work Efficiency,7,Percentage,Woodcutting,While doing  Woodcutting
+Iron Hatchet,Woodcutting,20,Tool,Craft,Good,Woodcutting Hatchet,Work Efficiency,8,Percentage,Woodcutting,While doing  Woodcutting
+Iron Hatchet,Woodcutting,20,Tool,Craft,Good,Woodcutting Hatchet,Double Rewards,2,Percentage,Woodcutting,While doing  Woodcutting
+Iron Hatchet,Woodcutting,20,Tool,Craft,Good,Woodcutting Hatchet,Fine Material Finding,13,Percentage,Woodcutting,While doing  Woodcutting
+Iron Hatchet,Woodcutting,20,Tool,Craft,Good,Woodcutting Hatchet,Chest Finding,10,Percentage,Woodcutting,While doing  Woodcutting
+Iron Hatchet,Woodcutting,20,Tool,Craft,Good,Woodcutting Hatchet,Find Bird Nests,13,Percentage,Woodcutting,While doing  Woodcutting
+Iron Hatchet,Woodcutting,20,Tool,Craft,Great,Woodcutting Hatchet,Work Efficiency,10,Percentage,Woodcutting,While doing  Woodcutting
+Iron Hatchet,Woodcutting,20,Tool,Craft,Great,Woodcutting Hatchet,Double Rewards,4,Percentage,Woodcutting,While doing  Woodcutting
+Iron Hatchet,Woodcutting,20,Tool,Craft,Great,Woodcutting Hatchet,Fine Material Finding,21,Percentage,Woodcutting,While doing  Woodcutting
+Iron Hatchet,Woodcutting,20,Tool,Craft,Great,Woodcutting Hatchet,Chest Finding,16,Percentage,Woodcutting,While doing  Woodcutting
+Iron Hatchet,Woodcutting,20,Tool,Craft,Great,Woodcutting Hatchet,Find Bird Nests,21,Percentage,Woodcutting,While doing  Woodcutting
+Iron Hatchet,Woodcutting,20,Tool,Craft,Excellent,Woodcutting Hatchet,Work Efficiency,13,Percentage,Woodcutting,While doing  Woodcutting
+Iron Hatchet,Woodcutting,20,Tool,Craft,Excellent,Woodcutting Hatchet,Double Action,1,Percentage,Woodcutting,While doing  Woodcutting
+Iron Hatchet,Woodcutting,20,Tool,Craft,Excellent,Woodcutting Hatchet,Double Rewards,6,Percentage,Woodcutting,While doing  Woodcutting
+Iron Hatchet,Woodcutting,20,Tool,Craft,Excellent,Woodcutting Hatchet,Fine Material Finding,24,Percentage,Woodcutting,While doing  Woodcutting
+Iron Hatchet,Woodcutting,20,Tool,Craft,Excellent,Woodcutting Hatchet,Chest Finding,18,Percentage,Woodcutting,While doing  Woodcutting
+Iron Hatchet,Woodcutting,20,Tool,Craft,Excellent,Woodcutting Hatchet,Find Bird Nests,24,Percentage,Woodcutting,While doing  Woodcutting
+Iron Hatchet,Woodcutting,20,Tool,Craft,Perfect,Woodcutting Hatchet,Work Efficiency,16,Percentage,Woodcutting,While doing  Woodcutting
+Iron Hatchet,Woodcutting,20,Tool,Craft,Perfect,Woodcutting Hatchet,Double Action,3,Percentage,Woodcutting,While doing  Woodcutting
+Iron Hatchet,Woodcutting,20,Tool,Craft,Perfect,Woodcutting Hatchet,Double Rewards,8,Percentage,Woodcutting,While doing  Woodcutting
+Iron Hatchet,Woodcutting,20,Tool,Craft,Perfect,Woodcutting Hatchet,Fine Material Finding,25,Percentage,Woodcutting,While doing  Woodcutting
+Iron Hatchet,Woodcutting,20,Tool,Craft,Perfect,Woodcutting Hatchet,Chest Finding,19,Percentage,Woodcutting,While doing  Woodcutting
+Iron Hatchet,Woodcutting,20,Tool,Craft,Perfect,Woodcutting Hatchet,Find Bird Nests,25,Percentage,Woodcutting,While doing  Woodcutting
+Iron Hatchet,Woodcutting,20,Tool,Craft,Eternal,Woodcutting Hatchet,Work Efficiency,20,Percentage,Woodcutting,While doing  Woodcutting
+Iron Hatchet,Woodcutting,20,Tool,Craft,Eternal,Woodcutting Hatchet,Double Action,8,Percentage,Woodcutting,While doing  Woodcutting
+Iron Hatchet,Woodcutting,20,Tool,Craft,Eternal,Woodcutting Hatchet,Double Rewards,10,Percentage,Woodcutting,While doing  Woodcutting
+Iron Hatchet,Woodcutting,20,Tool,Craft,Eternal,Woodcutting Hatchet,Fine Material Finding,26,Percentage,Woodcutting,While doing  Woodcutting
+Iron Hatchet,Woodcutting,20,Tool,Craft,Eternal,Woodcutting Hatchet,Chest Finding,20,Percentage,Woodcutting,While doing  Woodcutting
+Iron Hatchet,Woodcutting,20,Tool,Craft,Eternal,Woodcutting Hatchet,Find Bird Nests,26,Percentage,Woodcutting,While doing  Woodcutting
+Iron Pickaxe,Mining,20,Tool,Craft,Normal,Pickaxe,Work Efficiency,7,Percentage,Mining,While doing  Mining
+Iron Pickaxe,Mining,20,Tool,Craft,Good,Pickaxe,Work Efficiency,8,Percentage,Mining,While doing  Mining
+Iron Pickaxe,Mining,20,Tool,Craft,Good,Pickaxe,Double Rewards,2,Percentage,Mining,While doing  Mining
+Iron Pickaxe,Mining,20,Tool,Craft,Good,Pickaxe,Fine Material Finding,13,Percentage,Mining,While doing  Mining
+Iron Pickaxe,Mining,20,Tool,Craft,Good,Pickaxe,Chest Finding,10,Percentage,Mining,While doing  Mining
+Iron Pickaxe,Mining,20,Tool,Craft,Good,Pickaxe,Find Gems,13,Percentage,Mining,While doing  Mining
+Iron Pickaxe,Mining,20,Tool,Craft,Great,Pickaxe,Work Efficiency,10,Percentage,Mining,While doing  Mining
+Iron Pickaxe,Mining,20,Tool,Craft,Great,Pickaxe,Double Rewards,4,Percentage,Mining,While doing  Mining
+Iron Pickaxe,Mining,20,Tool,Craft,Great,Pickaxe,Fine Material Finding,21,Percentage,Mining,While doing  Mining
+Iron Pickaxe,Mining,20,Tool,Craft,Great,Pickaxe,Chest Finding,16,Percentage,Mining,While doing  Mining
+Iron Pickaxe,Mining,20,Tool,Craft,Great,Pickaxe,Find Gems,21,Percentage,Mining,While doing  Mining
+Iron Pickaxe,Mining,20,Tool,Craft,Excellent,Pickaxe,Work Efficiency,13,Percentage,Mining,While doing  Mining
+Iron Pickaxe,Mining,20,Tool,Craft,Excellent,Pickaxe,Double Action,1,Percentage,Mining,While doing  Mining
+Iron Pickaxe,Mining,20,Tool,Craft,Excellent,Pickaxe,Double Rewards,6,Percentage,Mining,While doing  Mining
+Iron Pickaxe,Mining,20,Tool,Craft,Excellent,Pickaxe,Fine Material Finding,24,Percentage,Mining,While doing  Mining
+Iron Pickaxe,Mining,20,Tool,Craft,Excellent,Pickaxe,Chest Finding,18,Percentage,Mining,While doing  Mining
+Iron Pickaxe,Mining,20,Tool,Craft,Excellent,Pickaxe,Find Gems,24,Percentage,Mining,While doing  Mining
+Iron Pickaxe,Mining,20,Tool,Craft,Perfect,Pickaxe,Work Efficiency,16,Percentage,Mining,While doing  Mining
+Iron Pickaxe,Mining,20,Tool,Craft,Perfect,Pickaxe,Double Action,3,Percentage,Mining,While doing  Mining
+Iron Pickaxe,Mining,20,Tool,Craft,Perfect,Pickaxe,Double Rewards,8,Percentage,Mining,While doing  Mining
+Iron Pickaxe,Mining,20,Tool,Craft,Perfect,Pickaxe,Fine Material Finding,25,Percentage,Mining,While doing  Mining
+Iron Pickaxe,Mining,20,Tool,Craft,Perfect,Pickaxe,Chest Finding,19,Percentage,Mining,While doing  Mining
+Iron Pickaxe,Mining,20,Tool,Craft,Perfect,Pickaxe,Find Gems,25,Percentage,Mining,While doing  Mining
+Iron Pickaxe,Mining,20,Tool,Craft,Eternal,Pickaxe,Work Efficiency,20,Percentage,Mining,While doing  Mining
+Iron Pickaxe,Mining,20,Tool,Craft,Eternal,Pickaxe,Double Action,8,Percentage,Mining,While doing  Mining
+Iron Pickaxe,Mining,20,Tool,Craft,Eternal,Pickaxe,Double Rewards,10,Percentage,Mining,While doing  Mining
+Iron Pickaxe,Mining,20,Tool,Craft,Eternal,Pickaxe,Fine Material Finding,26,Percentage,Mining,While doing  Mining
+Iron Pickaxe,Mining,20,Tool,Craft,Eternal,Pickaxe,Chest Finding,20,Percentage,Mining,While doing  Mining
+Iron Pickaxe,Mining,20,Tool,Craft,Eternal,Pickaxe,Find Gems,26,Percentage,Mining,While doing  Mining
+Iron Sickle,Foraging,20,Tool,Craft,Normal,"Sickle, Foraging Tool",Work Efficiency,8,Percentage,Foraging,While doing  Foraging
+Iron Sickle,Foraging,20,Tool,Craft,Normal,"Sickle, Foraging Tool",Double Rewards,2,Percentage,Foraging,While doing  Foraging
+Iron Sickle,Foraging,20,Tool,Craft,Normal,"Sickle, Foraging Tool",Fine Material Finding,26,Percentage,Foraging,While doing  Foraging
+Iron Sickle,Foraging,20,Tool,Craft,Normal,"Sickle, Foraging Tool",Chest Finding,10,Percentage,Foraging,While doing  Foraging
+Iron Sickle,Foraging,20,Tool,Craft,Good,"Sickle, Foraging Tool",Work Efficiency,10,Percentage,Foraging,While doing  Foraging
+Iron Sickle,Foraging,20,Tool,Craft,Good,"Sickle, Foraging Tool",Double Rewards,4,Percentage,Foraging,While doing  Foraging
+Iron Sickle,Foraging,20,Tool,Craft,Good,"Sickle, Foraging Tool",Fine Material Finding,42,Percentage,Foraging,While doing  Foraging
+Iron Sickle,Foraging,20,Tool,Craft,Good,"Sickle, Foraging Tool",Chest Finding,16,Percentage,Foraging,While doing  Foraging
+Iron Sickle,Foraging,20,Tool,Craft,Great,"Sickle, Foraging Tool",Work Efficiency,13,Percentage,Foraging,While doing  Foraging
+Iron Sickle,Foraging,20,Tool,Craft,Great,"Sickle, Foraging Tool",Double Action,2,Percentage,Foraging,While doing  Foraging
+Iron Sickle,Foraging,20,Tool,Craft,Great,"Sickle, Foraging Tool",Double Rewards,6,Percentage,Foraging,While doing  Foraging
+Iron Sickle,Foraging,20,Tool,Craft,Great,"Sickle, Foraging Tool",Fine Material Finding,48,Percentage,Foraging,While doing  Foraging
+Iron Sickle,Foraging,20,Tool,Craft,Great,"Sickle, Foraging Tool",Chest Finding,18,Percentage,Foraging,While doing  Foraging
+Iron Sickle,Foraging,20,Tool,Craft,Excellent,"Sickle, Foraging Tool",Work Efficiency,16,Percentage,Foraging,While doing  Foraging
+Iron Sickle,Foraging,20,Tool,Craft,Excellent,"Sickle, Foraging Tool",Double Action,4,Percentage,Foraging,While doing  Foraging
+Iron Sickle,Foraging,20,Tool,Craft,Excellent,"Sickle, Foraging Tool",Double Rewards,8,Percentage,Foraging,While doing  Foraging
+Iron Sickle,Foraging,20,Tool,Craft,Excellent,"Sickle, Foraging Tool",Fine Material Finding,50,Percentage,Foraging,While doing  Foraging
+Iron Sickle,Foraging,20,Tool,Craft,Excellent,"Sickle, Foraging Tool",Chest Finding,19,Percentage,Foraging,While doing  Foraging
+Iron Sickle,Foraging,20,Tool,Craft,Perfect,"Sickle, Foraging Tool",Work Efficiency,20,Percentage,Foraging,While doing  Foraging
+Iron Sickle,Foraging,20,Tool,Craft,Perfect,"Sickle, Foraging Tool",Double Action,9,Percentage,Foraging,While doing  Foraging
+Iron Sickle,Foraging,20,Tool,Craft,Perfect,"Sickle, Foraging Tool",Double Rewards,10,Percentage,Foraging,While doing  Foraging
+Iron Sickle,Foraging,20,Tool,Craft,Perfect,"Sickle, Foraging Tool",Fine Material Finding,52,Percentage,Foraging,While doing  Foraging
+Iron Sickle,Foraging,20,Tool,Craft,Perfect,"Sickle, Foraging Tool",Chest Finding,20,Percentage,Foraging,While doing  Foraging
+Fishing Spear,Fishing,25,Tool,Craft,Normal,Fishing Spear,Work Efficiency,10,Percentage,Fishing,While doing  Fishing
+Fishing Spear,Fishing,25,Tool,Craft,Normal,Fishing Spear,Double Rewards,2,Percentage,Fishing,While doing  Fishing
+Fishing Spear,Fishing,25,Tool,Craft,Normal,Fishing Spear,Fine Material Finding,14,Percentage,Fishing,While doing  Fishing
+Fishing Spear,Fishing,25,Tool,Craft,Normal,Fishing Spear,Chest Finding,16,Percentage,Fishing,While doing  Fishing
+Fishing Spear,Fishing,25,Tool,Craft,Good,Fishing Spear,Work Efficiency,12,Percentage,Fishing,While doing  Fishing
+Fishing Spear,Fishing,25,Tool,Craft,Good,Fishing Spear,Double Rewards,4,Percentage,Fishing,While doing  Fishing
+Fishing Spear,Fishing,25,Tool,Craft,Good,Fishing Spear,Fine Material Finding,22,Percentage,Fishing,While doing  Fishing
+Fishing Spear,Fishing,25,Tool,Craft,Good,Fishing Spear,Chest Finding,26,Percentage,Fishing,While doing  Fishing
+Fishing Spear,Fishing,25,Tool,Craft,Great,Fishing Spear,Work Efficiency,16,Percentage,Fishing,While doing  Fishing
+Fishing Spear,Fishing,25,Tool,Craft,Great,Fishing Spear,Double Action,1,Percentage,Fishing,While doing  Fishing
+Fishing Spear,Fishing,25,Tool,Craft,Great,Fishing Spear,Double Rewards,6,Percentage,Fishing,While doing  Fishing
+Fishing Spear,Fishing,25,Tool,Craft,Great,Fishing Spear,Fine Material Finding,25,Percentage,Fishing,While doing  Fishing
+Fishing Spear,Fishing,25,Tool,Craft,Great,Fishing Spear,Chest Finding,29,Percentage,Fishing,While doing  Fishing
+Fishing Spear,Fishing,25,Tool,Craft,Excellent,Fishing Spear,Work Efficiency,20,Percentage,Fishing,While doing  Fishing
+Fishing Spear,Fishing,25,Tool,Craft,Excellent,Fishing Spear,Double Action,3,Percentage,Fishing,While doing  Fishing
+Fishing Spear,Fishing,25,Tool,Craft,Excellent,Fishing Spear,Double Rewards,8,Percentage,Fishing,While doing  Fishing
+Fishing Spear,Fishing,25,Tool,Craft,Excellent,Fishing Spear,Fine Material Finding,26,Percentage,Fishing,While doing  Fishing
+Fishing Spear,Fishing,25,Tool,Craft,Excellent,Fishing Spear,Chest Finding,31,Percentage,Fishing,While doing  Fishing
+Fishing Spear,Fishing,25,Tool,Craft,Perfect,Fishing Spear,Work Efficiency,25,Percentage,Fishing,While doing  Fishing
+Fishing Spear,Fishing,25,Tool,Craft,Perfect,Fishing Spear,Double Action,9,Percentage,Fishing,While doing  Fishing
+Fishing Spear,Fishing,25,Tool,Craft,Perfect,Fishing Spear,Double Rewards,10,Percentage,Fishing,While doing  Fishing
+Fishing Spear,Fishing,25,Tool,Craft,Perfect,Fishing Spear,Fine Material Finding,27,Percentage,Fishing,While doing  Fishing
+Fishing Spear,Fishing,25,Tool,Craft,Perfect,Fishing Spear,Chest Finding,33,Percentage,Fishing,While doing  Fishing
+Oak Fishing Rod,Fishing,30,Tool,Craft,Normal,"Fishing Rod, Fishing",Work Efficiency,11,Percentage,Fishing,While doing  Fishing
+Oak Fishing Rod,Fishing,30,Tool,Craft,Normal,"Fishing Rod, Fishing",Double Action,1,Percentage,Fishing,While doing  Fishing
+Oak Fishing Rod,Fishing,30,Tool,Craft,Normal,"Fishing Rod, Fishing",Double Rewards,2,Percentage,Fishing,While doing  Fishing
+Oak Fishing Rod,Fishing,30,Tool,Craft,Normal,"Fishing Rod, Fishing",Fine Material Finding,30,Percentage,Fishing,While doing  Fishing
+Oak Fishing Rod,Fishing,30,Tool,Craft,Normal,"Fishing Rod, Fishing",Chest Finding,13,Percentage,Fishing,While doing  Fishing
+Oak Fishing Rod,Fishing,30,Tool,Craft,Good,"Fishing Rod, Fishing",Work Efficiency,14,Percentage,Fishing,While doing  Fishing
+Oak Fishing Rod,Fishing,30,Tool,Craft,Good,"Fishing Rod, Fishing",Double Action,2,Percentage,Fishing,While doing  Fishing
+Oak Fishing Rod,Fishing,30,Tool,Craft,Good,"Fishing Rod, Fishing",Double Rewards,4,Percentage,Fishing,While doing  Fishing
+Oak Fishing Rod,Fishing,30,Tool,Craft,Good,"Fishing Rod, Fishing",Fine Material Finding,48,Percentage,Fishing,While doing  Fishing
+Oak Fishing Rod,Fishing,30,Tool,Craft,Good,"Fishing Rod, Fishing",Chest Finding,21,Percentage,Fishing,While doing  Fishing
+Oak Fishing Rod,Fishing,30,Tool,Craft,Great,"Fishing Rod, Fishing",Work Efficiency,18,Percentage,Fishing,While doing  Fishing
+Oak Fishing Rod,Fishing,30,Tool,Craft,Great,"Fishing Rod, Fishing",Double Action,3,Percentage,Fishing,While doing  Fishing
+Oak Fishing Rod,Fishing,30,Tool,Craft,Great,"Fishing Rod, Fishing",Double Rewards,6,Percentage,Fishing,While doing  Fishing
+Oak Fishing Rod,Fishing,30,Tool,Craft,Great,"Fishing Rod, Fishing",Fine Material Finding,54,Percentage,Fishing,While doing  Fishing
+Oak Fishing Rod,Fishing,30,Tool,Craft,Great,"Fishing Rod, Fishing",Chest Finding,24,Percentage,Fishing,While doing  Fishing
+Oak Fishing Rod,Fishing,30,Tool,Craft,Excellent,"Fishing Rod, Fishing",Work Efficiency,22,Percentage,Fishing,While doing  Fishing
+Oak Fishing Rod,Fishing,30,Tool,Craft,Excellent,"Fishing Rod, Fishing",Double Action,5,Percentage,Fishing,While doing  Fishing
+Oak Fishing Rod,Fishing,30,Tool,Craft,Excellent,"Fishing Rod, Fishing",Double Rewards,8,Percentage,Fishing,While doing  Fishing
+Oak Fishing Rod,Fishing,30,Tool,Craft,Excellent,"Fishing Rod, Fishing",Fine Material Finding,58,Percentage,Fishing,While doing  Fishing
+Oak Fishing Rod,Fishing,30,Tool,Craft,Excellent,"Fishing Rod, Fishing",Chest Finding,25,Percentage,Fishing,While doing  Fishing
+Oak Fishing Rod,Fishing,30,Tool,Craft,Perfect,"Fishing Rod, Fishing",Work Efficiency,27,Percentage,Fishing,While doing  Fishing
+Oak Fishing Rod,Fishing,30,Tool,Craft,Perfect,"Fishing Rod, Fishing",Double Action,12,Percentage,Fishing,While doing  Fishing
+Oak Fishing Rod,Fishing,30,Tool,Craft,Perfect,"Fishing Rod, Fishing",Double Rewards,10,Percentage,Fishing,While doing  Fishing
+Oak Fishing Rod,Fishing,30,Tool,Craft,Perfect,"Fishing Rod, Fishing",Fine Material Finding,62,Percentage,Fishing,While doing  Fishing
+Oak Fishing Rod,Fishing,30,Tool,Craft,Perfect,"Fishing Rod, Fishing",Chest Finding,26,Percentage,Fishing,While doing  Fishing
+Steel Hatchet,Woodcutting,30,Tool,Craft,Normal,Woodcutting Hatchet,Work Efficiency,11,Percentage,Woodcutting,While doing  Woodcutting
+Steel Hatchet,Woodcutting,30,Tool,Craft,Normal,Woodcutting Hatchet,Double Action,1,Percentage,Woodcutting,While doing  Woodcutting
+Steel Hatchet,Woodcutting,30,Tool,Craft,Normal,Woodcutting Hatchet,Double Rewards,2,Percentage,Woodcutting,While doing  Woodcutting
+Steel Hatchet,Woodcutting,30,Tool,Craft,Normal,Woodcutting Hatchet,Fine Material Finding,15,Percentage,Woodcutting,While doing  Woodcutting
+Steel Hatchet,Woodcutting,30,Tool,Craft,Normal,Woodcutting Hatchet,Chest Finding,13,Percentage,Woodcutting,While doing  Woodcutting
+Steel Hatchet,Woodcutting,30,Tool,Craft,Normal,Woodcutting Hatchet,Find Bird Nests,15,Percentage,Woodcutting,While doing  Woodcutting
+Steel Hatchet,Woodcutting,30,Tool,Craft,Good,Woodcutting Hatchet,Work Efficiency,14,Percentage,Woodcutting,While doing  Woodcutting
+Steel Hatchet,Woodcutting,30,Tool,Craft,Good,Woodcutting Hatchet,Double Action,2,Percentage,Woodcutting,While doing  Woodcutting
+Steel Hatchet,Woodcutting,30,Tool,Craft,Good,Woodcutting Hatchet,Double Rewards,4,Percentage,Woodcutting,While doing  Woodcutting
+Steel Hatchet,Woodcutting,30,Tool,Craft,Good,Woodcutting Hatchet,Fine Material Finding,24,Percentage,Woodcutting,While doing  Woodcutting
+Steel Hatchet,Woodcutting,30,Tool,Craft,Good,Woodcutting Hatchet,Chest Finding,21,Percentage,Woodcutting,While doing  Woodcutting
+Steel Hatchet,Woodcutting,30,Tool,Craft,Good,Woodcutting Hatchet,Find Bird Nests,24,Percentage,Woodcutting,While doing  Woodcutting
+Steel Hatchet,Woodcutting,30,Tool,Craft,Great,Woodcutting Hatchet,Work Efficiency,18,Percentage,Woodcutting,While doing  Woodcutting
+Steel Hatchet,Woodcutting,30,Tool,Craft,Great,Woodcutting Hatchet,Double Action,3,Percentage,Woodcutting,While doing  Woodcutting
+Steel Hatchet,Woodcutting,30,Tool,Craft,Great,Woodcutting Hatchet,Double Rewards,6,Percentage,Woodcutting,While doing  Woodcutting
+Steel Hatchet,Woodcutting,30,Tool,Craft,Great,Woodcutting Hatchet,Fine Material Finding,27,Percentage,Woodcutting,While doing  Woodcutting
+Steel Hatchet,Woodcutting,30,Tool,Craft,Great,Woodcutting Hatchet,Chest Finding,24,Percentage,Woodcutting,While doing  Woodcutting
+Steel Hatchet,Woodcutting,30,Tool,Craft,Great,Woodcutting Hatchet,Find Bird Nests,27,Percentage,Woodcutting,While doing  Woodcutting
+Steel Hatchet,Woodcutting,30,Tool,Craft,Excellent,Woodcutting Hatchet,Work Efficiency,22,Percentage,Woodcutting,While doing  Woodcutting
+Steel Hatchet,Woodcutting,30,Tool,Craft,Excellent,Woodcutting Hatchet,Double Action,5,Percentage,Woodcutting,While doing  Woodcutting
+Steel Hatchet,Woodcutting,30,Tool,Craft,Excellent,Woodcutting Hatchet,Double Rewards,8,Percentage,Woodcutting,While doing  Woodcutting
+Steel Hatchet,Woodcutting,30,Tool,Craft,Excellent,Woodcutting Hatchet,Fine Material Finding,29,Percentage,Woodcutting,While doing  Woodcutting
+Steel Hatchet,Woodcutting,30,Tool,Craft,Excellent,Woodcutting Hatchet,Chest Finding,25,Percentage,Woodcutting,While doing  Woodcutting
+Steel Hatchet,Woodcutting,30,Tool,Craft,Excellent,Woodcutting Hatchet,Find Bird Nests,29,Percentage,Woodcutting,While doing  Woodcutting
+Steel Hatchet,Woodcutting,30,Tool,Craft,Perfect,Woodcutting Hatchet,Work Efficiency,27,Percentage,Woodcutting,While doing  Woodcutting
+Steel Hatchet,Woodcutting,30,Tool,Craft,Perfect,Woodcutting Hatchet,Double Action,12,Percentage,Woodcutting,While doing  Woodcutting
+Steel Hatchet,Woodcutting,30,Tool,Craft,Perfect,Woodcutting Hatchet,Double Rewards,10,Percentage,Woodcutting,While doing  Woodcutting
+Steel Hatchet,Woodcutting,30,Tool,Craft,Perfect,Woodcutting Hatchet,Fine Material Finding,31,Percentage,Woodcutting,While doing  Woodcutting
+Steel Hatchet,Woodcutting,30,Tool,Craft,Perfect,Woodcutting Hatchet,Chest Finding,26,Percentage,Woodcutting,While doing  Woodcutting
+Steel Hatchet,Woodcutting,30,Tool,Craft,Perfect,Woodcutting Hatchet,Find Bird Nests,31,Percentage,Woodcutting,While doing  Woodcutting
+Steel Pickaxe,Mining,30,Tool,Craft,Normal,Pickaxe,Work Efficiency,11,Percentage,Mining,While doing  Mining
+Steel Pickaxe,Mining,30,Tool,Craft,Normal,Pickaxe,Double Action,1,Percentage,Mining,While doing  Mining
+Steel Pickaxe,Mining,30,Tool,Craft,Normal,Pickaxe,Double Rewards,2,Percentage,Mining,While doing  Mining
+Steel Pickaxe,Mining,30,Tool,Craft,Normal,Pickaxe,Fine Material Finding,15,Percentage,Mining,While doing  Mining
+Steel Pickaxe,Mining,30,Tool,Craft,Normal,Pickaxe,Chest Finding,13,Percentage,Mining,While doing  Mining
+Steel Pickaxe,Mining,30,Tool,Craft,Normal,Pickaxe,Find Gems,15,Percentage,Mining,While doing  Mining
+Steel Pickaxe,Mining,30,Tool,Craft,Good,Pickaxe,Work Efficiency,14,Percentage,Mining,While doing  Mining
+Steel Pickaxe,Mining,30,Tool,Craft,Good,Pickaxe,Double Action,2,Percentage,Mining,While doing  Mining
+Steel Pickaxe,Mining,30,Tool,Craft,Good,Pickaxe,Double Rewards,4,Percentage,Mining,While doing  Mining
+Steel Pickaxe,Mining,30,Tool,Craft,Good,Pickaxe,Fine Material Finding,24,Percentage,Mining,While doing  Mining
+Steel Pickaxe,Mining,30,Tool,Craft,Good,Pickaxe,Chest Finding,21,Percentage,Mining,While doing  Mining
+Steel Pickaxe,Mining,30,Tool,Craft,Good,Pickaxe,Find Gems,24,Percentage,Mining,While doing  Mining
+Steel Pickaxe,Mining,30,Tool,Craft,Great,Pickaxe,Work Efficiency,18,Percentage,Mining,While doing  Mining
+Steel Pickaxe,Mining,30,Tool,Craft,Great,Pickaxe,Double Action,3,Percentage,Mining,While doing  Mining
+Steel Pickaxe,Mining,30,Tool,Craft,Great,Pickaxe,Double Rewards,6,Percentage,Mining,While doing  Mining
+Steel Pickaxe,Mining,30,Tool,Craft,Great,Pickaxe,Fine Material Finding,27,Percentage,Mining,While doing  Mining
+Steel Pickaxe,Mining,30,Tool,Craft,Great,Pickaxe,Chest Finding,24,Percentage,Mining,While doing  Mining
+Steel Pickaxe,Mining,30,Tool,Craft,Great,Pickaxe,Find Gems,27,Percentage,Mining,While doing  Mining
+Steel Pickaxe,Mining,30,Tool,Craft,Excellent,Pickaxe,Work Efficiency,22,Percentage,Mining,While doing  Mining
+Steel Pickaxe,Mining,30,Tool,Craft,Excellent,Pickaxe,Double Action,5,Percentage,Mining,While doing  Mining
+Steel Pickaxe,Mining,30,Tool,Craft,Excellent,Pickaxe,Double Rewards,8,Percentage,Mining,While doing  Mining
+Steel Pickaxe,Mining,30,Tool,Craft,Excellent,Pickaxe,Fine Material Finding,29,Percentage,Mining,While doing  Mining
+Steel Pickaxe,Mining,30,Tool,Craft,Excellent,Pickaxe,Chest Finding,25,Percentage,Mining,While doing  Mining
+Steel Pickaxe,Mining,30,Tool,Craft,Excellent,Pickaxe,Find Gems,29,Percentage,Mining,While doing  Mining
+Steel Pickaxe,Mining,30,Tool,Craft,Perfect,Pickaxe,Work Efficiency,27,Percentage,Mining,While doing  Mining
+Steel Pickaxe,Mining,30,Tool,Craft,Perfect,Pickaxe,Double Action,12,Percentage,Mining,While doing  Mining
+Steel Pickaxe,Mining,30,Tool,Craft,Perfect,Pickaxe,Double Rewards,10,Percentage,Mining,While doing  Mining
+Steel Pickaxe,Mining,30,Tool,Craft,Perfect,Pickaxe,Fine Material Finding,31,Percentage,Mining,While doing  Mining
+Steel Pickaxe,Mining,30,Tool,Craft,Perfect,Pickaxe,Chest Finding,26,Percentage,Mining,While doing  Mining
+Steel Pickaxe,Mining,30,Tool,Craft,Perfect,Pickaxe,Find Gems,31,Percentage,Mining,While doing  Mining
+Steel Sickle,Foraging,30,Tool,Craft,Normal,"Sickle, Foraging Tool",Work Efficiency,11,Percentage,Foraging,While doing  Foraging
+Steel Sickle,Foraging,30,Tool,Craft,Normal,"Sickle, Foraging Tool",Double Action,1,Percentage,Foraging,While doing  Foraging
+Steel Sickle,Foraging,30,Tool,Craft,Normal,"Sickle, Foraging Tool",Double Rewards,2,Percentage,Foraging,While doing  Foraging
+Steel Sickle,Foraging,30,Tool,Craft,Normal,"Sickle, Foraging Tool",Fine Material Finding,30,Percentage,Foraging,While doing  Foraging
+Steel Sickle,Foraging,30,Tool,Craft,Normal,"Sickle, Foraging Tool",Chest Finding,13,Percentage,Foraging,While doing  Foraging
+Steel Sickle,Foraging,30,Tool,Craft,Good,"Sickle, Foraging Tool",Work Efficiency,14,Percentage,Foraging,While doing  Foraging
+Steel Sickle,Foraging,30,Tool,Craft,Good,"Sickle, Foraging Tool",Double Action,2,Percentage,Foraging,While doing  Foraging
+Steel Sickle,Foraging,30,Tool,Craft,Good,"Sickle, Foraging Tool",Double Rewards,4,Percentage,Foraging,While doing  Foraging
+Steel Sickle,Foraging,30,Tool,Craft,Good,"Sickle, Foraging Tool",Fine Material Finding,48,Percentage,Foraging,While doing  Foraging
+Steel Sickle,Foraging,30,Tool,Craft,Good,"Sickle, Foraging Tool",Chest Finding,21,Percentage,Foraging,While doing  Foraging
+Steel Sickle,Foraging,30,Tool,Craft,Great,"Sickle, Foraging Tool",Work Efficiency,18,Percentage,Foraging,While doing  Foraging
+Steel Sickle,Foraging,30,Tool,Craft,Great,"Sickle, Foraging Tool",Double Action,3,Percentage,Foraging,While doing  Foraging
+Steel Sickle,Foraging,30,Tool,Craft,Great,"Sickle, Foraging Tool",Double Rewards,6,Percentage,Foraging,While doing  Foraging
+Steel Sickle,Foraging,30,Tool,Craft,Great,"Sickle, Foraging Tool",Fine Material Finding,54,Percentage,Foraging,While doing  Foraging
+Steel Sickle,Foraging,30,Tool,Craft,Great,"Sickle, Foraging Tool",Chest Finding,24,Percentage,Foraging,While doing  Foraging
+Steel Sickle,Foraging,30,Tool,Craft,Excellent,"Sickle, Foraging Tool",Work Efficiency,22,Percentage,Foraging,While doing  Foraging
+Steel Sickle,Foraging,30,Tool,Craft,Excellent,"Sickle, Foraging Tool",Double Action,5,Percentage,Foraging,While doing  Foraging
+Steel Sickle,Foraging,30,Tool,Craft,Excellent,"Sickle, Foraging Tool",Double Rewards,8,Percentage,Foraging,While doing  Foraging
+Steel Sickle,Foraging,30,Tool,Craft,Excellent,"Sickle, Foraging Tool",Fine Material Finding,58,Percentage,Foraging,While doing  Foraging
+Steel Sickle,Foraging,30,Tool,Craft,Excellent,"Sickle, Foraging Tool",Chest Finding,25,Percentage,Foraging,While doing  Foraging
+Steel Sickle,Foraging,30,Tool,Craft,Perfect,"Sickle, Foraging Tool",Work Efficiency,27,Percentage,Foraging,While doing  Foraging
+Steel Sickle,Foraging,30,Tool,Craft,Perfect,"Sickle, Foraging Tool",Double Action,12,Percentage,Foraging,While doing  Foraging
+Steel Sickle,Foraging,30,Tool,Craft,Perfect,"Sickle, Foraging Tool",Double Rewards,10,Percentage,Foraging,While doing  Foraging
+Steel Sickle,Foraging,30,Tool,Craft,Perfect,"Sickle, Foraging Tool",Fine Material Finding,62,Percentage,Foraging,While doing  Foraging
+Steel Sickle,Foraging,30,Tool,Craft,Perfect,"Sickle, Foraging Tool",Chest Finding,26,Percentage,Foraging,While doing  Foraging
+Lobster Pot,Global,,Tool,Craft,Normal,Fishing Cage,Work Efficiency,10,Percentage,Fishing,While doing  Fishing
+Lobster Pot,Global,,Tool,Craft,Good,Fishing Cage,Work Efficiency,12,Percentage,Fishing,While doing  Fishing
+Lobster Pot,Global,,Tool,Craft,Good,Fishing Cage,Double Action,1,Percentage,Fishing,While doing  Fishing
+Lobster Pot,Global,,Tool,Craft,Good,Fishing Cage,Double Rewards,3,Percentage,Fishing,While doing  Fishing
+Lobster Pot,Global,,Tool,Craft,Good,Fishing Cage,Fine Material Finding,32,Percentage,Fishing,While doing  Fishing
+Lobster Pot,Global,,Tool,Craft,Good,Fishing Cage,Chest Finding,14,Percentage,Fishing,While doing  Fishing
+Lobster Pot,Global,,Tool,Craft,Great,Fishing Cage,Work Efficiency,15,Percentage,Fishing,While doing  Fishing
+Lobster Pot,Global,,Tool,Craft,Great,Fishing Cage,Double Action,2,Percentage,Fishing,While doing  Fishing
+Lobster Pot,Global,,Tool,Craft,Great,Fishing Cage,Double Rewards,6,Percentage,Fishing,While doing  Fishing
+Lobster Pot,Global,,Tool,Craft,Great,Fishing Cage,Fine Material Finding,52,Percentage,Fishing,While doing  Fishing
+Lobster Pot,Global,,Tool,Craft,Great,Fishing Cage,Chest Finding,22,Percentage,Fishing,While doing  Fishing
+Lobster Pot,Global,,Tool,Craft,Excellent,Fishing Cage,Work Efficiency,20,Percentage,Fishing,While doing  Fishing
+Lobster Pot,Global,,Tool,Craft,Excellent,Fishing Cage,Double Action,3,Percentage,Fishing,While doing  Fishing
+Lobster Pot,Global,,Tool,Craft,Excellent,Fishing Cage,Double Rewards,9,Percentage,Fishing,While doing  Fishing
+Lobster Pot,Global,,Tool,Craft,Excellent,Fishing Cage,Fine Material Finding,58,Percentage,Fishing,While doing  Fishing
+Lobster Pot,Global,,Tool,Craft,Excellent,Fishing Cage,Chest Finding,25,Percentage,Fishing,While doing  Fishing
+Lobster Pot,Global,,Tool,Craft,Perfect,Fishing Cage,Work Efficiency,25,Percentage,Fishing,While doing  Fishing
+Lobster Pot,Global,,Tool,Craft,Perfect,Fishing Cage,Double Action,6,Percentage,Fishing,While doing  Fishing
+Lobster Pot,Global,,Tool,Craft,Perfect,Fishing Cage,Double Rewards,12,Percentage,Fishing,While doing  Fishing
+Lobster Pot,Global,,Tool,Craft,Perfect,Fishing Cage,Fine Material Finding,62,Percentage,Fishing,While doing  Fishing
+Lobster Pot,Global,,Tool,Craft,Perfect,Fishing Cage,Chest Finding,26,Percentage,Fishing,While doing  Fishing
+Lobster Pot,Global,,Tool,Craft,Eternal,Fishing Cage,Work Efficiency,31,Percentage,Fishing,While doing  Fishing
+Lobster Pot,Global,,Tool,Craft,Eternal,Fishing Cage,Double Action,9,Percentage,Fishing,While doing  Fishing
+Lobster Pot,Global,,Tool,Craft,Eternal,Fishing Cage,Double Rewards,15,Percentage,Fishing,While doing  Fishing
+Lobster Pot,Global,,Tool,Craft,Eternal,Fishing Cage,Fine Material Finding,66,Percentage,Fishing,While doing  Fishing
+Lobster Pot,Global,,Tool,Craft,Eternal,Fishing Cage,Chest Finding,27,Percentage,Fishing,While doing  Fishing
+Jellyfishing Net,Global,,Tool,Craft,Normal,Bug Catching Net,Work Efficiency,4,Percentage,Fishing,While doing  Fishing
+Jellyfishing Net,Global,,Tool,Craft,Normal,Bug Catching Net,Work Efficiency,4,Percentage,Foraging,While doing  Foraging
+Jellyfishing Net,Global,,Tool,Craft,Normal,Bug Catching Net,Double Rewards,1,Percentage,Fishing,While doing  Fishing
+Jellyfishing Net,Global,,Tool,Craft,Normal,Bug Catching Net,Double Rewards,1,Percentage,Foraging,While doing  Foraging
+Jellyfishing Net,Global,,Tool,Craft,Good,Bug Catching Net,Work Efficiency,5,Percentage,Fishing,While doing  Fishing
+Jellyfishing Net,Global,,Tool,Craft,Good,Bug Catching Net,Work Efficiency,5,Percentage,Foraging,While doing  Foraging
+Jellyfishing Net,Global,,Tool,Craft,Good,Bug Catching Net,Double Rewards,2,Percentage,Fishing,While doing  Fishing
+Jellyfishing Net,Global,,Tool,Craft,Good,Bug Catching Net,Double Rewards,2,Percentage,Foraging,While doing  Foraging
+Jellyfishing Net,Global,,Tool,Craft,Great,Bug Catching Net,Work Efficiency,6,Percentage,Fishing,While doing  Fishing
+Jellyfishing Net,Global,,Tool,Craft,Great,Bug Catching Net,Work Efficiency,6,Percentage,Foraging,While doing  Foraging
+Jellyfishing Net,Global,,Tool,Craft,Great,Bug Catching Net,Double Rewards,3,Percentage,Fishing,While doing  Fishing
+Jellyfishing Net,Global,,Tool,Craft,Great,Bug Catching Net,Double Rewards,3,Percentage,Foraging,While doing  Foraging
+Jellyfishing Net,Global,,Tool,Craft,Excellent,Bug Catching Net,Work Efficiency,7,Percentage,Fishing,While doing  Fishing
+Jellyfishing Net,Global,,Tool,Craft,Excellent,Bug Catching Net,Work Efficiency,7,Percentage,Foraging,While doing  Foraging
+Jellyfishing Net,Global,,Tool,Craft,Excellent,Bug Catching Net,Double Rewards,4,Percentage,Fishing,While doing  Fishing
+Jellyfishing Net,Global,,Tool,Craft,Excellent,Bug Catching Net,Double Rewards,4,Percentage,Foraging,While doing  Foraging
+Jellyfishing Net,Global,,Tool,Craft,Perfect,Bug Catching Net,Work Efficiency,8,Percentage,Fishing,While doing  Fishing
+Jellyfishing Net,Global,,Tool,Craft,Perfect,Bug Catching Net,Work Efficiency,8,Percentage,Foraging,While doing  Foraging
+Jellyfishing Net,Global,,Tool,Craft,Perfect,Bug Catching Net,Double Rewards,5,Percentage,Fishing,While doing  Fishing
+Jellyfishing Net,Global,,Tool,Craft,Perfect,Bug Catching Net,Double Rewards,5,Percentage,Foraging,While doing  Foraging
+Jellyfishing Net,Global,,Tool,Craft,Eternal,Bug Catching Net,Work Efficiency,9,Percentage,Fishing,While doing  Fishing
+Jellyfishing Net,Global,,Tool,Craft,Eternal,Bug Catching Net,Work Efficiency,9,Percentage,Foraging,While doing  Foraging
+Jellyfishing Net,Global,,Tool,Craft,Eternal,Bug Catching Net,Double Rewards,6,Percentage,Fishing,While doing  Fishing
+Jellyfishing Net,Global,,Tool,Craft,Eternal,Bug Catching Net,Double Rewards,6,Percentage,Foraging,While doing  Foraging
+Tarsilium Hatchet,Woodcutting,40,Tool,Craft,Normal,Woodcutting Hatchet,Work Efficiency,14,Percentage,Woodcutting,While doing  Woodcutting
+Tarsilium Hatchet,Woodcutting,40,Tool,Craft,Normal,Woodcutting Hatchet,Double Action,1,Percentage,Woodcutting,While doing  Woodcutting
+Tarsilium Hatchet,Woodcutting,40,Tool,Craft,Normal,Woodcutting Hatchet,Double Rewards,3,Percentage,Woodcutting,While doing  Woodcutting
+Tarsilium Hatchet,Woodcutting,40,Tool,Craft,Normal,Woodcutting Hatchet,Fine Material Finding,18,Percentage,Woodcutting,While doing  Woodcutting
+Tarsilium Hatchet,Woodcutting,40,Tool,Craft,Normal,Woodcutting Hatchet,Chest Finding,15,Percentage,Woodcutting,While doing  Woodcutting
+Tarsilium Hatchet,Woodcutting,40,Tool,Craft,Normal,Woodcutting Hatchet,Find Bird Nests,18,Percentage,Woodcutting,While doing  Woodcutting
+Tarsilium Hatchet,Woodcutting,40,Tool,Craft,Good,Woodcutting Hatchet,Work Efficiency,18,Percentage,Woodcutting,While doing  Woodcutting
+Tarsilium Hatchet,Woodcutting,40,Tool,Craft,Good,Woodcutting Hatchet,Double Action,2,Percentage,Woodcutting,While doing  Woodcutting
+Tarsilium Hatchet,Woodcutting,40,Tool,Craft,Good,Woodcutting Hatchet,Double Rewards,6,Percentage,Woodcutting,While doing  Woodcutting
+Tarsilium Hatchet,Woodcutting,40,Tool,Craft,Good,Woodcutting Hatchet,Fine Material Finding,29,Percentage,Woodcutting,While doing  Woodcutting
+Tarsilium Hatchet,Woodcutting,40,Tool,Craft,Good,Woodcutting Hatchet,Chest Finding,24,Percentage,Woodcutting,While doing  Woodcutting
+Tarsilium Hatchet,Woodcutting,40,Tool,Craft,Good,Woodcutting Hatchet,Find Bird Nests,29,Percentage,Woodcutting,While doing  Woodcutting
+Tarsilium Hatchet,Woodcutting,40,Tool,Craft,Great,Woodcutting Hatchet,Work Efficiency,23,Percentage,Woodcutting,While doing  Woodcutting
+Tarsilium Hatchet,Woodcutting,40,Tool,Craft,Great,Woodcutting Hatchet,Double Action,3,Percentage,Woodcutting,While doing  Woodcutting
+Tarsilium Hatchet,Woodcutting,40,Tool,Craft,Great,Woodcutting Hatchet,Double Rewards,9,Percentage,Woodcutting,While doing  Woodcutting
+Tarsilium Hatchet,Woodcutting,40,Tool,Craft,Great,Woodcutting Hatchet,Fine Material Finding,33,Percentage,Woodcutting,While doing  Woodcutting
+Tarsilium Hatchet,Woodcutting,40,Tool,Craft,Great,Woodcutting Hatchet,Chest Finding,27,Percentage,Woodcutting,While doing  Woodcutting
+Tarsilium Hatchet,Woodcutting,40,Tool,Craft,Great,Woodcutting Hatchet,Find Bird Nests,33,Percentage,Woodcutting,While doing  Woodcutting
+Tarsilium Hatchet,Woodcutting,40,Tool,Craft,Excellent,Woodcutting Hatchet,Work Efficiency,28,Percentage,Woodcutting,While doing  Woodcutting
+Tarsilium Hatchet,Woodcutting,40,Tool,Craft,Excellent,Woodcutting Hatchet,Double Action,6,Percentage,Woodcutting,While doing  Woodcutting
+Tarsilium Hatchet,Woodcutting,40,Tool,Craft,Excellent,Woodcutting Hatchet,Double Rewards,12,Percentage,Woodcutting,While doing  Woodcutting
+Tarsilium Hatchet,Woodcutting,40,Tool,Craft,Excellent,Woodcutting Hatchet,Fine Material Finding,35,Percentage,Woodcutting,While doing  Woodcutting
+Tarsilium Hatchet,Woodcutting,40,Tool,Craft,Excellent,Woodcutting Hatchet,Chest Finding,29,Percentage,Woodcutting,While doing  Woodcutting
+Tarsilium Hatchet,Woodcutting,40,Tool,Craft,Excellent,Woodcutting Hatchet,Find Bird Nests,35,Percentage,Woodcutting,While doing  Woodcutting
+Tarsilium Hatchet,Woodcutting,40,Tool,Craft,Perfect,Woodcutting Hatchet,Work Efficiency,35,Percentage,Woodcutting,While doing  Woodcutting
+Tarsilium Hatchet,Woodcutting,40,Tool,Craft,Perfect,Woodcutting Hatchet,Double Action,14,Percentage,Woodcutting,While doing  Woodcutting
+Tarsilium Hatchet,Woodcutting,40,Tool,Craft,Perfect,Woodcutting Hatchet,Double Rewards,15,Percentage,Woodcutting,While doing  Woodcutting
+Tarsilium Hatchet,Woodcutting,40,Tool,Craft,Perfect,Woodcutting Hatchet,Fine Material Finding,37,Percentage,Woodcutting,While doing  Woodcutting
+Tarsilium Hatchet,Woodcutting,40,Tool,Craft,Perfect,Woodcutting Hatchet,Chest Finding,31,Percentage,Woodcutting,While doing  Woodcutting
+Tarsilium Hatchet,Woodcutting,40,Tool,Craft,Perfect,Woodcutting Hatchet,Find Bird Nests,37,Percentage,Woodcutting,While doing  Woodcutting
+Tarsilium Pickaxe,Mining,40,Tool,Craft,Normal,Pickaxe,Work Efficiency,14,Percentage,Mining,While doing  Mining
+Tarsilium Pickaxe,Mining,40,Tool,Craft,Normal,Pickaxe,Double Action,1,Percentage,Mining,While doing  Mining
+Tarsilium Pickaxe,Mining,40,Tool,Craft,Normal,Pickaxe,Double Rewards,3,Percentage,Mining,While doing  Mining
+Tarsilium Pickaxe,Mining,40,Tool,Craft,Normal,Pickaxe,Fine Material Finding,18,Percentage,Mining,While doing  Mining
+Tarsilium Pickaxe,Mining,40,Tool,Craft,Normal,Pickaxe,Chest Finding,15,Percentage,Mining,While doing  Mining
+Tarsilium Pickaxe,Mining,40,Tool,Craft,Normal,Pickaxe,Find Gems,18,Percentage,Mining,While doing  Mining
+Tarsilium Pickaxe,Mining,40,Tool,Craft,Good,Pickaxe,Work Efficiency,18,Percentage,Mining,While doing  Mining
+Tarsilium Pickaxe,Mining,40,Tool,Craft,Good,Pickaxe,Double Action,2,Percentage,Mining,While doing  Mining
+Tarsilium Pickaxe,Mining,40,Tool,Craft,Good,Pickaxe,Double Rewards,6,Percentage,Mining,While doing  Mining
+Tarsilium Pickaxe,Mining,40,Tool,Craft,Good,Pickaxe,Fine Material Finding,29,Percentage,Mining,While doing  Mining
+Tarsilium Pickaxe,Mining,40,Tool,Craft,Good,Pickaxe,Chest Finding,24,Percentage,Mining,While doing  Mining
+Tarsilium Pickaxe,Mining,40,Tool,Craft,Good,Pickaxe,Find Gems,29,Percentage,Mining,While doing  Mining
+Tarsilium Pickaxe,Mining,40,Tool,Craft,Great,Pickaxe,Work Efficiency,23,Percentage,Mining,While doing  Mining
+Tarsilium Pickaxe,Mining,40,Tool,Craft,Great,Pickaxe,Double Action,3,Percentage,Mining,While doing  Mining
+Tarsilium Pickaxe,Mining,40,Tool,Craft,Great,Pickaxe,Double Rewards,9,Percentage,Mining,While doing  Mining
+Tarsilium Pickaxe,Mining,40,Tool,Craft,Great,Pickaxe,Fine Material Finding,33,Percentage,Mining,While doing  Mining
+Tarsilium Pickaxe,Mining,40,Tool,Craft,Great,Pickaxe,Chest Finding,27,Percentage,Mining,While doing  Mining
+Tarsilium Pickaxe,Mining,40,Tool,Craft,Great,Pickaxe,Find Gems,33,Percentage,Mining,While doing  Mining
+Tarsilium Pickaxe,Mining,40,Tool,Craft,Excellent,Pickaxe,Work Efficiency,28,Percentage,Mining,While doing  Mining
+Tarsilium Pickaxe,Mining,40,Tool,Craft,Excellent,Pickaxe,Double Action,6,Percentage,Mining,While doing  Mining
+Tarsilium Pickaxe,Mining,40,Tool,Craft,Excellent,Pickaxe,Double Rewards,12,Percentage,Mining,While doing  Mining
+Tarsilium Pickaxe,Mining,40,Tool,Craft,Excellent,Pickaxe,Fine Material Finding,35,Percentage,Mining,While doing  Mining
+Tarsilium Pickaxe,Mining,40,Tool,Craft,Excellent,Pickaxe,Chest Finding,29,Percentage,Mining,While doing  Mining
+Tarsilium Pickaxe,Mining,40,Tool,Craft,Excellent,Pickaxe,Find Gems,35,Percentage,Mining,While doing  Mining
+Tarsilium Pickaxe,Mining,40,Tool,Craft,Perfect,Pickaxe,Work Efficiency,35,Percentage,Mining,While doing  Mining
+Tarsilium Pickaxe,Mining,40,Tool,Craft,Perfect,Pickaxe,Double Action,14,Percentage,Mining,While doing  Mining
+Tarsilium Pickaxe,Mining,40,Tool,Craft,Perfect,Pickaxe,Double Rewards,15,Percentage,Mining,While doing  Mining
+Tarsilium Pickaxe,Mining,40,Tool,Craft,Perfect,Pickaxe,Fine Material Finding,37,Percentage,Mining,While doing  Mining
+Tarsilium Pickaxe,Mining,40,Tool,Craft,Perfect,Pickaxe,Chest Finding,31,Percentage,Mining,While doing  Mining
+Tarsilium Pickaxe,Mining,40,Tool,Craft,Perfect,Pickaxe,Find Gems,37,Percentage,Mining,While doing  Mining
+Willow Fishing Rod,Fishing,40,Tool,Craft,Normal,"Fishing Rod, Fishing",Work Efficiency,14,Percentage,Fishing,While doing  Fishing
+Willow Fishing Rod,Fishing,40,Tool,Craft,Normal,"Fishing Rod, Fishing",Double Action,1,Percentage,Fishing,While doing  Fishing
+Willow Fishing Rod,Fishing,40,Tool,Craft,Normal,"Fishing Rod, Fishing",Double Rewards,3,Percentage,Fishing,While doing  Fishing
+Willow Fishing Rod,Fishing,40,Tool,Craft,Normal,"Fishing Rod, Fishing",Fine Material Finding,36,Percentage,Fishing,While doing  Fishing
+Willow Fishing Rod,Fishing,40,Tool,Craft,Normal,"Fishing Rod, Fishing",Chest Finding,15,Percentage,Fishing,While doing  Fishing
+Willow Fishing Rod,Fishing,40,Tool,Craft,Good,"Fishing Rod, Fishing",Work Efficiency,18,Percentage,Fishing,While doing  Fishing
+Willow Fishing Rod,Fishing,40,Tool,Craft,Good,"Fishing Rod, Fishing",Double Action,1,Percentage,Fishing,While doing  Fishing
+Willow Fishing Rod,Fishing,40,Tool,Craft,Good,"Fishing Rod, Fishing",Double Rewards,6,Percentage,Fishing,While doing  Fishing
+Willow Fishing Rod,Fishing,40,Tool,Craft,Good,"Fishing Rod, Fishing",Fine Material Finding,58,Percentage,Fishing,While doing  Fishing
+Willow Fishing Rod,Fishing,40,Tool,Craft,Good,"Fishing Rod, Fishing",Chest Finding,24,Percentage,Fishing,While doing  Fishing
+Willow Fishing Rod,Fishing,40,Tool,Craft,Great,"Fishing Rod, Fishing",Work Efficiency,23,Percentage,Fishing,While doing  Fishing
+Willow Fishing Rod,Fishing,40,Tool,Craft,Great,"Fishing Rod, Fishing",Double Action,2,Percentage,Fishing,While doing  Fishing
+Willow Fishing Rod,Fishing,40,Tool,Craft,Great,"Fishing Rod, Fishing",Double Rewards,9,Percentage,Fishing,While doing  Fishing
+Willow Fishing Rod,Fishing,40,Tool,Craft,Great,"Fishing Rod, Fishing",Fine Material Finding,66,Percentage,Fishing,While doing  Fishing
+Willow Fishing Rod,Fishing,40,Tool,Craft,Great,"Fishing Rod, Fishing",Chest Finding,27,Percentage,Fishing,While doing  Fishing
+Willow Fishing Rod,Fishing,40,Tool,Craft,Excellent,"Fishing Rod, Fishing",Work Efficiency,28,Percentage,Fishing,While doing  Fishing
+Willow Fishing Rod,Fishing,40,Tool,Craft,Excellent,"Fishing Rod, Fishing",Double Action,5,Percentage,Fishing,While doing  Fishing
+Willow Fishing Rod,Fishing,40,Tool,Craft,Excellent,"Fishing Rod, Fishing",Double Rewards,12,Percentage,Fishing,While doing  Fishing
+Willow Fishing Rod,Fishing,40,Tool,Craft,Excellent,"Fishing Rod, Fishing",Fine Material Finding,70,Percentage,Fishing,While doing  Fishing
+Willow Fishing Rod,Fishing,40,Tool,Craft,Excellent,"Fishing Rod, Fishing",Chest Finding,29,Percentage,Fishing,While doing  Fishing
+Willow Fishing Rod,Fishing,40,Tool,Craft,Perfect,"Fishing Rod, Fishing",Work Efficiency,35,Percentage,Fishing,While doing  Fishing
+Willow Fishing Rod,Fishing,40,Tool,Craft,Perfect,"Fishing Rod, Fishing",Double Action,13,Percentage,Fishing,While doing  Fishing
+Willow Fishing Rod,Fishing,40,Tool,Craft,Perfect,"Fishing Rod, Fishing",Double Rewards,15,Percentage,Fishing,While doing  Fishing
+Willow Fishing Rod,Fishing,40,Tool,Craft,Perfect,"Fishing Rod, Fishing",Fine Material Finding,74,Percentage,Fishing,While doing  Fishing
+Willow Fishing Rod,Fishing,40,Tool,Craft,Perfect,"Fishing Rod, Fishing",Chest Finding,31,Percentage,Fishing,While doing  Fishing
+Coral Fishing Spear,Fishing,45,Tool,Craft,Normal,Fishing Spear,Work Efficiency,16,Percentage,Fishing,While doing  Fishing
+Coral Fishing Spear,Fishing,45,Tool,Craft,Normal,Fishing Spear,Double Action,1,Percentage,Fishing,While doing  Fishing
+Coral Fishing Spear,Fishing,45,Tool,Craft,Normal,Fishing Spear,Double Rewards,3,Percentage,Fishing,While doing  Fishing
+Coral Fishing Spear,Fishing,45,Tool,Craft,Normal,Fishing Spear,Fine Material Finding,19,Percentage,Fishing,While doing  Fishing
+Coral Fishing Spear,Fishing,45,Tool,Craft,Normal,Fishing Spear,Chest Finding,25,Percentage,Fishing,While doing  Fishing
+Coral Fishing Spear,Fishing,45,Tool,Craft,Good,Fishing Spear,Work Efficiency,20,Percentage,Fishing,While doing  Fishing
+Coral Fishing Spear,Fishing,45,Tool,Craft,Good,Fishing Spear,Double Action,2,Percentage,Fishing,While doing  Fishing
+Coral Fishing Spear,Fishing,45,Tool,Craft,Good,Fishing Spear,Double Rewards,6,Percentage,Fishing,While doing  Fishing
+Coral Fishing Spear,Fishing,45,Tool,Craft,Good,Fishing Spear,Fine Material Finding,30,Percentage,Fishing,While doing  Fishing
+Coral Fishing Spear,Fishing,45,Tool,Craft,Good,Fishing Spear,Chest Finding,40,Percentage,Fishing,While doing  Fishing
+Coral Fishing Spear,Fishing,45,Tool,Craft,Great,Fishing Spear,Work Efficiency,26,Percentage,Fishing,While doing  Fishing
+Coral Fishing Spear,Fishing,45,Tool,Craft,Great,Fishing Spear,Double Action,4,Percentage,Fishing,While doing  Fishing
+Coral Fishing Spear,Fishing,45,Tool,Craft,Great,Fishing Spear,Double Rewards,9,Percentage,Fishing,While doing  Fishing
+Coral Fishing Spear,Fishing,45,Tool,Craft,Great,Fishing Spear,Fine Material Finding,34,Percentage,Fishing,While doing  Fishing
+Coral Fishing Spear,Fishing,45,Tool,Craft,Great,Fishing Spear,Chest Finding,45,Percentage,Fishing,While doing  Fishing
+Coral Fishing Spear,Fishing,45,Tool,Craft,Excellent,Fishing Spear,Work Efficiency,32,Percentage,Fishing,While doing  Fishing
+Coral Fishing Spear,Fishing,45,Tool,Craft,Excellent,Fishing Spear,Double Action,7,Percentage,Fishing,While doing  Fishing
+Coral Fishing Spear,Fishing,45,Tool,Craft,Excellent,Fishing Spear,Double Rewards,12,Percentage,Fishing,While doing  Fishing
+Coral Fishing Spear,Fishing,45,Tool,Craft,Excellent,Fishing Spear,Fine Material Finding,36,Percentage,Fishing,While doing  Fishing
+Coral Fishing Spear,Fishing,45,Tool,Craft,Excellent,Fishing Spear,Chest Finding,48,Percentage,Fishing,While doing  Fishing
+Coral Fishing Spear,Fishing,45,Tool,Craft,Perfect,Fishing Spear,Work Efficiency,40,Percentage,Fishing,While doing  Fishing
+Coral Fishing Spear,Fishing,45,Tool,Craft,Perfect,Fishing Spear,Double Action,16,Percentage,Fishing,While doing  Fishing
+Coral Fishing Spear,Fishing,45,Tool,Craft,Perfect,Fishing Spear,Double Rewards,15,Percentage,Fishing,While doing  Fishing
+Coral Fishing Spear,Fishing,45,Tool,Craft,Perfect,Fishing Spear,Fine Material Finding,38,Percentage,Fishing,While doing  Fishing
+Coral Fishing Spear,Fishing,45,Tool,Craft,Perfect,Fishing Spear,Chest Finding,51,Percentage,Fishing,While doing  Fishing
+Hydrilium Hatchet,Global,,Tool,Craft,Normal,Woodcutting Hatchet,Work Efficiency,16,Percentage,Woodcutting,While doing  Woodcutting
+Hydrilium Hatchet,Global,,Tool,Craft,Normal,Woodcutting Hatchet,Double Action,1,Percentage,Woodcutting,While doing  Woodcutting
+Hydrilium Hatchet,Global,,Tool,Craft,Normal,Woodcutting Hatchet,Double Rewards,3,Percentage,Woodcutting,While doing  Woodcutting
+Hydrilium Hatchet,Global,,Tool,Craft,Normal,Woodcutting Hatchet,Chest Finding,25,Percentage,Woodcutting,While doing  Woodcutting
+Hydrilium Hatchet,Global,,Tool,Craft,Normal,Woodcutting Hatchet,Find Bird Nests,19,Percentage,Woodcutting,While doing  Woodcutting
+Hydrilium Hatchet,Global,,Tool,Craft,Good,Woodcutting Hatchet,Work Efficiency,20,Percentage,Woodcutting,While doing  Woodcutting
+Hydrilium Hatchet,Global,,Tool,Craft,Good,Woodcutting Hatchet,Double Action,2,Percentage,Woodcutting,While doing  Woodcutting
+Hydrilium Hatchet,Global,,Tool,Craft,Good,Woodcutting Hatchet,Double Rewards,6,Percentage,Woodcutting,While doing  Woodcutting
+Hydrilium Hatchet,Global,,Tool,Craft,Good,Woodcutting Hatchet,Chest Finding,40,Percentage,Woodcutting,While doing  Woodcutting
+Hydrilium Hatchet,Global,,Tool,Craft,Good,Woodcutting Hatchet,Find Bird Nests,30,Percentage,Woodcutting,While doing  Woodcutting
+Hydrilium Hatchet,Global,,Tool,Craft,Great,Woodcutting Hatchet,Work Efficiency,26,Percentage,Woodcutting,While doing  Woodcutting
+Hydrilium Hatchet,Global,,Tool,Craft,Great,Woodcutting Hatchet,Double Action,4,Percentage,Woodcutting,While doing  Woodcutting
+Hydrilium Hatchet,Global,,Tool,Craft,Great,Woodcutting Hatchet,Double Rewards,9,Percentage,Woodcutting,While doing  Woodcutting
+Hydrilium Hatchet,Global,,Tool,Craft,Great,Woodcutting Hatchet,Chest Finding,45,Percentage,Woodcutting,While doing  Woodcutting
+Hydrilium Hatchet,Global,,Tool,Craft,Great,Woodcutting Hatchet,Find Bird Nests,34,Percentage,Woodcutting,While doing  Woodcutting
+Hydrilium Hatchet,Global,,Tool,Craft,Excellent,Woodcutting Hatchet,Work Efficiency,32,Percentage,Woodcutting,While doing  Woodcutting
+Hydrilium Hatchet,Global,,Tool,Craft,Excellent,Woodcutting Hatchet,Double Action,7,Percentage,Woodcutting,While doing  Woodcutting
+Hydrilium Hatchet,Global,,Tool,Craft,Excellent,Woodcutting Hatchet,Double Rewards,12,Percentage,Woodcutting,While doing  Woodcutting
+Hydrilium Hatchet,Global,,Tool,Craft,Excellent,Woodcutting Hatchet,Chest Finding,48,Percentage,Woodcutting,While doing  Woodcutting
+Hydrilium Hatchet,Global,,Tool,Craft,Excellent,Woodcutting Hatchet,Find Bird Nests,36,Percentage,Woodcutting,While doing  Woodcutting
+Hydrilium Hatchet,Global,,Tool,Craft,Perfect,Woodcutting Hatchet,Work Efficiency,40,Percentage,Woodcutting,While doing  Woodcutting
+Hydrilium Hatchet,Global,,Tool,Craft,Perfect,Woodcutting Hatchet,Double Action,16,Percentage,Woodcutting,While doing  Woodcutting
+Hydrilium Hatchet,Global,,Tool,Craft,Perfect,Woodcutting Hatchet,Double Rewards,15,Percentage,Woodcutting,While doing  Woodcutting
+Hydrilium Hatchet,Global,,Tool,Craft,Perfect,Woodcutting Hatchet,Chest Finding,51,Percentage,Woodcutting,While doing  Woodcutting
+Hydrilium Hatchet,Global,,Tool,Craft,Perfect,Woodcutting Hatchet,Find Bird Nests,38,Percentage,Woodcutting,While doing  Woodcutting
+Hydrilium Pickaxe,Global,,Tool,Craft,Normal,Pickaxe,Work Efficiency,16,Percentage,Mining,While doing  Mining
+Hydrilium Pickaxe,Global,,Tool,Craft,Normal,Pickaxe,Double Action,1,Percentage,Mining,While doing  Mining
+Hydrilium Pickaxe,Global,,Tool,Craft,Normal,Pickaxe,Double Rewards,3,Percentage,Mining,While doing  Mining
+Hydrilium Pickaxe,Global,,Tool,Craft,Normal,Pickaxe,Chest Finding,25,Percentage,Mining,While doing  Mining
+Hydrilium Pickaxe,Global,,Tool,Craft,Normal,Pickaxe,Find Gems,19,Percentage,Mining,While doing  Mining
+Hydrilium Pickaxe,Global,,Tool,Craft,Good,Pickaxe,Work Efficiency,20,Percentage,Mining,While doing  Mining
+Hydrilium Pickaxe,Global,,Tool,Craft,Good,Pickaxe,Double Action,2,Percentage,Mining,While doing  Mining
+Hydrilium Pickaxe,Global,,Tool,Craft,Good,Pickaxe,Double Rewards,6,Percentage,Mining,While doing  Mining
+Hydrilium Pickaxe,Global,,Tool,Craft,Good,Pickaxe,Chest Finding,40,Percentage,Mining,While doing  Mining
+Hydrilium Pickaxe,Global,,Tool,Craft,Good,Pickaxe,Find Gems,30,Percentage,Mining,While doing  Mining
+Hydrilium Pickaxe,Global,,Tool,Craft,Great,Pickaxe,Work Efficiency,26,Percentage,Mining,While doing  Mining
+Hydrilium Pickaxe,Global,,Tool,Craft,Great,Pickaxe,Double Action,4,Percentage,Mining,While doing  Mining
+Hydrilium Pickaxe,Global,,Tool,Craft,Great,Pickaxe,Double Rewards,9,Percentage,Mining,While doing  Mining
+Hydrilium Pickaxe,Global,,Tool,Craft,Great,Pickaxe,Chest Finding,45,Percentage,Mining,While doing  Mining
+Hydrilium Pickaxe,Global,,Tool,Craft,Great,Pickaxe,Find Gems,34,Percentage,Mining,While doing  Mining
+Hydrilium Pickaxe,Global,,Tool,Craft,Excellent,Pickaxe,Work Efficiency,32,Percentage,Mining,While doing  Mining
+Hydrilium Pickaxe,Global,,Tool,Craft,Excellent,Pickaxe,Double Action,7,Percentage,Mining,While doing  Mining
+Hydrilium Pickaxe,Global,,Tool,Craft,Excellent,Pickaxe,Double Rewards,12,Percentage,Mining,While doing  Mining
+Hydrilium Pickaxe,Global,,Tool,Craft,Excellent,Pickaxe,Chest Finding,48,Percentage,Mining,While doing  Mining
+Hydrilium Pickaxe,Global,,Tool,Craft,Excellent,Pickaxe,Find Gems,36,Percentage,Mining,While doing  Mining
+Hydrilium Pickaxe,Global,,Tool,Craft,Perfect,Pickaxe,Work Efficiency,40,Percentage,Mining,While doing  Mining
+Hydrilium Pickaxe,Global,,Tool,Craft,Perfect,Pickaxe,Double Action,16,Percentage,Mining,While doing  Mining
+Hydrilium Pickaxe,Global,,Tool,Craft,Perfect,Pickaxe,Double Rewards,15,Percentage,Mining,While doing  Mining
+Hydrilium Pickaxe,Global,,Tool,Craft,Perfect,Pickaxe,Chest Finding,51,Percentage,Mining,While doing  Mining
+Hydrilium Pickaxe,Global,,Tool,Craft,Perfect,Pickaxe,Find Gems,38,Percentage,Mining,While doing  Mining
+Hydrilium Sickle,Global,,Tool,Craft,Normal,"Foraging Tool, Sickle",Work Efficiency,16,Percentage,Foraging,While doing  Foraging
+Hydrilium Sickle,Global,,Tool,Craft,Normal,"Foraging Tool, Sickle",Double Action,1,Percentage,Foraging,While doing  Foraging
+Hydrilium Sickle,Global,,Tool,Craft,Normal,"Foraging Tool, Sickle",Double Rewards,3,Percentage,Foraging,While doing  Foraging
+Hydrilium Sickle,Global,,Tool,Craft,Normal,"Foraging Tool, Sickle",Fine Material Finding,19,Percentage,Foraging,While doing  Foraging
+Hydrilium Sickle,Global,,Tool,Craft,Normal,"Foraging Tool, Sickle",Chest Finding,25,Percentage,Foraging,While doing  Foraging
+Hydrilium Sickle,Global,,Tool,Craft,Good,"Foraging Tool, Sickle",Work Efficiency,20,Percentage,Foraging,While doing  Foraging
+Hydrilium Sickle,Global,,Tool,Craft,Good,"Foraging Tool, Sickle",Double Action,2,Percentage,Foraging,While doing  Foraging
+Hydrilium Sickle,Global,,Tool,Craft,Good,"Foraging Tool, Sickle",Double Rewards,6,Percentage,Foraging,While doing  Foraging
+Hydrilium Sickle,Global,,Tool,Craft,Good,"Foraging Tool, Sickle",Fine Material Finding,30,Percentage,Foraging,While doing  Foraging
+Hydrilium Sickle,Global,,Tool,Craft,Good,"Foraging Tool, Sickle",Chest Finding,40,Percentage,Foraging,While doing  Foraging
+Hydrilium Sickle,Global,,Tool,Craft,Great,"Foraging Tool, Sickle",Work Efficiency,26,Percentage,Foraging,While doing  Foraging
+Hydrilium Sickle,Global,,Tool,Craft,Great,"Foraging Tool, Sickle",Double Action,4,Percentage,Foraging,While doing  Foraging
+Hydrilium Sickle,Global,,Tool,Craft,Great,"Foraging Tool, Sickle",Double Rewards,9,Percentage,Foraging,While doing  Foraging
+Hydrilium Sickle,Global,,Tool,Craft,Great,"Foraging Tool, Sickle",Fine Material Finding,34,Percentage,Foraging,While doing  Foraging
+Hydrilium Sickle,Global,,Tool,Craft,Great,"Foraging Tool, Sickle",Chest Finding,45,Percentage,Foraging,While doing  Foraging
+Hydrilium Sickle,Global,,Tool,Craft,Excellent,"Foraging Tool, Sickle",Work Efficiency,32,Percentage,Foraging,While doing  Foraging
+Hydrilium Sickle,Global,,Tool,Craft,Excellent,"Foraging Tool, Sickle",Double Action,7,Percentage,Foraging,While doing  Foraging
+Hydrilium Sickle,Global,,Tool,Craft,Excellent,"Foraging Tool, Sickle",Double Rewards,12,Percentage,Foraging,While doing  Foraging
+Hydrilium Sickle,Global,,Tool,Craft,Excellent,"Foraging Tool, Sickle",Fine Material Finding,36,Percentage,Foraging,While doing  Foraging
+Hydrilium Sickle,Global,,Tool,Craft,Excellent,"Foraging Tool, Sickle",Chest Finding,48,Percentage,Foraging,While doing  Foraging
+Hydrilium Sickle,Global,,Tool,Craft,Perfect,"Foraging Tool, Sickle",Work Efficiency,40,Percentage,Foraging,While doing  Foraging
+Hydrilium Sickle,Global,,Tool,Craft,Perfect,"Foraging Tool, Sickle",Double Action,16,Percentage,Foraging,While doing  Foraging
+Hydrilium Sickle,Global,,Tool,Craft,Perfect,"Foraging Tool, Sickle",Double Rewards,15,Percentage,Foraging,While doing  Foraging
+Hydrilium Sickle,Global,,Tool,Craft,Perfect,"Foraging Tool, Sickle",Fine Material Finding,38,Percentage,Foraging,While doing  Foraging
+Hydrilium Sickle,Global,,Tool,Craft,Perfect,"Foraging Tool, Sickle",Chest Finding,51,Percentage,Foraging,While doing  Foraging
+Farganite Hatchet,Woodcutting,50,Tool,Craft,Normal,Woodcutting Hatchet,Work Efficiency,18,Percentage,Woodcutting,While doing  Woodcutting
+Farganite Hatchet,Woodcutting,50,Tool,Craft,Normal,Woodcutting Hatchet,Double Action,1,Percentage,Woodcutting,While doing  Woodcutting
+Farganite Hatchet,Woodcutting,50,Tool,Craft,Normal,Woodcutting Hatchet,Double Rewards,3,Percentage,Woodcutting,While doing  Woodcutting
+Farganite Hatchet,Woodcutting,50,Tool,Craft,Normal,Woodcutting Hatchet,Fine Material Finding,21,Percentage,Woodcutting,While doing  Woodcutting
+Farganite Hatchet,Woodcutting,50,Tool,Craft,Normal,Woodcutting Hatchet,Chest Finding,18,Percentage,Woodcutting,While doing  Woodcutting
+Farganite Hatchet,Woodcutting,50,Tool,Craft,Normal,Woodcutting Hatchet,Find Bird Nests,21,Percentage,Woodcutting,While doing  Woodcutting
+Farganite Hatchet,Woodcutting,50,Tool,Craft,Good,Woodcutting Hatchet,Work Efficiency,23,Percentage,Woodcutting,While doing  Woodcutting
+Farganite Hatchet,Woodcutting,50,Tool,Craft,Good,Woodcutting Hatchet,Double Action,2,Percentage,Woodcutting,While doing  Woodcutting
+Farganite Hatchet,Woodcutting,50,Tool,Craft,Good,Woodcutting Hatchet,Double Rewards,6,Percentage,Woodcutting,While doing  Woodcutting
+Farganite Hatchet,Woodcutting,50,Tool,Craft,Good,Woodcutting Hatchet,Fine Material Finding,33,Percentage,Woodcutting,While doing  Woodcutting
+Farganite Hatchet,Woodcutting,50,Tool,Craft,Good,Woodcutting Hatchet,Chest Finding,29,Percentage,Woodcutting,While doing  Woodcutting
+Farganite Hatchet,Woodcutting,50,Tool,Craft,Good,Woodcutting Hatchet,Find Bird Nests,33,Percentage,Woodcutting,While doing  Woodcutting
+Farganite Hatchet,Woodcutting,50,Tool,Craft,Great,Woodcutting Hatchet,Work Efficiency,30,Percentage,Woodcutting,While doing  Woodcutting
+Farganite Hatchet,Woodcutting,50,Tool,Craft,Great,Woodcutting Hatchet,Double Action,3,Percentage,Woodcutting,While doing  Woodcutting
+Farganite Hatchet,Woodcutting,50,Tool,Craft,Great,Woodcutting Hatchet,Double Rewards,9,Percentage,Woodcutting,While doing  Woodcutting
+Farganite Hatchet,Woodcutting,50,Tool,Craft,Great,Woodcutting Hatchet,Fine Material Finding,37,Percentage,Woodcutting,While doing  Woodcutting
+Farganite Hatchet,Woodcutting,50,Tool,Craft,Great,Woodcutting Hatchet,Chest Finding,33,Percentage,Woodcutting,While doing  Woodcutting
+Farganite Hatchet,Woodcutting,50,Tool,Craft,Great,Woodcutting Hatchet,Find Bird Nests,37,Percentage,Woodcutting,While doing  Woodcutting
+Farganite Hatchet,Woodcutting,50,Tool,Craft,Excellent,Woodcutting Hatchet,Work Efficiency,37,Percentage,Woodcutting,While doing  Woodcutting
+Farganite Hatchet,Woodcutting,50,Tool,Craft,Excellent,Woodcutting Hatchet,Double Action,6,Percentage,Woodcutting,While doing  Woodcutting
+Farganite Hatchet,Woodcutting,50,Tool,Craft,Excellent,Woodcutting Hatchet,Double Rewards,12,Percentage,Woodcutting,While doing  Woodcutting
+Farganite Hatchet,Woodcutting,50,Tool,Craft,Excellent,Woodcutting Hatchet,Fine Material Finding,39,Percentage,Woodcutting,While doing  Woodcutting
+Farganite Hatchet,Woodcutting,50,Tool,Craft,Excellent,Woodcutting Hatchet,Chest Finding,35,Percentage,Woodcutting,While doing  Woodcutting
+Farganite Hatchet,Woodcutting,50,Tool,Craft,Excellent,Woodcutting Hatchet,Find Bird Nests,39,Percentage,Woodcutting,While doing  Woodcutting
+Farganite Hatchet,Woodcutting,50,Tool,Craft,Perfect,Woodcutting Hatchet,Work Efficiency,46,Percentage,Woodcutting,While doing  Woodcutting
+Farganite Hatchet,Woodcutting,50,Tool,Craft,Perfect,Woodcutting Hatchet,Double Action,16,Percentage,Woodcutting,While doing  Woodcutting
+Farganite Hatchet,Woodcutting,50,Tool,Craft,Perfect,Woodcutting Hatchet,Double Rewards,15,Percentage,Woodcutting,While doing  Woodcutting
+Farganite Hatchet,Woodcutting,50,Tool,Craft,Perfect,Woodcutting Hatchet,Fine Material Finding,41,Percentage,Woodcutting,While doing  Woodcutting
+Farganite Hatchet,Woodcutting,50,Tool,Craft,Perfect,Woodcutting Hatchet,Chest Finding,37,Percentage,Woodcutting,While doing  Woodcutting
+Farganite Hatchet,Woodcutting,50,Tool,Craft,Perfect,Woodcutting Hatchet,Find Bird Nests,41,Percentage,Woodcutting,While doing  Woodcutting
+Farganite Pickaxe,Mining,50,Tool,Craft,Normal,Pickaxe,Work Efficiency,18,Percentage,Mining,While doing  Mining
+Farganite Pickaxe,Mining,50,Tool,Craft,Normal,Pickaxe,Double Action,1,Percentage,Mining,While doing  Mining
+Farganite Pickaxe,Mining,50,Tool,Craft,Normal,Pickaxe,Double Rewards,3,Percentage,Mining,While doing  Mining
+Farganite Pickaxe,Mining,50,Tool,Craft,Normal,Pickaxe,Fine Material Finding,21,Percentage,Mining,While doing  Mining
+Farganite Pickaxe,Mining,50,Tool,Craft,Normal,Pickaxe,Chest Finding,18,Percentage,Mining,While doing  Mining
+Farganite Pickaxe,Mining,50,Tool,Craft,Normal,Pickaxe,Find Gems,21,Percentage,Mining,While doing  Mining
+Farganite Pickaxe,Mining,50,Tool,Craft,Good,Pickaxe,Work Efficiency,23,Percentage,Mining,While doing  Mining
+Farganite Pickaxe,Mining,50,Tool,Craft,Good,Pickaxe,Double Action,2,Percentage,Mining,While doing  Mining
+Farganite Pickaxe,Mining,50,Tool,Craft,Good,Pickaxe,Double Rewards,6,Percentage,Mining,While doing  Mining
+Farganite Pickaxe,Mining,50,Tool,Craft,Good,Pickaxe,Fine Material Finding,33,Percentage,Mining,While doing  Mining
+Farganite Pickaxe,Mining,50,Tool,Craft,Good,Pickaxe,Chest Finding,29,Percentage,Mining,While doing  Mining
+Farganite Pickaxe,Mining,50,Tool,Craft,Good,Pickaxe,Find Gems,33,Percentage,Mining,While doing  Mining
+Farganite Pickaxe,Mining,50,Tool,Craft,Great,Pickaxe,Work Efficiency,30,Percentage,Mining,While doing  Mining
+Farganite Pickaxe,Mining,50,Tool,Craft,Great,Pickaxe,Double Action,4,Percentage,Mining,While doing  Mining
+Farganite Pickaxe,Mining,50,Tool,Craft,Great,Pickaxe,Double Rewards,9,Percentage,Mining,While doing  Mining
+Farganite Pickaxe,Mining,50,Tool,Craft,Great,Pickaxe,Fine Material Finding,37,Percentage,Mining,While doing  Mining
+Farganite Pickaxe,Mining,50,Tool,Craft,Great,Pickaxe,Chest Finding,33,Percentage,Mining,While doing  Mining
+Farganite Pickaxe,Mining,50,Tool,Craft,Great,Pickaxe,Find Gems,37,Percentage,Mining,While doing  Mining
+Farganite Pickaxe,Mining,50,Tool,Craft,Excellent,Pickaxe,Work Efficiency,37,Percentage,Mining,While doing  Mining
+Farganite Pickaxe,Mining,50,Tool,Craft,Excellent,Pickaxe,Double Action,7,Percentage,Mining,While doing  Mining
+Farganite Pickaxe,Mining,50,Tool,Craft,Excellent,Pickaxe,Double Rewards,12,Percentage,Mining,While doing  Mining
+Farganite Pickaxe,Mining,50,Tool,Craft,Excellent,Pickaxe,Fine Material Finding,39,Percentage,Mining,While doing  Mining
+Farganite Pickaxe,Mining,50,Tool,Craft,Excellent,Pickaxe,Chest Finding,35,Percentage,Mining,While doing  Mining
+Farganite Pickaxe,Mining,50,Tool,Craft,Excellent,Pickaxe,Find Gems,39,Percentage,Mining,While doing  Mining
+Farganite Pickaxe,Mining,50,Tool,Craft,Perfect,Pickaxe,Work Efficiency,46,Percentage,Mining,While doing  Mining
+Farganite Pickaxe,Mining,50,Tool,Craft,Perfect,Pickaxe,Double Action,17,Percentage,Mining,While doing  Mining
+Farganite Pickaxe,Mining,50,Tool,Craft,Perfect,Pickaxe,Double Rewards,15,Percentage,Mining,While doing  Mining
+Farganite Pickaxe,Mining,50,Tool,Craft,Perfect,Pickaxe,Fine Material Finding,41,Percentage,Mining,While doing  Mining
+Farganite Pickaxe,Mining,50,Tool,Craft,Perfect,Pickaxe,Chest Finding,37,Percentage,Mining,While doing  Mining
+Farganite Pickaxe,Mining,50,Tool,Craft,Perfect,Pickaxe,Find Gems,41,Percentage,Mining,While doing  Mining
+Wooden Shield,Global,,Secondary,Craft,Normal,,,,,,
+Wooden Shield,Global,,Secondary,Craft,Good,,,,,,
+Wooden Shield,Global,,Secondary,Craft,Great,,,,,,
+Wooden Shield,Global,,Secondary,Craft,Excellent,,,,,,
+Wooden Shield,Global,,Secondary,Craft,Perfect,,,,,,
+Wooden Shield,Global,,Secondary,Craft,Eternal,,,,,,
+Wooden Sword,Global,,Primary,Craft,Normal,,,,,,
+Wooden Sword,Global,,Primary,Craft,Good,,,,,,
+Wooden Sword,Global,,Primary,Craft,Great,,,,,,
+Wooden Sword,Global,,Primary,Craft,Excellent,,,,,,
+Wooden Sword,Global,,Primary,Craft,Perfect,,,,,,
+Wooden Sword,Global,,Primary,Craft,Eternal,,,,,,
+Copper Sword,Global,,Primary,Craft,Normal,,,,,,
+Copper Sword,Global,,Primary,Craft,Good,,,,,,
+Copper Sword,Global,,Primary,Craft,Great,,,,,,
+Copper Sword,Global,,Primary,Craft,Excellent,,,,,,
+Copper Sword,Global,,Primary,Craft,Perfect,,,,,,
+Copper Sword,Global,,Primary,Craft,Eternal,,,,,,
+Bag of Rocks,Global,,Back,Craft,Normal,,Work Efficiency,-10,Percentage,Global,Global
+Bag of Rocks,Global,,Back,Craft,Normal,,Bonus Experience,3,Percentage,Global,Global
+Bag of Rocks,Global,,Back,Craft,Good,,Work Efficiency,-8,Percentage,Global,Global
+Bag of Rocks,Global,,Back,Craft,Good,,Bonus Experience,3,Percentage,Global,Global
+Bag of Rocks,Global,,Back,Craft,Great,,Work Efficiency,-6,Percentage,Global,Global
+Bag of Rocks,Global,,Back,Craft,Great,,Bonus Experience,3,Percentage,Global,Global
+Bag of Rocks,Global,,Back,Craft,Excellent,,Work Efficiency,-4,Percentage,Global,Global
+Bag of Rocks,Global,,Back,Craft,Excellent,,Bonus Experience,3,Percentage,Global,Global
+Bag of Rocks,Global,,Back,Craft,Perfect,,Work Efficiency,-2,Percentage,Global,Global
+Bag of Rocks,Global,,Back,Craft,Perfect,,Bonus Experience,3,Percentage,Global,Global
+Bag of Rocks,Global,,Back,Craft,Eternal,,Bonus Experience,3,Percentage,Global,Global
+Copper Shield,Global,,Secondary,Craft,Normal,,,,,,
+Copper Shield,Global,,Secondary,Craft,Good,,,,,,
+Copper Shield,Global,,Secondary,Craft,Great,,,,,,
+Copper Shield,Global,,Secondary,Craft,Excellent,,,,,,
+Copper Shield,Global,,Secondary,Craft,Perfect,,,,,,
+Copper Shield,Global,,Secondary,Craft,Eternal,,,,,,
+Bronze Sword,Global,,Primary,Craft,Normal,,,,,,
+Bronze Sword,Global,,Primary,Craft,Good,,,,,,
+Bronze Sword,Global,,Primary,Craft,Great,,,,,,
+Bronze Sword,Global,,Primary,Craft,Excellent,,,,,,
+Bronze Sword,Global,,Primary,Craft,Perfect,,,,,,
+Bronze Sword,Global,,Primary,Craft,Eternal,,,,,,
+Bronze Shield,Global,,Secondary,Craft,Normal,,,,,,
+Bronze Shield,Global,,Secondary,Craft,Good,,,,,,
+Bronze Shield,Global,,Secondary,Craft,Great,,,,,,
+Bronze Shield,Global,,Secondary,Craft,Excellent,,,,,,
+Bronze Shield,Global,,Secondary,Craft,Perfect,,,,,,
+Bronze Shield,Global,,Secondary,Craft,Eternal,,,,,,
+Iron Sword,Global,,Primary,Craft,Normal,,,,,,
+Iron Sword,Global,,Primary,Craft,Good,,,,,,
+Iron Sword,Global,,Primary,Craft,Great,,,,,,
+Iron Sword,Global,,Primary,Craft,Excellent,,,,,,
+Iron Sword,Global,,Primary,Craft,Perfect,,,,,,
+Iron Sword,Global,,Primary,Craft,Eternal,,,,,,
+Kelp Diving Mask,Agility,30,Head,Craft,Normal,"Advanced Diving Gear Set, Diving Gear Set",Work Efficiency,-10,Percentage,,Global  While in Underwater location.
+Kelp Diving Mask,Agility,30,Head,Craft,Normal,"Advanced Diving Gear Set, Diving Gear Set",Double Rewards,1,Percentage,,Global  While in Underwater location.
+Kelp Diving Mask,Agility,30,Head,Craft,Good,"Advanced Diving Gear Set, Diving Gear Set",Work Efficiency,-7,Percentage,,Global  While in Underwater location.
+Kelp Diving Mask,Agility,30,Head,Craft,Good,"Advanced Diving Gear Set, Diving Gear Set",Double Rewards,0,Percentage,,Global  While in Underwater location.
+Kelp Diving Mask,Agility,30,Head,Craft,Great,"Advanced Diving Gear Set, Diving Gear Set",Work Efficiency,-4,Percentage,,Global  While in Underwater location.
+Kelp Diving Mask,Agility,30,Head,Craft,Great,"Advanced Diving Gear Set, Diving Gear Set",Double Rewards,1,Percentage,,Global  While in Underwater location.
+Kelp Diving Mask,Agility,30,Head,Craft,Excellent,"Advanced Diving Gear Set, Diving Gear Set",Work Efficiency,-1,Percentage,,Global  While in Underwater location.
+Kelp Diving Mask,Agility,30,Head,Craft,Excellent,"Advanced Diving Gear Set, Diving Gear Set",Double Rewards,2,Percentage,,Global  While in Underwater location.
+Kelp Diving Mask,Agility,30,Head,Craft,Perfect,"Advanced Diving Gear Set, Diving Gear Set",Work Efficiency,2,Percentage,,Global  While in Underwater location.
+Kelp Diving Mask,Agility,30,Head,Craft,Perfect,"Advanced Diving Gear Set, Diving Gear Set",Double Rewards,3,Percentage,,Global  While in Underwater location.
+Kelp Diving Mask,Agility,30,Head,Craft,Eternal,"Advanced Diving Gear Set, Diving Gear Set",Work Efficiency,5,Percentage,,Global  While in Underwater location.
+Kelp Diving Mask,Agility,30,Head,Craft,Eternal,"Advanced Diving Gear Set, Diving Gear Set",Double Rewards,4,Percentage,,Global  While in Underwater location.
+Kelp Diving Pants,Agility,30,Legs,Craft,Normal,"Advanced Diving Gear Set, Diving Gear Set",Work Efficiency,-10,Percentage,,Global  While in Underwater location.
+Kelp Diving Pants,Agility,30,Legs,Craft,Normal,"Advanced Diving Gear Set, Diving Gear Set",Double Rewards,1,Percentage,,Global  While in Underwater location.
+Kelp Diving Pants,Agility,30,Legs,Craft,Good,"Advanced Diving Gear Set, Diving Gear Set",Work Efficiency,-7,Percentage,,Global  While in Underwater location.
+Kelp Diving Pants,Agility,30,Legs,Craft,Good,"Advanced Diving Gear Set, Diving Gear Set",Double Rewards,0,Percentage,,Global  While in Underwater location.
+Kelp Diving Pants,Agility,30,Legs,Craft,Great,"Advanced Diving Gear Set, Diving Gear Set",Work Efficiency,-4,Percentage,,Global  While in Underwater location.
+Kelp Diving Pants,Agility,30,Legs,Craft,Great,"Advanced Diving Gear Set, Diving Gear Set",Double Rewards,1,Percentage,,Global  While in Underwater location.
+Kelp Diving Pants,Agility,30,Legs,Craft,Excellent,"Advanced Diving Gear Set, Diving Gear Set",Work Efficiency,-1,Percentage,,Global  While in Underwater location.
+Kelp Diving Pants,Agility,30,Legs,Craft,Excellent,"Advanced Diving Gear Set, Diving Gear Set",Double Rewards,2,Percentage,,Global  While in Underwater location.
+Kelp Diving Pants,Agility,30,Legs,Craft,Perfect,"Advanced Diving Gear Set, Diving Gear Set",Work Efficiency,2,Percentage,,Global  While in Underwater location.
+Kelp Diving Pants,Agility,30,Legs,Craft,Perfect,"Advanced Diving Gear Set, Diving Gear Set",Double Rewards,3,Percentage,,Global  While in Underwater location.
+Kelp Diving Pants,Agility,30,Legs,Craft,Eternal,"Advanced Diving Gear Set, Diving Gear Set",Work Efficiency,5,Percentage,,Global  While in Underwater location.
+Kelp Diving Pants,Agility,30,Legs,Craft,Eternal,"Advanced Diving Gear Set, Diving Gear Set",Double Rewards,4,Percentage,,Global  While in Underwater location.
+Kelp Diving Shirt,Agility,30,Chest,Craft,Normal,"Advanced Diving Gear Set, Diving Gear Set",Work Efficiency,-10,Percentage,,Global  While in Underwater location.
+Kelp Diving Shirt,Agility,30,Chest,Craft,Normal,"Advanced Diving Gear Set, Diving Gear Set",Double Rewards,1,Percentage,,Global  While in Underwater location.
+Kelp Diving Shirt,Agility,30,Chest,Craft,Good,"Advanced Diving Gear Set, Diving Gear Set",Work Efficiency,-7,Percentage,,Global  While in Underwater location.
+Kelp Diving Shirt,Agility,30,Chest,Craft,Good,"Advanced Diving Gear Set, Diving Gear Set",Double Rewards,0,Percentage,,Global  While in Underwater location.
+Kelp Diving Shirt,Agility,30,Chest,Craft,Great,"Advanced Diving Gear Set, Diving Gear Set",Work Efficiency,-4,Percentage,,Global  While in Underwater location.
+Kelp Diving Shirt,Agility,30,Chest,Craft,Great,"Advanced Diving Gear Set, Diving Gear Set",Double Rewards,1,Percentage,,Global  While in Underwater location.
+Kelp Diving Shirt,Agility,30,Chest,Craft,Excellent,"Advanced Diving Gear Set, Diving Gear Set",Work Efficiency,-1,Percentage,,Global  While in Underwater location.
+Kelp Diving Shirt,Agility,30,Chest,Craft,Excellent,"Advanced Diving Gear Set, Diving Gear Set",Double Rewards,2,Percentage,,Global  While in Underwater location.
+Kelp Diving Shirt,Agility,30,Chest,Craft,Perfect,"Advanced Diving Gear Set, Diving Gear Set",Work Efficiency,2,Percentage,,Global  While in Underwater location.
+Kelp Diving Shirt,Agility,30,Chest,Craft,Perfect,"Advanced Diving Gear Set, Diving Gear Set",Double Rewards,3,Percentage,,Global  While in Underwater location.
+Kelp Diving Shirt,Agility,30,Chest,Craft,Eternal,"Advanced Diving Gear Set, Diving Gear Set",Work Efficiency,5,Percentage,,Global  While in Underwater location.
+Kelp Diving Shirt,Agility,30,Chest,Craft,Eternal,"Advanced Diving Gear Set, Diving Gear Set",Double Rewards,4,Percentage,,Global  While in Underwater location.
+Iron Shield,Global,,Secondary,Craft,Normal,,,,,,
+Iron Shield,Global,,Secondary,Craft,Good,,,,,,
+Iron Shield,Global,,Secondary,Craft,Great,,,,,,
+Iron Shield,Global,,Secondary,Craft,Excellent,,,,,,
+Iron Shield,Global,,Secondary,Craft,Perfect,,,,,,
+Iron Shield,Global,,Secondary,Craft,Eternal,,,,,,
+Steel Sword,Global,,Primary,Craft,Normal,,,,,,
+Steel Sword,Global,,Primary,Craft,Good,,,,,,
+Steel Sword,Global,,Primary,Craft,Great,,,,,,
+Steel Sword,Global,,Primary,Craft,Excellent,,,,,,
+Steel Sword,Global,,Primary,Craft,Perfect,,,,,,
+Steel Sword,Global,,Primary,Craft,Eternal,,,,,,
+Steel Shield,Global,,Secondary,Craft,Normal,,,,,,
+Steel Shield,Global,,Secondary,Craft,Good,,,,,,
+Steel Shield,Global,,Secondary,Craft,Great,,,,,,
+Steel Shield,Global,,Secondary,Craft,Excellent,,,,,,
+Steel Shield,Global,,Secondary,Craft,Perfect,,,,,,
+Steel Shield,Global,,Secondary,Craft,Eternal,,,,,,
+Tarsilium Sword,Global,,Primary,Craft,Normal,,,,,,
+Tarsilium Sword,Global,,Primary,Craft,Good,,,,,,
+Tarsilium Sword,Global,,Primary,Craft,Great,,,,,,
+Tarsilium Sword,Global,,Primary,Craft,Excellent,,,,,,
+Tarsilium Sword,Global,,Primary,Craft,Perfect,,,,,,
+Tarsilium Sword,Global,,Primary,Craft,Eternal,,,,,,
+Hydrilium Diving Helm,Global,,Head,Craft,Normal,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",Work Efficiency,-2,Percentage,,Global  While in Underwater location.
+Hydrilium Diving Helm,Global,,Head,Craft,Normal,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",No Materials Consumed,1,Percentage,Global,Global
+Hydrilium Diving Helm,Global,,Head,Craft,Good,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",Work Efficiency,0,Percentage,,Global  While in Underwater location.
+Hydrilium Diving Helm,Global,,Head,Craft,Good,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",No Materials Consumed,1,Percentage,Global,Global
+Hydrilium Diving Helm,Global,,Head,Craft,Good,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",Double Rewards,1,Percentage,,Global  While in Underwater location.
+Hydrilium Diving Helm,Global,,Head,Craft,Great,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",Work Efficiency,2,Percentage,,Global  While in Underwater location.
+Hydrilium Diving Helm,Global,,Head,Craft,Great,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",No Materials Consumed,2,Percentage,Global,Global
+Hydrilium Diving Helm,Global,,Head,Craft,Great,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",Double Rewards,2,Percentage,,Global  While in Underwater location.
+Hydrilium Diving Helm,Global,,Head,Craft,Excellent,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",Work Efficiency,4,Percentage,,Global  While in Underwater location.
+Hydrilium Diving Helm,Global,,Head,Craft,Excellent,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",No Materials Consumed,2,Percentage,Global,Global
+Hydrilium Diving Helm,Global,,Head,Craft,Excellent,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",Double Rewards,3,Percentage,,Global  While in Underwater location.
+Hydrilium Diving Helm,Global,,Head,Craft,Perfect,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",Work Efficiency,6,Percentage,,Global  While in Underwater location.
+Hydrilium Diving Helm,Global,,Head,Craft,Perfect,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",No Materials Consumed,3,Percentage,Global,Global
+Hydrilium Diving Helm,Global,,Head,Craft,Perfect,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",Double Rewards,4,Percentage,,Global  While in Underwater location.
+Hydrilium Diving Helm,Global,,Head,Craft,Eternal,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",Work Efficiency,8,Percentage,,Global  While in Underwater location.
+Hydrilium Diving Helm,Global,,Head,Craft,Eternal,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",No Materials Consumed,3,Percentage,Global,Global
+Hydrilium Diving Helm,Global,,Head,Craft,Eternal,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",Double Rewards,5,Percentage,,Global  While in Underwater location.
+Hydrilium Diving Leggings,Global,,Legs,Craft,Normal,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",Work Efficiency,-2,Percentage,,Global  While in Underwater location.
+Hydrilium Diving Leggings,Global,,Legs,Craft,Normal,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",No Materials Consumed,1,Percentage,Global,Global
+Hydrilium Diving Leggings,Global,,Legs,Craft,Good,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",Work Efficiency,0,Percentage,,Global  While in Underwater location.
+Hydrilium Diving Leggings,Global,,Legs,Craft,Good,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",No Materials Consumed,1,Percentage,Global,Global
+Hydrilium Diving Leggings,Global,,Legs,Craft,Good,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",Double Rewards,1,Percentage,,Global  While in Underwater location.
+Hydrilium Diving Leggings,Global,,Legs,Craft,Great,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",Work Efficiency,2,Percentage,,Global  While in Underwater location.
+Hydrilium Diving Leggings,Global,,Legs,Craft,Great,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",No Materials Consumed,2,Percentage,Global,Global
+Hydrilium Diving Leggings,Global,,Legs,Craft,Great,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",Double Rewards,2,Percentage,,Global  While in Underwater location.
+Hydrilium Diving Leggings,Global,,Legs,Craft,Excellent,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",Work Efficiency,4,Percentage,,Global  While in Underwater location.
+Hydrilium Diving Leggings,Global,,Legs,Craft,Excellent,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",No Materials Consumed,2,Percentage,Global,Global
+Hydrilium Diving Leggings,Global,,Legs,Craft,Excellent,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",Double Rewards,3,Percentage,,Global  While in Underwater location.
+Hydrilium Diving Leggings,Global,,Legs,Craft,Perfect,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",Work Efficiency,6,Percentage,,Global  While in Underwater location.
+Hydrilium Diving Leggings,Global,,Legs,Craft,Perfect,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",No Materials Consumed,3,Percentage,Global,Global
+Hydrilium Diving Leggings,Global,,Legs,Craft,Perfect,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",Double Rewards,4,Percentage,,Global  While in Underwater location.
+Hydrilium Diving Leggings,Global,,Legs,Craft,Eternal,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",Work Efficiency,8,Percentage,,Global  While in Underwater location.
+Hydrilium Diving Leggings,Global,,Legs,Craft,Eternal,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",No Materials Consumed,3,Percentage,Global,Global
+Hydrilium Diving Leggings,Global,,Legs,Craft,Eternal,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",Double Rewards,5,Percentage,,Global  While in Underwater location.
+Hydrilium Diving Torso,Global,,Chest,Craft,Normal,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",Work Efficiency,-2,Percentage,,Global  While in Underwater location.
+Hydrilium Diving Torso,Global,,Chest,Craft,Normal,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",No Materials Consumed,1,Percentage,Global,Global
+Hydrilium Diving Torso,Global,,Chest,Craft,Good,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",Work Efficiency,0,Percentage,,Global  While in Underwater location.
+Hydrilium Diving Torso,Global,,Chest,Craft,Good,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",No Materials Consumed,1,Percentage,Global,Global
+Hydrilium Diving Torso,Global,,Chest,Craft,Good,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",Double Rewards,1,Percentage,,Global  While in Underwater location.
+Hydrilium Diving Torso,Global,,Chest,Craft,Great,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",Work Efficiency,2,Percentage,,Global  While in Underwater location.
+Hydrilium Diving Torso,Global,,Chest,Craft,Great,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",No Materials Consumed,2,Percentage,Global,Global
+Hydrilium Diving Torso,Global,,Chest,Craft,Great,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",Double Rewards,2,Percentage,,Global  While in Underwater location.
+Hydrilium Diving Torso,Global,,Chest,Craft,Excellent,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",Work Efficiency,4,Percentage,,Global  While in Underwater location.
+Hydrilium Diving Torso,Global,,Chest,Craft,Excellent,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",No Materials Consumed,2,Percentage,Global,Global
+Hydrilium Diving Torso,Global,,Chest,Craft,Excellent,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",Double Rewards,3,Percentage,,Global  While in Underwater location.
+Hydrilium Diving Torso,Global,,Chest,Craft,Perfect,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",Work Efficiency,6,Percentage,,Global  While in Underwater location.
+Hydrilium Diving Torso,Global,,Chest,Craft,Perfect,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",No Materials Consumed,3,Percentage,Global,Global
+Hydrilium Diving Torso,Global,,Chest,Craft,Perfect,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",Double Rewards,4,Percentage,,Global  While in Underwater location.
+Hydrilium Diving Torso,Global,,Chest,Craft,Eternal,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",Work Efficiency,8,Percentage,,Global  While in Underwater location.
+Hydrilium Diving Torso,Global,,Chest,Craft,Eternal,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",No Materials Consumed,3,Percentage,Global,Global
+Hydrilium Diving Torso,Global,,Chest,Craft,Eternal,"Expert Diving Gear Set, Advanced Diving Gear Set, Diving Gear Set",Double Rewards,5,Percentage,,Global  While in Underwater location.
+Tarsilium Shield,Global,,Secondary,Craft,Normal,,,,,,
+Tarsilium Shield,Global,,Secondary,Craft,Good,,,,,,
+Tarsilium Shield,Global,,Secondary,Craft,Great,,,,,,
+Tarsilium Shield,Global,,Secondary,Craft,Excellent,,,,,,
+Tarsilium Shield,Global,,Secondary,Craft,Perfect,,,,,,
+Tarsilium Shield,Global,,Secondary,Craft,Eternal,,,,,,
