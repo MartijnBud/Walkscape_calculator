@@ -250,7 +250,7 @@ def get_attributes_loot(df):
             attribute_list = attribute_full.split(" ")
 
             boost = attribute_list[0].replace('+', '').replace('%', '')
-            type_boost = "Percentage" if "%" in attribute_full else "flat"
+            type_boost = "Percentage" if "%" in attribute_full else "Flat"
             attribute = ' '.join(attribute_list[1:]).strip()
             note = result.get('note')
             skill_boost = note.split(" ")[-1] if "While doing" in note or note.split(" ")[-1] == "Global" else ""
@@ -318,11 +318,84 @@ def get_equipment():
     df.to_csv("equipment_with_qualities.csv", index=False)
 
 
+def get_consumables_images():
+    soup = func.get_wiki_soup("Consumables")
+    tables = func.get_tables(soup)
+    func.download_svg_from_table(tables[0], "data/images/consumables/")
+
+def get_attributes_consumables(result):
+
+    attribute_full = result.get('attribute')
+    attribute_list = attribute_full.split(" ")
+
+    boost = attribute_list[0].replace('+', '').replace('%', '')
+    type_boost = "Percentage" if "%" in attribute_full else "Flat"
+    attribute = ' '.join(attribute_list[1:]).strip()
+    note = result.get('note')
+    skill_boost = note.split(" ")[-1] if "While doing" in note or note.split(" ")[-1] == "Global" else ""
+
+    return skill_boost, boost, type_boost, attribute, note
+
+def get_consumables():
+    soup = func.get_wiki_soup("Consumables")
+    table = func.get_tables(soup)[0]
+
+    rows = table.find_all("tr")
+
+    data_rows = []
+    for i in range(1, len(rows), 2):
+
+        row1 = rows[i]
+        row2 = rows[i + 1]
+        row1.extend(row2)
+
+        cells = row1.find_all("td")
+
+        item = cells[1].text
+        duration = cells[5].text.split()[0].strip()
+        print(item)
+
+        lines_normal = func.split_br(cells[4])[1:]
+        results_normal = func.get_attributes_from_html(lines_normal)
+
+        lines_fine = func.split_br(cells[6])[1:]
+        results_fine = func.get_attributes_from_html(lines_fine)
+
+        for result in results_normal:
+            quality = "Normal"
+            skill_boost, boost, type_boost, attribute, note = get_attributes_consumables(result)
+            new_row = [item, skill_boost, boost, type_boost, attribute, note, duration, quality]
+            data_rows.append(new_row)
+
+        for result in results_fine:
+            quality = "Fine"
+            skill_boost, boost, type_boost, attribute, note = get_attributes_consumables(result)
+            new_row = [item, skill_boost, boost, type_boost, attribute, note, duration, quality]
+            data_rows.append(new_row)
+
+    # Make csv
+    columns = ['Item', 'Skill_boost', 'Boost', 'Type_boost', 'Attribute', 'Note', 'Duration', 'Quality']
+    df = pd.DataFrame(data_rows, columns=columns)
+    df.to_csv("consumables.csv", index=False)
 
 
 
 
 
 
-get_equipment()
+
+get_consumables()
+
+
+
+
+
+
+
+
+
+
+
+
+
 
