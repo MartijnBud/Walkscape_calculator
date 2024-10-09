@@ -2,7 +2,7 @@
 # Next steps
 - [x] Finish collection equipment with qualities
 - [ ] Collect collectibles
-- [ ] Collect consumables
+- [X] Collect consumables
 
 # Data needed
 Activities (skills needed, xp rates, location, drops)
