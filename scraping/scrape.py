@@ -229,7 +229,7 @@ def get_attributes_crafted(df):
 
     return new_rows
 
-def get_attributes_loot(df):
+def get_attributes_df(df):
     new_rows = []
 
     for index, row in df.iterrows():
@@ -303,7 +303,7 @@ def get_equipment():
     # Now get all attributes
     ## Collect all attributes of loot items
     df_loot = df[df["Craft_loot"] == "Loot"]
-    new_rows_tool = get_attributes_loot(df_loot)
+    new_rows_tool = get_attributes_df(df_loot)
 
     ## Collect all attributes of crafted items
     df_craft = df[df["Craft_loot"] == "Craft"]
@@ -323,7 +323,7 @@ def get_consumables_images():
     tables = func.get_tables(soup)
     func.download_svg_from_table(tables[0], "data/images/consumables/")
 
-def get_attributes_consumables(result):
+def get_attributes(result):
 
     attribute_full = result.get('attribute')
     attribute_list = attribute_full.split(" ")
@@ -363,13 +363,13 @@ def get_consumables():
 
         for result in results_normal:
             quality = "Normal"
-            skill_boost, boost, type_boost, attribute, note = get_attributes_consumables(result)
+            skill_boost, boost, type_boost, attribute, note = get_attributes(result)
             new_row = [item, skill_boost, boost, type_boost, attribute, note, duration, quality]
             data_rows.append(new_row)
 
         for result in results_fine:
             quality = "Fine"
-            skill_boost, boost, type_boost, attribute, note = get_attributes_consumables(result)
+            skill_boost, boost, type_boost, attribute, note = get_attributes(result)
             new_row = [item, skill_boost, boost, type_boost, attribute, note, duration, quality]
             data_rows.append(new_row)
 
@@ -379,12 +379,61 @@ def get_consumables():
     df.to_csv("consumables.csv", index=False)
 
 
+def get_collectibles_images():
+    soup = func.get_wiki_soup("Collectibles")
+    table = func.get_tables(soup)[0]
+
+    rows = table.find_all("tr")
+    rows.pop(0)
+
+    destination_path = "data/kaas/"
+    os.makedirs(destination_path, exist_ok=True)
+
+    for row in rows:
+        cells = row.find_all("td")
+        func.download_image_html(cells[0], destination_path)
+
+def get_collectibles():
+    soup = func.get_wiki_soup("Collectibles")
+    table = func.get_tables(soup)[0]
+
+    rows = table.find_all("tr")
+    rows.pop(0)
+
+    data_rows = []
+
+    for row in rows:
+        cells = row.find_all("td")
+
+        item = cells[1].text.strip()
+
+        attr = cells[4]
+        print(item)
+
+        if "None" in attr.text:
+            print("Found none")
+            skill_boost = boost = type_boost = attribute = note = None
+            new_row = [item, skill_boost, boost, type_boost, attribute, note]
+            data_rows.append(new_row)
+            continue
+        elif "<br/>" in attr:
+            lines = func.split_br(attr)
+        else:
+            lines = [attr]
+
+        results = func.get_attributes_from_html(lines)
+        for result in results:
+            skill_boost, boost, type_boost, attribute, note = get_attributes(result)
+            new_row = [item, skill_boost, boost, type_boost, attribute, note]
+            data_rows.append(new_row)
+
+    # Make csv
+    columns = ['Item', 'Skill_boost', 'Boost', 'Type_boost', 'Attribute', 'Note']
+    df = pd.DataFrame(data_rows, columns=columns)
+    df.to_csv("collectibles.csv", index=False)
 
 
-
-
-
-get_consumables()
+get_collectibles()
 
 
 
