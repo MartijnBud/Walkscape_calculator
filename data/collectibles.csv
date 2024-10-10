@@ -1,3 +1,32 @@
-﻿Item,Attribute,Skill_boost,Boost,Type_boost,Note
-Ancient Ankh,Work Efficiency,Mining,1,percentage,While doing Mining
-Ancient Ankh,Work Efficiency,Agility,1,percentage,While doing Agility
+Item,Skill_boost,Boost,Type_boost,Attribute,Note
+99-Year-Old Wine,,,,,
+Ancient Ankh,Agility,1,Percentage,Work Efficiency,While doing  Mining While doing  Agility
+Ancient Ankh,Agility,1,Percentage,Work Efficiency,While doing  Mining While doing  Agility
+Ancient Trident,,,,,
+Anglerfish Mask,Fishing,1,Percentage,Double Action,While doing  Fishing
+Artificial Snowflake,Foraging,1,Percentage,Double Rewards,While doing  Foraging
+Blue Lotus Butterfly,Agility,1,Percentage,Work Efficiency,While doing  Foraging While doing  Agility
+Blue Lotus Butterfly,Agility,1,Percentage,Work Efficiency,While doing  Foraging While doing  Agility
+Dinglehopper,Global,2,Percentage,Find Collectibles,Global
+Easter Egg,Global,1,Percentage,Find Collectibles,Global
+Expedition Journal,Foraging,1,Percentage,Work Efficiency,While doing  Foraging
+Floating Coral,Fishing,2,Percentage,Fine Material Finding,While doing  Fishing
+Jarvonian Crossword Puzzle,Global,1,Percentage,Bonus Experience,Global
+Letter From A. A.,,,,,
+Mark of the Trident,,,,,
+Mark of the Serpent,Fishing,1,Percentage,Double Rewards,While doing  Fishing
+Mark of the Deep One,,2,Percentage,Double Rewards,Global  While in Underwater location.
+Old War Sword,,,,,
+Petrified Branch,,,,,
+Seahorse Fossil,,,,,
+Silver Pocket Watch,,,,,
+Swordfish Sword Fossil,,,,,
+Soup Kitchen Badge,Access,1,Percentage,Bonus Experience,While doing  CookingUnlocks   Eberhart Mansion Advanced Kitchen Access
+Terrifying Fossil,,,,,
+Tiny Swan Ice Sculpture,,,,,
+Treasure Hunter Token,Global,2,Percentage,Find Collectibles,Global
+Underwater Map,,,,,
+Very Shiny Stone,,,,,
+Walrus Tusk,,,,,
+Western Continent Boat Pass,,,,,
+Wooden Carved Bear Figurine,,,,,
