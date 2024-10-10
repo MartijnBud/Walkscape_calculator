@@ -1,7 +1,7 @@
 
 # Next steps
 - [x] Finish collection equipment with qualities
-- [ ] Collect collectibles
+- [x] Collect collectibles
 - [X] Collect consumables
 
 # Data needed
