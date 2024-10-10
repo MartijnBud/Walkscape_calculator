@@ -38,36 +38,39 @@ def get_tables(soup):
 
 """ Writes all svg from table """
 def download_svg_from_table(table, destination_path):
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"}
 
     os.makedirs(destination_path, exist_ok=True)
     rows = table.find_all("tr")
     for row in rows:
-        img_tag = row.find("img")
-        if not img_tag:
-            continue
+        download_image_html(row)
 
-        img_url = img_tag["src"]
-        filename = img_url.split("/")[-1]
-        extension = filename.split(".")[-1]
-        filename = filename.replace("%27", "'")
-        filename = filename.replace("%28", "(")
-        filename = filename.replace("%29", ")")
-        filename = filename.replace("_", " ")
-        print(filename)
-        img_url = "https:" + img_url
+def download_image_html(data, destination_path):
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"}
+    img_tag = data.find("img")
+    if not img_tag:
+        return
 
-        if extension == "svg":
-            svg = requests.get(img_url, headers=headers).text
-            with open(destination_path + filename, 'w') as file:
-                file.write(svg)
+    img_url = img_tag["src"]
+    filename = img_url.split("/")[-1]
+    extension = filename.split(".")[-1]
+    filename = filename.replace("%27", "'")
+    filename = filename.replace("%28", "(")
+    filename = filename.replace("%29", ")")
+    filename = filename.replace("_", " ")
+    print(filename)
+    img_url = "https:" + img_url
 
-        if extension == "png":
-            response = requests.get(img_url, headers=headers, stream=True)
-            with open(os.path.join(destination_path, filename), 'wb') as file:
-                for chunk in response.iter_content(1024):
-                    file.write(chunk)
+    if extension == "svg":
+        svg = requests.get(img_url, headers=headers).text
+        with open(destination_path + filename, 'w') as file:
+            file.write(svg)
+
+    if extension == "png":
+        response = requests.get(img_url, headers=headers, stream=True)
+        with open(os.path.join(destination_path, filename), 'wb') as file:
+            for chunk in response.iter_content(1024):
+                file.write(chunk)
 
 def get_previous_headers(table):
     h2_header = None
@@ -115,11 +118,10 @@ def get_attributes_from_html(lines):
         sub_spans = section.find_all('span', style="color:#E51414")
 
         if isinstance(plus_spans, str):
-            plus_spans = [plus_spans]  # Convert to a list if it's a string
+            plus_spans = [plus_spans]
         if isinstance(sub_spans, str):
-            sub_spans = [sub_spans]  # Convert to a list if it's a string
+            sub_spans = [sub_spans]
 
-        # Combine both sets of spans
         spans = plus_spans + sub_spans
 
         if not spans:
