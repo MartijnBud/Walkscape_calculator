@@ -348,12 +348,18 @@ function parseCSV(data) {
   const rows = data.split("\n");
   const header = rows[0].split(",").map((col) => col.trim());
 
-  // Identify column indices for Item, Slot, and any additional attributes
+  // Get column indices based on header
   const itemIndex = header.indexOf("Item");
+  const qualityIndex = header.indexOf("Quality");
   const slotIndex = header.indexOf("Slot");
+  const attributeIndex = header.indexOf("Attribute");
+  const boostIndex = header.indexOf("Boost");
+  const typeBoostIndex = header.indexOf("Type_boost");
+  const skillBoostIndex = header.indexOf("Skill_boost");
+  const noteIndex = header.indexOf("Note");
 
-  if (itemIndex === -1 || slotIndex === -1) {
-    console.error("CSV format error: Missing 'Item' or 'Slot' columns.");
+  if (itemIndex === -1 || qualityIndex === -1 || slotIndex === -1) {
+    console.error("CSV format error: Missing essential columns.");
     return [];
   }
 
@@ -361,35 +367,50 @@ function parseCSV(data) {
 
   rows.slice(1).forEach((row) => {
     const columns = row.split(",");
-    if (columns.length > Math.max(itemIndex, slotIndex)) {
+    if (columns.length > Math.max(itemIndex, qualityIndex)) {
       const itemName = columns[itemIndex].trim();
       const slot = columns[slotIndex].trim().toLowerCase();
+      const quality = columns[qualityIndex].trim();
+      const attribute = {
+        type: columns[attributeIndex]?.trim(),
+        boost: columns[boostIndex]?.trim(),
+        boostType: columns[typeBoostIndex]?.trim(),
+        skillBoost: columns[skillBoostIndex]?.trim(),
+        condition: columns[noteIndex]?.trim(),
+      };
 
-      // Combine remaining columns as attributes, joining them into a single string
-      const attributes = columns
-        .slice(2)
-        .map((col) => col.trim())
-        .join(", ");
-
+      // Initialize item if not present
       if (!equipment[itemName]) {
-        equipment[itemName] = {
-          Item: itemName,
-          Slot: slot,
-          Attributes: attributes,
-        };
-      } else {
-        // Concatenate additional attributes if the item already exists
-        equipment[itemName].Attributes += `, ${attributes}`;
+        equipment[itemName] = { Item: itemName, Slot: slot, Qualities: {} };
       }
+
+      // Initialize quality if not present
+      if (!equipment[itemName].Qualities[quality]) {
+        equipment[itemName].Qualities[quality] = [];
+      }
+
+      // Add attribute to the appropriate quality level
+      equipment[itemName].Qualities[quality].push(attribute);
     }
   });
 
-  // Convert the equipment object to an array for easier handling in other functions
   const parsedData = Object.values(equipment);
-  console.log("Final Parsed Data with Combined Attributes:", parsedData);
+  console.log(
+    "Final Parsed Data with Grouped Attributes by Quality:",
+    parsedData
+  );
   return parsedData;
 }
-const equipmentMap = {}; // Global dictionary to store items and attributes
+const equipmentMap = {}; // Store structured attributes by item and quality
+
+function getSelectedSkill() {
+  const skillDropdown = document.getElementById("skillDropdown");
+  return skillDropdown ? skillDropdown.value : "";
+}
+document.getElementById("skillDropdown").addEventListener("change", () => {
+  updateTotalsTable(totalsTracker); // Re-run table update with new skill selection
+});
+
 function populateGearSlots(equipment) {
   const gearSlots = [
     "cape",
@@ -403,15 +424,15 @@ function populateGearSlots(equipment) {
     "secondary",
     "ring",
     "feet",
-    "ring2",
     "tool",
   ];
 
+  // Populate equipmentMap for easy access by item name
   equipment.forEach((item) => {
-    // Store each item in the dictionary for quick attribute lookup
-    equipmentMap[item.Item.toLowerCase()] = item.Attributes;
+    equipmentMap[item.Item.toLowerCase()] = item.Qualities;
   });
 
+  // Populate each gear slot dropdown (datalist) with items matching the slot
   gearSlots.forEach((slot) => {
     const slotData = equipment.filter(
       (item) => item.Slot === slot.toLowerCase()
@@ -419,35 +440,168 @@ function populateGearSlots(equipment) {
     const datalist = document.getElementById(`${slot}Suggestions`);
 
     if (datalist) {
-      datalist.innerHTML = "";
+      console.log(`Populating ${slot} with items:`, slotData);
+      datalist.innerHTML = ""; // Clear any previous options
 
       slotData.forEach((item) => {
         const option = document.createElement("option");
         option.value = item.Item;
         datalist.appendChild(option);
       });
+    } else {
+      console.warn(`Datalist for ${slot} not found in HTML.`);
     }
   });
 
-  // Add event listeners for each input in the gear grid
+  // Add event listeners to log attributes when an item is selected
   addSelectionListeners();
 }
+
+// Initialize totals tracker globally
+let totalsTracker = {}; // We use `let` so we can reset it on recalculations
 
 function addSelectionListeners() {
   const gearInputs = document.querySelectorAll(".gear-slot");
 
   gearInputs.forEach((input) => {
     input.addEventListener("input", (event) => {
-      const selectedItem = event.target.value.toLowerCase();
-      if (equipmentMap[selectedItem]) {
-        console.log(
-          `Attributes for ${selectedItem}: ${equipmentMap[selectedItem]}`
-        );
-      } else {
-        console.warn(`No attributes found for item: ${selectedItem}`);
+      const selectedItem = event.target.value.trim().toLowerCase();
+
+      // Check if selectedItem is an exact match in equipmentMap
+      if (selectedItem && equipmentMap[selectedItem]) {
+        updateTotals();
+      } else if (!selectedItem) {
+        // If the input is cleared, update totals to remove bonuses from that slot
+        updateTotals();
       }
     });
   });
+}
+
+// Function to re-calculate totals based on current grid input values
+function updateTotals() {
+  // Reset totalsTracker to start fresh
+  totalsTracker = {};
+
+  // Get all gear inputs and calculate totals based on exact matches
+  const gearInputs = document.querySelectorAll(".gear-slot");
+
+  gearInputs.forEach((input) => {
+    const selectedItem = input.value.trim().toLowerCase();
+    const qualities = equipmentMap[selectedItem];
+
+    if (qualities) {
+      // Accumulate totals grouped by main attribute type
+      for (const quality in qualities) {
+        qualities[quality].forEach((attr) => {
+          const isPercentage = attr.boostType === "Percentage";
+          const boostValue = parseFloat(attr.boost) || 0;
+
+          // Skip this attribute if boost value is zero
+          if (boostValue === 0) return;
+
+          const isNegative = attr.boost.startsWith("-");
+          const mainAttribute = attr.type; // Grouping key for main attribute type
+          const specificCondition = `${
+            attr.skillBoost === "Specific"
+              ? "while " + attr.condition
+              : attr.condition
+              ? attr.condition.toLowerCase()
+              : "global"
+          }`;
+
+          // Initialize main attribute in totalsTracker if not already present
+          if (!totalsTracker[mainAttribute]) {
+            totalsTracker[mainAttribute] = {};
+          }
+
+          // Initialize condition-specific total if not present
+          if (!totalsTracker[mainAttribute][specificCondition]) {
+            totalsTracker[mainAttribute][specificCondition] = {
+              percentage: 0,
+              flat: 0,
+            };
+          }
+
+          // Add or subtract the boost based on its type
+          if (isPercentage) {
+            totalsTracker[mainAttribute][specificCondition].percentage +=
+              isNegative ? -Math.abs(boostValue) : boostValue;
+          } else {
+            totalsTracker[mainAttribute][specificCondition].flat += isNegative
+              ? -Math.abs(boostValue)
+              : boostValue;
+          }
+        });
+      }
+    }
+  });
+
+  // Update the totals table with the recalculated cumulative totals
+  updateTotalsTable(totalsTracker);
+}
+
+function updateTotalsTable(totalsTracker) {
+  const tableBody = document
+    .getElementById("totalsTable")
+    .querySelector("tbody");
+
+  // Get the selected skill from the dropdown
+  const selectedSkill = getSelectedSkill();
+
+  // Clear existing rows
+  tableBody.innerHTML = "";
+
+  // Populate table with grouped cumulative totals
+  for (const [mainAttribute, conditions] of Object.entries(totalsTracker)) {
+    let row = document.createElement("tr");
+
+    // Create a cell for the main attribute (e.g., "Work Efficiency")
+    const attributeCell = document.createElement("td");
+    attributeCell.textContent = mainAttribute;
+    attributeCell.rowSpan = Object.keys(conditions).length; // Span across all conditions for this attribute
+    row.appendChild(attributeCell);
+
+    // Add each condition-specific total as its own row under the main attribute
+    let firstCondition = true;
+    for (const [condition, totals] of Object.entries(conditions)) {
+      // Only append a new row if it's not the first condition (first condition uses the same row as main attribute)
+      if (!firstCondition) {
+        tableBody.appendChild(row);
+        row = document.createElement("tr"); // Create a new row for subsequent conditions
+      }
+
+      // Create cells for condition, percentage, and flat bonus
+      const conditionCell = document.createElement("td");
+      conditionCell.textContent = condition;
+      row.appendChild(conditionCell);
+
+      const percentageCell = document.createElement("td");
+      percentageCell.textContent =
+        totals.percentage !== 0 ? `${totals.percentage}%` : "";
+      row.appendChild(percentageCell);
+
+      const flatCell = document.createElement("td");
+      flatCell.textContent = totals.flat !== 0 ? `${totals.flat}` : "";
+      row.appendChild(flatCell);
+
+      // Apply row color based on skill match
+      if (selectedSkill) {
+        // If a skill is selected, color green if it matches, red if it doesn't
+        if (condition.toLowerCase().includes(selectedSkill.toLowerCase())) {
+          row.style.backgroundColor = "rgba(144, 238, 144, 0.3)"; // Light green
+        } else {
+          row.style.backgroundColor = "rgba(255, 99, 71, 0.3)"; // Light red
+        }
+      } else {
+        // Reset to default color if no skill is selected
+        row.style.backgroundColor = "";
+      }
+
+      firstCondition = false;
+      tableBody.appendChild(row); // Append the row to the table body
+    }
+  }
 }
 
 // Function to update the current XP based on the selected skill
