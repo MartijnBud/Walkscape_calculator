@@ -324,6 +324,100 @@ function searchCharacter() {
     });
 }
 
+function selectGear(slotId) {
+  console.log(`Selected gear slot: ${slotId}`);
+  // You can add more logic here if you want to handle actions when a slot is selected
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  fetchEquipmentData();
+});
+
+async function fetchEquipmentData() {
+  const response = await fetch(
+    "https://proxyserver-2d51fl6oa-martijnbuds-projects.vercel.app/api?url=https://martijnbud.github.io/Walkscape_calculator/data/equipment.csv"
+  );
+  const data = await response.text();
+  console.log("Data:", data);
+  const equipment = parseCSV(data);
+
+  populateGearSlots(equipment);
+}
+
+function parseCSV(data) {
+  const rows = data.split("\n");
+  const header = rows[0].split(",").map((col) => col.trim());
+
+  // Identify column indices for Item and Slot
+  const itemIndex = header.indexOf("Item");
+  const slotIndex = header.indexOf("Slot");
+
+  if (itemIndex === -1 || slotIndex === -1) {
+    console.error("CSV format error: Missing 'Item' or 'Slot' columns.");
+    return [];
+  }
+
+  const parsedData = [];
+
+  rows.slice(1).forEach((row, index) => {
+    const columns = row.split(",");
+    if (columns.length > Math.max(itemIndex, slotIndex)) {
+      const Item = columns[itemIndex].trim();
+      const Slot = columns[slotIndex].trim().toLowerCase();
+      parsedData.push({ Item, Slot });
+      console.log(`Row ${index + 1} - Item: ${Item}, Slot: ${Slot}`);
+    } else {
+      console.warn(`Skipping malformed row at line ${index + 2}:`, row);
+    }
+  });
+
+  console.log("Final Parsed Data:", parsedData); // Log parsed data for verification
+  return parsedData;
+}
+
+function populateGearSlots(equipment) {
+  const gearSlots = [
+    "cape",
+    "head",
+    "back",
+    "hands",
+    "chest",
+    "neck",
+    "primary",
+    "legs",
+    "secondary",
+    "ring",
+    "feet",
+    "ring2",
+    "tools",
+  ];
+
+  console.log(
+    "Available Slots in CSV:",
+    equipment.map((item) => item[1])
+  ); // Check slot names from CSV
+
+  gearSlots.forEach((slot) => {
+    const slotData = equipment.filter(
+      (item) => item.Slot.toLowerCase().trim() === slot
+    );
+    const datalist = document.getElementById(`${slot}Suggestions`);
+
+    if (datalist) {
+      console.log(`Populating ${slot} with items:`, slotData); // Confirm slotData matches
+      datalist.innerHTML = ""; // Clear previous options
+
+      slotData.forEach((item) => {
+        const option = document.createElement("option");
+        option.value = item.Item;
+        datalist.appendChild(option);
+      });
+    } else {
+      console.warn(`Datalist for ${slot} not found in HTML.`);
+    }
+  });
+}
+
 // Function to update the current XP based on the selected skill
 function updateCurrentXP() {
   const skillDropdown = document.getElementById("skillDropdown");
