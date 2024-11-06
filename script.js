@@ -348,7 +348,7 @@ function parseCSV(data) {
   const rows = data.split("\n");
   const header = rows[0].split(",").map((col) => col.trim());
 
-  // Identify column indices for Item and Slot
+  // Identify column indices for Item, Slot, and any additional attributes
   const itemIndex = header.indexOf("Item");
   const slotIndex = header.indexOf("Slot");
 
@@ -357,24 +357,39 @@ function parseCSV(data) {
     return [];
   }
 
-  const parsedData = [];
+  const equipment = {};
 
-  rows.slice(1).forEach((row, index) => {
+  rows.slice(1).forEach((row) => {
     const columns = row.split(",");
     if (columns.length > Math.max(itemIndex, slotIndex)) {
-      const Item = columns[itemIndex].trim();
-      const Slot = columns[slotIndex].trim().toLowerCase();
-      parsedData.push({ Item, Slot });
-      console.log(`Row ${index + 1} - Item: ${Item}, Slot: ${Slot}`);
-    } else {
-      console.warn(`Skipping malformed row at line ${index + 2}:`, row);
+      const itemName = columns[itemIndex].trim();
+      const slot = columns[slotIndex].trim().toLowerCase();
+
+      // Combine remaining columns as attributes, joining them into a single string
+      const attributes = columns
+        .slice(2)
+        .map((col) => col.trim())
+        .join(", ");
+
+      if (!equipment[itemName]) {
+        equipment[itemName] = {
+          Item: itemName,
+          Slot: slot,
+          Attributes: attributes,
+        };
+      } else {
+        // Concatenate additional attributes if the item already exists
+        equipment[itemName].Attributes += `, ${attributes}`;
+      }
     }
   });
 
-  console.log("Final Parsed Data:", parsedData); // Log parsed data for verification
+  // Convert the equipment object to an array for easier handling in other functions
+  const parsedData = Object.values(equipment);
+  console.log("Final Parsed Data with Combined Attributes:", parsedData);
   return parsedData;
 }
-
+const equipmentMap = {}; // Global dictionary to store items and attributes
 function populateGearSlots(equipment) {
   const gearSlots = [
     "cape",
@@ -389,32 +404,49 @@ function populateGearSlots(equipment) {
     "ring",
     "feet",
     "ring2",
-    "tools",
+    "tool",
   ];
 
-  console.log(
-    "Available Slots in CSV:",
-    equipment.map((item) => item[1])
-  ); // Check slot names from CSV
+  equipment.forEach((item) => {
+    // Store each item in the dictionary for quick attribute lookup
+    equipmentMap[item.Item.toLowerCase()] = item.Attributes;
+  });
 
   gearSlots.forEach((slot) => {
     const slotData = equipment.filter(
-      (item) => item.Slot.toLowerCase().trim() === slot
+      (item) => item.Slot === slot.toLowerCase()
     );
     const datalist = document.getElementById(`${slot}Suggestions`);
 
     if (datalist) {
-      console.log(`Populating ${slot} with items:`, slotData); // Confirm slotData matches
-      datalist.innerHTML = ""; // Clear previous options
+      datalist.innerHTML = "";
 
       slotData.forEach((item) => {
         const option = document.createElement("option");
         option.value = item.Item;
         datalist.appendChild(option);
       });
-    } else {
-      console.warn(`Datalist for ${slot} not found in HTML.`);
     }
+  });
+
+  // Add event listeners for each input in the gear grid
+  addSelectionListeners();
+}
+
+function addSelectionListeners() {
+  const gearInputs = document.querySelectorAll(".gear-slot");
+
+  gearInputs.forEach((input) => {
+    input.addEventListener("input", (event) => {
+      const selectedItem = event.target.value.toLowerCase();
+      if (equipmentMap[selectedItem]) {
+        console.log(
+          `Attributes for ${selectedItem}: ${equipmentMap[selectedItem]}`
+        );
+      } else {
+        console.warn(`No attributes found for item: ${selectedItem}`);
+      }
+    });
   });
 }
 
